@@ -515,10 +515,10 @@ function imprimirCotizacionAsisa(){
             *{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
           }
+          .nota{ font-size:12px; color:#333; margin-top:10px; }
 
         </style>
 
-          .nota{ font-size:12px; color:#333; margin-top:10px; }
 
 
       </head>
@@ -1719,3 +1719,52 @@ document.getElementById("contadorProductos").innerText =
 
 }
 }
+// =============================
+// IMPRESIÓN DE CARTAS
+// =============================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.querySelectorAll(".print-letter").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+      const id = btn.dataset.letter;
+      const area = document.getElementById(id);
+
+      if(!area){
+        alert("No se encontró la carta");
+        return;
+      }
+
+      const texto = area.value;
+
+      const win = window.open("", "_blank","width=900,height=700");
+
+      win.document.write(`
+        <html>
+        <head>
+        <title>Carta</title>
+        <style>
+        body{
+          font-family: Arial;
+          padding:40px;
+          line-height:1.6;
+          white-space:pre-wrap;
+        }
+        </style>
+        </head>
+        <body>${texto}</body>
+        </html>
+      `);
+
+      win.document.close();
+      win.focus();
+      win.print();
+
+    });
+
+  });
+
+});
+
