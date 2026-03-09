@@ -1,96 +1,51 @@
 
 // =====================================
-
 // NAVEGACIÓN PRINCIPAL
-
 // Usa: .main-tab + data-target + .main-section (id)
-
 // =====================================
 
 document.addEventListener("DOMContentLoaded", function () {
 
   const buttons = document.querySelectorAll(".main-tab");
-
   const sections = document.querySelectorAll(".main-section");
 
- 
-
   function showSection(id) {
-
     sections.forEach(sec => {
-
       sec.style.display = "none";
-
-      sec.classList.remove("is-visible");
-
+      sec.classList.remove("active");
     });
 
- 
-
-    buttons.forEach(btn => btn.classList.remove("is-active"));
-
- 
+    buttons.forEach(btn => btn.classList.remove("active"));
 
     const target = document.getElementById(id);
-
     if (!target) {
-
       console.warn("No existe sección con id:", id);
-
       return;
-
     }
-
- 
 
     target.style.display = "block";
-
-    target.classList.add("is-visible");
-
- 
+    target.classList.add("active");
 
     const activeBtn = document.querySelector(`.main-tab[data-target="${id}"]`);
-
-    if (activeBtn) activeBtn.classList.add("is-active");
-
- 
-
-    // Si entras en tarifas, repinta tablas
+    if (activeBtn) activeBtn.classList.add("active");
 
     if (id === "tarifas") {
-
       setTimeout(renderTablasTarifas, 50);
-
     }
-
   }
 
- 
-
   buttons.forEach(btn => {
-
     btn.addEventListener("click", function () {
-
       const targetId = this.getAttribute("data-target");
-
       showSection(targetId);
-
     });
-
   });
 
- 
-
-  // Mostrar primera al cargar
-
   if (buttons.length > 0) {
-
     showSection(buttons[0].getAttribute("data-target"));
-
   }
 
 });
-
  
 
 // =====================================
@@ -470,15 +425,12 @@ function calcularCotizacionAsisa(){
 function imprimirCotizacionAsisa(){
 
   const bloque = document.getElementById("asisaPresupuestoImprimible");
+if(!bloque){
+  console.warn("⚠️ No encuentro #asisaPresupuestoImprimible");
+  return;
+}
 
-  if(!bloque){
-
-    console.warn("⚠️ No encuentro #asisaPresupuestoImprimible");
-
-    return;
-
-  }
-
+document.getElementById("asisaPresupuestoImprimible").style.display = "block";
  
 
   const win = window.open("", "_blank", "width=900,height=700");
@@ -516,6 +468,16 @@ function imprimirCotizacionAsisa(){
 
           }
           .nota{ font-size:12px; color:#333; margin-top:10px; }
+.aviso-presupuesto{
+background:#ffe3e3;
+border:2px solid #c62828;
+color:#7a0000;
+font-weight:700;
+padding:12px;
+margin:15px 0;
+border-radius:8px;
+text-align:center;
+}
 
         </style>
 
@@ -665,35 +627,55 @@ function prepararImpresionAsisa(){
 
 }
 
- 
-
-// Enganchar impresión para preparar antes
-
+ // Enganchar botones cotizador ASISA
 document.addEventListener("DOMContentLoaded", () => {
 
-  const btnPrint = document.getElementById("btnImprimirAsisa");
+    const btnCalc = document.getElementById("btnCalcularAsisa");
+    const btnPrint = document.getElementById("btnImprimirAsisa");
 
-  if(btnPrint){
+    if (btnCalc) {
+        btnCalc.addEventListener("click", () => {
+            calcularCotizacionAsisa();
 
-    btnPrint.addEventListener("click", () => {
+            const bloque = document.getElementById("asisaPresupuestoImprimible");
+            if (bloque) bloque.style.display = "block";
+        });
+    }
 
-      calcularCotizacionAsisa();
+    if (btnPrint) {
+        btnPrint.addEventListener("click", () => {
+            calcularCotizacionAsisa();
 
-      prepararImpresionAsisa();
+            const bloque = document.getElementById("asisaPresupuestoImprimible");
+            if (bloque) bloque.style.display = "block";
 
-      imprimirCotizacionAsisa();
-
-      // Ocultar de nuevo (no molesta en pantalla)
-
-      const bloque = document.getElementById("asisaPresupuestoImprimible");
-
-      if(bloque) bloque.style.display = "none";
-
-    });
-
-  }
+            prepararImpresionAsisa();
+            imprimirCotizacionAsisa();
+        });
+    }
 
 });
+// Botón calcular cotización
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btnCalc = document.getElementById("btnCalcularAsisa");
+
+    if(btnCalc){
+        btnCalc.addEventListener("click", () => {
+
+            calcularCotizacionAsisa();
+
+            const bloque = document.getElementById("asisaPresupuestoImprimible");
+
+            if(bloque){
+                bloque.style.display = "block";
+            }
+
+        });
+    }
+
+});
+
 
 // ==============================
 
@@ -870,7 +852,6 @@ function resetMiniImpago() {
  
 
 // - paneles: .sub-section / .subtab-panel / article
-
  
 
 // - visible: .is-visible / .active
@@ -1182,19 +1163,19 @@ function showSection(id) {
   // Ocultar todas
   sections.forEach(sec => {
     sec.style.display = "none";
-    sec.classList.remove("is-visible");
+    sec.classList.remove("active");
   });
 
   // Quitar activo a todos
-  buttons.forEach(btn => btn.classList.remove("is-active"));
+  buttons.forEach(btn => btn.classList.remove("active"));
 
   // Mostrar la correcta
   target.style.display = "block";
-  target.classList.add("is-visible");
+  target.classList.add("active");
 
   // Activar botón
   const activeBtn = document.querySelector(`.main-tab[data-target="${id}"]`);
-  if (activeBtn) activeBtn.classList.add("is-active");
+  if (activeBtn) activeBtn.classList.add("active");
 
   // Si entras en tarifas, repinta tablas
   if (id === "tarifas") {
@@ -1767,4 +1748,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-
