@@ -41,11 +41,21 @@
 <div id="bubbles" aria-hidden="true"></div>
 
   <div class="bg-anim" aria-hidden="true"></div>
-
+<div class="marca-agua-interna">
+DOCUMENTO INTERNO
+</div>
  
 
   <header class="topbar">
+<div class="aviso-interno">
+⚠️ USO INTERNO EXCLUSIVO – HERRAMIENTA DE APOYO COMERCIAL
 
+Esta herramienta está destinada únicamente a uso interno del equipo para consulta, formación y apoyo comercial.
+
+El contenido tiene carácter meramente informativo y orientativo y no constituye documentación oficial, oferta vinculante ni propuesta contractual de ninguna entidad aseguradora o financiera.
+
+Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs del cotizador ASISA) son exclusivamente orientativos para uso interno y **no deben entregarse al cliente como documentación contractual o precontractual**.
+</div>
     <div class="brand">
 
       <img class="brand-logo" src="assets/ACS_logo_SASA_Canarias.png" alt="Logo SASA Team Canarias" />
@@ -256,8 +266,12 @@ Selecciona los productos que quieres incluir en el dossier y genera un documento
 </button>
     </section>
 
-<section id="promociones" class="main-section">
 
+
+<section id="promociones" class="main-section">
+<p style="font-size:13px;color:#555;">
+Información comercial orientativa. Promociones vigentes sujetas a actualización según campaña.
+</p>
 <h1>🔥Campañas y promociones del mes</h1>
 
 <div class="card">
@@ -329,6 +343,28 @@ Selecciona los productos que quieres incluir en el dossier y genera un documento
 <li>La RC Integral es uno de los seguros más necesarios en empresas</li>
 <li>Especial oportunidad en construcción, reformas, hostelería, transporte y comercio</li>
 <li>Seguros GOLD recomendados: MR, RC, Convenio Colectivo, Ciber y Póliza PY</li>
+</ul>
+</div>
+<div class="promo-card">
+<h3>Campaña Accidentes Digital</h3>
+<ul>
+<li><strong>20% de descuento</strong></li>
+<li>Vigencia: del 9 al 31 de marzo</li>
+<li>Productos incluidos:</li>
+<li>Accidentes Protección Integral</li>
+<li>Accidentes Protección Integral Esencial</li>
+<li>Protección Senior</li>
+</ul>
+</div>
+
+<div class="promo-card">
+<h3>Promoción Hogar</h3>
+<ul>
+<li>Vigencia: del 9 al 31 de marzo</li>
+<li>Descuento sobre prima anual durante toda la vida de la póliza:</li>
+<li><strong>25%</strong> – Mi Hogar Esencial</li>
+<li><strong>20%</strong> – Mi Hogar Ampliado</li>
+<li><strong>15%</strong> – Mi Hogar Integral</li>
 </ul>
 </div>
 
@@ -2095,9 +2131,9 @@ Saludos</pre>
 
   <!-- BLOQUE QUE SE IMPRIME -->
 
-  <div id="asisaPresupuestoImprimible" style="display:none;">
+  <div id="asisaPresupuestoImprimible" 
 
-    <h1 class="azul">Presupuesto Salud ASISA Empresas</h1>
+    <h1 class="azul">Presupuesto Salud Empresas</h1>
 
     <p><strong>Empresa:</strong> <span id="printEmpresa"> </span></p>
 
@@ -2105,7 +2141,13 @@ Saludos</pre>
 
     <p><strong>Fecha:</strong> <span id="printFecha"> </span></p>
 
- 
+<div class="aviso-presupuesto">
+  <strong>DOCUMENTO INTERNO – CÁLCULO ORIENTATIVO</strong><br>
+  Este presupuesto ha sido generado mediante una herramienta interna de apoyo comercial.
+  Tiene carácter meramente informativo y orientativo y no constituye oferta vinculante ni documentación oficial de la aseguradora.
+  No debe entregarse al cliente como documento contractual o precontractual.
+</div> 
+
 
     <h2 class="azul">Detalle por tramos</h2>
 
@@ -2895,8 +2937,11 @@ Tel: <a href="tel:900123470">900 123 470</a>
 
     </footer>
 </div>
+</section>
+
 <!-- ===================== MANUAL COMERCIAL ===================== -->
 <section id="manual" class="main-section">
+
 
 <h1>Manual comercial</h1>
 
@@ -3251,13 +3296,11 @@ El cierre debe ser natural. No se trata de presionar al cliente, sino de facilit
 Muchas ventas se pierden simplemente porque no se intenta cerrar la operación.
 Siempre hay que hacer una pregunta final.
 </div>
-
 </section>
 
 
 <!-- ===================== FRASES CALIDAD ===================== -->
-<section id="frasecontrol
-s-calidad" class="main-section">
+<section id="frases-calidad" class="main-section">
 
 <h1>Frases importantes para control de calidad</h1>
 
@@ -3337,7 +3380,6 @@ Después de contratar algunos seguros, el cliente puede recibir una llamada del 
 <div class="notice">
 Si el cliente indica en la llamada que no entendía el seguro o que no quería contratarlo, la venta puede quedar anulada.
 </div>
-
 </section>
 
 
@@ -3421,18 +3463,18 @@ style="position:fixed;bottom:20px;right:20px;padding:10px 14px;border:none;borde
 
   function showSection(sectionId) {
     document.querySelectorAll(".main-section").forEach(section => {
-      section.classList.remove("is-visible");
+      section.classList.remove("active");
     });
 
     document.querySelectorAll(".main-tab").forEach(tab => {
-      tab.classList.remove("is-active");
+      tab.classList.remove("active");
     });
 
     const targetSection = document.getElementById(sectionId);
     const targetTab = document.querySelector('.main-tab[data-target="' + sectionId + '"]');
 
-    if (targetSection) targetSection.classList.add("is-visible");
-    if (targetTab) targetTab.classList.add("is-active");
+    if (targetSection) targetSection.classList.add("active");
+    if (targetTab) targetTab.classList.add("active");
   }
 
   function findBestMatch(term) {
@@ -5066,13 +5108,126 @@ por lo que se mantienen el historial médico y las carencias cumplidas.
 <li>45-64 años → 52 € copago / 75 € sin copago</li>
 </ul>
 
+<div class="card">
+<h2>Cómo funciona el sistema de reembolso</h2>
+
+<p>
+En los seguros de salud con reembolso el asegurado puede acudir a cualquier médico o clínica privada, aunque no esté dentro del cuadro médico de la compañía.
+</p>
+
+<ol>
+<li>El cliente acude al médico o clínica privada que prefiera.</li>
+<li>Paga la consulta o tratamiento.</li>
+<li>Envía la factura a la aseguradora.</li>
+<li>La compañía devuelve el porcentaje establecido en la póliza.</li>
+</ol>
+
+<h3>Ejemplo práctico</h3>
+
+<ul>
+<li>Consulta especialista: 120 €</li>
+<li>Reembolso Aegon: 80%</li>
+</ul>
+
+<p>
+El cliente paga 120 € al médico.<br>
+La aseguradora devuelve 96 €.<br>
+Coste final para el cliente: 24 €.
+</p>
+
+<p class="muted">
+En algunas pólizas existen límites máximos anuales o por acto médico.
+</p>
+
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Cuadro médico</h3>
+
+<h4>Ventajas</h4>
+<ul>
+<li>No hay que adelantar dinero.</li>
+<li>Acceso directo a médicos concertados.</li>
+<li>Proceso sencillo.</li>
+</ul>
+
+<h4>Inconvenientes</h4>
+<ul>
+<li>Solo se puede acudir a médicos del cuadro médico.</li>
+</ul>
+<div class="card">
+
+<h2>Comparativa rápida Aegon vs Asisa</h2>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Aegon</th>
+<th>Asisa</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Tipo de cliente</td>
+<td>Particulares y autónomos</td>
+<td>Principalmente empresas y colectivos</td>
+</tr>
+
+<tr>
+<td>Modalidades</td>
+<td>Cuadro médico / Reembolso</td>
+<td>Básico / Completo / Reembolso</td>
+</tr>
+
+<tr>
+<td>Libre elección de médico</td>
+<td>Solo en reembolso</td>
+<td>Solo en reembolso</td>
+</tr>
+
+<tr>
+<td>Hospitalización</td>
+<td>Incluida en cuadro médico</td>
+<td>Incluida según modalidad</td>
+</tr>
+
+<tr>
+<td>Uso habitual en oficina</td>
+<td>Autónomos, particulares, no residentes</td>
+<td>Empresas y colectivos</td>
+</tr>
+
+<tr>
+<td>Ventaja comercial</td>
+<td>Flexible para autónomos</td>
+<td>Muy competitivo en empresas</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div class="tip-comercial">
+💡 Explicación sencilla: “Aegon se usa más para particulares y autónomos, mientras que Asisa suele utilizarse más para empresas.”
+</div>
+
+</div>
+
 <div class="tip-comercial">
 💡 Argumento potente: "La sanidad pública funciona, pero con el seguro puedes ir directamente al especialista sin listas de espera."
 </div>
-
+</div>
+</div>
 </div>
 
 <div id="aegon-autonomo" class="subtab-panel">
+
 <h3>Incapacidad Temporal Autónomo</h3>
 
 <ul>
@@ -5198,6 +5353,331 @@ por lo que se mantienen el historial médico y las carencias cumplidas.
 <p>
   El asegurado debe llamar al teléfono: <b>915 123 123</b>. Allí indicarán la documentación necesaria para tramitar el pago de la indemnización.
 </p>
+<div class="card">
+
+<h2>Autónomos y protección de ingresos</h2>
+
+<p>
+Los autónomos dependen directamente de su actividad profesional para generar ingresos.
+Si sufren una enfermedad o accidente y no pueden trabajar, sus ingresos pueden reducirse de forma importante.
+</p>
+
+<p>
+El seguro de incapacidad temporal permite recibir una indemnización diaria que ayuda a compensar
+la pérdida de ingresos mientras dura la baja laboral.
+</p>
+
+<h3>Situación habitual del autónomo</h3>
+
+<ul>
+<li>Los ingresos dependen directamente de su trabajo.</li>
+<li>Si no puede trabajar, los ingresos se reducen o desaparecen.</li>
+<li>Los gastos personales y profesionales continúan.</li>
+</ul>
+
+<div class="tip-comercial">
+💡 Argumento comercial:  
+"El autónomo cuando se pone enfermo no solo pierde salud, también pierde ingresos."
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Qué cubre el seguro de incapacidad temporal</h2>
+
+<ul>
+<li>Baja laboral por enfermedad.</li>
+<li>Baja laboral por accidente.</li>
+<li>Indemnización según diagnóstico recogido en el baremo.</li>
+<li>Pago en un único abono según el diagnóstico.</li>
+<li>Indemnización diaria adicional en caso de hospitalización.</li>
+</ul>
+
+<h3>Indemnización diaria disponible</h3>
+
+<ul>
+<li>30 € por día</li>
+<li>60 € por día</li>
+<li>90 € por día</li>
+</ul>
+
+<p>
+La indemnización dependerá de los ingresos netos del autónomo,
+su cotización a la Seguridad Social y el riesgo de la actividad profesional.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Cómo explicarlo al cliente en 20 segundos</h2>
+
+<p>
+Muchos autónomos dependen totalmente de su trabajo.
+Si no pueden trabajar por enfermedad o accidente,
+sus ingresos pueden desaparecer durante el tiempo de baja.
+</p>
+
+<p>
+Este seguro permite recibir una indemnización diaria
+que ayuda a compensar la pérdida de ingresos durante ese periodo.
+</p>
+
+<div class="bloque-info">
+
+<h3>Cómo funciona el baremo de indemnización</h3>
+
+<p>
+El seguro de incapacidad temporal funciona mediante un <strong>baremo médico</strong>.
+Cada enfermedad o lesión tiene asignado un número concreto de días de indemnización.
+</p>
+
+<p>
+La indemnización se calcula multiplicando:
+</p>
+
+<p><strong>Indemnización diaria contratada × días del baremo</strong></p>
+
+</div>
+
+
+<div class="bloque-info">
+
+<h3>Ejemplo de cálculo</h3>
+
+<p>
+Si el cliente contrata <strong>30 € diarios</strong> y el diagnóstico tiene <strong>20 días de baremo</strong>:
+</p>
+
+<p><strong>30 € × 20 días = 600 €</strong></p>
+
+<p>
+Ese importe se paga normalmente en un único abono.
+</p>
+
+</div>
+
+
+<div class="bloque-info">
+
+<h3>Ejemplo sencillo con gripe</h3>
+
+<p>
+La indemnización diaria se paga según los días que establece el baremo.
+</p>
+
+<p>
+Por ejemplo, si la gripe tiene <strong>3 días de baremo</strong> y el cliente tiene contratados
+<strong>30 € al día</strong>:
+</p>
+
+<p><strong>30 € × 3 días = 90 €</strong></p>
+
+<p>
+Aunque el cliente se recupere antes, la compañía paga los días que establece el baremo.
+</p>
+
+</div>
+
+
+<div class="bloque-info">
+
+<h3>Hospitalización</h3>
+
+<p>
+Si el asegurado permanece hospitalizado al menos <strong>24 horas</strong>,
+se añade una indemnización adicional por cada día real de hospitalización.
+</p>
+
+<p>
+Ejemplo:
+</p>
+
+<ul>
+<li>Indemnización diaria contratada: <strong>30 €</strong></li>
+<li>Días del baremo: <strong>20</strong></li>
+<li>Hospitalización: <strong>5 días</strong></li>
+</ul>
+
+<p>
+Baremo: <strong>30 × 20 = 600 €</strong><br>
+Hospitalización: <strong>30 × 5 = 150 €</strong>
+</p>
+
+<p><strong>Total recibido: 750 €</strong></p>
+
+</div>
+
+
+<div class="bloque-info">
+
+<h3>Ejemplos del baremo</h3>
+
+<h4>Enfermedades respiratorias</h4>
+
+<ul>
+<li>Amigdalitis — 2 días</li>
+<li>Bronquitis aguda — 7 días</li>
+<li>Bronconeumonía — 15 días</li>
+<li>Neumonía — 20 días</li>
+<li>Crisis asmática — 5 días</li>
+<li>Tuberculosis pulmonar — 60 días</li>
+</ul>
+
+<h4>Urología</h4>
+
+<ul>
+<li>Cólico renal — 3 días</li>
+<li>Infección urinaria — 3 días</li>
+<li>Prostatitis — 15 días</li>
+<li>Hiperplasia de próstata con cirugía — 30 días</li>
+<li>Nefrectomía — 60 días</li>
+</ul>
+
+<h4>Lesiones deportivas</h4>
+
+<ul>
+<li>Esguince cervical tratado médicamente — 10 días</li>
+<li>Esguince cervical tratado ortopédicamente — 20 días</li>
+<li>Esguince de tobillo con cirugía — 40 días</li>
+<li>Esguince de hombro con cirugía — 50 días</li>
+<li>Rotura de ligamentos de rodilla — 90 días</li>
+</ul>
+
+<h4>Fracturas</h4>
+
+<ul>
+<li>Fractura de clavícula ortopédica — 40 días</li>
+<li>Fractura de clavícula quirúrgica — 60 días</li>
+<li>Fractura de tibia o peroné — 70 a 90 días</li>
+<li>Fractura de columna con cirugía — 120 días</li>
+<li>Fractura de cráneo con afectación neurológica — 210 días</li>
+<li>Fractura-luxación de cadera — 240 días</li>
+</ul>
+
+<h4>Heridas y traumatismos</h4>
+
+<ul>
+<li>Herida con sutura — 7 días</li>
+<li>Herida penetrante con afectación interna — 20 días</li>
+<li>Neumotórax traumático — 50 días</li>
+<li>Quemadura moderada — 30 días</li>
+<li>Quemadura grave — 90 días</li>
+<li>Quemadura muy grave — 180 días</li>
+</ul>
+
+</div>
+
+
+<div class="bloque-info">
+
+<h3>Cómo explicarlo al cliente</h3>
+
+<p>
+Este seguro funciona con un baremo médico. Dependiendo del diagnóstico,
+la compañía paga un número de días de indemnización para compensar la pérdida
+de ingresos mientras el autónomo no puede trabajar.
+</p>
+
+</div>
+
+<div class="tip-comercial">
+💡 Frase comercial útil:  
+"Si un autónomo no puede trabajar, deja de ingresar dinero. Este seguro ayuda a cubrir esa situación."
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Cuándo ofrecer este seguro en oficina</h2>
+
+<ul>
+<li>Clientes autónomos.</li>
+<li>Profesionales liberales.</li>
+<li>Personas que trabajan por cuenta propia.</li>
+<li>Clientes que dependen de su actividad profesional para generar ingresos.</li>
+</ul>
+
+<p>
+También puede ofrecerse a administradores de empresa o socios que tengan un papel clave
+en la actividad del negocio.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Diferencia entre autónomo y empresa</h2>
+
+<h3>Autónomos</h3>
+
+<ul>
+<li>Protege los ingresos personales.</li>
+<li>La indemnización ayuda a cubrir gastos personales y familiares.</li>
+<li>Indicado para profesionales independientes.</li>
+</ul>
+
+<h3>Empresa</h3>
+
+<ul>
+<li>Puede proteger a socios o administradores.</li>
+<li>Compensa la pérdida de actividad si una persona clave no puede trabajar.</li>
+<li>Ayuda a mantener estabilidad económica en el negocio.</li>
+</ul>
+
+<div class="tip-comercial">
+💡 Explicación sencilla:  
+"Para el autónomo protege su sueldo.  
+Para la empresa protege la continuidad del negocio."
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Objeciones habituales del cliente</h2>
+
+<h3>“Yo ya tengo la Seguridad Social.”</h3>
+
+<p>
+La prestación de la Seguridad Social muchas veces resulta insuficiente para el autónomo,
+especialmente durante los primeros meses de baja.
+</p>
+
+<h3>“Yo casi nunca me pongo enfermo.”</h3>
+
+<p>
+Este seguro está pensado precisamente para situaciones inesperadas
+que pueden afectar a los ingresos durante un periodo de tiempo.
+</p>
+
+<h3>“No creo que lo necesite.”</h3>
+
+<p>
+Muchos clientes piensan igual hasta que se encuentran en una situación
+en la que no pueden trabajar durante varias semanas o meses.
+</p>
+
+<div class="tip-comercial">
+💡 Argumento útil:  
+"El seguro no se contrata pensando en usarlo mañana, sino para protegerse si ocurre algo inesperado."
+</div>
+
+</div>
+</div>
+</div>
 </div>
 
 
@@ -5331,6 +5811,7 @@ por lo que se mantienen el historial médico y las carencias cumplidas.
 <li>Prestación renta vitalicia mensual</li>
 <li>Dependencia severa o gran dependencia</li>
 </ul>
+
 <h1>Seguro Protección Dependencia</h1>
 
 <h2>Datos principales</h2>
@@ -6231,8 +6712,7 @@ Con esta información es más fácil identificar qué seguros necesita realmente
 </p>
 
 </div>
-
-</div>
+>
 </div>
 </div>
 
@@ -6255,6 +6735,7 @@ El contenido tiene carácter informativo y no constituye documentación oficial 
     onkeyup="buscarContenido()">
 </div>
 </section>
+</div
 
 
 
