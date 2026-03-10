@@ -1086,3 +1086,21 @@ pointer-events:none;
     page-break-inside:avoid;
   }
 }
+textarea{
+width:100%;
+min-height:260px;
+padding:15px;
+font-size:14px;
+border-radius:8px;
+border:1px solid #ccc;
+background:#ffffff;
+resize:vertical;
+box-sizing:border-box;
+margin-top:10px;
+}
+
+textarea:focus{
+outline:none;
+border:1px solid #004481;
+box-shadow:0 0 4px rgba(0,68,129,0.2);
+}
