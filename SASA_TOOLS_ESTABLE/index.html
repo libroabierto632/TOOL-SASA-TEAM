@@ -84,8 +84,6 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
       <button class="main-tab" data-target="impago">Protección Impago</button>
 
-      <button class="main-tab" data-target="hogar">Hogar</button>
-
       <button class="main-tab" data-target="rav">Renta Vitalicia y Ahorro Unit linked</button>
 
       <button class="main-tab" data-target="aegon">Seguros Aegon, vida, salud...</button>
@@ -251,7 +249,6 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 Selecciona los productos que quieres incluir en el dossier y genera un documento listo para imprimir o enviar al cliente.
 </p>
 
-<label><input type="checkbox" value="hogar"> Seguro Hogar</label><br>
 <label><input type="checkbox" value="ciberseguro"> Ciberseguro</label><br>
 <label><input type="checkbox" value="credito"> Seguro de crédito</label><br>
 <label><input type="checkbox" value="rav"> Renta Vitalicia</label><br>
@@ -3287,14 +3284,6 @@ Revisar siempre la información antes de finalizar la contratación.
 Explicar el problema + explicar la solución + dar tranquilidad al cliente.
 </div>
 
-<h2>Seguro de hogar</h2>
-
-<p>
-El seguro de hogar protege tu vivienda frente a situaciones como daños por agua,
-incendio, robo o responsabilidad civil si ocurre algún daño a terceros.
-La compañía se encarga de reparar los daños o indemnizar según las coberturas contratadas.
-</p>
-
 <h2>Seguro de salud</h2>
 
 <p>
@@ -3971,7 +3960,6 @@ Cuanta más información se tenga antes de cotizar, más preciso será el presup
 </section>  </main>
 
 
-
 <script src="js/funciones.js?v=2"></script>
 <button onclick="window.scrollTo({top:0,behavior:'smooth'})" 
 style="position:fixed;bottom:20px;right:20px;padding:10px 14px;border:none;border-radius:8px;background:#4CAF50;color:white;cursor:pointer;">
@@ -4048,7 +4036,6 @@ style="position:fixed;bottom:20px;right:20px;padding:10px 14px;border:none;borde
   });
 })();
 
-
 </script>
 <button id="btnArriba">⬆</button>
 
@@ -4075,575 +4062,36 @@ function openVidaTab(event, panelId) {
 
   event.currentTarget.classList.add('active');
 }
+
+</script>
+
+<script>
+function openHogarTab(event, panelId) {
+  event.preventDefault();
+
+  const hogarRoot = document.getElementById('aegon-hogar');
+  if (!hogarRoot) return;
+
+  hogarRoot.querySelectorAll('.hogar-panel').forEach(panel => {
+    panel.style.display = 'none';
+  });
+
+  hogarRoot.querySelectorAll('.hogar-subtab').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  const target = document.getElementById(panelId);
+  if (target) {
+    target.style.display = 'block';
+  }
+
+  event.currentTarget.classList.add('active');
+}
 </script>
 </body>
 
 </html>
-<!-- ============================= -->
-<!-- MODULO MI HOGAR SANTANDER -->
-<!-- ============================= -->
 
-<section id="hogar" class="main-section">
-
-<h1>Mi Hogar </h1>
-
-<div class="subtabs">
-
-<button data-subtab="hogar-modalidades">Modalidades</button>
-<button data-subtab="hogar-capitales">Capitales</button>
-<button data-subtab="hogar-joyas">Joyas</button>
-<button data-subtab="hogar-objetos-valor">Objetos valor</button>   
-<button data-subtab="hogar-argumentario">Argumentario</button>
-<button data-subtab="hogar-venta-cruzada">Venta cruzada</button>
-<button data-subtab="hogar-checklist">Checklist</button>
-
-</div>
-
-<!-- MODALIDADES -->
-
-<div id="hogar-modalidades" class="subtab-panel">
-<h2>🏠Modalidades</h2>
-
-<h3>Esencial</h3>
-<ul>
-<li>Incendio</li>
-<li>Daños por agua</li>
-<li>Cristales</li>
-<li>Robo en vivienda</li>
-<li>Responsabilidad civil</li>
-<li>Defensa jurídica</li>
-<li>RC mascotas hasta 150.000 €</li>
-</ul>
-
-<h3>Ampliado</h3>
-<p>Incluye todo lo anterior más:</p>
-
-<ul>
-<li>Daños estéticos</li>
-<li>Servicio de bricolaje</li>
-<li>Asistencia informática</li>
-<li>Actos vandálicos</li>
-<li>Robo dentro y fuera de la vivienda</li>
-<li>Daños eléctricos</li>
-</ul>
-
-<p><b>Compromiso de calidad:</b> asistencia en 3 / 24 / 48 / 72 horas.</p>
-
-<h3>Integral</h3>
-
-<ul>
-<li>Daño accidental</li>
-<li>Reparación de electrodomésticos</li>
-<li>Rotura de móviles y tablets</li>
-<li>Congelación de tuberías</li>
-<li>Desatascos ampliados</li>
-<li><b>Rotura de placas solares</b></li>
-</ul>
-
-<h3>Senior</h3>
-
-<ul>
-<li>Ayuda a domicilio</li>
-<li>Limpieza hogar</li>
-<li>Compra medicamentos</li>
-<li>Sesiones profesionales</li>
-<li>Cuidado mascotas y plantas</li>
-</ul>
-
-</div>
-
-
-<!-- CAPITALES -->
-
-<div id="hogar-capitales" class="subtab-panel">
-
-<h2>📊Cálculo de capitales</h2>
-
-<p>El capital asegurado debe reflejar el valor real de la vivienda y de los bienes que contiene para evitar infraseguro.</p>
-
-<h3>Continente</h3>
-
-<p>El capital de continente se calcula en función de:</p>
-
-<ul>
-<li>Tipo de vivienda (piso, chalet, adosado)</li>
-<li>Provincia</li>
-<li>Metros cuadrados construidos</li>
-</ul>
-
-<p>Incluye:</p>
-
-<ul>
-<li>Estructura de la vivienda</li>
-<li>Paredes y suelos</li>
-<li>Instalaciones fijas (agua, electricidad)</li>
-<li>Cocina y baños</li>
-<li>Garaje y trastero si forman parte de la vivienda</li>
-<li>Placas solares instaladas</li>
-</ul>
-
-
-<h3>Contenido</h3>
-
-<p>El contenido corresponde a todos los bienes dentro de la vivienda.</p>
-
-<ul>
-<li>Muebles</li>
-<li>Electrodomésticos</li>
-<li>Televisores y tecnología</li>
-<li>Ropa</li>
-<li>Material deportivo</li>
-<li>Objetos personales</li>
-</ul>
-
-<h3>Importante</h3>
-
-<p><b>Si el capital declarado es inferior al valor real puede aplicarse la regla proporcional en caso de siniestro.</b></p></div>
-<div class="card">
-
-
-
-<!-- JOYAS -->
-<div id="hogar-joyas" class="subtab-panel">
-
-<h2>💍 Joyas en el seguro de hogar</h2>
-
-<p>
-Las joyas están cubiertas dentro del contenido del seguro de hogar, pero con límites establecidos en la póliza.  
-Si el valor de las joyas es elevado, es recomendable declararlas expresamente para que queden correctamente aseguradas.
-</p>
-
-<div class="card">
-
-<h3>Límites habituales de cobertura</h3>
-
-<ul>
-<li>Modalidad ampliada → hasta aproximadamente <strong>3.000 € en joyas</strong>.</li>
-<li>Modalidad integral → hasta aproximadamente <strong>6.000 € en joyas</strong>.</li>
-<li>Para valores superiores es recomendable declarar las joyas en la póliza.</li>
-</ul>
-
-<p>
-Cuando el valor de las joyas supera ciertos importes, la aseguradora puede solicitar información adicional o estudiar el riesgo antes de aceptar la cobertura.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Joyas de alto valor</h3>
-
-<p>
-Si el valor de las joyas es elevado, la compañía puede solicitar documentación adicional para incluirlas correctamente en la póliza.
-</p>
-
-<ul>
-<li>Factura de compra o tasación.</li>
-<li>Descripción detallada de la joya.</li>
-<li>Fotografías.</li>
-<li>Valor estimado.</li>
-</ul>
-
-<p>
-En algunos casos el riesgo puede pasar a estudio antes de aceptarse la ampliación de cobertura.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Caja fuerte</h3>
-
-<p>
-Cuando el valor de las joyas es elevado, la aseguradora puede exigir que se guarden en una <strong>caja fuerte</strong> para mantener la cobertura completa.
-</p>
-
-<p>
-La caja fuerte normalmente debe cumplir ciertas características de seguridad:
-</p>
-
-<ul>
-<li>Estar anclada a pared o suelo.</li>
-<li>Tener sistema de cierre de seguridad.</li>
-<li>Estar instalada de forma fija en la vivienda.</li>
-</ul>
-
-<p>
-Si las joyas no se guardan en las condiciones indicadas, la compañía podría limitar la indemnización en caso de robo.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Cómo declarar joyas en la póliza</h3>
-
-<p>
-Si el cliente tiene joyas cuyo valor supera el límite incluido en la póliza, se pueden declarar mediante un <strong>suplemento del seguro de hogar</strong>.
-</p>
-
-<p>
-El proceso suele requerir:
-</p>
-
-<ul>
-<li>Solicitud de ampliación de cobertura.</li>
-<li>Valor estimado o tasación de las joyas.</li>
-<li>Información sobre el sistema de seguridad de la vivienda.</li>
-<li>En algunos casos, características de la caja fuerte.</li>
-</ul>
-
-<p>
-Una vez aceptado el suplemento, las joyas quedarán aseguradas hasta el valor declarado.
-</p>
-
-</div>
-
-<div class="tip-comercial">
-💡 Consejo comercial: si el cliente cree que sus joyas pueden superar el límite de la póliza, es recomendable revisarlo y declararlas para evitar problemas en caso de robo.
-</div>
-</div>
-
-<!-- OBJETOS VALOR -->
-
-<div id="hogar-objetos-valor" class="subtab-panel">
-
-<h2>🏺 Objetos de valor en el seguro de hogar</h2>
-
-<p>
-Además de las joyas, existen otros bienes que pueden considerarse <strong>objetos de valor</strong> dentro de un seguro de hogar.  
-Estos bienes suelen requerir declaración específica en la póliza para garantizar su correcta cobertura.
-</p>
-
-<div class="card">
-
-<h3>Qué se considera objeto de valor</h3>
-
-<ul>
-<li>Obras de arte (cuadros, esculturas, grabados).</li>
-<li>Antigüedades.</li>
-<li>Colecciones (monedas, sellos, objetos históricos).</li>
-<li>Relojes de alto valor.</li>
-<li>Instrumentos musicales de valor elevado.</li>
-<li>Objetos decorativos de alto valor económico.</li>
-</ul>
-
-<p>
-En muchos casos estos objetos no quedan completamente cubiertos si no se declaran expresamente en la póliza.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Declaración en la póliza</h3>
-
-<p>
-Cuando el valor de un objeto es elevado, la aseguradora puede solicitar información adicional para poder incluirlo en la póliza.
-</p>
-
-<ul>
-<li>Descripción del objeto.</li>
-<li>Valor aproximado o tasación.</li>
-<li>Fotografías.</li>
-<li>Factura si existe.</li>
-</ul>
-
-<p>
-En algunos casos la compañía puede realizar un estudio previo antes de aceptar la cobertura del objeto.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Medidas de seguridad</h3>
-
-<p>
-Cuando el valor de los objetos es elevado, la aseguradora puede exigir medidas de seguridad adicionales en la vivienda.
-</p>
-
-<ul>
-<li>Sistemas de alarma.</li>
-<li>Caja fuerte para determinados objetos.</li>
-<li>Medidas de protección específicas según el tipo de bien.</li>
-</ul>
-
-<p>
-Estas medidas ayudan a reducir el riesgo y facilitan la aceptación del seguro.
-</p>
-
-</div>
-
-<div class="tip-comercial">
-💡 Consejo comercial: si el cliente tiene bienes de valor elevado (arte, relojes, colecciones), es recomendable revisarlo y declararlos en la póliza para evitar limitaciones en caso de siniestro.
-</div>
-</div>
-<!-- ARGUMENTARIO -->
-<div id="hogar-argumentario" class="subtab-panel">
-
-<h2>🧠 Argumentario comercial</h2>
-
-<h3>Por qué ofrecer seguro de hogar</h3>
-
-<ul>
-<li>Protege el patrimonio más importante del cliente: su vivienda.</li>
-<li>Cubre daños materiales y también responsabilidades frente a terceros.</li>
-<li>Evita gastos imprevistos que pueden ser muy elevados.</li>
-</ul>
-
-<h3>Puntos fuertes del seguro</h3>
-
-<ul>
-<li>Responsabilidad civil dentro y fuera de la vivienda</li>
-<li>Daño accidental</li>
-<li>Congelación de tuberías</li>
-<li>Defensa jurídica</li>
-<li>Responsabilidad civil de animales domésticos</li>
-<li>Asistencia hogar 24 horas</li>
-</ul>
-
-<h3>Mensajes comerciales útiles</h3>
-
-<ul>
-<li>“El seguro de hogar no protege solo la casa, protege también tu responsabilidad frente a terceros.”</li>
-<li>“Un pequeño siniestro de agua puede costar miles de euros si no hay seguro.”</li>
-<li>“Muchas coberturas se utilizan sin esperar a un gran siniestro: bricolaje, asistencia informática, reparaciones…”</li>
-</ul>
-
-<h3>Preguntas que ayudan a detectar necesidad</h3>
-
-<ul>
-<li>¿Tu vivienda está ya asegurada?</li>
-<li>¿Hace cuánto tiempo revisaste tu seguro de hogar?</li>
-<li>¿Tienes declarados correctamente los bienes de valor?</li>
-<li>¿Tienes responsabilidad civil fuera de la vivienda?</li>
-</ul>
-
-<div class="card">
-
-<h3>Capitales asegurados y regla proporcional</h3>
-
-<p>
-En los seguros de hogar es fundamental que los capitales asegurados del continente (vivienda) y del contenido (mobiliario) estén correctamente calculados. Si los capitales son inferiores al valor real del bien asegurado, puede aplicarse la llamada <strong>regla proporcional</strong>.
-</p>
-
-<h4>¿Qué es la regla proporcional?</h4>
-
-<p>
-La regla proporcional se aplica cuando el capital asegurado es inferior al valor real del bien. En ese caso, la indemnización del siniestro se reduce en la misma proporción.
-</p>
-
-<p><strong>Ejemplo:</strong></p>
-
-<ul>
-<li>Valor real de la vivienda: 200.000 €</li>
-<li>Capital asegurado: 100.000 €</li>
-<li>Siniestro: 40.000 €</li>
-</ul>
-
-<p>
-La aseguradora solo indemnizaría el 50 % del daño, es decir, 20.000 €, al existir infraseguro.
-</p>
-
-<h4>Derogación de la regla proporcional</h4>
-
-<p>
-En muchas pólizas de hogar, cuando los capitales de continente y contenido son iguales o superiores a los capitales propuestos por la aseguradora, se aplica la <strong>derogación de la regla proporcional</strong>.
-</p>
-
-<p>
-Esto significa que, en caso de siniestro, <strong>no se aplicará reducción de indemnización por infraseguro</strong>, siempre que los capitales asegurados se correspondan con los valores orientativos establecidos por la compañía.
-</p>
-
-<h4>Revalorización automática de capitales</h4>
-
-<p>
-Las pólizas suelen incluir una <strong>cláusula de revalorización automática</strong>. Esto significa que cada año los capitales asegurados se actualizan automáticamente según índices de coste de construcción o inflación.
-</p>
-
-<p>
-Aun así, es recomendable revisar los capitales aproximadamente cada 2 años para asegurarse de que siguen siendo adecuados.
-</p>
-
-<div style="background:#fff3cd; border-left:6px solid #ffc107; padding:15px; margin-top:20px; border-radius:6px;">
-
-<strong>⚠ IMPORTANTE – Recomendación profesional</strong>
-
-<p style="margin-top:10px;">
-Para calcular correctamente el capital del continente se recomienda utilizar siempre la <strong>referencia catastral</strong> de la vivienda.
-</p>
-
-<ul>
-<li>Permite conocer los metros construidos reales.</li>
-<li>Ayuda a calcular correctamente el valor de reconstrucción.</li>
-<li>Evita situaciones de infraseguro.</li>
-<li>Facilita que la aseguradora indemnice el <strong>100 % del daño</strong> en caso de siniestro.</li>
-</ul>
-
-<p>
-Por este motivo es una buena práctica utilizar la referencia catastral al contratar o revisar un seguro de hogar.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<h3>Vivienda vacacional en casa cueva – Consideraciones especiales</h3>
-
-<p>
-Las viviendas tipo <strong>casa cueva</strong> pueden ser consideradas por las aseguradoras como <strong>riesgos especiales</strong> debido a su sistema constructivo, ya que se trata de viviendas excavadas en terreno natural y no de edificaciones convencionales.
-</p>
-
-<p>
-Por este motivo, algunos sistemas de contratación pueden derivar automáticamente el riesgo a <strong>revisión por parte del departamento de riesgos</strong> de la aseguradora.
-</p>
-
-<h4>Motivos por los que puede revisarse el riesgo</h4>
-
-<ul>
-<li>Construcción excavada en terreno.</li>
-<li>Posibles filtraciones o humedad estructural.</li>
-<li>Dificultad para valorar el coste de reconstrucción.</li>
-<li>Características constructivas diferentes a una vivienda tradicional.</li>
-</ul>
-
-<h4>Procedimiento habitual</h4>
-
-<ul>
-<li>Emitir la póliza de hogar según el sistema de contratación.</li>
-<li>Comunicar a la aseguradora que se trata de una <strong>casa cueva destinada a vivienda vacacional</strong>.</li>
-<li>En caso necesario, el departamento de riesgos podrá solicitar información adicional como fotografías, referencia catastral o año de rehabilitación.</li>
-<li>La compañía confirmará la aceptación del riesgo o emitirá un suplemento o anotación en la póliza.</li>
-</ul>
-
-<div style="background:#fff3cd; border-left:6px solid #ffc107; padding:15px; margin-top:15px; border-radius:6px;">
-
-<strong>⚠ Importante</strong>
-
-<p style="margin-top:10px;">
-Las casas cueva pueden requerir revisión por parte del departamento de riesgos antes de la aceptación definitiva del seguro de hogar.
-</p>
-
-<p>
-Es recomendable comunicar siempre a la aseguradora el tipo de construcción y el uso turístico de la vivienda para evitar problemas en caso de siniestro.
-</p>
-
-</div>
-
-</div>
-
-<div class="tip-comercial">
-💡 Tip comercial: cuando un cliente alquila su vivienda, puede ser buena oportunidad para ofrecer también soluciones de protección complementaria según sus necesidades.
-</div>
-
-</div>
-</div>
-
-
-
-<!-- VENTA CRUZADA -->
-
-<div id="hogar-venta-cruzada" class="subtab-panel">
-
-<h2>🔗Venta cruzada con seguro de Impago de alquiler</h2>
-
-<p>Cuando un cliente alquila su vivienda, es recomendable proteger tanto la vivienda como los ingresos que genera.</p>
-
-<h3>Protección completa del propietario</h3>
-
-<ul>
-<li><b>Seguro de Hogar:</b> protege la vivienda frente a daños (agua, incendio, robo, etc.).</li>
-<li><b>Seguro de Impago de alquiler:</b> protege los ingresos del propietario si el inquilino deja de pagar.</li>
-</ul>
-
-<h3>Ventaja para el propietario</h3>
-
-<ul>
-<li>Protección del inmueble.</li>
-<li>Protección de la renta mensual.</li>
-<li>Defensa jurídica ante conflictos con el inquilino.</li>
-<li>Gestión profesional del proceso de reclamación.</li>
-</ul>
-
-<h3>Argumento comercial</h3>
-
-<p><b>"Si alquilas tu vivienda, lo ideal es proteger tanto la casa como el ingreso del alquiler."</b></p>
-
-<p>El seguro de hogar protege el inmueble, mientras que el seguro de impago protege la renta que genera.</p>
-
-<h3>Situaciones habituales</h3>
-
-<ul>
-<li>Cliente que alquila una segunda vivienda.</li>
-<li>Cliente que ha heredado una vivienda y la alquila.</li>
-<li>Cliente que compra vivienda como inversión.</li>
-</ul>
-
-<p><b>Consejo comercial:</b> cuando un cliente comenta que tiene una vivienda alquilada, es el momento perfecto para ofrecer ambos seguros.</p>
-</div>
-</div>
-
-<!-- CHECKLIST -->
-
-<div id="hogar-checklist" class="subtab-panel">
-
-<h2>✅Checklist contratación</h2>
-
-<p>Antes de contratar el seguro de hogar conviene revisar los siguientes puntos con el cliente:</p>
-
-<h3>Datos de la vivienda</h3>
-
-<ul>
-<li>Tipo de vivienda (piso, chalet, adosado, etc.).</li>
-<li>Metros cuadrados construidos.</li>
-<li>Uso de la vivienda (habitual, segunda residencia, alquiler).</li>
-<li>Año de construcción o reforma.</li>
-<li>Ubicación (provincia).</li>
-</ul>
-
-<h3>Capitales asegurados</h3>
-
-<ul>
-<li>Capital de continente correctamente calculado.</li>
-<li>Capital de contenido aproximado de los bienes.</li>
-<li>Existencia de joyas.</li>
-<li>Objetos de valor especial (cuadros, colecciones, relojes, etc.).</li>
-</ul>
-
-<h3>Elementos especiales</h3>
-
-<ul>
-<li>Placas solares instaladas.</li>
-<li>Piscina.</li>
-<li>Garaje o trastero.</li>
-<li>Instalaciones adicionales.</li>
-</ul>
-
-<h3>Revisión final</h3>
-
-<ul>
-<li>Modalidad elegida (Esencial, Ampliado, Integral o Senior).</li>
-<li>Revisión de coberturas incluidas.</li>
-<li>Confirmación de capitales asegurados.</li>
-</ul>
-
-<p><b>Consejo comercial:</b> dedicar unos minutos a revisar estos puntos evita problemas en caso de siniestro.</p>
-</div>
-
-
-</div>
-</section>
-
-
-<div class="tip-comercial">
-💡 Tip comercial: cuando un cliente alquila su vivienda, es buena oportunidad para ofrecer también el seguro de impago de alquiler.
-</div>
-
-</section>
 <section id="ciberseguro" class="main-section">
   <h1>🛡️ Ciberseguro</h1>
   <p>Protección digital para autónomos y PYMEs: asistencia 24/7 y coberturas ante ataques informáticos y sus consecuencias.</p>
@@ -5564,6 +5012,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 
 <div class="subtabs">
 
+<div class="subtabs">
 <button class="subtab active" data-subtab="aegon-indice">Índice</button>
 <button class="subtab" data-subtab="aegon-vida">Seguros de Vida</button>
 <button class="subtab" data-subtab="aegon-salud">Seguros de Salud</button>
@@ -5571,8 +5020,8 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 <button class="subtab" data-subtab="aegon-accidentes">Accidentes</button>
 <button class="subtab" data-subtab="aegon-dependencia">Dependencia</button>
 <button class="subtab" data-subtab="aegon-decesos">Decesos</button>
-
-
+<button class="subtab" data-subtab="aegon-hogar">Mi Hogar</button>
+</div>
 </div>
 
 
@@ -5587,6 +5036,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 <li>Seguro de accidentes</li>
 <li>Seguro de dependencia</li>
 <li>Seguro de decesos</li>
+<li>Seguro Mi Hogar</li>
 </ul>
 
 <div class="tip-comercial">
@@ -7329,6 +6779,316 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
 </div>
 </section>
 
+<div id="aegon-hogar" class="subtab-panel">
+
+  <h2>Mi Hogar</h2>
+  <p>Protección para la vivienda, el contenido y la responsabilidad del cliente.</p>
+
+  <div class="hogar-subtabs">
+    <button type="button" class="hogar-subtab active" onclick="openHogarTab(event, 'hogar-modalidades-panel')">Modalidades</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-capitales-panel')">Capitales</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-joyas-panel')">Joyas</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-objetos-valor-panel')">Objetos valor</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-argumentario-panel')">Argumentario</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-venta-cruzada-panel')">Venta cruzada</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-checklist-panel')">Checklist</button>
+  </div>
+
+  <!-- MODALIDADES -->
+  <div id="hogar-modalidades-panel" class="hogar-panel" style="display:block;">
+    <h2>🏠 Modalidades</h2>
+
+    <h3>Esencial</h3>
+    <ul>
+      <li>Incendio</li>
+      <li>Daños por agua</li>
+      <li>Cristales</li>
+      <li>Robo en vivienda</li>
+      <li>Responsabilidad civil</li>
+      <li>Defensa jurídica</li>
+      <li>RC mascotas hasta 150.000 €</li>
+    </ul>
+
+    <h3>Ampliado</h3>
+    <p>Incluye todo lo anterior más:</p>
+    <ul>
+      <li>Daños estéticos</li>
+      <li>Servicio de bricolaje</li>
+      <li>Asistencia informática</li>
+      <li>Actos vandálicos</li>
+      <li>Robo dentro y fuera de la vivienda</li>
+      <li>Daños eléctricos</li>
+    </ul>
+
+    <p><b>Compromiso de calidad:</b> asistencia en 3 / 24 / 48 / 72 horas.</p>
+
+    <h3>Integral</h3>
+    <ul>
+      <li>Daño accidental</li>
+      <li>Reparación de electrodomésticos</li>
+      <li>Rotura de móviles y tablets</li>
+      <li>Congelación de tuberías</li>
+      <li>Desatascos ampliados</li>
+      <li><b>Rotura de placas solares</b></li>
+    </ul>
+
+    <h3>Senior</h3>
+    <ul>
+      <li>Ayuda a domicilio</li>
+      <li>Limpieza hogar</li>
+      <li>Compra medicamentos</li>
+      <li>Sesiones profesionales</li>
+      <li>Cuidado mascotas y plantas</li>
+    </ul>
+  </div>
+
+  <!-- CAPITALES -->
+  <div id="hogar-capitales-panel" class="hogar-panel" style="display:none;">
+    <h2>📊 Cálculo de capitales</h2>
+
+    <p>El capital asegurado debe reflejar el valor real de la vivienda y de los bienes que contiene para evitar infraseguro.</p>
+
+    <h3>Continente</h3>
+    <p>El capital de continente se calcula en función de:</p>
+    <ul>
+      <li>Tipo de vivienda (piso, chalet, adosado)</li>
+      <li>Provincia</li>
+      <li>Metros cuadrados construidos</li>
+    </ul>
+
+    <p>Incluye:</p>
+    <ul>
+      <li>Estructura de la vivienda</li>
+      <li>Paredes y suelos</li>
+      <li>Instalaciones fijas (agua, electricidad)</li>
+      <li>Cocina y baños</li>
+      <li>Garaje y trastero si forman parte de la vivienda</li>
+      <li>Placas solares instaladas</li>
+    </ul>
+
+    <h3>Contenido</h3>
+    <p>El contenido corresponde a todos los bienes dentro de la vivienda.</p>
+    <ul>
+      <li>Muebles</li>
+      <li>Electrodomésticos</li>
+      <li>Televisores y tecnología</li>
+      <li>Ropa</li>
+      <li>Material deportivo</li>
+      <li>Objetos personales</li>
+    </ul>
+
+    <h3>Importante</h3>
+    <p><b>Si el capital declarado es inferior al valor real puede aplicarse la regla proporcional en caso de siniestro.</b></p>
+  </div>
+
+  <!-- JOYAS -->
+  <div id="hogar-joyas-panel" class="hogar-panel" style="display:none;">
+    <h2>💍 Joyas en el seguro de hogar</h2>
+
+    <p>
+      Las joyas están cubiertas dentro del contenido del seguro de hogar, pero con límites establecidos en la póliza.
+      Si el valor de las joyas es elevado, es recomendable declararlas expresamente para que queden correctamente aseguradas.
+    </p>
+
+    <div class="card">
+      <h3>Límites habituales de cobertura</h3>
+      <ul>
+        <li>Modalidad ampliada → hasta aproximadamente <strong>3.000 € en joyas</strong>.</li>
+        <li>Modalidad integral → hasta aproximadamente <strong>6.000 € en joyas</strong>.</li>
+        <li>Para valores superiores es recomendable declarar las joyas en la póliza.</li>
+      </ul>
+      <p>Cuando el valor de las joyas supera ciertos importes, la aseguradora puede solicitar información adicional o estudiar el riesgo antes de aceptar la cobertura.</p>
+    </div>
+
+    <div class="card">
+      <h3>Joyas de alto valor</h3>
+      <p>Si el valor de las joyas es elevado, la compañía puede solicitar documentación adicional para incluirlas correctamente en la póliza.</p>
+      <ul>
+        <li>Factura de compra o tasación.</li>
+        <li>Descripción detallada de la joya.</li>
+        <li>Fotografías.</li>
+        <li>Valor estimado.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Caja fuerte</h3>
+      <p>Cuando el valor de las joyas es elevado, la aseguradora puede exigir que se guarden en una <strong>caja fuerte</strong> para mantener la cobertura completa.</p>
+      <ul>
+        <li>Estar anclada a pared o suelo.</li>
+        <li>Tener sistema de cierre de seguridad.</li>
+        <li>Estar instalada de forma fija en la vivienda.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Cómo declarar joyas en la póliza</h3>
+      <p>Si el cliente tiene joyas cuyo valor supera el límite incluido en la póliza, se pueden declarar mediante un <strong>suplemento del seguro de hogar</strong>.</p>
+      <ul>
+        <li>Solicitud de ampliación de cobertura.</li>
+        <li>Valor estimado o tasación de las joyas.</li>
+        <li>Información sobre el sistema de seguridad de la vivienda.</li>
+        <li>En algunos casos, características de la caja fuerte.</li>
+      </ul>
+    </div>
+
+    <div class="tip-comercial">
+      💡 Consejo comercial: si el cliente cree que sus joyas pueden superar el límite de la póliza, es recomendable revisarlo y declararlas para evitar problemas en caso de robo.
+    </div>
+  </div>
+
+  <!-- OBJETOS VALOR -->
+  <div id="hogar-objetos-valor-panel" class="hogar-panel" style="display:none;">
+    <h2>🏺 Objetos de valor en el seguro de hogar</h2>
+
+    <p>
+      Además de las joyas, existen otros bienes que pueden considerarse <strong>objetos de valor</strong> dentro de un seguro de hogar.
+      Estos bienes suelen requerir declaración específica en la póliza para garantizar su correcta cobertura.
+    </p>
+
+    <div class="card">
+      <h3>Qué se considera objeto de valor</h3>
+      <ul>
+        <li>Obras de arte (cuadros, esculturas, grabados).</li>
+        <li>Antigüedades.</li>
+        <li>Colecciones (monedas, sellos, objetos históricos).</li>
+        <li>Relojes de alto valor.</li>
+        <li>Instrumentos musicales de valor elevado.</li>
+        <li>Objetos decorativos de alto valor económico.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Declaración en la póliza</h3>
+      <p>Cuando el valor de un objeto es elevado, la aseguradora puede solicitar información adicional para poder incluirlo en la póliza.</p>
+      <ul>
+        <li>Descripción del objeto.</li>
+        <li>Valor aproximado o tasación.</li>
+        <li>Fotografías.</li>
+        <li>Factura si existe.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Medidas de seguridad</h3>
+      <p>Cuando el valor de los objetos es elevado, la aseguradora puede exigir medidas de seguridad adicionales en la vivienda.</p>
+      <ul>
+        <li>Sistemas de alarma.</li>
+        <li>Caja fuerte para determinados objetos.</li>
+        <li>Medidas de protección específicas según el tipo de bien.</li>
+      </ul>
+    </div>
+
+    <div class="tip-comercial">
+      💡 Consejo comercial: si el cliente tiene bienes de valor elevado (arte, relojes, colecciones), es recomendable revisarlo y declararlos en la póliza para evitar limitaciones en caso de siniestro.
+    </div>
+  </div>
+
+  <!-- ARGUMENTARIO -->
+  <div id="hogar-argumentario-panel" class="hogar-panel" style="display:none;">
+    <h2>🧠 Argumentario comercial</h2>
+
+    <h3>Por qué ofrecer seguro de hogar</h3>
+    <ul>
+      <li>Protege el patrimonio más importante del cliente: su vivienda.</li>
+      <li>Cubre daños materiales y también responsabilidades frente a terceros.</li>
+      <li>Evita gastos imprevistos que pueden ser muy elevados.</li>
+    </ul>
+
+    <h3>Puntos fuertes del seguro</h3>
+    <ul>
+      <li>Responsabilidad civil dentro y fuera de la vivienda</li>
+      <li>Daño accidental</li>
+      <li>Congelación de tuberías</li>
+      <li>Defensa jurídica</li>
+      <li>Responsabilidad civil de animales domésticos</li>
+      <li>Asistencia hogar 24 horas</li>
+    </ul>
+
+    <h3>Mensajes comerciales útiles</h3>
+    <ul>
+      <li>“El seguro de hogar no protege solo la casa, protege también tu responsabilidad frente a terceros.”</li>
+      <li>“Un pequeño siniestro de agua puede costar miles de euros si no hay seguro.”</li>
+      <li>“Muchas coberturas se utilizan sin esperar a un gran siniestro: bricolaje, asistencia informática, reparaciones…”</li>
+    </ul>
+
+    <h3>Preguntas que ayudan a detectar necesidad</h3>
+    <ul>
+      <li>¿Tu vivienda está ya asegurada?</li>
+      <li>¿Hace cuánto tiempo revisaste tu seguro de hogar?</li>
+      <li>¿Tienes declarados correctamente los bienes de valor?</li>
+      <li>¿Tienes responsabilidad civil fuera de la vivienda?</li>
+    </ul>
+
+    <div class="tip-comercial">
+      💡 Tip comercial: cuando un cliente alquila su vivienda, puede ser buena oportunidad para ofrecer también soluciones de protección complementaria según sus necesidades.
+    </div>
+  </div>
+
+  <!-- VENTA CRUZADA -->
+  <div id="hogar-venta-cruzada-panel" class="hogar-panel" style="display:none;">
+    <h2>🔗 Venta cruzada con seguro de impago de alquiler</h2>
+
+    <p>Cuando un cliente alquila su vivienda, es recomendable proteger tanto la vivienda como los ingresos que genera.</p>
+
+    <h3>Protección completa del propietario</h3>
+    <ul>
+      <li><b>Seguro de Hogar:</b> protege la vivienda frente a daños (agua, incendio, robo, etc.).</li>
+      <li><b>Seguro de Impago de alquiler:</b> protege los ingresos del propietario si el inquilino deja de pagar.</li>
+    </ul>
+
+    <h3>Ventaja para el propietario</h3>
+    <ul>
+      <li>Protección del inmueble.</li>
+      <li>Protección de la renta mensual.</li>
+      <li>Defensa jurídica ante conflictos con el inquilino.</li>
+      <li>Gestión profesional del proceso de reclamación.</li>
+    </ul>
+
+    <h3>Argumento comercial</h3>
+    <p><b>“Si alquilas tu vivienda, lo ideal es proteger tanto la casa como el ingreso del alquiler.”</b></p>
+  </div>
+
+  <!-- CHECKLIST -->
+  <div id="hogar-checklist-panel" class="hogar-panel" style="display:none;">
+    <h2>✅ Checklist contratación</h2>
+
+    <p>Antes de contratar el seguro de hogar conviene revisar los siguientes puntos con el cliente:</p>
+
+    <h3>Datos de la vivienda</h3>
+    <ul>
+      <li>Tipo de vivienda (piso, chalet, adosado, etc.).</li>
+      <li>Metros cuadrados construidos.</li>
+      <li>Uso de la vivienda (habitual, segunda residencia, alquiler).</li>
+      <li>Año de construcción o reforma.</li>
+      <li>Ubicación (provincia).</li>
+    </ul>
+
+    <h3>Capitales asegurados</h3>
+    <ul>
+      <li>Capital de continente correctamente calculado.</li>
+      <li>Capital de contenido aproximado de los bienes.</li>
+      <li>Existencia de joyas.</li>
+      <li>Objetos de valor especial (cuadros, colecciones, relojes, etc.).</li>
+    </ul>
+
+    <h3>Elementos especiales</h3>
+    <ul>
+      <li>Placas solares instaladas.</li>
+      <li>Piscina.</li>
+      <li>Garaje o trastero.</li>
+      <li>Instalaciones adicionales.</li>
+    </ul>
+
+    <h3>Revisión final</h3>
+    <ul>
+      <li>Modalidad elegida (Esencial, Ampliado, Integral o Senior).</li>
+      <li>Revisión de coberturas incluidas.</li>
+      <li>Confirmación de capitales asegurados.</li>
+    </ul>
+  </div>
+</div>
+</div>
 <section id="credito" class="main-section">
   <h1>📊 Seguro de Crédito – Póliza PY</h1>
 
@@ -8019,5 +7779,17 @@ El contenido tiene carácter informativo y no constituye documentación oficial 
 </div>
 </section>
 </div
+<script>
+<script>
+function activarPrimeraSubtabHogar() {
+  const primeraTab = document.querySelector('#aegon-hogar .hogar-subtab');
+  if (primeraTab) {
+    primeraTab.click();
+  }
+}
 
+document.addEventListener("DOMContentLoaded", function () {
+  const botonMiHogar = document.querySelector('[data-subtab="aegon-hogar"]');
 
+  if (botonMiHogar) {
+    botonMiHogar.addEventListener("click", function () {
