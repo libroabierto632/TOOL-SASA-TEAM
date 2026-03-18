@@ -1125,3 +1125,54 @@ background:#d6001c;
 color:#fff;
 border-color:#d6001c;
 }
+
+.hogar-subtabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:12px 0 16px 0;
+}
+
+.hogar-subtab{
+  background:#f2f2f2;
+  border:1px solid #ddd;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.hogar-subtab.active{
+  background:#d6001c;
+  color:#fff;
+  border-color:#d6001c;
+}
+
+.hogar-panel{
+  display:none;
+}
+.hogar-subtabs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:12px 0 16px 0;
+}
+
+.hogar-subtab{
+  background:#f7dede;
+  border:1px solid #e7b5b5;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.hogar-subtab.active{
+  background:#d6001c;
+  color:#fff;
+  border-color:#d6001c;
+}
+
+.hogar-panel{
+  display:none;
+}
