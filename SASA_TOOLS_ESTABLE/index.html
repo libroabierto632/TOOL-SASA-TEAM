@@ -4048,8 +4048,34 @@ style="position:fixed;bottom:20px;right:20px;padding:10px 14px;border:none;borde
   });
 })();
 
+
 </script>
 <button id="btnArriba">⬆</button>
+
+
+<script>
+function openVidaTab(event, panelId) {
+  event.preventDefault();
+
+  const vidaRoot = document.getElementById('aegon-vida');
+  if (!vidaRoot) return;
+
+  vidaRoot.querySelectorAll('.vida-panel').forEach(panel => {
+    panel.style.display = 'none';
+  });
+
+  vidaRoot.querySelectorAll('.vida-subtab').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  const target = document.getElementById(panelId);
+  if (target) {
+    target.style.display = 'block';
+  }
+
+  event.currentTarget.classList.add('active');
+}
+</script>
 </body>
 
 </html>
@@ -5570,1019 +5596,461 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 </div>
 
 
+
 <div id="aegon-vida" class="subtab-panel">
 
-<div class="card">
+  <div class="card">
+    <h2>🛡️ Seguros de Vida</h2>
+    <p>
+      Los seguros de vida permiten proteger económicamente a la familia o a la empresa
+      frente a situaciones como el fallecimiento o la invalidez permanente del asegurado.
+    </p>
+  </div>
 
-<h2>🛡️ Seguros de Vida –  Vida</h2>
+  <div class="vida-subtabs" style="margin:16px 0;">
+    <button type="button" class="vida-subtab active" onclick="openVidaTab(event, 'vida-guia-aegon')">Guía Vida</button>
+    <button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-esencial-aegon')">Esencial</button>
+    <button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-familiar-aegon')">Familiar Plus</button>
+    <button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-empresa-aegon')">Empresa</button>
+    <button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-femenino-aegon')">Femenino</button>
+  </div>
 
-<p>
-Los seguros de vida permiten proteger económicamente a la familia o a la empresa frente a situaciones como el fallecimiento o la invalidez permanente del asegurado.
-</p>
+  <!-- GUÍA VIDA -->
+  <div id="vida-guia-aegon" class="vida-panel" style="display:block;">
+
+    <div class="card">
+      <h2>💡 Suscríbete a la vida</h2>
+      <p>
+        Hoy en día es muy fácil tener pequeñas suscripciones que casi pasan desapercibidas:
+        plataformas de series, música, aplicaciones, fútbol, compras online o servicios digitales.
+      </p>
+      <p>
+        Sin embargo, muchas veces dejamos para después algo mucho más importante:
+        <strong>la protección económica de nuestra familia.</strong>
+      </p>
+      <p style="font-size:18px; font-weight:bold;">
+        Suscribirse a la vida no es un gasto, es una inversión en tranquilidad.
+      </p>
+      <div class="tip-comercial">
+        💡 Idea clave: muchas personas revisan sus suscripciones digitales cada año.
+        Es un buen momento también para revisar si la familia está correctamente protegida.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📊 Suscripciones invisibles vs protección familiar</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Servicio</th>
+              <th>Precio mensual aproximado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Netflix</td><td>13 €</td></tr>
+            <tr><td>Amazon Prime</td><td>5 €</td></tr>
+            <tr><td>Disney+</td><td>9 €</td></tr>
+            <tr><td>Fútbol o deporte</td><td>20 €</td></tr>
+            <tr><td>Spotify o música</td><td>10 €</td></tr>
+            <tr><td>Aplicaciones o herramientas digitales</td><td>8 €</td></tr>
+            <tr><td><strong>Total mensual aproximado</strong></td><td><strong>65 €</strong></td></tr>
+            <tr><td><strong>Total anual aproximado</strong></td><td><strong>780 €</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Seguro de vida – ejemplo realista</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th>Importe aproximado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Seguro de vida</td><td>10 € – 20 € al mes</td></tr>
+            <tr><td>Coste anual</td><td>120 € – 240 € al año</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip-comercial">
+        💡 Por menos de lo que cuestan varias suscripciones, puedes proteger a tu familia.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>⏰ ¿Cuándo es el mejor momento para contratar un seguro de vida?</h2>
+      <ul>
+        <li>Cuando se compra una vivienda</li>
+        <li>Cuando se forma una familia</li>
+        <li>Cuando alguien depende económicamente de ti</li>
+        <li>Cuando se quiere planificar el futuro</li>
+      </ul>
+      <div class="tip-comercial">
+        💡 En general, cuanto antes se contrata un seguro de vida, más económico suele ser.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>🧮 Calculadora orientativa de seguro de vida</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Ingreso mensual</th>
+              <th>Ingreso anual</th>
+              <th>Capital recomendado (10 años)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.500 €</td><td>18.000 €</td><td>180.000 €</td></tr>
+            <tr><td>2.000 €</td><td>24.000 €</td><td>240.000 €</td></tr>
+            <tr><td>2.500 €</td><td>30.000 €</td><td>300.000 €</td></tr>
+            <tr><td>3.000 €</td><td>36.000 €</td><td>360.000 €</td></tr>
+            <tr><td>4.000 €</td><td>48.000 €</td><td>480.000 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="tip-comercial">
+        💡 El seguro de vida no asegura solo a una persona, asegura los ingresos que sostienen a la familia.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💼 ¿Cuánto vale tu ingreso?</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Concepto</th>
+              <th>Importe</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Ingreso mensual</td><td>2.000 €</td></tr>
+            <tr><td>Ingreso anual</td><td>24.000 €</td></tr>
+            <tr><td>Ingresos en 10 años</td><td>240.000 €</td></tr>
+            <tr><td>Ingresos en 20 años</td><td>480.000 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        Si ese ingreso desaparece, la familia pierde su estabilidad.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>⚠️ Errores comunes al contratar un seguro de vida</h2>
+      <ul>
+        <li>Dejarlo para más adelante</li>
+        <li>No calcular bien el capital necesario</li>
+        <li>Pensar que solo es necesario con hipoteca</li>
+        <li>No revisarlo con el paso del tiempo</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🏠 Situaciones donde un seguro de vida marca la diferencia</h2>
+      <ul>
+        <li>Familias con hijos</li>
+        <li>Personas con hipoteca</li>
+        <li>Autónomos o trabajadores por cuenta propia</li>
+        <li>Personas que quieren proteger a su pareja o familia</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Regla de las 3 preguntas</h2>
+      <p><strong>1.</strong> ¿Depende alguien de tus ingresos?</p>
+      <p><strong>2.</strong> ¿Cuánto tiempo podría mantenerse la economía familiar sin esos ingresos?</p>
+      <p><strong>3.</strong> ¿Te gustaría que tu familia tuviera un respaldo económico si algún día faltaras?</p>
+      <div class="tip-comercial">
+        💡 Si la respuesta es sí, hay necesidad de protección.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🩺 Telesselección Seguros de Vida</h3>
+      <table style="width:100%; border-collapse:collapse;">
+        <tr style="background:#f2f2f2;">
+          <th style="padding:8px;border:1px solid #ddd;">Edad</th>
+          <th style="padding:8px;border:1px solid #ddd;">Declaración de Salud</th>
+          <th style="padding:8px;border:1px solid #ddd;">Telesselección / Pruebas Médicas</th>
+        </tr>
+        <tr>
+          <td style="padding:8px;border:1px solid #ddd;">Hasta 50 años</td>
+          <td style="padding:8px;border:1px solid #ddd;">Hasta 150.000 €</td>
+          <td style="padding:8px;border:1px solid #ddd;">150.000 € – 300.000 €</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;border:1px solid #ddd;">Desde 51 años</td>
+          <td style="padding:8px;border:1px solid #ddd;">Hasta 75.000 €</td>
+          <td style="padding:8px;border:1px solid #ddd;">75.000 € – 300.000 €</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;border:1px solid #ddd;">Todas las edades</td>
+          <td style="padding:8px;border:1px solid #ddd;">—</td>
+          <td style="padding:8px;border:1px solid #ddd;">Pruebas médicas a partir de 300.000 €</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- ESENCIAL -->
+  <div id="vida-esencial-aegon" class="vida-panel" style="display:none;">
+
+    <div class="card">
+      <h3>Protección Familiar Esencial</h3>
+
+      <p>
+        Seguro de vida riesgo sencillo diseñado para garantizar un capital básico en caso de fallecimiento del asegurado.
+      </p>
+
+      <ul>
+        <li>Capital asegurado fijo: 50.000 €</li>
+        <li>Edad de contratación: 42 a 64 años</li>
+        <li>Forma de pago: anual o semestral</li>
+        <li>Seguro anual renovable</li>
+      </ul>
+
+      <h4>Primas orientativas</h4>
+
+      <table style="width:100%; border-collapse:collapse;">
+        <tr style="background:#f2f2f2;">
+          <th style="padding:8px;border:1px solid #ddd;">Edad</th>
+          <th style="padding:8px;border:1px solid #ddd;">Prima anual</th>
+        </tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;">42-50</td><td style="padding:8px;border:1px solid #ddd;">240 €</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;">51-55</td><td style="padding:8px;border:1px solid #ddd;">350 €</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;">56-60</td><td style="padding:8px;border:1px solid #ddd;">550 €</td></tr>
+        <tr><td style="padding:8px;border:1px solid #ddd;">61-65</td><td style="padding:8px;border:1px solid #ddd;">750 €</td></tr>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- FAMILIAR PLUS -->
+  <div id="vida-familiar-aegon" class="vida-panel" style="display:none;">
+
+    <div class="card">
+      <h3>Protección Familiar Plus</h3>
+
+      <p>
+        Seguro de vida riesgo más completo que cubre fallecimiento e invalidez permanente absoluta.
+      </p>
+
+      <ul>
+        <li>Edad de contratación: 18 a 64 años</li>
+        <li>Capital mínimo: 60.000 €</li>
+        <li>Capital máximo: 1.600.000 €</li>
+        <li>Pago anual, semestral o trimestral</li>
+      </ul>
+
+      <h4>Coberturas</h4>
+
+      <ul>
+        <li>Fallecimiento</li>
+        <li>Invalidez permanente absoluta</li>
+        <li>Gran invalidez</li>
+        <li>Fallecimiento por accidente doble capital por accidente (opcional)</li>
+        <li>Fallecimiento por accidente de circulación triple capital por accidente de circulación (opcional)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- EMPRESA -->
+  <div id="vida-empresa-aegon" class="vida-panel" style="display:none;">
+
+    <div class="card">
+      <h3>Seguro de Vida – Protección Empresa</h3>
+
+      <p>
+        Seguro diseñado para proteger la continuidad de la empresa en caso de fallecimiento
+        o invalidez permanente del empresario, socio o apoderado.
+      </p>
+
+      <ul>
+        <li>Se puede contratar una póliza por cada socio o apoderado</li>
+        <li>Permite cubrir deudas empresariales</li>
+        <li>Garantiza estabilidad financiera del negocio</li>
+      </ul>
+
+      <h4>Ejemplo</h4>
+
+      <ul>
+        <li>Deuda empresa: 50.000 €</li>
+        <li>Capital recomendado: 60.000 €</li>
+        <li>Prima anual aproximada: 287,98 €</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- FEMENINO -->
+  <div id="vida-femenino-aegon" class="vida-panel" style="display:none;">
+
+    <div class="card">
+      <h3>Protección Familiar en Femenino</h3>
+
+      <p>
+        Seguro de vida específico para mujeres que incluye cobertura adicional por cáncer femenino.
+      </p>
+
+      <ul>
+        <li>Edad de contratación: 18 a 64 años</li>
+        <li>Cobertura por fallecimiento</li>
+        <li>Cobertura por invalidez permanente absoluta</li>
+        <li>Cobertura adicional por diagnóstico de cáncer femenino</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🔥 Campaña Femenino – Empuje final</h2>
+
+      <p style="color:#d6001c; font-weight:bold;">
+        Promoción activa: 20% de descuento hasta el 27 de marzo
+      </p>
+
+      <p>
+        Quedan pocos días para aprovechar la campaña, así que el enfoque estos días debe ser
+        <strong>rápido, sencillo y directo a clientas con perfil claro</strong>.
+      </p>
+
+      <h3>Qué clientas priorizar</h3>
+      <ul>
+        <li>Mujeres entre 30 y 55 años</li>
+        <li>Con hijos o cargas familiares</li>
+        <li>Con nómina o ingresos estables</li>
+        <li>Con hipoteca o gastos fijos importantes</li>
+        <li>Autónomas o profesionales</li>
+        <li>Clientas con protección de vida pendiente o revisable</li>
+      </ul>
+
+      <h3>Cómo enfocarlo</h3>
+      <ul>
+        <li>No entrar hablando de producto, sino de <strong>protección</strong>.</li>
+        <li>Aprovechar la promoción del <strong>20%</strong> como motivo para revisarlo ahora.</li>
+        <li>Explicarlo como una protección pensada para mujer, no como una póliza más.</li>
+        <li>Ir a una simulación rápida, sin complicar la conversación.</li>
+      </ul>
+
+      <h3>Frase de apertura rápida</h3>
+      <p>
+        Hola 😊 te escribo porque estos días estamos revisando una protección femenina
+        que ahora mismo tiene un <strong>20% de descuento hasta el día 27</strong>
+        y la verdad es que merece la pena mirarla.
+      </p>
+
+      <p>
+        Si quieres, te miro el precio en un momento y ves si te encaja, sin compromiso.
+      </p>
+
+      <div class="tip-comercial">
+        💡 Menos explicación larga y más revisión directa.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💬 5 preguntas para iniciar la conversación sobre el Seguro de Vida en Femenino</h2>
+
+      <h3>1. Protección familiar</h3>
+      <p>¿Alguna vez ha pensado en qué situación quedaría su familia si un día no pudiese contar con sus ingresos?</p>
+
+      <h3>2. Responsabilidades familiares</h3>
+      <p>¿Tiene hijos o personas que dependan económicamente de usted?</p>
+
+      <h3>3. Estabilidad económica</h3>
+      <p>Si durante unos meses no pudiera trabajar por una situación grave de salud, ¿tendría un respaldo económico suficiente?</p>
+
+      <h3>4. Prevención y salud</h3>
+      <p>¿Conoce si su seguro actual incluye algún tipo de cobertura específica para cáncer femenino?</p>
+
+      <h3>5. Tranquilidad para el futuro</h3>
+      <p>¿Ha valorado alguna vez esa opción?</p>
+    </div>
+
+    <div class="card" style="border:2px solid #e60023;">
+      <h2>💗 Seguro de Vida Protección Familiar en Femenino</h2>
+
+      <p style="font-size:18px; font-weight:bold; color:#e60023;">
+        🎯 Promoción especial: 20% de descuento hasta el 27 de marzo
+      </p>
+
+      <ul>
+        <li>Capital mínimo: <strong>60.000 €</strong></li>
+        <li>Capital máximo: <strong>450.000 €</strong></li>
+        <li>Capital adicional por cáncer femenino: <strong>30.000 €</strong></li>
+      </ul>
+
+      <h3>Coberturas principales</h3>
+      <ul>
+        <li>Fallecimiento</li>
+        <li>Invalidez Permanente Absoluta</li>
+        <li>Diagnóstico de cáncer femenino</li>
+      </ul>
+
+      <h3>Servicios adicionales incluidos</h3>
+      <ul>
+        <li>Orientación médica pediátrica y ginecológica</li>
+        <li>Asesoramiento en nutrición y dietética</li>
+        <li>Orientación telefónica psicoemocional</li>
+        <li>Segunda opinión médica internacional</li>
+        <li>Ayuda a domicilio</li>
+      </ul>
+
+      <h3>Teléfonos de asistencia</h3>
+      <ul>
+        <li>Segunda opinión médica internacional: <strong>91 489 86 41</strong></li>
+        <li>Asesoramiento psicológico presencial: <strong>91 489 86 41</strong></li>
+        <li>Ayuda a domicilio: <strong>91 489 86 41</strong></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Servicios adicionales del asegurado</h3>
+      <ul>
+        <li>Orientación médica telefónica 24h</li>
+        <li>Orientación psicológica</li>
+        <li>Test de hábitos saludables</li>
+        <li>Asesoramiento nutricional</li>
+      </ul>
+
+      <p><strong>Teléfono servicio médico:</strong> 91 266 53 51</p>
+    </div>
+
+  </div>
 
 </div>
 
 
 
-<div class="card">
 
-<h3>Protección Familiar Esencial</h3>
 
-<p>
-Seguro de vida riesgo sencillo diseñado para garantizar un capital básico en caso de fallecimiento del asegurado.
-</p>
 
-<ul>
-<li>Capital asegurado fijo: 50.000 €</li>
-<li>Edad de contratación: 42 a 64 años</li>
-<li>Forma de pago: anual o semestral</li>
-<li>Seguro anual renovable</li>
-</ul>
 
-<h4>Primas orientativas</h4>
 
-<table style="width:100%; border-collapse:collapse;">
 
-<tr style="background:#f2f2f2;">
-<th style="padding:8px;border:1px solid #ddd;">Edad</th>
-<th style="padding:8px;border:1px solid #ddd;">Prima anual</th>
-</tr>
 
-<tr>
-<td style="padding:8px;border:1px solid #ddd;">42-50</td>
-<td style="padding:8px;border:1px solid #ddd;">240 €</td>
-</tr>
 
-<tr>
-<td style="padding:8px;border:1px solid #ddd;">51-55</td>
-<td style="padding:8px;border:1px solid #ddd;">350 €</td>
-</tr>
 
-<tr>
-<td style="padding:8px;border:1px solid #ddd;">56-60</td>
-<td style="padding:8px;border:1px solid #ddd;">550 €</td>
-</tr>
 
-<tr>
-<td style="padding:8px;border:1px solid #ddd;">61-65</td>
-<td style="padding:8px;border:1px solid #ddd;">750 €</td>
-</tr>
 
-</table>
 
-</div>
 
-<div class="card">
 
-<h3>Seguro de Vida – Protección Empresa</h3>
 
-<p>
-Seguro diseñado para proteger la continuidad de la empresa en caso de fallecimiento o invalidez permanente del empresario, socio o apoderado.
-</p>
 
-<ul>
-<li>Se puede contratar una póliza por cada socio o apoderado</li>
-<li>Permite cubrir deudas empresariales</li>
-<li>Garantiza estabilidad financiera del negocio</li>
-</ul>
 
-<h4>Ejemplo</h4>
 
-<ul>
-<li>Deuda empresa: 50.000 €</li>
-<li>Capital recomendado: 60.000 €</li>
-<li>Prima anual aproximada: 287,98 €</li>
-</ul>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Protección Familiar Plus</h3>
-
-<p>
-Seguro de vida riesgo más completo que cubre fallecimiento e invalidez permanente absoluta.
-</p>
-
-<ul>
-<li>Edad de contratación: 18 a 64 años</li>
-<li>Capital mínimo: 60.000 €</li>
-<li>Capital máximo: 1.600.000 €</li>
-<li>Pago anual, semestral o trimestral</li>
-</ul>
-
-<h4>Coberturas</h4>
-
-<ul>
-<li>Fallecimiento</li>
-<li>Invalidez permanente absoluta</li>
-<li>Gran invalidez</li>
-<li>Fallecimiento por accidente (opcional)</li>
-<li>Fallecimiento por accidente de circulación (opcional)</li>
-</ul>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>Protección Familiar en Femenino</h3>
-
-<p>
-Seguro de vida específico para mujeres que incluye cobertura adicional por cáncer femenino.
-</p>
-<div class="card">
-
-<h2>🔥 Campaña Femenino – Empuje final</h2>
-
-<p style="color:#d6001c; font-weight:bold;">
-Promoción activa: 20% de descuento hasta el 27 de marzo, se ha ampliado
-</p>
-
-<p>
-Quedan pocos días para aprovechar la campaña, así que el enfoque estos días debe ser
-<strong>rápido, sencillo y directo a clientas con perfil claro</strong>.
-</p>
-
-<h3>Qué clientas priorizar</h3>
-
-<ul>
-<li>Mujeres entre 30 y 55 años</li>
-<li>Con hijos o cargas familiares</li>
-<li>Con nómina o ingresos estables</li>
-<li>Con hipoteca o gastos fijos importantes</li>
-<li>Autónomas o profesionales</li>
-<li>Clientas con protección de vida pendiente o revisable</li>
-</ul>
-
-<h3>Cómo enfocarlo</h3>
-
-<ul>
-<li>No entrar hablando de producto, sino de <strong>protección</strong>.</li>
-<li>Aprovechar la promoción del <strong>20%</strong> como motivo para revisarlo ahora.</li>
-<li>Explicarlo como una protección pensada para mujer, no como una póliza más.</li>
-<li>Ir a una simulación rápida, sin complicar la conversación.</li>
-</ul>
-
-<h3>Frase de apertura rápida</h3>
-
-<p>
-Hola 😊 te escribo porque estos días estamos revisando una protección femenina
-que ahora mismo tiene un <strong>20% de descuento hasta el día 27</strong>
-y la verdad es que merece la pena mirarla.
-</p>
-
-<p>
-Si quieres, te miro el precio en un momento y ves si te encaja, sin compromiso.
-</p>
-
-<h3>Audio corto para enviar</h3>
-
-<p>
-Oye 😊 te digo rápido, que hay ahora mismo un 20% de descuento en la protección femenina
-hasta el día 20 y lo estoy revisando con algunas clientas porque merece la pena mirarlo.
-Si quieres, te miro precio en un momento y ves si te encaja 👍
-</p>
-
-<h3>Cómo explicarlo en 20 segundos</h3>
-
-<p>
-Es una protección pensada para mujer que, además de la cobertura habitual,
-incluye cobertura específica por cáncer femenino y servicios de apoyo en una situación complicada.
-</p>
-
-<h3>Argumentos que más ayudan</h3>
-
-<ul>
-<li>Además de proteger a la familia, protege también a la mujer.</li>
-<li>Incluye cobertura específica por cáncer femenino.</li>
-<li>Puede ayudar en un momento delicado tanto a nivel económico como personal.</li>
-<li>Ahora tiene un 20% de descuento, por lo que es buen momento para revisarlo.</li>
-</ul>
-
-<h3>Frases que funcionan</h3>
-
-<ul>
-<li>“No es solo protección familiar, también es apoyo para ti en una situación complicada.”</li>
-<li>“Es una protección pensada específicamente para la mujer.”</li>
-<li>“Ahora mismo merece la pena mirarlo por la promoción que tiene activa.”</li>
-</ul>
-
-<h3>Objeciones rápidas</h3>
-
-<p><strong>“Ahora no me lo había planteado”</strong></p>
-<p>
-Normal, por eso mismo te lo comento ahora, aprovechando la promoción y para que al menos lo valores.
-</p>
-
-<p><strong>“No sé si me hará falta”</strong></p>
-<p>
-La mayoría de la gente no piensa en estas cosas hasta que alguien se lo recuerda.
-La idea es verlo con tranquilidad y valorar si encaja en tu caso.
-</p>
-
-<p><strong>“Tengo muchos gastos”</strong></p>
-<p>
-Justamente por eso conviene revisar qué parte de la protección importante sí merece la pena tener cubierta,
-sobre todo cuando hay descuento activo.
-</p>
-
-<h3>Cierre suave</h3>
-
-<p>
-No se trata de decidir ahora mismo, solo de aprovechar estos días para revisarlo,
-ver precio y decidir con calma.
-</p>
-
-<div class="tip-comercial">
-💡 Estos 3 días conviene ir a clienta clara, mensaje corto y simulación rápida. Menos explicación larga y más revisión directa.
-</div>
-
-</div>
-<ul>
-<li>Edad de contratación: 18 a 64 años</li>
-<li>Cobertura por fallecimiento</li>
-<li>Cobertura por invalidez permanente absoluta</li>
-<li>Cobertura adicional por diagnóstico de cáncer femenino</li>
-<div class="card">
-
-<h2>💬 5 preguntas para iniciar la conversación sobre el Seguro de Vida en Femenino</h2>
-
-<p>
-A veces la mejor forma de hablar de protección es mediante una conversación sencilla.
-Estas preguntas ayudan a reflexionar sobre la importancia de proteger a la familia
-y a la propia asegurada ante situaciones inesperadas.
-</p>
-
-<h3>1. Protección familiar</h3>
-<p>
-¿Alguna vez ha pensado en qué situación quedaría su familia si un día no pudiese contar con sus ingresos?
-</p>
-
-<h3>2. Responsabilidades familiares</h3>
-<p>
-¿Tiene hijos o personas que dependan económicamente de usted?
-</p>
-
-<h3>3. Estabilidad económica</h3>
-<p>
-Si durante unos meses no pudiera trabajar por una situación grave de salud,
-¿tendría un respaldo económico suficiente?
-</p>
-
-<h3>4. Prevención y salud</h3>
-<p>
-Hoy en día cada vez más seguros incluyen coberturas relacionadas con la salud femenina.
-¿Conoce si su seguro actual incluye algún tipo de cobertura específica para cáncer femenino?
-</p>
-
-<h3>5. Tranquilidad para el futuro</h3>
-<p>
-Muchas personas contratan un seguro de vida no solo por la familia,
-sino también para tener una tranquilidad económica si ocurre algo inesperado.
-¿Ha valorado alguna vez esa opción?
-</p>
-
-<div class="tip-comercial">
-💡 Consejo comercial: estas preguntas ayudan a iniciar la conversación de forma natural,
-centrándola en la protección y la tranquilidad de la familia.
-</div>
-
-</div>
-
-<div class="card" style="border:2px solid #e60023;">
-
-<h2>💗 Seguro de Vida Protección Familiar en Femenino</h2>
-
-<p style="font-size:18px; font-weight:bold; color:#e60023;">
-🎯 Promoción especial: 20% de descuento hasta el 27 de marzo
-</p>
-
-<p>
-El Seguro de Vida Protección Familiar en Femenino es un seguro de vida diseñado
-para mujeres entre <strong>18 y 64 años</strong>, que protege tanto a la asegurada
-como a su familia ante situaciones que pueden afectar gravemente a la estabilidad económica del hogar.
-</p>
-
-<p>
-Además de las coberturas habituales de fallecimiento e invalidez permanente absoluta,
-incluye una cobertura específica en caso de <strong>diagnóstico de cáncer femenino</strong>.
-</p>
-
-<h3>📊 Datos relevantes</h3>
-
-<p>
-Cada año se diagnostican aproximadamente <strong>247.000 nuevos casos de cáncer femenino</strong>,
-y más de <strong>1.500.000 mujeres</strong> padecen actualmente esta enfermedad.
-</p>
-
-<p>
-Este seguro busca ofrecer una protección económica adicional ante una situación que puede afectar
-tanto a la salud como a la estabilidad financiera de la familia.
-</p>
-
-<h3>Capital asegurado</h3>
-
-<ul>
-<li>Capital mínimo: <strong>60.000 €</strong></li>
-<li>Capital máximo: <strong>450.000 €</strong></li>
-<li>Capital adicional por cáncer femenino: <strong>30.000 €</strong></li>
-</ul>
-
-<h3>Coberturas principales</h3>
-
-<ul>
-<li><strong>Fallecimiento</strong></li>
-<li><strong>Invalidez Permanente Absoluta</strong></li>
-<li><strong>Diagnóstico de cáncer femenino</strong></li>
-</ul>
-
-<p>
-El pago del capital adicional por diagnóstico de cáncer femenino supone la cancelación de esa garantía,
-manteniéndose el resto de coberturas de vida.
-</p>
-
-<h3>Tipos de cáncer cubiertos</h3>
-
-<ul>
-<li>Cáncer de mama</li>
-<li>Cáncer del aparato reproductor femenino</li>
-</ul>
-
-<h3>Perfil de clienta más propensa a contratar</h3>
-
-<ul>
-<li>Mujeres entre <strong>30 y 55 años</strong></li>
-<li>Con hijos o responsabilidades familiares</li>
-<li>Nóminas superiores a <strong>1.200 €</strong></li>
-<li>Trabajadoras por cuenta propia o ajena</li>
-</ul>
-
-<h3>Servicios adicionales incluidos</h3>
-
-<ul>
-<li>Orientación médica pediátrica y ginecológica</li>
-<li>Asesoramiento en nutrición y dietética</li>
-<li>Orientación telefónica psicoemocional</li>
-<li>Segunda opinión médica internacional</li>
-<li>Ayuda a domicilio</li>
-</ul>
-
-<h3>Teléfonos de asistencia</h3>
-
-<ul>
-<li>Segunda opinión médica internacional: <strong>91 489 86 41</strong></li>
-<li>Asesoramiento psicológico presencial: <strong>91 489 86 41</strong></li>
-<li>Ayuda a domicilio: <strong>91 489 86 41</strong></li>
-</ul>
-
-<h3>Cómo explicarlo al cliente en 20 segundos</h3>
-
-<p>
-Es un seguro de vida pensado para mujeres que, además de proteger a su familia en caso
-de fallecimiento o invalidez permanente absoluta, incluye una cobertura específica
-si aparece un cáncer femenino y servicios de apoyo médico y psicológico.
-</p>
-
-<div class="tip-comercial">
-💡 Idea comercial: este seguro protege a la familia, pero también protege a la mujer
-ante una situación de salud que puede afectar a su estabilidad económica.
-</div>
-
-</div>
-
-</ul>
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h3>Servicios adicionales del asegurado</h3>
-
-<ul>
-<li>Orientación médica telefónica 24h</li>
-<li>Orientación psicológica</li>
-<li>Test de hábitos saludables</li>
-<li>Asesoramiento nutricional</li>
-</ul>
-
-<p><strong>Teléfono servicio médico:</strong> 91 266 53 51</p>
-
-</div>
-
-<div class="card">
-
-<h2>Suscríbete a la vida</h2>
-
-<p>
-Hoy en día es muy fácil tener pequeñas suscripciones que casi pasan desapercibidas: 
-plataformas de series, música, aplicaciones, fútbol, compras online o servicios digitales.
-</p>
-
-<p>
-Muchas veces son importes pequeños que se pagan cada mes y que apenas se notan, 
-pero si los sumamos a lo largo del año pueden convertirse en una cantidad importante.
-</p>
-
-<p>
-Sin embargo, hay algo que a veces dejamos para después y que realmente tiene un impacto mucho mayor:
-<strong>la protección económica de nuestra familia.</strong>
-</p>
-
-<h3>Una reflexión sencilla</h3>
-
-<p>
-Si sumamos algunas de las suscripciones más habituales, podemos encontrar fácilmente situaciones como estas:
-</p>
-
-<ul>
-<li>Plataformas de streaming</li>
-<li>Suscripciones digitales o aplicaciones</li>
-<li>Servicios de ocio o deporte</li>
-<li>Compras online con suscripción</li>
-</ul>
-
-<p>
-Es normal disfrutar de estos servicios. Forman parte del día a día y del entretenimiento.
-Pero también es interesante hacerse una pregunta:
-</p>
-
-<p>
-<strong>¿Estamos dedicando al menos una pequeña parte de esos gastos a proteger a nuestra familia?</strong>
-</p>
-
-<h3>El seguro de vida no es un gasto</h3>
-
-<p>
-Un seguro de vida no está pensado para quien lo contrata, sino para las personas que dependen de él.
-</p>
-
-<p>
-Su objetivo es que, si ocurre algo inesperado, la familia pueda mantener estabilidad económica 
-y afrontar gastos importantes como:
-</p>
-
-<ul>
-<li>Hipoteca o alquiler</li>
-<li>Educación de los hijos</li>
-<li>Gastos familiares cotidianos</li>
-<li>Compromisos financieros</li>
-</ul>
-
-<p>
-En muchos casos, el coste de un seguro de vida puede ser similar al de una o dos suscripciones mensuales,
-pero su impacto es completamente diferente.
-</p>
-
-<h3>Invertir en tranquilidad</h3>
-
-<p>
-Cuando hablamos de protección familiar, no estamos hablando solo de dinero.
-Estamos hablando de <strong>tranquilidad</strong>, de saber que, si algún día ocurre algo,
-las personas que más queremos estarán protegidas.
-</p>
-
-<p>
-Por eso muchas personas lo ven de una forma muy sencilla:
-</p>
-
-<p style="font-size:18px; font-weight:bold;">
-Suscribirse a la vida.
-</p>
-
-<p>
-No como un gasto, sino como una <strong>inversión en la seguridad y el bienestar de la familia.</strong>
-</p>
-
-<div class="tip-comercial">
-💡 Idea clave: muchas personas revisan sus suscripciones digitales cada año. 
-Es un buen momento también para revisar si la familia está correctamente protegida.
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>📊 Suscripciones invisibles vs protección familiar</h2>
-
-<p>
-Hoy en día es muy fácil tener pequeñas suscripciones que casi pasan desapercibidas:
-plataformas de series, música, deporte, aplicaciones o compras online.
-</p>
-
-<p>
-Cada una puede parecer un gasto pequeño, pero cuando se suman a lo largo del año
-pueden representar una cantidad importante de dinero.
-</p>
-
-<h3>Ejemplo de suscripciones habituales</h3>
-
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Servicio</th>
-<th>Precio mensual aproximado</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td>Netflix</td>
-<td>13 €</td>
-</tr>
-
-<tr>
-<td>Amazon Prime</td>
-<td>5 €</td>
-</tr>
-
-<tr>
-<td>Disney+</td>
-<td>9 €</td>
-</tr>
-
-<tr>
-<td>Fútbol o deporte</td>
-<td>20 €</td>
-</tr>
-
-<tr>
-<td>Spotify o música</td>
-<td>10 €</td>
-</tr>
-
-<tr>
-<td>Aplicaciones o herramientas digitales</td>
-<td>8 €</td>
-</tr>
-
-<tr>
-<td><strong>Total mensual aproximado</strong></td>
-<td><strong>65 €</strong></td>
-</tr>
-
-<tr>
-<td><strong>Total anual aproximado</strong></td>
-<td><strong>780 €</strong></td>
-</tr>
-
-</tbody>
-</table>
-</div>
-
-<h3>Seguro de vida – ejemplo realista</h3>
-
-<p>
-Una persona de aproximadamente <strong>40 años</strong> puede contratar un seguro de vida
-con un capital asegurado de unos <strong>120.000 €</strong> por un coste aproximado de:
-</p>
-
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Concepto</th>
-<th>Importe aproximado</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td>Seguro de vida</td>
-<td>10 € – 20 € al mes</td>
-</tr>
-
-<tr>
-<td>Coste anual</td>
-<td>120 € – 240 € al año</td>
-</tr>
-
-</tbody>
-</table>
-</div>
-
-<h3>La reflexión</h3>
-
-<p>
-Muchas familias pueden gastar cerca de <strong>780 € al año</strong> en suscripciones de ocio
-que casi pasan desapercibidas.
-</p>
-
-<p>
-Sin embargo, proteger económicamente a la familia con un seguro de vida puede costar
-<strong>menos de 20 € al mes</strong>.
-</p>
-
-<p style="font-size:18px; font-weight:bold;">
-Suscribirse a la vida no es un gasto, es una inversión en la tranquilidad de tu familia.
-</p>
-
-<div class="tip-comercial">
-💡 Idea clave: muchas veces revisamos nuestras suscripciones digitales cada año.
-Es un buen momento también para revisar si nuestra familia está correctamente protegida.
-</div>
-
-</div>
-<div class="card">
-<div class="card">
-
-
-<div class="card">
-
-<h2>⏰ ¿Cuándo es el mejor momento para contratar un seguro de vida?</h2>
-
-<p>
-Muchas personas se preguntan cuándo es el momento adecuado para contratar un seguro de vida. En realidad, hay varias situaciones en las que cobra especial sentido.
-</p>
-
-<h3>Cuando se compra una vivienda</h3>
-
-<p>
-La hipoteca suele ser uno de los compromisos económicos más importantes de una familia. 
-Un seguro de vida puede ayudar a garantizar que la vivienda no suponga una carga económica si ocurre algo inesperado.
-</p>
-
-<h3>Cuando se forma una familia</h3>
-
-<p>
-Con la llegada de hijos o nuevas responsabilidades familiares, proteger los ingresos se convierte en una prioridad para muchas personas.
-</p>
-
-<h3>Cuando alguien depende económicamente de ti</h3>
-
-<p>
-Si otras personas dependen de tu salario para mantener su estabilidad económica, un seguro de vida puede ser una forma de garantizar su tranquilidad.
-</p>
-
-<h3>Cuando se quiere planificar el futuro</h3>
-
-<p>
-Muchas personas contratan un seguro de vida como parte de su planificación financiera, para asegurar estabilidad económica a largo plazo.
-</p>
-
-<div class="tip-comercial">
-💡 En general, cuanto antes se contrata un seguro de vida, más económico suele ser.
-</div>
-
-</div>
-
-
-<h2>🧮 Calculadora orientativa de seguro de vida</h2>
-
-<p>
-Una forma sencilla de calcular el capital recomendado de un seguro de vida es multiplicar
-los ingresos anuales por los años que queremos proteger a la familia.
-</p>
-
-<p>
-Muchos asesores utilizan una referencia orientativa de entre <strong>5 y 10 años de ingresos</strong>.
-</p>
-
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Ingreso mensual</th>
-<th>Ingreso anual</th>
-<th>Capital recomendado (10 años)</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td>1.500 €</td>
-<td>18.000 €</td>
-<td>180.000 €</td>
-</tr>
-
-<tr>
-<td>2.000 €</td>
-<td>24.000 €</td>
-<td>240.000 €</td>
-</tr>
-
-<tr>
-<td>2.500 €</td>
-<td>30.000 €</td>
-<td>300.000 €</td>
-</tr>
-
-<tr>
-<td>3.000 €</td>
-<td>36.000 €</td>
-<td>360.000 €</td>
-</tr>
-
-<tr>
-<td>4.000 €</td>
-<td>48.000 €</td>
-<td>480.000 €</td>
-</tr>
-
-</tbody>
-</table>
-</div>
-
-<h3>Cómo interpretarlo</h3>
-
-<ul>
-<li>El capital recomendado busca cubrir varios años de ingresos familiares.</li>
-<li>Permite mantener estabilidad económica si desaparece el ingreso principal.</li>
-<li>También puede ayudar a cubrir hipoteca, educación de los hijos o gastos familiares.</li>
-</ul>
-
-<div class="tip-comercial">
-💡 Idea clave: el seguro de vida no asegura solo a una persona, asegura los ingresos que sostienen a la familia.
-</div>
-
-</div>
-
-<h2>💼 ¿Cuánto vale tu ingreso?</h2>
-
-<p>
-Muchas veces pensamos en asegurar bienes materiales como la vivienda o el coche,
-pero olvidamos asegurar lo más importante: <strong>nuestra capacidad de generar ingresos</strong>.
-</p>
-
-<p>
-El ingreso de una persona es el motor económico de la familia.
-Es lo que permite pagar la vivienda, la educación de los hijos, la alimentación
-y el día a día del hogar.
-</p>
-
-<h3>Un ejemplo sencillo</h3>
-
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Concepto</th>
-<th>Importe</th>
-</tr>
-</thead>
-
-<tbody>
-
-<tr>
-<td>Ingreso mensual</td>
-<td>2.000 €</td>
-</tr>
-
-<tr>
-<td>Ingreso anual</td>
-<td>24.000 €</td>
-</tr>
-
-<tr>
-<td>Ingresos en 10 años</td>
-<td>240.000 €</td>
-</tr>
-
-<tr>
-<td>Ingresos en 20 años</td>
-<td>480.000 €</td>
-</tr>
-
-</tbody>
-</table>
-</div>
-
-<p>
-Esto significa que una persona que gana unos <strong>2.000 € al mes</strong>
-puede generar cerca de <strong>medio millón de euros</strong> para su familia
-a lo largo de los próximos 20 años.
-</p>
-
-<p>
-Si ese ingreso desaparece de forma inesperada,
-la economía familiar puede verse seriamente afectada.
-</p>
-
-<h3>Ahí es donde entra el seguro de vida</h3>
-
-<p>
-El seguro de vida permite crear un respaldo económico para la familia,
-de manera que puedan mantener estabilidad financiera
-y afrontar los gastos más importantes.
-</p>
-
-<p>
-Muchas veces el coste de esta protección puede ser
-<strong>menos de lo que cuesta una o dos suscripciones mensuales</strong>.
-</p>
-
-<div class="tip-comercial">
-💡 Idea clave: el seguro de vida no asegura una persona, asegura el ingreso que sostiene a la familia.
-</div>
-
-</div>
-<div class="card">
-
-<h2>⚠️ Errores comunes al contratar un seguro de vida</h2>
-
-<p>
-Muchas personas piensan en contratar un seguro de vida, pero a veces lo dejan para más adelante o no revisan bien las coberturas. Estos son algunos errores habituales que conviene evitar.
-</p>
-
-<h3>Contratarlo demasiado tarde</h3>
-
-<p>
-El seguro de vida suele ser más económico cuando se contrata a edades más jóvenes. 
-Esperar demasiado tiempo puede implicar primas más altas o incluso limitaciones en la contratación.
-</p>
-
-<h3>No calcular bien el capital necesario</h3>
-
-<p>
-El capital asegurado debería cubrir al menos:
-</p>
-
-<ul>
-<li>Hipoteca o préstamos pendientes</li>
-<li>Gastos familiares durante varios años</li>
-<li>Educación de los hijos</li>
-</ul>
-
-<h3>Pensar que solo es necesario con hipoteca</h3>
-
-<p>
-Aunque muchas personas lo contratan por la hipoteca, el seguro de vida también protege a la familia frente a cualquier situación inesperada que afecte a los ingresos.
-</p>
-
-<h3>No revisarlo con el paso del tiempo</h3>
-
-<p>
-A lo largo de la vida cambian las circunstancias: nacen hijos, cambian los ingresos o se adquieren nuevas responsabilidades económicas. Por eso es recomendable revisar el seguro periódicamente.
-</p>
-
-<div class="tip-comercial">
-💡 Consejo: contratar un seguro de vida cuando se es joven suele ser más económico y garantiza la protección desde el primer momento.
-</div>
-
-</div>
-<div class="card">
-
-<h2>⏰ ¿Cuándo es el mejor momento para contratar un seguro de vida?</h2>
-
-<p>
-Muchas personas se preguntan cuándo es el momento adecuado para contratar un seguro de vida. En realidad, hay varias situaciones en las que cobra especial sentido.
-</p>
-
-<h3>Cuando se compra una vivienda</h3>
-
-<p>
-La hipoteca suele ser uno de los compromisos económicos más importantes de una familia. 
-Un seguro de vida puede ayudar a garantizar que la vivienda no suponga una carga económica si ocurre algo inesperado.
-</p>
-
-<h3>Cuando se forma una familia</h3>
-
-<p>
-Con la llegada de hijos o nuevas responsabilidades familiares, proteger los ingresos se convierte en una prioridad para muchas personas.
-</p>
-
-<h3>Cuando alguien depende económicamente de ti</h3>
-
-<p>
-Si otras personas dependen de tu salario para mantener su estabilidad económica, un seguro de vida puede ser una forma de garantizar su tranquilidad.
-</p>
-
-<h3>Cuando se quiere planificar el futuro</h3>
-
-<p>
-Muchas personas contratan un seguro de vida como parte de su planificación financiera, para asegurar estabilidad económica a largo plazo.
-</p>
-
-<div class="tip-comercial">
-💡 En general, cuanto antes se contrata un seguro de vida, más económico suele ser.
-</div>
-
-</div>
-<div class="card">
-
-<h2>🏠 Situaciones donde un seguro de vida marca la diferencia</h2>
-
-<p>
-El seguro de vida puede marcar una gran diferencia en determinadas situaciones familiares o económicas. Estos son algunos ejemplos habituales.
-</p>
-
-<h3>Familias con hijos</h3>
-
-<p>
-Los gastos de educación, vivienda y alimentación pueden mantenerse durante muchos años. Un seguro de vida puede ayudar a garantizar estabilidad económica para los hijos.
-</p>
-
-<h3>Personas con hipoteca</h3>
-
-<p>
-Si el ingreso principal desaparece, el pago de la hipoteca puede convertirse en un problema para la familia. El seguro de vida puede cubrir esa situación.
-</p>
-
-<h3>Autónomos o trabajadores por cuenta propia</h3>
-
-<p>
-En muchos casos, el ingreso familiar depende directamente de una sola persona. Proteger ese ingreso puede ser fundamental para la estabilidad del hogar.
-</p>
-
-<h3>Personas que quieren proteger a su pareja o familia</h3>
-
-<p>
-Incluso sin hijos o hipoteca, muchas personas deciden contratar un seguro de vida para asegurar que su pareja o familiares no tengan dificultades económicas si ocurre algo inesperado.
-</p>
-
-<div class="tip-comercial">
-💡 El seguro de vida no está pensado para quien lo contrata, sino para la tranquilidad de quienes dependen de él.
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>La regla de las 3 preguntas</h2>
-
-<p>
-Cuando hablamos de protección familiar, a veces una conversación sencilla puede ayudar a entender
-la importancia de un seguro de vida. Muchos asesores utilizan la llamada
-<strong>regla de las tres preguntas</strong>.
-</p>
-
-<h3>1. ¿Depende alguien de tus ingresos?</h3>
-
-<p>
-Si hay personas que dependen de tus ingresos —pareja, hijos o familiares—,
-es importante pensar qué ocurriría si esos ingresos desaparecieran de forma inesperada.
-</p>
-
-<h3>2. ¿Cuánto tiempo podría mantenerse la economía familiar sin esos ingresos?</h3>
-
-<p>
-Muchas familias tienen gastos fijos como hipoteca, alquiler, colegio o préstamos.
-Un seguro de vida puede ayudar a mantener la estabilidad económica durante ese periodo.
-</p>
-
-<h3>3. ¿Te gustaría que tu familia tuviera un respaldo económico si algún día faltaras?</h3>
-
-<p>
-El seguro de vida está pensado precisamente para eso: que las personas que más queremos
-no tengan que enfrentarse también a una dificultad económica en un momento complicado.
-</p>
-
-<div class="tip-comercial">
-💡 Idea clave: el seguro de vida no se contrata pensando en uno mismo,
-sino en la tranquilidad y protección de la familia.
-</div>
-
-</div>
-
-<div class="card">
-
-<h3>🩺 Telesselección Seguros de Vida</h3>
-
-<p>
-Dependiendo de la edad del asegurado y del capital solicitado, la contratación puede requerir declaración de salud, telesselección médica o pruebas médicas.
-</p>
-
-<table style="width:100%; border-collapse:collapse;">
-
-<tr style="background:#f2f2f2;">
-<th style="padding:8px;border:1px solid #ddd;">Edad</th>
-<th style="padding:8px;border:1px solid #ddd;">Declaración de Salud</th>
-<th style="padding:8px;border:1px solid #ddd;">Telesselección / Pruebas Médicas</th>
-</tr>
-
-<tr>
-<td style="padding:8px;border:1px solid #ddd;">Hasta 50 años</td>
-<td style="padding:8px;border:1px solid #ddd;">Hasta 150.000 €</td>
-<td style="padding:8px;border:1px solid #ddd;">150.000 € – 300.000 €</td>
-</tr>
-
-<tr>
-<td style="padding:8px;border:1px solid #ddd;">Desde 51 años</td>
-<td style="padding:8px;border:1px solid #ddd;">Hasta 75.000 €</td>
-<td style="padding:8px;border:1px solid #ddd;">75.000 € – 300.000 €</td>
-</tr>
-
-<tr>
-<td style="padding:8px;border:1px solid #ddd;">Todas las edades</td>
-<td style="padding:8px;border:1px solid #ddd;">—</td>
-<td style="padding:8px;border:1px solid #ddd;">Pruebas médicas a partir de 300.000 €</td>
-</tr>
-
-</table>
-
-</div>
-</div>
 
 <div id="aegon-salud" class="subtab-panel">
 
@@ -6766,61 +6234,6 @@ habitual <strong>no exceda de 90 días consecutivos</strong> por viaje o desplaz
     <li>Seguro privado completo dentro del cuadro Aegon: especialistas, pruebas, urgencias, <b>hospitalización y cirugía</b>.</li>
     <li>Recomendación típica para familias o para quien quiere “sanidad privada completa”.</li>
   </ul>
-
-  <p><b>Salud Reembolso</b></p>
-  <ul>
-    <li>Para cliente exigente: <b>libre elección</b> de médico y clínica dentro o fuera del cuadro.</li>
-    <li>Se paga y luego se solicita <b>reembolso</b> según condiciones de póliza.</li>
-    <li>Muy útil si ya tiene especialistas de confianza fuera de cuadro.</li>
-  </ul>
-
-  <h3>✅ 3) Objeciones típicas (respuesta rápida)</h3>
-
-  <p><b>“Yo casi no lo uso”</b></p>
-  <ul>
-    <li>“Entonces lo ajustamos: Básico si quieres complemento, o Cuadro Médico si quieres completo.”</li>
-  </ul>
-
-  <p><b>“¿Y si necesito hospital?”</b></p>
-  <ul>
-    <li>“Hospitalización y cirugía: Cuadro Médico o Reembolso.”</li>
-  </ul>
-
-  <p><b>“Quiero libertad total”</b></p>
-  <ul>
-    <li>“Entonces Reembolso: eliges médico y clínica y luego reembolsas según póliza.”</li>
-  </ul>
-
-  <h3>🧾 Canarias: no residente (Extranjería)</h3>
-  <ul>
-    <li>Frecuente que pidan <b>póliza completa</b>, <b>sin copagos</b> y <b>pago anual</b>.</li>
-    <li>Cuando el cliente necesita justificante, se tramita y se solicita a Aegon el <b>certificado</b> con las condiciones de la póliza.</li>
-    <li>Si prefiere pagar mes a mes, se puede apoyar en <b>Planeta Seguro</b> y luego pedir el certificado.</li>
-  </ul>
-
-  <div class="tip-comercial">
-    ✅ Tip Canarias: “No residente: póliza completa + sin copagos + certificado. Oportunidad muy habitual.”
-  </div>
-
-<p>
-El seguro de cuadro médico permite acceder directamente a médicos, especialistas,
-hospitales privados y pruebas diagnósticas dentro de la red médica concertada.
-</p>
-
-<h3>Qué permite al cliente</h3>
-
-<ul>
-<li>Ir directamente al especialista</li>
-<li>Realizar pruebas diagnósticas en centros privados</li>
-<li>Acceder a hospitales privados concertados</li>
-<li>Recibir atención médica con mayor rapidez</li>
-</ul>
-
-<p>
-El cliente no paga el coste real de los servicios médicos,
-sino una prima mensual del seguro.
-</p>
-
 <h3>Modalidades del seguro</h3>
 
 <h4>Seguro SIN copago</h4>
@@ -6913,6 +6326,62 @@ cada vez que utiliza el seguro.
 El cambio se hace mediante suplemento en la póliza,
 por lo que se mantienen el historial médico y las carencias cumplidas.
 </p>
+
+
+  <p><b>Salud Reembolso</b></p>
+  <ul>
+    <li>Para cliente exigente: <b>libre elección</b> de médico y clínica dentro o fuera del cuadro.</li>
+    <li>Se paga y luego se solicita <b>reembolso</b> según condiciones de póliza.</li>
+    <li>Muy útil si ya tiene especialistas de confianza fuera de cuadro.</li>
+  </ul>
+
+  <h3>✅ 3) Objeciones típicas (respuesta rápida)</h3>
+
+  <p><b>“Yo casi no lo uso”</b></p>
+  <ul>
+    <li>“Entonces lo ajustamos: Básico si quieres complemento, o Cuadro Médico si quieres completo.”</li>
+  </ul>
+
+  <p><b>“¿Y si necesito hospital?”</b></p>
+  <ul>
+    <li>“Hospitalización y cirugía: Cuadro Médico o Reembolso.”</li>
+  </ul>
+
+  <p><b>“Quiero libertad total”</b></p>
+  <ul>
+    <li>“Entonces Reembolso: eliges médico y clínica y luego reembolsas según póliza.”</li>
+  </ul>
+
+  <h3>🧾 Canarias: no residente (Extranjería)</h3>
+  <ul>
+    <li>Frecuente que pidan <b>póliza completa</b>, <b>sin copagos</b> y <b>pago anual</b>.</li>
+    <li>Cuando el cliente necesita justificante, se tramita y se solicita a Aegon el <b>certificado</b> con las condiciones de la póliza.</li>
+    <li>Si prefiere pagar mes a mes, se puede apoyar en <b>Planeta Seguro</b> y luego pedir el certificado.</li>
+  </ul>
+
+  <div class="tip-comercial">
+    ✅ Tip Canarias: “No residente: póliza completa + sin copagos + certificado. Oportunidad muy habitual.”
+  </div>
+
+<p>
+El seguro de cuadro médico permite acceder directamente a médicos, especialistas,
+hospitales privados y pruebas diagnósticas dentro de la red médica concertada.
+</p>
+
+<h3>Qué permite al cliente</h3>
+
+<ul>
+<li>Ir directamente al especialista</li>
+<li>Realizar pruebas diagnósticas en centros privados</li>
+<li>Acceder a hospitales privados concertados</li>
+<li>Recibir atención médica con mayor rapidez</li>
+</ul>
+
+<p>
+El cliente no paga el coste real de los servicios médicos,
+sino una prima mensual del seguro.
+</p>
+
 
 <h3>Tarifas orientativas Canarias</h3>
 
