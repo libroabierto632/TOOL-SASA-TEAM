@@ -30,7 +30,77 @@
 
   <link rel="stylesheet" href="css/estilos.css">
 
- 
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const hoy = new Date();
+  const campañas = document.querySelectorAll("#promociones .card, #promociones .promo-card");
+
+  campañas.forEach(card => {
+
+    const inicioTxt = card.dataset.inicio;
+    const finTxt = card.dataset.fin;
+
+    if (!inicioTxt) return;
+
+    const inicio = new Date(inicioTxt);
+    const fin = finTxt ? new Date(finTxt) : null;
+
+    let estado = "";
+    let color = "";
+
+    if (fin && hoy > fin) {
+      estado = "FINALIZADA";
+      color = "#dc3545";
+      card.style.opacity = "0.5"; // opcional
+    } 
+    else if (hoy >= inicio && (!fin || hoy <= fin)) {
+
+      if (fin) {
+        const dias = Math.ceil((fin - hoy) / (1000 * 60 * 60 * 24));
+
+        if (dias <= 5) {
+          estado = "ÚLTIMOS DÍAS";
+          color = "#ffc107";
+        } else {
+          estado = "ACTIVA";
+          color = "#28a745";
+        }
+
+      } else {
+        estado = "ACTIVA";
+        color = "#28a745";
+      }
+    } 
+    else {
+      estado = "PRÓXIMAMENTE";
+      color = "#6c757d";
+    }
+
+    const etiqueta = document.createElement("div");
+    etiqueta.innerText = estado;
+
+    etiqueta.style.position = "absolute";
+    etiqueta.style.top = "10px";
+    etiqueta.style.right = "10px";
+    etiqueta.style.padding = "4px 10px";
+    etiqueta.style.borderRadius = "6px";
+    etiqueta.style.fontSize = "12px";
+    etiqueta.style.fontWeight = "bold";
+    etiqueta.style.background = color;
+    etiqueta.style.color = "white";
+
+    card.style.position = "relative";
+    card.appendChild(etiqueta);
+
+  });
+
+});
+
+if (fin && hoy > fin) {
+  card.style.display = "none";
+}
+</script>
 
   </head>
 
@@ -281,100 +351,192 @@ Selecciona los productos que quieres incluir en el dossier y genera un documento
 📚 Generar dossier completo
 </button>
     </section>
-
-
-
 <section id="promociones" class="main-section">
+
 <p style="font-size:13px;color:#555;">
 Información comercial orientativa. Promociones vigentes sujetas a actualización según campaña.
 </p>
-<h1>🔥Campañas y promociones del mes</h1>
 
-<div class="card">
+<h1>🔥 Campañas y promociones del mes</h1>
+
+<!-- VIDA FEMENINO -->
+<div class="card" data-inicio="2026-03-09" data-fin="2026-03-27">
 <h3>Campaña Vida Femenino</h3>
 <ul>
-<li>Descuento del 20%</li>
-<li>Vigencia del 9 al 27 de marzo(se amplió)</li>
+<li>Hasta 20% de descuento</li>
+<li>Vigencia del 9 al 27 de marzo</li>
 <li>Protección Familiar en Femenino</li>
 </ul>
 </div>
 
-<div class="card">
-<h3>Promoción Salud</h3>
+<!-- VIDA ESENCIAL -->
+<div class="card" data-inicio="2025-06-16">
+<h3>Vida Esencial</h3>
 <ul>
-<li>10% de descuento en salud</li>
-<li>Promoción SELECT desde el 9 de marzo</li>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<!-- VIDA PLUS -->
+<div class="card" data-inicio="2025-06-16">
+<h3>PF Plus</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<!-- PROTECCIÓN EMPRESA -->
+<div class="card" data-inicio="2025-06-16">
+<h3>Protección Empresa</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<!-- ACCIDENTES -->
+<div class="card" data-inicio="2025-06-16">
+<h3>Accidentes Protección Integral</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
 </ul>
 </div>
 
 <div class="card">
+<h3>Accidentes Protección Integral Esencial</h3>
+<ul>
+<li>Sin campaña activa</li>
+</ul>
+</div>
+
+<!-- SENIOR -->
+<div class="card" data-inicio="2025-06-16">
+<h3>Protección Senior</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<!-- ITA -->
+<div class="card" data-inicio="2025-11-01">
+<h3>ITA</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<!-- SALUD -->
+<div class="card" data-inicio="2026-03-09">
+<h3>Promoción Salud</h3>
+<ul>
+<li>10% de descuento</li>
+<li>SELECT activo desde el 9 de marzo</li>
+<li>Sin fecha fin actualmente</li>
+</ul>
+</div>
+
+<div class="card" data-inicio="2026-03-09">
+<h3>Salud Senior</h3>
+<ul>
+<li>0% - 5% - 10% Select</li>
+</ul>
+</div>
+
+<div class="card" data-inicio="2026-03-09">
+<h3>Salud con Copago</h3>
+<ul>
+<li>0% - 5% - 10% Select</li>
+</ul>
+</div>
+
+<!-- MHS -->
+<div class="card" data-inicio="2025-06-16">
+<h3>MHS</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<div class="card" data-inicio="2025-06-16">
+<h3>MHS Senior</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<!-- TARJETAS -->
+<div class="card">
+<h3>Protección de Tarjetas</h3>
+<ul>
+<li>Sin campaña activa</li>
+</ul>
+</div>
+
+<!-- INGRESOS -->
+<div class="card" data-inicio="2025-06-16">
+<h3>Protección de Ingresos</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<!-- CONVENIOS -->
+<div class="card" data-inicio="2025-07-01">
+<h3>Accidentes y Vida Convenios Colectivos</h3>
+<ul>
+<li>Bonificación hasta 40%</li>
+<li>Pendiente ampliación</li>
+</ul>
+</div>
+
+<!-- IMPAGO -->
+<div class="card" data-inicio="2026-03-03">
+<h3>Impago de Alquiler</h3>
+<ul>
+<li>Bonificación 0% - 20%</li>
+<li>+1 mes tras despliegue</li>
+</ul>
+</div>
+
+<!-- VIDA HIPOTECA -->
+<div class="card" data-inicio="2025-07-14" data-fin="2026-06-30">
+<h3>Vida Vinculado Préstamos Hipotecarios</h3>
+<ul>
+<li>Hasta 20% de descuento</li>
+<li>Vigencia hasta 30/06/2026</li>
+</ul>
+</div>
+
+<!-- PLANETA -->
+<div class="card" data-inicio="2026-03-02" data-fin="2026-03-31">
 <h3>Planeta Seguros</h3>
 <ul>
 <li>Hasta 15% de descuento en recibos</li>
-<li>+4% adicional durante la vida de la póliza</li>
-<li>Vigencia del 2 al 31 de marzo</li>
-<li>Ramos incluidos: hogar, vida, salud e IT</li>
+<li>+1% adicional durante la vida de la póliza</li>
+<li>Del 2 al 31 de marzo</li>
 </ul>
 </div>
 
-<div class="card">
+<!-- AUTOS -->
+<div class="card" data-inicio="2026-03-02" data-fin="2026-04-30">
 <h3>Autos</h3>
 <ul>
-<li>Cheque regalo de 60€</li>
-<li>Desde el 2 de marzo hasta el 30 de abril</li>
-<li>Aplicable a primas desde 499€</li>
+<li>Cheque regalo 60€</li>
+<li>Vigencia hasta 30 de abril</li>
+<li>Aplicable desde 499€</li>
 </ul>
 </div>
 
+<!-- AHORRO -->
 <div class="card">
-<h3>Seguros de ahorro</h3>
+<h3>Seguros de Ahorro</h3>
 <ul>
 <li>Objetivo de reposición de vencimientos</li>
-<li>Gran volumen pendiente de renovación</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Producto pendiente</h3>
-<ul>
-<li>Protección de pagos de alquiler</li>
-<li>De momento se paraliza el inicio del producto</li>
-</ul>
-</div>
-
-
-<div class="promo-card">
-<h3>Campaña Accidentes Digital</h3>
-<ul>
-<li><strong>20% de descuento</strong></li>
-<li>Vigencia: del 9 al 31 de marzo</li>
-<li>Productos incluidos:</li>
-<li>Accidentes Protección Integral</li>
-<li>Accidentes Protección Integral Esencial</li>
-<li>Protección Senior</li>
-</ul>
-</div>
-<div class="card">
-<h3>Campaña IT AUTÓNOMOS Digital</h3>
-<ul>
-<li>Descuento del 20%</li>
-<li>Vigencia hasta el 31 de marzo</li>
-<li>Incapacidad Temporal de autónomos</li>
-</ul>
-</div>
-
-<div class="promo-card">
-<h3>Promoción Hogar</h3>
-<ul>
-<li>Vigencia: del 9 al 31 de marzo</li>
-<li>Descuento sobre prima anual durante toda la vida de la póliza:</li>
-<li><strong>25%</strong> – Mi Hogar Esencial</li>
-<li><strong>20%</strong> – Mi Hogar Ampliado</li>
-<li><strong>15%</strong> – Mi Hogar Integral</li>
+<li>Sin campaña definida</li>
 </ul>
 </div>
 
 </section>
+
     <!-- ===================== SALUD ASISA EMPRESA ===================== -->
 
     <section id="salud" class="main-section">
@@ -5216,11 +5378,19 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
   </div>
 
   <div class="vida-subtabs" style="margin:16px 0;">
-    <button type="button" class="vida-subtab active" onclick="openVidaTab(event, 'vida-guia-aegon')">Guía Vida</button>
-    <button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-esencial-aegon')">Esencial</button>
-    <button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-familiar-aegon')">Familiar Plus</button>
-    <button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-empresa-aegon')">Empresa</button>
-    <button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-femenino-aegon')">Femenino</button>
+
+<button type="button" class="vida-subtab active" onclick="openVidaTab(event, 'vida-guia-aegon')">Guía Vida</button>
+
+<button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-esencial-aegon')">Esencial</button> 
+
+<button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-familiar-aegon')">Familiar Plus</button>
+
+<button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-empresa-aegon')">Empresa</button>
+
+<button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-femenino-aegon')">Femenino</button>
+
+<button class="vida-subtab" onclick="openVidaTab(event, 'vida-vinculados')">Vinculados Hipoteca/préstamo</button>
+
   </div>
 
   <!-- GUÍA VIDA -->
@@ -5469,11 +5639,10 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
         <li>Invalidez permanente absoluta</li>
         <li>Gran invalidez</li>
         <li>Fallecimiento por accidente doble capital por accidente (opcional)</li>
-        <li>Fallecimiento por accidente de circulación triple capital por accidente de circulación (opcional)</li>
+       <li>Fallecimiento por accidente de circulación triple capital por accidente de circulación (opcional)</li>
       </ul>
     </div>
-
-  </div>
+</div>
 
   <!-- EMPRESA -->
   <div id="vida-empresa-aegon" class="vida-panel" style="display:none;">
@@ -5634,16 +5803,171 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 
       <p><strong>Teléfono servicio médico:</strong> 91 266 53 51</p>
     </div>
+  </div>
 
+
+<div id="vida-vinculados" class="vida-panel" style="display:none;">
+
+  <div class="card">
+    <h2>🏠 Seguros de Vida Vinculados a Hipoteca</h2>
+    <p>
+      Bloque específico para separar los seguros de vida vinculados a préstamos hipotecarios del resto de vida libre.
+    </p>
+    <div class="tip-comercial">
+      💡 Aquí puedes trabajar aparte los vinculados de hipoteca, sin mezclarlos con Esencial, Familiar Plus, Empresa o Femenino.
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Protección Préstamo Hipotecario – Prima Periódica</h3>
+
+    <p>
+      Producto destinado a cubrir al cliente que ha contratado un préstamo hipotecario ante los riesgos de fallecimiento, invalidez permanente absoluta y desempleo o incapacidad temporal, en función del producto contratado.
+    </p>
+
+    <h4>Comercialización</h4>
+    <ul>
+      <li>No existe obligación de contratar el seguro con Santander Vida o Santander Seguros.</li>
+      <li>Público objetivo: clientes particulares, personas físicas titulares de un préstamo hipotecario.</li>
+      <li>Edad de contratación: mínima 18 años y máxima 64 años.</li>
+      <li>Canales disponibles: oficina y Santander Personal.</li>
+    </ul>
+
+    <h4>Características</h4>
+    <ul>
+      <li>Forma de pago: anual, semestral o trimestral, sin recargo por fraccionamiento.</li>
+      <li>Duración: anual renovable durante la vida del préstamo.</li>
+      <li>Edad máxima de cobertura:
+        <ul>
+          <li>Fallecimiento: 70 años</li>
+          <li>IPA, desempleo e incapacidad temporal: 67 años</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h4>Aseguramiento</h4>
+    <ul>
+      <li>Permite 1 o 2 asegurados, intervinientes del préstamo.</li>
+      <li>Para 1 asegurado: 100 % del importe del préstamo.</li>
+      <li>Para 2 asegurados: puede elegirse entre el 50 % y el 100 %.</li>
+    </ul>
+
+    <h4>Beneficiarios</h4>
+    <p>
+      En caso de fallecimiento o invalidez permanente absoluta, el beneficiario será Banco Santander por el importe pendiente de amortizar del préstamo, con el límite máximo del capital asegurado. Si el capital asegurado es superior al capital pendiente, la diferencia la perciben los beneficiarios designados en la póliza.
+    </p>
+
+    <h4>Coberturas y capital asegurado</h4>
+    <ul>
+      <li>Fallecimiento por cualquier causa.</li>
+      <li>Invalidez permanente absoluta.</li>
+      <li>Desempleo o incapacidad temporal, según la situación laboral del asegurado.</li>
+      <li>Límite de desempleo: hasta 1.350 €/mes.</li>
+      <li>Límite de incapacidad temporal: hasta 2.025 €/mes.</li>
+      <li>Límite de indemnización: 10 pagos por siniestro y 30 pagos durante la vigencia de la póliza.</li>
+    </ul>
+
+    <h4>Franquicias y carencias</h4>
+    <ul>
+      <li>Desempleo:
+        <ul>
+          <li>Franquicia de 21 días, retroactiva</li>
+          <li>Carencia de 30 días desde efecto de la póliza</li>
+          <li>180 días consecutivos entre siniestros</li>
+        </ul>
+      </li>
+      <li>Incapacidad temporal:
+        <ul>
+          <li>Franquicia de 21 días, retroactiva</li>
+          <li>Carencia de 30 días desde efecto de la póliza, excepto accidente</li>
+          <li>30 días entre siniestros si la causa es distinta</li>
+          <li>180 días entre siniestros si la causa es la misma</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h4>Amortización del préstamo</h4>
+    <ul>
+      <li>Amortización total anticipada: cancelación automática y extorno de la parte de prima no consumida del recibo en curso.</li>
+      <li>Amortización parcial: suplemento para ajustar al nuevo capital pendiente y extorno correspondiente.</li>
+    </ul>
+
+    <h4>Exclusiones y desistimiento</h4>
+    <ul>
+      <li>Exclusiones: las indicadas en condiciones particulares y ficha de cliente.</li>
+      <li>Desistimiento: 30 días desde la fecha de efecto de la póliza.</li>
+    </ul>
+
+  </div>
+
+  <div class="card">
+    <h3>Protección Préstamos Hipoteca – Prima Única 3 años</h3>
+
+    <p>
+      Seguro de vida de protección de préstamos con prima única durante los 3 primeros años. A partir del año 4, pasa a prima periódica anual renovable hasta el vencimiento final del préstamo.
+    </p>
+
+    <h4>Características principales</h4>
+    <ul>
+      <li>Asegurador: Santander Vida Seguros y Reaseguros, S.A.</li>
+      <li>Edad de contratación: entre 18 y 64 años.</li>
+      <li>Duración inicial: 3 años en fase de prima única.</li>
+      <li>Desde el año 4: seguro temporal renovable con prima periódica.</li>
+      <li>Edad máxima de cobertura:
+        <ul>
+          <li>Fallecimiento: 70 años</li>
+          <li>Invalidez permanente absoluta: 67 años</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h4>Aseguramiento</h4>
+    <ul>
+      <li>Permite asegurar hasta 2 intervinientes del préstamo.</li>
+      <li>Para 1 asegurado: 100 %.</li>
+      <li>Para 2 asegurados: desde el 50 % al 100 % por cada uno.</li>
+    </ul>
+
+    <h4>Forma de pago</h4>
+    <ul>
+      <li>Prima única durante los 3 primeros años.</li>
+      <li>A partir del año 4, prima periódica renovable.</li>
+      <li>En fase periódica los pagos podrán tener periodicidad trimestral, semestral o anual.</li>
+    </ul>
+
+    <h4>Coberturas</h4>
+    <ul>
+      <li>Fallecimiento</li>
+      <li>Invalidez permanente absoluta</li>
+    </ul>
+
+    <h4>Beneficiarios</h4>
+    <p>
+      En caso de fallecimiento o invalidez permanente absoluta, el beneficiario será Banco Santander por el capital pendiente de amortizar del préstamo, con el límite máximo del capital asegurado. Si hay exceso, lo perciben los beneficiarios designados en la póliza.
+    </p>
+
+    <h4>Amortización del préstamo</h4>
+    <ul>
+      <li>Amortización total anticipada en fase de prima única: cancelación automática y extorno al cliente del importe que corresponda.</li>
+      <li>Amortización total anticipada en fase de prima periódica: cancelación automática y extorno de la parte de prima no consumida.</li>
+      <li>Amortización parcial: suplemento automático para ajustar al nuevo capital pendiente y generar el extorno correspondiente.</li>
+    </ul>
+
+    <h4>Exclusiones y desistimiento</h4>
+    <ul>
+      <li>Exclusiones principales: las detalladas en condiciones generales, particulares y ficha de cliente.</li>
+      <li>Desistimiento: 30 días desde la fecha de efecto de la póliza.</li>
+    </ul>
+
+    <div class="tip-comercial">
+      💡 Este producto es ideal para explicarlo aparte, porque mezcla fase de prima única y fase de prima periódica, y si lo dejas junto al resto de vida libre se confunde mucho.
+    </div>
   </div>
 
 </div>
 
-
-
-
-
-
+</div>
+</div>
 
 
 
