@@ -30,81 +30,71 @@
 
   <link rel="stylesheet" href="css/estilos.css">
 
- <script>
+
+
+  </head>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-
   const hoy = new Date();
-  const campañas = document.querySelectorAll("#promociones .card, #promociones .promo-card");
+  const cards = document.querySelectorAll('#promociones .card');
 
-  campañas.forEach(card => {
-
-    const inicioTxt = card.dataset.inicio;
-    const finTxt = card.dataset.fin;
+  cards.forEach(function(card) {
+    const inicioTxt = card.getAttribute('data-inicio');
+    const finTxt = card.getAttribute('data-fin');
 
     if (!inicioTxt) return;
 
-    const inicio = new Date(inicioTxt);
-    const fin = finTxt ? new Date(finTxt) : null;
+    const inicio = new Date(inicioTxt + "T00:00:00");
+    const fin = finTxt ? new Date(finTxt + "T23:59:59") : null;
 
-    let estado = "";
-    let color = "";
+    let texto = "";
+    let colorFondo = "";
+    let colorTexto = "#fff";
 
     if (fin && hoy > fin) {
-      estado = "FINALIZADA";
-      color = "#dc3545";
-      card.style.opacity = "0.5"; // opcional
-    } 
-    else if (hoy >= inicio && (!fin || hoy <= fin)) {
-
+      texto = "FINALIZADA";
+      colorFondo = "#dc3545";
+    } else if (hoy >= inicio && (!fin || hoy <= fin)) {
       if (fin) {
-        const dias = Math.ceil((fin - hoy) / (1000 * 60 * 60 * 24));
+        const diferencia = fin - hoy;
+        const diasRestantes = Math.ceil(diferencia / (1000 * 60 * 60 * 24));
 
-        if (dias <= 5) {
-          estado = "ÚLTIMOS DÍAS";
-          color = "#ffc107";
+        if (diasRestantes <= 10) {
+          texto = "ÚLTIMOS DÍAS";
+          colorFondo = "#ffc107";
+          colorTexto = "#000";
         } else {
-          estado = "ACTIVA";
-          color = "#28a745";
+          texto = "ACTIVA";
+          colorFondo = "#198754";
         }
-
       } else {
-        estado = "ACTIVA";
-        color = "#28a745";
+        texto = "ACTIVA";
+        colorFondo = "#198754";
       }
-    } 
-    else {
-      estado = "PRÓXIMAMENTE";
-      color = "#6c757d";
+    } else {
+      texto = "PRÓXIMAMENTE";
+      colorFondo = "#6c757d";
     }
 
-    const etiqueta = document.createElement("div");
-    etiqueta.innerText = estado;
-
-    etiqueta.style.position = "absolute";
-    etiqueta.style.top = "10px";
-    etiqueta.style.right = "10px";
-    etiqueta.style.padding = "4px 10px";
-    etiqueta.style.borderRadius = "6px";
-    etiqueta.style.fontSize = "12px";
-    etiqueta.style.fontWeight = "bold";
-    etiqueta.style.background = color;
-    etiqueta.style.color = "white";
+    const badge = document.createElement("span");
+    badge.textContent = texto;
+    badge.style.position = "absolute";
+    badge.style.top = "10px";
+    badge.style.right = "10px";
+    badge.style.background = colorFondo;
+    badge.style.color = colorTexto;
+    badge.style.padding = "5px 10px";
+    badge.style.borderRadius = "8px";
+    badge.style.fontSize = "12px";
+    badge.style.fontWeight = "bold";
+    badge.style.zIndex = "20";
 
     card.style.position = "relative";
-    card.appendChild(etiqueta);
-
+    card.appendChild(badge);
   });
-
 });
-
-if (fin && hoy > fin) {
-  card.style.display = "none";
-}
 </script>
 
-  </head>
-
- 
 
 <body>
 
