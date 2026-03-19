@@ -95,6 +95,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script>
+function 
+Tab(event, panelId) {
+  event.preventDefault();
+
+  const autosRoot = document.getElementById('autos');
+  if (!autosRoot) return;
+
+  autosRoot.querySelectorAll('.autos-panel').forEach(panel => {
+    panel.style.display = 'none';
+  });
+
+  autosRoot.querySelectorAll('.autos-subtab').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  const target = document.getElementById(panelId);
+  if (target) {
+    target.style.display = 'block';
+  }
+
+  event.currentTarget.classList.add('active');
+}
+</script>
 
 <body>
 
@@ -188,6 +212,7 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
       <button class="main-tab" data-target="rutaGO">🧭 Ruta GO</button>
 
+      <button class="main-tab" data-target="autos">🚗 Autos y Motos</button>
 
     </nav>
   </header>
@@ -341,6 +366,282 @@ Selecciona los productos que quieres incluir en el dossier y genera un documento
 📚 Generar dossier completo
 </button>
     </section>
+
+
+<div id="autos" class="main-section" style="display:none;">
+
+  <h1>🚗 Autos y Motos</h1>
+  <p>Información comercial orientativa sobre seguros de coche y moto.</p>
+
+  <div class="hogar-subtabs autos-subtabs">
+    <button type="button" class="hogar-subtab autos-subtab active" onclick="openAutosTab(event, 'autos-eco-panel')">Gama Eco</button>
+    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, 'autos-eleccion-panel')">Gama Elección</button>
+    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, 'autos-plus-panel')">Gama Plus</button>
+    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, 'autos-moto-panel')">Motos</button>
+    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, 'autos-argumentario-panel')">Argumentario</button>
+  </div>
+
+  <!-- GAMA ECO -->
+  <div id="autos-eco-panel" class="autos-panel" style="display:block;">
+    <div class="card">
+      <h2>🌱 Seguro de Coches Gama Eco</h2>
+
+      <p>
+        Modalidad pensada para clientes que buscan una opción más económica, con las coberturas esenciales para circular con tranquilidad
+        y cumpliendo con las exigencias legales mínimas, pero añadiendo servicios muy útiles para el día a día.
+      </p>
+
+      <h3>Coberturas principales</h3>
+      <ul>
+        <li>Responsabilidad civil obligatoria</li>
+        <li>Responsabilidad civil voluntaria</li>
+        <li>Defensa jurídica y reclamación de daños</li>
+        <li>Accidentes del conductor</li>
+        <li>Asistencia en viaje</li>
+        <li>Asistencia al vehículo y a los ocupantes</li>
+        <li>Gestión de multas y apoyo jurídico básico según condiciones</li>
+      </ul>
+
+      <h3>Qué le puedes explicar al cliente</h3>
+      <ul>
+        <li>Es una modalidad orientada al ahorro</li>
+        <li>Cubre lo importante para circular y estar respaldado frente a terceros</li>
+        <li>Incluye servicios útiles como la asistencia en carretera</li>
+        <li>Es adecuada cuando el vehículo ya tiene años o el cliente no quiere pagar por daños propios</li>
+      </ul>
+
+      <h3>Perfil ideal</h3>
+      <ul>
+        <li>Vehículos antiguos o con menor valor de mercado</li>
+        <li>Clientes que priorizan precio</li>
+        <li>Uso urbano o desplazamientos habituales sencillos</li>
+      </ul>
+
+      <div class="tip-comercial">
+        💡 Frase útil: “Si buscas una opción económica pero con respaldo para circular tranquilo, esta puede ser una buena base.”
+      </div>
+
+      <div class="tip-comercial">
+        💡 Importante: no está pensada para quien quiera cubrir daños propios del vehículo.
+      </div>
+    </div>
+  </div>
+
+  <!-- GAMA ELECCIÓN -->
+  <div id="autos-eleccion-panel" class="autos-panel" style="display:none;">
+    <div class="card">
+      <h2>🚘 Seguro de Coches Gama Elección</h2>
+
+      <p>
+        Modalidad más equilibrada, pensada para clientes que quieren subir un nivel respecto a un seguro básico
+        y contar con coberturas muy valoradas como lunas, incendio o robo, además de asistencia y protección jurídica.
+      </p>
+
+      <h3>Coberturas destacadas</h3>
+      <ul>
+        <li>Responsabilidad civil obligatoria y voluntaria</li>
+        <li>Defensa jurídica y reclamación de daños</li>
+        <li>Accidentes del conductor</li>
+        <li>Asistencia en viaje</li>
+        <li>Lunas</li>
+        <li>Incendio</li>
+        <li>Robo</li>
+        <li>Daños por especies cinegéticas y fenómenos atmosféricos</li>
+        <li>Daños propios según modalidad contratada</li>
+      </ul>
+
+      <h3>Ventajas comerciales</h3>
+      <ul>
+        <li>Da un salto claro frente a una póliza básica</li>
+        <li>Protege mejor el vehículo en situaciones frecuentes</li>
+        <li>Permite explicar fácilmente al cliente qué gana por una diferencia de precio razonable</li>
+        <li>Es una modalidad muy defendible comercialmente porque combina precio y protección</li>
+      </ul>
+
+      <h3>Comparativa rápida</h3>
+      <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+        <tr style="background:#f5f5f5;">
+          <th style="border:1px solid #ccc; padding:8px;">Cobertura</th>
+          <th style="border:1px solid #ccc; padding:8px;">Terceros</th>
+          <th style="border:1px solid #ccc; padding:8px;">Terceros Ampliado</th>
+          <th style="border:1px solid #ccc; padding:8px;">Todo Riesgo</th>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:8px;">Responsabilidad civil</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:8px;">Defensa jurídica</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:8px;">Lunas</td>
+          <td style="border:1px solid #ccc; padding:8px;">❌</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:8px;">Robo</td>
+          <td style="border:1px solid #ccc; padding:8px;">❌</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:8px;">Incendio</td>
+          <td style="border:1px solid #ccc; padding:8px;">❌</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #ccc; padding:8px;">Daños propios</td>
+          <td style="border:1px solid #ccc; padding:8px;">❌</td>
+          <td style="border:1px solid #ccc; padding:8px;">❌</td>
+          <td style="border:1px solid #ccc; padding:8px;">✔️</td>
+        </tr>
+      </table>
+
+      <div class="tip-comercial">
+        💡 Frase útil: “Es una opción muy equilibrada, porque sin irte a un todo riesgo ya incorporas coberturas muy importantes.”
+      </div>
+    </div>
+  </div>
+
+  <!-- GAMA PLUS -->
+  <div id="autos-plus-panel" class="autos-panel" style="display:none;">
+    <div class="card">
+      <h2>⭐ Seguro de Coches Gama Plus</h2>
+
+      <p>
+        Modalidad orientada a clientes que quieren una protección más completa del vehículo y reducir al máximo los imprevistos económicos
+        derivados de golpes, daños propios u otras incidencias relevantes.
+      </p>
+
+      <h3>Coberturas y enfoque</h3>
+      <ul>
+        <li>Responsabilidad civil completa</li>
+        <li>Defensa jurídica y reclamación</li>
+        <li>Accidentes del conductor</li>
+        <li>Asistencia en viaje</li>
+        <li>Lunas, robo e incendio</li>
+        <li>Daños propios del vehículo</li>
+        <li>Mayor nivel de protección general</li>
+        <li>Enfoque más premium y menos expuesto a gastos inesperados</li>
+      </ul>
+
+      <h3>Cuándo tiene más sentido</h3>
+      <ul>
+        <li>Vehículos de mayor valor</li>
+        <li>Coches más nuevos</li>
+        <li>Clientes que no quieren asumir reparaciones por su cuenta</li>
+        <li>Personas que usan mucho el coche y quieren máxima tranquilidad</li>
+      </ul>
+
+      <h3>Ventajas comerciales</h3>
+      <ul>
+        <li>Protege mejor el patrimonio del cliente</li>
+        <li>Evita que un siniestro o golpe se convierta en un gasto importante</li>
+        <li>Se vende muy bien cuando el cliente valora seguridad y comodidad por encima del precio mínimo</li>
+      </ul>
+
+      <div class="tip-comercial">
+        💡 Frase útil: “Aquí ya no hablamos solo de cumplir o de ahorrar, hablamos de ir mucho más protegido y con menos preocupaciones.”
+      </div>
+    </div>
+  </div>
+
+  <!-- MOTOS -->
+  <div id="autos-moto-panel" class="autos-panel" style="display:none;">
+    <div class="card">
+      <h2>🏍️ Seguro de Motos</h2>
+
+      <p>
+        El seguro de moto debe adaptarse mucho al uso real del cliente: no es lo mismo una moto de diario que una de ocio o una de mayor cilindrada.
+        Por eso es importante explicar bien las coberturas y detectar qué nivel de protección necesita.
+      </p>
+
+      <h3>Coberturas habituales</h3>
+      <ul>
+        <li>Responsabilidad civil obligatoria y voluntaria</li>
+        <li>Defensa jurídica y reclamación de daños</li>
+        <li>Accidentes del conductor</li>
+        <li>Asistencia en viaje</li>
+        <li>Asistencia al motorista</li>
+        <li>Opcionalmente robo</li>
+        <li>Opcionalmente incendio</li>
+        <li>Opcionalmente daños propios según modalidad</li>
+      </ul>
+
+      <h3>Qué conviene revisar con el cliente</h3>
+      <ul>
+        <li>Si usa la moto todos los días o solo fines de semana</li>
+        <li>Si duerme en garaje o en la calle</li>
+        <li>El valor actual de la moto</li>
+        <li>Si le interesa más precio o más protección</li>
+      </ul>
+
+      <h3>Perfil ideal de ampliación</h3>
+      <ul>
+        <li>Motos de valor medio o alto</li>
+        <li>Clientes que dependen de la moto para ir al trabajo</li>
+        <li>Usuarios que quieren proteger robo o incendio</li>
+      </ul>
+
+      <div class="tip-comercial">
+        💡 Frase útil: “En moto, una buena asistencia y una buena cobertura al conductor suelen marcar mucho la diferencia.”
+      </div>
+    </div>
+  </div>
+
+  <!-- ARGUMENTARIO -->
+  <div id="autos-argumentario-panel" class="autos-panel" style="display:none;">
+    <div class="card">
+      <h2>💬 Argumentario comercial</h2>
+
+      <h3>Ideas fuerza</h3>
+      <ul>
+        <li>No solo proteges el vehículo, también tu responsabilidad frente a terceros.</li>
+        <li>La asistencia en carretera es una de las coberturas que más valora el cliente cuando realmente la necesita.</li>
+        <li>La diferencia entre una modalidad básica y una más completa muchas veces es pequeña frente al coste de un siniestro.</li>
+        <li>Un seguro no se valora el día que se contrata, se valora el día que ocurre algo.</li>
+      </ul>
+
+      <h3>Cómo orientar la conversación</h3>
+      <ul>
+        <li>Primero detectar el uso del vehículo</li>
+        <li>Después valorar si el cliente prioriza precio o tranquilidad</li>
+        <li>Explicar de forma sencilla qué pierde si baja demasiado la cobertura</li>
+        <li>Proponer una alternativa razonable, no solo la más barata</li>
+      </ul>
+
+      <h3>Frases útiles</h3>
+      <ul>
+        <li>“Lo importante no es solo tener seguro, sino que te responda como esperas cuando lo necesites.”</li>
+        <li>“Vamos a buscar un equilibrio entre lo que pagas y lo que realmente te cubre.”</li>
+        <li>“Por una diferencia pequeña podemos mejorar bastante la protección.”</li>
+        <li>“Si el coche tiene cierto valor, bajar demasiado la cobertura puede salir caro.”</li>
+      </ul>
+
+      <h3>Objeciones típicas</h3>
+      <ul>
+        <li><strong>“Yo quiero lo más barato”</strong> → “Perfecto, lo revisamos, pero también te explico qué coberturas pierdes para que decidas con toda la información.”</li>
+        <li><strong>“Nunca me pasa nada”</strong> → “Ojalá siga así, precisamente el seguro está para cuando ocurre algo inesperado.”</li>
+        <li><strong>“Solo uso el coche para poco”</strong> → “Entonces quizá no necesites el máximo nivel, pero sí una opción equilibrada que no te deje corto.”</li>
+      </ul>
+
+      <div class="tip-comercial">
+        💡 Cierre útil: “Te enseño las opciones y te digo honestamente cuál veo más equilibrada para ti.”
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
 <section id="promociones" class="main-section">
 
 <p style="font-size:13px;color:#555;">
@@ -4398,6 +4699,31 @@ function openHogarTab(event, panelId) {
   });
 })();
 </script>
+<script>
+function openAutosTab(event, panelId) {
+  if (event) event.preventDefault();
+
+  const autosRoot = document.getElementById('autos');
+  if (!autosRoot) return;
+
+  autosRoot.querySelectorAll('.autos-panel').forEach(function(panel) {
+    panel.style.display = 'none';
+  });
+
+  autosRoot.querySelectorAll('.autos-subtab').forEach(function(btn) {
+    btn.classList.remove('active');
+  });
+
+  const target = document.getElementById(panelId);
+  if (target) {
+    target.style.display = 'block';
+  }
+
+  if (event && event.currentTarget) {
+    event.currentTarget.classList.add('active');
+  }
+}
+</script>
 </body>
 
 </html>
@@ -7247,9 +7573,9 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
   💡 En el seguro de decesos el argumento principal no es el coste del funeral, sino
   evitar que la familia tenga que gestionar trámites y decisiones difíciles en ese momento.
 </div>
-
 </div>
-</section>
+</div>
+</div>
 
 <div id="aegon-hogar" class="subtab-panel">
 
@@ -7265,14 +7591,6 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
     <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-venta-cruzada-panel')">Venta cruzada</button>
     <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-checklist-panel')">Checklist</button>
   </div>
-
-
-
-
-
-
-
-
 
 <!-- MODALIDADES -->
 <div id="hogar-modalidades-panel" class="hogar-panel" style="display:block;">
@@ -7791,7 +8109,7 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
   </ul>
 
 </div>
-</div>
+</section>
 
 
 
