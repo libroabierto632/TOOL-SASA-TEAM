@@ -128,14 +128,28 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
       <button class="main-tab" data-target="rutaGO">🧭 Ruta GO</button>
 
-    </nav>
 
+    </nav>
   </header>
 
- <div class="global-search">
-  <input type="text" id="globalSearchInput" placeholder="Buscar en toda la herramienta..." />
-  <button type="button" id="globalSearchBtn">Buscar</button>
+<div class="global-search-box" style="display:flex; gap:8px; align-items:center; margin:12px 0 18px 0; flex-wrap:wrap;">
+  <input
+    id="globalSearchInput"
+    type="text"
+    placeholder="Buscar en toda la herramienta..."
+    style="flex:1; min-width:260px; padding:10px 12px; border:1px solid #ccc; border-radius:8px;"
+  >
+  <button
+    id="globalSearchBtn"
+    type="button"
+    style="padding:10px 16px; border:none; border-radius:8px; background:#d6001c; color:#fff; font-weight:600; cursor:pointer;"
+  >
+    Buscar
+  </button>
 </div>
+
+
+
 
   <main class="container">
 
@@ -4088,6 +4102,149 @@ function openHogarTab(event, panelId) {
 
   event.currentTarget.classList.add('active');
 }
+</script>
+<script>
+(function () {
+  const input = document.getElementById("globalSearchInput");
+  const button = document.getElementById("globalSearchBtn");
+
+  if (!input || !button) return;
+
+  function clearHighlights() {
+    document.querySelectorAll("mark.search-highlight").forEach(mark => {
+      const parent = mark.parentNode;
+      if (!parent) return;
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      parent.normalize();
+    });
+  }
+
+  function normalize(text) {
+    return text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function showMainSection(sectionId) {
+    const btn = document.querySelector(`.main-tab[data-target="${sectionId}"]`);
+    if (btn) btn.click();
+  }
+
+  function showSubtab(subtabId) {
+    const btn = document.querySelector(`.subtab[data-subtab="${subtabId}"]`);
+    if (btn) btn.click();
+  }
+
+  function showCustomSubtab(selector, id) {
+    const buttons = document.querySelectorAll(selector);
+    for (const btn of buttons) {
+      const onclick = btn.getAttribute("onclick") || "";
+      if (onclick.includes(id)) {
+        btn.click();
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function openParents(element) {
+    let current = element;
+
+    while (current) {
+      if (current.classList) {
+        if (current.classList.contains("hogar-panel") && current.id) {
+          showCustomSubtab(".hogar-subtab", current.id);
+        }
+
+        if (current.classList.contains("vida-panel") && current.id) {
+          showCustomSubtab(".vida-subtab", current.id);
+        }
+
+        if (current.classList.contains("subtab-panel") && current.id) {
+          showSubtab(current.id);
+        }
+
+        if (current.classList.contains("main-section") && current.id) {
+          showMainSection(current.id);
+        }
+      }
+      current = current.parentElement;
+    }
+  }
+
+  function highlight(element, query) {
+    const walker = document.createTreeWalker(
+      element,
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
+    );
+
+    const q = normalize(query);
+
+    let node;
+    while ((node = walker.nextNode())) {
+      const text = node.nodeValue;
+      const normalized = normalize(text);
+
+      if (normalized.includes(q)) {
+        const index = normalized.indexOf(q);
+
+        const before = text.slice(0, index);
+        const match = text.slice(index, index + query.length);
+        const after = text.slice(index + query.length);
+
+        const mark = document.createElement("mark");
+        mark.className = "search-highlight";
+        mark.style.background = "#ffb84d";
+        mark.textContent = match;
+
+        const frag = document.createDocumentFragment();
+        if (before) frag.appendChild(document.createTextNode(before));
+        frag.appendChild(mark);
+        if (after) frag.appendChild(document.createTextNode(after));
+
+        node.parentNode.replaceChild(frag, node);
+
+        mark.scrollIntoView({ behavior: "smooth", block: "center" });
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function search() {
+    const query = input.value.trim();
+    if (!query) return;
+
+    clearHighlights();
+
+    const sections = document.querySelectorAll(
+      ".main-section, .subtab-panel, .hogar-panel, .vida-panel"
+    );
+
+    const q = normalize(query);
+
+    for (const section of sections) {
+      const text = normalize(section.innerText || "");
+      if (text.includes(q)) {
+        openParents(section);
+
+        setTimeout(() => {
+          highlight(section, query);
+        }, 200);
+
+        return;
+      }
+    }
+
+    alert("No se encontró ningún resultado.");
+  }
+
+  button.addEventListener("click", search);
+
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") search();
+  });
+})();
 </script>
 </body>
 
