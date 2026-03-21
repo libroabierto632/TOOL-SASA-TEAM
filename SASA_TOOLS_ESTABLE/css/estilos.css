@@ -1249,3 +1249,24 @@ border-color:#d6001c;
   padding: 10px;
   border-radius: 8px;
 }
+<style>
+#buscadorContactos:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 8px rgba(25,118,210,0.3);
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card.oculto {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+</style>
