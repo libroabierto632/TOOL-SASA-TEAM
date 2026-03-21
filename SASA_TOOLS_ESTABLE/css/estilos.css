@@ -1194,3 +1194,58 @@ border-color:#d6001c;
 .finalizada { background: #dc3545; }
 .proxima { background: #6c757d; }
 </style>
+
+
+.gamas {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.gama {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  color: #333;
+}
+
+.gama h4 {
+  margin-bottom: 10px;
+}
+
+.gama ul {
+  padding-left: 18px;
+}
+
+.gama .frase {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* COLORES */
+.gama.eco {
+  background: #e9f7ef;
+  border-left: 5px solid #198754;
+}
+
+.gama.azul {
+  background: #e7f0ff;
+  border-left: 5px solid #0d6efd;
+}
+
+.gama.plus {
+  background: #fdecea;
+  border-left: 5px solid #dc3545;
+}
+
+.detalle, .argumentario {
+  margin-top: 20px;
+}
+
+.tip-comercial {
+  margin-top: 15px;
+  background: #fff3cd;
+  padding: 10px;
+  border-radius: 8px;
+}
