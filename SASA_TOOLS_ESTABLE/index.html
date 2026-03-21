@@ -3716,11 +3716,37 @@ Nombre y apellidos:
 
  
 
-    <!-- ===================== CONTACTOS ===================== -->
+  <!-- ======================= CONTACTOS ======================= -->
+<section id="contactos" class="main-section">
+<div class="card" id="cardBuscadorContactos" style="background: linear-gradient(135deg, #e3f2fd, #ffffff); border:1px solid #90caf9;">
 
-    <section id="contactos" class="main-section">
+  <h3 style="margin-bottom:10px;">🔎 Buscar contacto</h3>
+<div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+  <button type="button" onclick="filtrarContactoRapido('autos')" style="padding:8px 12px; border:none; border-radius:20px; background:#e3f2fd; cursor:pointer;">🚗 Autos</button>
+  <button type="button" onclick="filtrarContactoRapido('hogar')" style="padding:8px 12px; border:none; border-radius:20px; background:#e8f5e9; cursor:pointer;">🏠 Hogar</button>
+  <button type="button" onclick="filtrarContactoRapido('salud')" style="padding:8px 12px; border:none; border-radius:20px; background:#fff3e0; cursor:pointer;">🏥 Salud</button>
+  <button type="button" onclick="filtrarContactoRapido('bajas')" style="padding:8px 12px; border:none; border-radius:20px; background:#ffebee; cursor:pointer;">❌ Bajas</button>
+  <button type="button" onclick="filtrarContactoRapido('prestaciones')" style="padding:8px 12px; border:none; border-radius:20px; background:#f3e5f5; cursor:pointer;">📧 Prestaciones</button>
+  <button type="button" onclick="filtrarContactoRapido('')" style="padding:8px 12px; border:none; border-radius:20px; background:#eeeeee; cursor:pointer;">🔄 Ver todos</button>
+</div>
+  <input 
+    type="text" 
+    id="buscadorContactos"
+    placeholder="Ej: autos, bajas, aegon, mapfre..."
+    style="
+      width:100%;
+      padding:12px;
+      border-radius:10px;
+      border:1px solid #90caf9;
+      outline:none;
+      font-size:14px;
+    "
+  >
 
- <div class="card">
+  <p id="mensajeBusqueda" style="margin-top:10px; font-size:13px; color:#666;"></p>
+
+</div>
+<div class="card">
 <h2>ASISA vía banco</h2>
 <ul>
 
@@ -3759,7 +3785,6 @@ Tel: <a href="tel:+34915143611">+34 915 143 611</a>
 </ul>
 </div>
 
-
 <div class="card">
 <h2>Seguros Banco</h2>
 <ul>
@@ -3792,7 +3817,6 @@ Tel: <a href="tel:912769645">912 769 645</a>
 </ul>
 </div>
 
-
 <div class="card">
 <h2>AEGON</h2>
 <ul>
@@ -3806,7 +3830,7 @@ Tel: <a href="tel:915632000">915 632 000</a>
 Tel: <a href="tel:932253266">932 253 266</a>
 </li>
 
-<li>Asistencia viaje<br>
+<li>Asistencia viaje AEGON<br>
 Tel: <a href="tel:917221777">917 221 777</a>
 </li>
 
@@ -3837,7 +3861,6 @@ Tel: <a href="tel:913059452">913 059 452</a><br>
 
 </ul>
 </div>
-
 
 <div class="card">
 <h2>Prestaciones Seguros Banco</h2>
@@ -3874,17 +3897,62 @@ Tel: <a href="tel:913059452">913 059 452</a><br>
 <li>Decesos<br>
 <a href="mailto:decesos@seguros.santandervida.com">decesos@seguros.santandervida.com</a>
 </li>
+<div class="card">
+<h2>Santander MAPFRE</h2>
+<ul>
+
+<li>Atención autos y multirriesgo<br>
+Tel: <a href="tel:912747576">912 747 576</a>
+</li>
+
+<li>Bajas autos y multirriesgo<br>
+Tel: <a href="tel:912747570">912 747 570</a>
+</li>
+
+<li>Patrimoniales MAPFRE<br>
+<a href="mailto:cuepatrimoniales@mapfre.com">cuepatrimoniales@mapfre.com</a>
+</li>
+
+<li>Atención al cliente MAPFRE<br>
+<a href="mailto:cueatencionalcliente@mapfre.com">cueatencionalcliente@mapfre.com</a>
+</li>
+
+<li>Anulación empresas<br>
+<a href="mailto:cueanulacionempresas@santander.com">cueanulacionempresas@santander.com</a>
+</li>
+
+<li>Anulación autos<br>
+<a href="mailto:cueanulacionautos@santander.com">cueanulacionautos@santander.com</a>
+</li>
 
 </ul>
 </div>
-    </footer>
+
+
+<div class="card">
+<h2>Buzones AEGON / SANTANDER</h2>
+<ul>
+
+<li>Buzón servicio Sassa<br>
+<a href="mailto:serviciosassa@aegon.es">serviciosassa@aegon.es</a>
+</li>
+
+<li>Buzón escalados salud<br>
+<a href="mailto:escaladossalud@aegon.es">escaladossalud@aegon.es</a>
+</li>
+
+<li>Buzón preferente servicios<br>
+<a href="mailto:preferente.serviciosassa@aegon.es">preferente.serviciosassa@aegon.es</a>
+</li>
+
+</ul>
 </div>
-</div>
+
 </section>
+
 
 <!-- ===================== MANUAL COMERCIAL ===================== -->
 <section id="manual" class="main-section">
-
 
 <h1>Manual comercial</h1>
 
@@ -5302,6 +5370,61 @@ function openAutosTab(event, panelId) {
     event.currentTarget.classList.add('active');
   }
 }
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const input = document.getElementById("buscadorContactos");
+  const mensaje = document.getElementById("mensajeBusqueda");
+
+  if (!input) return;
+
+  input.addEventListener("input", function () {
+
+    const filtro = input.value.toLowerCase().trim();
+    const cards = document.querySelectorAll("#contactos .card");
+
+    let visibles = 0;
+
+    cards.forEach(function (card) {
+
+      if (card.id === "cardBuscadorContactos") {
+        card.style.display = "block";
+        return;
+      }
+
+      const texto = card.textContent.toLowerCase();
+
+      if (filtro === "" || texto.includes(filtro)) {
+        card.style.display = "block";
+        visibles++;
+      } else {
+        card.style.display = "none";
+      }
+
+    });
+
+    // 👇 MENSAJES PRO
+    if (filtro === "") {
+      mensaje.innerText = "🔎 Escribe para buscar contactos";
+    } 
+    else if (visibles === 0) {
+      mensaje.innerText = "❌ No se encontraron resultados";
+    } 
+    else {
+      mensaje.innerText = "✅ " + visibles + " resultados encontrados";
+    }
+
+  });
+
+});
+window.filtrarContactoRapido = function(texto) {
+  const input = document.getElementById("buscadorContactos");
+  if (!input) return;
+
+  input.value = texto;
+  input.dispatchEvent(new Event("input"));
+};
 </script>
 </body>
 
