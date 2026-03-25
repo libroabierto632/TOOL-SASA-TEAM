@@ -1620,8 +1620,12 @@ function generarDossier(){
 
     if(seccion){
      const copia = seccion.cloneNode(true);
+// FORZAR QUE TODO LO OCULTO SE VEA EN EL DOSSIER
+copia.querySelectorAll('[style*="display:none"], .contenido-oculto, .formacion-oculta').forEach(el => {
+  el.style.display = 'block';
+});
 
-// Ocultar botones y navegación interna en el dossier
+// Mostrar botones y navegación interna en el dossier
 copia.querySelectorAll('.subtabs, .main-nav, button').forEach(el => {
   el.remove();
 });
