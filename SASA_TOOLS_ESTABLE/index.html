@@ -216,7 +216,7 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
       <button class="main-tab" data-target="otrosSeguros">🧩 Otros Seguros</button>
 
-      <button class="main-tab" data-target="transportes Mercancías">🚚 Transportes Mercancías</button>
+      <button class="main-tab" data-target="transportesMercancias">🚚 Transportes Mercancías</button>
 
     </nav>  
   </header>
@@ -352,12 +352,45 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 Selecciona los productos que quieres incluir en el dossier y genera un documento listo para imprimir o enviar al cliente.
 </p>
 
-<label><input type="checkbox" value="ciberseguro"> Ciberseguro</label><br>
-<label><input type="checkbox" value="credito"> Seguro de crédito</label><br>
+<label><input type="checkbox" value="promociones"> Promociones</label><br>
+<label><input type="checkbox" value="inicio"> Inicio</label><br>
+<label><input type="checkbox" value="cartas"> Cartas</label><br>
+<label><input type="checkbox" value="contactos"> Contactos</label><br>
+<label><input type="checkbox" value="impago"> Protección Impago</label><br>
+
+<label><input type="checkbox" value="manual"> Manual comercial</label><br>
+<label><input type="checkbox" value="objeciones"> Objeciones</label><br>
+<label><input type="checkbox" value="deteccion-oportunidad"> Oportunidades</label><br>
+<label><input type="checkbox" value="verificacion-datos"> Verificación cliente</label><br>
+<label><input type="checkbox" value="errores-contratacion"> Errores contratación</label><br>
+<label><input type="checkbox" value="explicacion-30s"> Explicar seguros</label><br>
+<label><input type="checkbox" value="cierres-comerciales"> Cierres de venta</label><br>
+<label><input type="checkbox" value="frases-calidad"> Frases calidad</label><br>
+<label><input type="checkbox" value="control-calidad"> Control calidad</label><br>
+
 <label><input type="checkbox" value="rav"> Renta Vitalicia</label><br>
 <label><input type="checkbox" value="aegon"> Seguros Aegon</label><br>
+<label><input type="checkbox" value="credito"> Seguro de crédito</label><br>
 <label><input type="checkbox" value="empresas"> Seguros Empresas</label><br>
+<label><input type="checkbox" value="ciberseguro"> Ciberseguro</label><br>
 <label><input type="checkbox" value="salud"> Salud Asisa</label><br>
+
+<label><input type="checkbox" value="cotizadorAsisa"> Cotizador Asisa</label><br>
+<label><input type="checkbox" value="tarifas"> Tarifas</label><br>
+<label><input type="checkbox" value="cuadro"> Cuadro médico</label><br>
+
+<label><input type="checkbox" value="checklist-cotizacion"> Checklist cotización</label><br>
+<label><input type="checkbox" value="sabias-que"> ¿Sabías qué?</label><br>
+<label><input type="checkbox" value="casos-reales"> Casos reales</label><br>
+<label><input type="checkbox" value="rutaGO"> Ruta GO</label><br>
+
+<label><input type="checkbox" value="autos"> Autos y Motos</label><br>
+<label><input type="checkbox" value="otrosSeguros"> Otros Seguros</label><br>
+<label><input type="checkbox" value="transportesMercancias"> Transportes Mercancías</label><br>
+
+
+
+
 <br>
 <p id="contadorProductos"></p>
 <button onclick="generarDossier()" class="btn">
@@ -1503,7 +1536,7 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
  
 </section>
 
-<section id="transportes Mercancías" class="main-section" style="display:none;">
+<section id="transportesMercancias" class="main-section" style="display:none;">
 
 <h1>🚚 Transportes Mercancías</h1>
 
