@@ -1060,11 +1060,11 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 <h1>🔥 Campañas y promociones del mes</h1>
 
 <!-- VIDA FEMENINO -->
-<div class="card" data-inicio="2026-03-09" data-fin="2026-03-27">
+<div class="card" data-inicio="2026-03-28" data-fin="2026-04-31">
 <h3>Campaña Vida Femenino</h3>
 <ul>
-<li>Hasta 20% de descuento</li>
-<li>Vigencia del 9 al 27 de marzo</li>
+<li>Hasta 5% de descuento</li>
+
 <li>Protección Familiar en Femenino</li>
 </ul>
 </div>
@@ -6577,9 +6577,7 @@ window.filtrarContactoRapido = function(texto) {
   input.dispatchEvent(new Event("input"));
 };
 </script>
-</body>
 
-</html>
 
 <section id="ciberseguro" class="main-section">
   <h1>🛡️ Ciberseguro</h1>
@@ -11383,9 +11381,10 @@ El contenido tiene carácter informativo y no constituye documentación oficial 
     onkeyup="buscarContenido()">
 </div>
 </section>
-</div
+</div>
+
 <script>
-<script>
+
 function activarPrimeraSubtabHogar() {
   const primeraTab = document.querySelector('#aegon-hogar .hogar-subtab');
   if (primeraTab) {
@@ -11398,3 +11397,1165 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (botonMiHogar) {
     botonMiHogar.addEventListener("click", function () {
+
+</script>
+<!-- ===== CHATBOT SASA LIMPIO ===== -->
+<style>
+
+#chatBotBtn{
+  position:fixed;
+  right:18px;
+  bottom:15px;
+  width:56px;
+  height:60px;
+  border:none;
+  border-radius:50%;
+  background:#0b3f8a;
+  color:#fff;
+  font-size:24px;
+  cursor:pointer;
+  z-index:99999;
+  box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+#chatBox{
+  position:fixed;
+  right:18px;
+  bottom:86px;
+  width:370px;
+  max-width:calc(100vw - 24px);
+  height:520px;
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  display:none;
+  flex-direction:column;
+  z-index:99998;
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+  font-family:Arial, sans-serif;
+}
+#chatHeader {
+  background: linear-gradient(90deg, #004481 0%, #0b5cab 100%) !important;
+  color: #ffffff !important;
+}
+#chatMessages{
+  flex:1;
+  overflow-y:auto;
+  padding:14px;
+  background:#f7fbff;
+}
+#chatMessages {
+  max-height: 350px;
+  overflow-y: auto;
+  padding: 12px;
+  line-height: 1.4;
+}
+#chatMessages div {
+  margin-bottom: 10px;
+}
+.msgUserWrap{ text-align:right; margin:8px 0; }
+.msgBotWrap{ text-align:left; margin:8px 0; }
+.msgUser{
+  display:inline-block;
+  max-width:82%;
+  background:#e8f2ff;
+  color:#1a1a1a;
+  padding:10px 12px;
+  border-radius:14px;
+  white-space:pre-wrap;
+  text-align:left;
+}
+.msgBot{
+  display:inline-block;
+  max-width:82%;
+  background:#ffffff;
+  color:#1a1a1a;
+  padding:10px 12px;
+  border-radius:14px;
+  white-space:pre-wrap;
+  text-align:left;
+  border:1px solid #dfe8f3;
+}
+#chatInputArea{
+  display:flex;
+  gap:8px;
+  padding:12px;
+  border-top:1px solid #dfe8f3;
+  background:#fff;
+}
+.contenido-msg {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.chatQuickBtn {
+  background: #ffffff !important;
+  color: #004481 !important;
+  border: 1px solid #004481 !important;
+}
+/* TÍTULOS tipo 👉 PRODUCTO */
+.contenido-msg strong,
+.contenido-msg b {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* CLAVE */
+.contenido-msg:has(:contains("Clave")) {
+  margin-top: 8px;
+}
+
+/* BLOQUE CLAVE */
+.contenido-msg span.clave {
+  display: block;
+  background: #fff7e6;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+/* BLOQUE CIERRE */
+.contenido-msg span.cierre {
+  display: block;
+  background: #e6f0ff;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+#chatInput{
+  flex:1;
+  border:1px solid #b9c8da;
+  border-radius:10px;
+  padding:10px 12px;
+  font-size:14px;
+  outline:none;
+}
+#chatSend{
+  border:none;
+  border-radius:10px;
+  background:#0b3f8a;
+  color:#fff;
+  padding:10px 14px;
+  cursor:pointer;
+  font-weight:700;
+}
+#chatQuickActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #dfe8f3;
+  background: #ffffff;
+}
+
+.chatQuickBtn {
+  border: 1px solid #c9d7e6;
+  background: #f7fbff;
+  color: #0b3f8a;
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chatQuickBtn:hover {
+  background: #eaf3ff;
+}
+.bubble {
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+/* BOT */
+.bot {
+  background: #f1f5f9;
+  color: #000;
+  text-align: left;
+}
+.bubble.bot {
+  background: #f5f7fb;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.bubble.user {
+  background: #004481;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.bubble strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.bubble hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 10px 0;
+}
+/* USER */
+.user {
+  background: #004481;
+  color: #fff;
+  text-align: right;
+}
+#chatMessages {
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+#chatMessages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chatMessages::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+#chatBox {
+  border: 1px solid #d9e2ec;
+  box-shadow: 0 8px 20px rgba(0, 68, 129, 0.12);
+}
+
+#chatHeader {
+  background: linear-gradient(90deg, #004481 0%, #0b5cab 100%);
+  color: #fff;
+}
+
+#chatQuickActions {
+  background: #f8fbff;
+}
+
+.chatQuickBtn {
+  background: #fff;
+  color: #004481;
+  border: 1px solid #d5e2f0;
+  border-radius: 999px;
+}
+
+.chatQuickBtn:hover {
+  background: #edf5ff;
+}
+
+#chatMessages {
+  background: #fff;
+}
+
+#chatSend {
+  background: linear-gradient(90deg, #004481 0%, #0b5cab 100%);
+  color: #fff;
+}
+
+#chatMessages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#chatMessages::-webkit-scrollbar-thumb {
+  background: #c4d4e5;
+  border-radius: 10px;
+}
+#chatBotBtn {
+  background: #e30613 !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(227,6,19,0.3);
+}
+
+#chatBotBtn:hover {
+  background: #c00510 !important;
+}
+#chatBotBtn {
+  bottom: 90px !important;
+}
+</style>
+
+<button id="chatBotBtn" type="button">💬</button>
+
+<div id="chatBox">
+  <div id="chatHeader">Asistente SASA</div>
+
+
+<div id="chatQuickActions">
+  <button class="chatQuickBtn" data-prompt="como vender empresa">Empresa</button>
+  <button class="chatQuickBtn" data-prompt="como vender multirriesgo">Multirriesgo</button>
+  <button class="chatQuickBtn" data-prompt="responsabilidad civil">RC</button>
+  <button class="chatQuickBtn" data-prompt="como vender ciberseguro">Ciber</button>
+  <button class="chatQuickBtn" data-prompt="como vender impago">Impago</button>
+  <button class="chatQuickBtn" data-prompt="como vender asisa">Asisa</button>
+  <button class="chatQuickBtn" data-prompt="como vender transporte de mercancias">Transporte</button>
+  <button class="chatQuickBtn" data-prompt="como vender vida">Vida</button>
+  <button class="chatQuickBtn" data-prompt="como vender hogar">Hogar</button>
+  <button class="chatQuickBtn" data-prompt="como vender autonomos">Autónomos</button>
+  <button class="chatQuickBtn" data-prompt="como vender accidentes convenio">Accidentes</button>
+  <button class="chatQuickBtn" data-prompt="objecion por precio">Objeciones</button>
+  <button class="chatQuickBtn" data-prompt="cerrar venta">Cierre</button>
+  <button class="chatQuickBtn" data-prompt="venta cruzada">Cross sell</button>
+  <button class="chatQuickBtn" data-prompt="modo director">Modo director</button>
+  <button class="chatQuickBtn" data-prompt="equipo objetivo">Equipo objetivo</button>
+  <button class="chatQuickBtn" data-prompt="equipo cierre">Equipo cierre</button>
+  <button class="chatQuickBtn" data-prompt="empresa equipo">Equipo empresa</button>
+  <button class="chatQuickBtn" data-prompt="equipo ciber">Equipo ciber</button>
+</div>
+
+<div id="chatMessages"></div>
+  <div id="chatMessages"></div>
+  <div id="chatInputArea">
+    <input id="chatInput" type="text" placeholder="Escribe aquí..." autocomplete="off">
+    <button id="chatSend" type="button">Enviar</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  const btn = document.getElementById("chatBotBtn");
+  const box = document.getElementById("chatBox");
+  const messages = document.getElementById("chatMessages");
+  const input = document.getElementById("chatInput");
+  const send = document.getElementById("chatSend");
+
+  function addMsg(text, tipo) {
+    const wrap = document.createElement("div");
+    wrap.className = tipo === "user" ? "msgUserWrap" : "msgBotWrap";
+
+    const bubble = document.createElement("div");
+bubble.className = "bubble " + tipo;
+bubble.innerHTML = `
+${tipo === "bot" ? `<div style="font-weight:700;margin-bottom:6px;">🧠 Asistente SASA</div>` : ""}
+<div class="contenido-msg">${String(text).replace(/\n/g, "<br>")}
+`;
+wrap.appendChild(bubble);
+messages.appendChild(wrap);
+
+setTimeout(() => {
+  wrap.scrollIntoView({ behavior: "smooth", block: "start" });
+}, 50);
+  }
+
+  function tiene(q, ...palabras) {
+    return palabras.some(p => q.includes(p));
+  }
+function responder(p) {
+  p = (p || "").toLowerCase().trim();
+  p = p.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+  // normalización útil
+  if (p.includes("poliza")) p += " credito";
+  if (p.includes("py")) p += " credito";
+  if (p.includes("directivo")) p += " rc";
+  if (p.includes("d&o")) p += " directivo";
+  if (p.includes("empresa")) p += " multirriesgo";
+  if (p.includes("negocio")) p += " multirriesgo";
+  if (p.includes("alquiler")) p += " impago";
+  if (p.includes("hogar")) p += " casa vivienda";
+  if (p.includes("autonomo")) p += " ingresos";
+  if (p.includes("deceso")) p += " decesos";
+
+  // =========================
+  // OBJECIONES
+  // =========================
+  if (
+    p.includes("es caro") ||
+    p.includes("muy caro") ||
+    p.includes("caro") ||
+    p.includes("precio alto") ||
+    p.includes("mejor precio") ||
+    p.includes("mas barato") ||
+    p.includes("más barato") ||
+    p.includes("objecion") ||
+    p.includes("objecion precio") ||
+    p.includes("objecion por precio")
+  ) {
+    return `
+
+👉 OBJECIÓN POR PRECIO
+
+• No compares solo prima
+• Lleva la conversación a coberturas, servicio y siniestro
+.contenido-msg {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* TÍTULOS tipo 👉 PRODUCTO */
+.contenido-msg strong,
+.contenido-msg b {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* CLAVE */
+.contenido-msg:has(:contains("Clave")) {
+  margin-top: 8px;
+}
+
+/* BLOQUE CLAVE */
+.contenido-msg span.clave {
+  display: block;
+  background: #fff7e6;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+/* BLOQUE CIERRE */
+.contenido-msg span.cierre {
+  display: block;
+  background: #e6f0ff;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 6px;
+  font-weight: 600;
+}
+💡 Clave:
+Lo barato deja de ser barato cuando falta cobertura
+
+👉 Respuesta útil:
+Entiendo que mires precio, pero aquí lo importante es qué pasa cuando lo necesites de verdad.
+
+👉 Cierre:
+¿Quieres que comparemos solo prima o también lo que te cubre cada opción?
+`;
+  }
+
+  if (
+    p.includes("ya lo tengo") ||
+    p.includes("ya tengo seguro") ||
+    p.includes("lo tengo con otra") ||
+    p.includes("tengo otra compania") ||
+    p.includes("tengo otra compañia")
+  ) {
+    return `
+👉 OBJECIÓN: YA LO TENGO
+
+• No ataques su seguro actual
+• Abre comparación de valor
+
+💡 Clave:
+No se trata de cambiar por cambiar, sino de revisar si está bien cubierto
+
+👉 Respuesta útil:
+Perfecto, precisamente por eso merece la pena revisarlo y ver si estás pagando bien por lo que tienes.
+
+👉 Cierre:
+Si quieres, lo vemos rápido y te digo si realmente merece la pena moverlo o no.
+`;
+  }
+
+  if (
+    p.includes("no lo necesito") ||
+    p.includes("no me hace falta") ||
+    p.includes("no lo veo necesario")
+  ) {
+    return `
+👉 OBJECIÓN: NO LO NECESITO
+
+• No contradigas de frente
+• Lleva al riesgo real
+
+💡 Clave:
+Muchos seguros no se valoran hasta que pasa algo
+
+👉 Respuesta útil:
+Ojalá no lo necesites nunca, pero la idea es que si pasa algo importante no tengas que asumirlo solo.
+
+👉 Cierre:
+¿Prefieres verlo ahora con calma o cuando ya haya habido un problema?
+`;
+  }
+
+  // =========================
+  // CIERRE
+  // =========================
+  if (
+    p.includes("cerrar venta") ||
+    p.includes("como cerrar") ||
+    p.includes("cómo cerrar") ||
+    p.includes("cierre comercial") ||
+    p.includes("frase de cierre")
+  ) {
+    return `
+👉 CIERRE DE VENTA
+
+• No preguntes si lo quiere
+• Da por hecho el siguiente paso
+
+💡 Frases útiles:
+• ¿Lo prefieres mensual o anual?
+• ¿Lo dejamos ya activado para que estés cubierto desde hoy?
+• ¿Te encaja más dejarlo resuelto ahora?
+
+👉 Clave:
+El cierre no es empujar, es facilitar la decisión.
+`;
+  }
+
+  // =========================
+  // DETECCIÓN DE NECESIDAD
+  // =========================
+  if (
+    p.includes("que le pregunto") ||
+    p.includes("que preguntar") ||
+    p.includes("qué le pregunto") ||
+    p.includes("qué preguntar") ||
+    p.includes("detectar necesidad") ||
+    p.includes("preguntas cliente")
+  ) {
+    return `
+👉 DETECCIÓN DE NECESIDAD
+
+Pregunta siempre:
+
+• ¿A qué te dedicas exactamente?
+• ¿Tienes empleados?
+• ¿Tienes local o trabajas desde casa?
+• ¿Tratas con clientes o datos?
+• ¿Tienes familia o ingresos que proteger?
+
+💡 Con eso detectas:
+RC, ciber, multirriesgo, accidentes, vida, salud, impago o protección de ingresos.
+
+👉 Clave:
+No vendas primero. Diagnostica.
+`;
+  }
+
+  // =========================
+  // VENTA CRUZADA
+  // =========================
+  if (
+    p.includes("venta cruzada") ||
+    p.includes("que vender") ||
+    p.includes("qué vender") ||
+    p.includes("oportunidad") ||
+    p.includes("cruzar venta")
+  ) {
+    return `
+👉 VENTA CRUZADA
+
+Oportunidades rápidas:
+
+• Hipoteca → vida + hogar
+• Alquiler → impago
+• Empresa → RC + ciber + salud
+• Autónomo → protección ingresos + salud
+• Empleados → accidentes convenio + salud empresa
+• Familia → vida + decesos
+
+💡 Clave:
+No vendas productos sueltos. Vende protección completa.
+`;
+  }
+
+  // =========================
+  // MODO VENTA GENERAL
+  // =========================
+  if (
+    p.includes("como vender") ||
+    p.includes("cómo vender") ||
+    p.includes("vender ")
+  ) {
+    if (p.includes("empresa") || p.includes("multirriesgo")) {
+      return `
+👉 MULTIRRIESGO EMPRESA
+
+• No empieces por la póliza
+• Empieza por el riesgo real del negocio
+• Habla de incendio, agua, robo y parón de actividad
+
+💡 Clave:
+No es un seguro, es continuidad del negocio
+
+👉 Cierre:
+Si mañana no puedes abrir, ¿cuánto pierdes?
+`;
+    }
+
+    if (p.includes("credito") || p.includes("poliza py")) {
+      return `
+👉 SEGURO DE CRÉDITO / PÓLIZA PY
+
+• No vendas un seguro, vende cobrar
+• Habla de facturas impagadas, análisis de clientes y recobro
+
+💡 Clave:
+La empresa no pierde por vender, pierde por no cobrar
+
+👉 Cierre:
+¿Prefieres vender más o cobrar seguro?
+`;
+    }
+
+    if (p.includes("directivo") || p.includes("rc")) {
+      return `
+👉 RC DIRECTIVOS / RESPONSABILIDAD CIVIL
+
+• Empieza por el riesgo personal
+• Una reclamación no la paga el cargo, la paga la persona si no está cubierta
+
+💡 Clave:
+No proteges una empresa, proteges el patrimonio del directivo
+
+👉 Cierre:
+Si mañana te reclaman personalmente, ¿estás cubierto?
+`;
+    }
+
+ if (p.includes("ciber")) {
+  return `
+<strong>👉 CIBERSEGURO</strong>
+
+• No empieces por tecnología  
+• Empieza por riesgo real  
+• Pérdida de datos, paralización y dinero  
+
+<hr>
+
+💡 <strong>Clave</strong>  
+No es un seguro, es supervivencia del negocio  
+
+<hr>
+
+👉 <strong>Cierre</strong>  
+Si mañana no puedes facturar por un ataque… ¿qué haces?
+`;
+}    if (p.includes("hogar") || p.includes("casa") || p.includes("vivienda")) {
+      return `
+👉 SEGURO DE HOGAR
+
+• No hables solo de continente y contenido
+• Habla de proteger lo que más valor tiene
+
+💡 Clave:
+No es una casa, es tranquilidad
+
+👉 Cierre:
+¿Tienes cubierto lo que más valor tiene?
+`;
+    }
+
+    if (p.includes("vida")) {
+      return `
+👉 SEGURO DE VIDA
+
+• No empieces por fallecimiento
+• Empieza por protección familiar y estabilidad económica
+
+💡 Clave:
+No es para ti, es para los tuyos
+
+👉 Cierre:
+Si mañana faltaras, ¿tu familia tendría respaldo?
+`;
+    }
+
+    if (p.includes("salud") || p.includes("asisa")) {
+      return `
+👉 SALUD / ASISA
+
+• Empieza por rapidez y acceso
+• Habla de especialistas, hospitalización y tranquilidad
+
+💡 Clave:
+No es gasto, es cuidado y fidelización
+
+👉 Cierre:
+¿Quieres resolverlo rápido cuando lo necesites o seguir esperando?
+`;
+    }
+
+    if (p.includes("impago")) {
+      return `
+👉 IMPAGO DE ALQUILER
+
+• No vendas solo rentas
+• Vende tranquilidad, defensa jurídica y descanso
+
+💡 Clave:
+El propietario compra dormir tranquilo
+
+👉 Cierre:
+¿Puedes permitirte varios meses sin cobrar?
+`;
+    }
+
+    if (p.includes("transporte") || p.includes("mercancia")) {
+      return `
+👉 TRANSPORTE DE MERCANCÍAS
+
+• No hables del camión, habla del dinero
+• La clave es quién pierde si pasa algo
+
+💡 Clave:
+No es transporte, es proteger el valor de la carga
+
+👉 Cierre:
+Si mañana se pierde la mercancía, ¿quién asume el coste?
+`;
+    }
+
+    if (p.includes("accidente") || p.includes("convenio")) {
+      return `
+👉 ACCIDENTES DE CONVENIO
+
+• Empieza por la obligación
+• Luego habla de protección del empleado y tranquilidad para la empresa
+
+💡 Clave:
+No es una opción, es cumplimiento
+
+👉 Cierre:
+¿Lo tienes ya cubierto o lo dejamos listo?
+`;
+    }
+
+    if (p.includes("dependencia")) {
+      return `
+👉 DEPENDENCIA
+
+• Habla de previsión y cuidados futuros
+• Llévalo a tranquilidad familiar
+
+💡 Clave:
+No vendes edad, vendes previsión
+
+👉 Cierre:
+Si mañana necesitaras ayuda diaria, ¿cómo lo tendrías resuelto?
+`;
+    }
+
+    if (p.includes("decesos")) {
+      return `
+👉 DECESOS
+
+• No hables de muerte
+• Habla de evitar cargas y gestiones a la familia
+
+💡 Clave:
+No vendes un seguro, vendes alivio en el peor momento
+
+👉 Cierre:
+¿Prefieres dejar esto resuelto ahora o que lo gestione tu familia?
+`;
+    }
+
+    if (p.includes("autonomo")) {
+      return `
+👉 PROTECCIÓN AUTÓNOMOS
+
+• No empieces por coberturas
+• Empieza por ingresos
+
+💡 Clave:
+Si no trabajas, no ingresas
+
+👉 Cierre:
+Si mañana no puedes trabajar, ¿qué pasa con tus ingresos?
+`;
+    }
+
+    return `
+👉 GUÍA GENERAL DE VENTA
+
+• No empieces por precio
+• Empieza por el problema real
+• Haz que el cliente lo visualice
+• Presenta el seguro como solución
+
+💡 Vendes tranquilidad, no pólizas
+`;
+  }
+
+  // =========================
+  // PRODUCTOS / CONSULTAS
+  // =========================
+  if (p.includes("ciber")) {
+    return `
+👉 CIBERSEGURO
+
+• No empieces por tecnología, empieza por riesgo real
+• Pérdida de datos, paralización y dinero
+
+💡 Clave:
+No es un seguro, es supervivencia del negocio
+
+👉 Cierre:
+Si mañana no pudieras facturar por un ataque, ¿qué harías?
+`;
+  }
+
+  if (p.includes("credito") || p.includes("poliza py")) {
+    return `
+👉 SEGURO DE CRÉDITO (PÓLIZA PY)
+
+• Cubre facturas impagadas
+• Analiza clientes
+• Gestiona recobro
+
+💡 Clave:
+No vendes seguro, vendes cobrar
+
+👉 Cierre:
+¿Prefieres vender más o vender seguro?
+`;
+  }
+
+  if (p.includes("rc") || p.includes("responsabilidad") || p.includes("directivo")) {
+    return `
+👉 RESPONSABILIDAD CIVIL / D&O
+
+• Protege patrimonio personal
+• Errores, reclamaciones y demandas
+
+💡 Clave:
+No paga la empresa, paga la persona
+
+👉 Cierre:
+Si mañana te reclaman personalmente, ¿estás cubierto?
+`;
+  }
+
+  if (p.includes("multirriesgo")) {
+    return `
+👉 MULTIRRIESGO EMPRESA
+
+• Daños: incendio, agua, robo
+• Parón de negocio
+• Responsabilidad
+
+💡 Clave:
+No es un seguro, es continuidad del negocio
+
+👉 Cierre:
+Si mañana no puedes abrir, ¿cuánto pierdes?
+`;
+  }
+
+  if (p.includes("transporte")) {
+    return `
+👉 TRANSPORTE DE MERCANCÍAS
+
+• Cubre daños o pérdida de mercancía
+
+💡 Clave:
+No es quién transporta, es quién pierde el dinero
+
+👉 Cierre:
+Si se pierde la carga, ¿quién lo paga?
+`;
+  }
+
+  if (p.includes("auto") || p.includes("coche") || p.includes("moto")) {
+    return `
+👉 AUTOS Y MOTOS
+
+• ECO → precio
+• Elección → equilibrio
+• Plus → tranquilidad
+
+💡 Clave:
+No vendas precio, vende siniestro
+
+👉 Cierre:
+¿Prefieres ahorrar hoy o no preocuparte mañana?
+`;
+  }
+
+  if (p.includes("asisa") || p.includes("salud")) {
+    return `
+👉 SALUD ASISA EMPRESA
+
+• Sin copagos
+• Hospitalización incluida
+• Ventaja fiscal
+
+💡 Clave:
+No es gasto, es fidelización
+
+👉 Cierre:
+¿Quieres cuidar al equipo o solo pagar nóminas?
+`;
+  }
+
+  if (p.includes("impago")) {
+    return `
+👉 IMPAGO ALQUILER
+
+• Cubre rentas
+• Defensa jurídica
+• Tiempo y desgaste
+
+💡 Clave:
+No vendes renta, vendes dormir tranquilo
+
+👉 Cierre:
+¿Puedes permitirte meses sin cobrar?
+`;
+  }
+
+  if (p.includes("accidente") || p.includes("convenio")) {
+    return `
+👉 ACCIDENTES CONVENIO
+
+• Obligatorio
+• Sancionable si no lo tienes
+
+💡 Clave:
+No es opción, es obligación + tranquilidad
+
+👉 Cierre:
+¿Lo tienes ya cubierto o lo dejamos listo?
+`;
+  }
+
+  if (p.includes("vida")) {
+    return `
+👉 SEGURO DE VIDA
+
+• Protección familiar
+• Cobertura de deudas
+
+💡 Clave:
+No es para ti, es para los tuyos
+
+👉 Cierre:
+Si faltas mañana, ¿qué pasa con tu familia?
+`;
+  }
+
+  if (p.includes("hogar") || p.includes("casa") || p.includes("vivienda")) {
+    return `
+👉 SEGURO DE HOGAR
+
+• Continente + contenido
+• Responsabilidad civil
+
+💡 Clave:
+No es casa, es tu tranquilidad
+
+👉 Cierre:
+¿Tienes cubierto lo que más valor tiene?
+`;
+  }
+
+  if (p.includes("autonomo")) {
+    return `
+👉 PROTECCIÓN AUTÓNOMOS
+
+• Protección de ingresos
+• Continuidad económica
+
+💡 Clave:
+Si no trabajas, no ingresas
+
+👉 Cierre:
+Si mañana no puedes trabajar, ¿qué haces?
+`;
+  }
+
+  if (p.includes("dependencia")) {
+    return `
+👉 DEPENDENCIA
+
+• Previsión
+• Cuidados futuros
+• Tranquilidad familiar
+
+💡 Clave:
+No es edad, es anticiparse
+
+👉 Cierre:
+¿Quién te ayudaría si mañana dependieras de otros?
+`;
+  }
+
+  if (p.includes("decesos")) {
+    return `
+👉 DECESOS
+
+• Gestión
+• Tranquilidad
+• Protección para la familia
+
+💡 Clave:
+Evitas problemas en el peor momento
+
+👉 Cierre:
+¿Lo quieres dejar resuelto ahora o que lo suyos lo gestionen?
+`;
+  }
+if (p.includes("lo que quieras")) {
+  return `texto`;
+}
+// =========================
+// MODO DIRECTOR
+// =========================
+if (p.includes("modo director") || p.includes("mensaje equipo") || p.includes("dinamizar equipo")) {
+  return `
+👉 MENSAJE PARA EQUIPO
+
+Equipo, hoy no hace falta hacer nada raro.
+
+Simplemente estar atentos a lo que salga en conversación:
+👉 hipoteca → vida + hogar  
+👉 alquiler → impago  
+👉 empresa → RC + ciber  
+
+Sin forzar, solo aprovechar lo que ya tenemos delante.
+
+Ahí es donde salen las operaciones.
+`;
+}
+
+if (p.includes("empresa equipo")) {
+  return `
+👉 FOCO EMPRESAS
+
+Ojo hoy con empresas.
+
+No empecéis por el seguro:
+👉 actividad  
+👉 empleados  
+👉 local  
+
+De ahí salen solos RC, multirriesgo, ciber o accidentes.
+
+No es vender, es detectar.
+`;
+}
+
+if (p.includes("equipo precio") || p.includes("es caro equipo")) {
+  return `
+👉 OBJECIÓN PRECIO (EQUIPO)
+
+Cuando os digan “es caro”:
+
+👉 no entréis en precio  
+👉 llevadlo a cobertura  
+👉 y a qué pasaría en un siniestro  
+
+El cliente no compra barato, compra tranquilo.
+`;
+}
+
+if (p.includes("equipo cierre")) {
+  return `
+👉 CIERRE EQUIPO
+
+No preguntéis si lo quiere.
+
+Usad:
+👉 “¿lo dejamos ya activado?”  
+👉 “¿prefieres mensual o anual?”  
+
+Mucho más natural y funciona mejor.
+`;
+}
+
+if (p.includes("equipo objetivo") || p.includes("mensaje motivacion")) {
+  return `
+👉 MENSAJE OBJETIVO
+
+Nos quedan pocos días, pero está más cerca de lo que parece.
+
+Con una operación por persona, estamos dentro.
+
+👉 mirad cartera  
+👉 llamad a clientes vivos  
+👉 aprovechad cualquier conversación  
+
+Vamos a por ello 💪
+`;
+}
+
+if (p.includes("equipo ciber")) {
+  return `
+👉 FOCO CIBER
+
+No habléis de tecnología.
+
+Hablad de:
+👉 perder datos  
+👉 no poder trabajar  
+👉 perder dinero  
+
+Ahí es donde lo entienden todos.
+`;
+}
+  return `
+Hazme la pregunta más concreta:
+
+👉 crédito, empresa, RC, ciber, transporte, impago
+👉 Asisa, autos, vida, hogar, autónomos, accidentes, dependencia o decesos
+
+Y te ayudo a cerrarlo.
+`;
+}
+  
+
+  function enviar() {
+    const texto = input.value.trim();
+    if (!texto) return;
+    addMsg(texto, "user");
+    const respuesta = responder(texto);
+    addMsg(respuesta, "bot");
+    input.value = "";
+    input.focus();
+  }
+
+  btn.onclick = function () {
+    box.style.display = box.style.display === "flex" ? "none" : "flex";
+  };
+
+  send.onclick = enviar;
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") enviar();
+  });
+document.querySelectorAll(".chatQuickBtn").forEach(function (btnQuick) {
+  btnQuick.addEventListener("click", function () {
+    lanzarBoton(this.dataset.prompt);
+  });
+});
+function lanzarBoton(texto) {
+  const input = document.getElementById("chatInput");
+  const messages = document.getElementById("chatMessages");
+
+  // limpiar conversación visible para que se vea clara la respuesta del botón
+  messages.innerHTML = "";
+
+  // mostrar la consulta elegida
+  addMsg(texto, "user");
+
+  // responder
+  const respuesta = responder(texto);
+  addMsg(respuesta, "bot");
+
+  input.value = "";
+  input.focus();
+
+  // asegurar que se vea el inicio del mensaje nuevo
+  setTimeout(() => {
+    messages.scrollTop = 0;
+  }, 50);
+}  addMsg("Hola. Pregúntame sobre ventas, productos u objeciones.", "bot");
+})();
+</script>
+<!-- ===== FIN CHATBOT SASA ===== -->
+
+</body>
+
+</html>
+
