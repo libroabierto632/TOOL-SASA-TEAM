@@ -23,8 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    target.style.display = "block";
-    target.classList.add("active");
+   target.style.display = "block";
+
+setTimeout(() => {
+  target.classList.add("active");
+}, 10);
 
     const activeBtn = document.querySelector(`.main-tab[data-target="${id}"]`);
     if (activeBtn) activeBtn.classList.add("active");
@@ -1744,3 +1747,70 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const promos = document.querySelectorAll("#promociones .promo-card");
+  const hoy = new Date();
+  hoy.setHours(0, 0, 0, 0);
+
+  promos.forEach(card => {
+    const inicioTxt = card.dataset.inicio;
+    const finTxt = card.dataset.fin;
+
+    if (!inicioTxt) return;
+
+    const inicio = new Date(inicioTxt + "T00:00:00");
+    const fin = finTxt ? new Date(finTxt + "T23:59:59") : null;
+
+    let estado = "";
+    let color = "";
+
+    if (hoy < inicio) {
+      estado = "PRÓXIMA";
+      color = "#0d6efd";
+    } else if (fin && hoy > fin) {
+      estado = "INACTIVA";
+      color = "#6c757d";
+    } else if (fin) {
+      const diffMs = fin - hoy;
+      const diffDias = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+      if (diffDias <= 7) {
+        estado = "PRÓXIMA A VENCER";
+        color = "#fd7e14";
+      } else {
+        estado = "ACTIVA";
+        color = "#198754";
+      }
+    } else {
+      estado = "ACTIVA";
+      color = "#198754";
+    }
+
+    let badge = card.querySelector(".promo-estado");
+
+    if (!badge) {
+      badge = document.createElement("span");
+      badge.className = "promo-estado";
+      badge.style.position = "absolute";
+      badge.style.top = "10px";
+      badge.style.right = "10px";
+      badge.style.color = "#fff";
+      badge.style.padding = "5px 10px";
+      badge.style.borderRadius = "8px";
+      badge.style.fontSize = "12px";
+      badge.style.fontWeight = "bold";
+      badge.style.zIndex = "20";
+      card.appendChild(badge);
+    }
+
+    badge.textContent = estado;
+    badge.style.background = color;
+  });
+});
+card.classList.remove("promo-activa", "promo-proxima", "promo-urgente", "promo-inactiva");
+
+if (estado === "ACTIVA") card.classList.add("promo-activa");
+if (estado === "PRÓXIMA") card.classList.add("promo-proxima");
+if (estado === "PRÓXIMA A VENCER") card.classList.add("promo-urgente");
+if (estado === "INACTIVA") card.classList.add("promo-inactiva");
