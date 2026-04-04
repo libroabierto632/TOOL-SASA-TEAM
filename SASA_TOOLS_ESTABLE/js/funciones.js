@@ -506,21 +506,13 @@ text-align:center;
  
 
 // Conectar botones si existen
+const btnCalc = document.getElementById("btnCalcularAsisa");
+const btnPrint = document.getElementById("btnImprimirAsisa");
 
-document.addEventListener("DOMContentLoaded", () => {
+if (btnCalc) btnCalc.addEventListener("click", calcularCotizacionAsisa);
+if (btnPrint) btnPrint.addEventListener("click", imprimirCotizacionAsisa);
 
-  if(btnCalc) btnCalc.addEventListener("click", calcularCotizacionAsisa);
-
-  if(btnPrint) btnPrint.addEventListener("click", imprimirCotizacionAsisa);
-
-  const btnCalc = document.getElementById("btnCalcularAsisa");
-
-  const btnPrint = document.getElementById("btnImprimirAsisa");
-
- 
-
-});// Rellenar bloque imprimible antes de imprimir
-
+// Rellenar bloque imprimible antes de imprimir
 function prepararImpresionAsisa(){
 
   const nombre = document.getElementById("asisaEmpresaNombre")?.value || "";
