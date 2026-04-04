@@ -1311,7 +1311,7 @@ border-color:#d6001c;
 
 #impago .subtab {
   border: none;
-  background: #ffffff;
+  background: #fa8383;
   color: #1f3f8f;
   border-radius: 999px;
   padding: 10px 16px;
@@ -1566,6 +1566,520 @@ border-color:#d6001c;
   border-radius: 10px;
   margin-top: 15px;
   font-size: 14px;
+}
+/* ===== MEJORA VISUAL GENERAL SEGURA ===== */
+
+body {
+  background: linear-gradient(180deg, #eef6fb 0%, #f8fbfd 100%);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main-section {
+  background: transparent;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e6eef5;
+  margin-bottom: 18px;
+}
+
+.card h2,
+.card h3 {
+  color: #0f3d75;
+}
+
+.section-head h1,
+.main-section h1 {
+  color: #64f10b;
+}
+
+.muted {
+  color: #5f6f82;
+}
+
+.highlight,
+.tip-comercial,
+.callout {
+  border-radius: 14px;
+}
+/* ===== BOTONES ESTILO MODERNO ===== */
+
+button,
+.nav-button,
+.btn {
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Botones amarillos */
+button,
+.nav-button {
+  background: linear-gradient(135deg, #ffd600, #ffb300);
+  color: #333;
+  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+}
+
+/* Hover */
+button:hover,
+.nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 193, 7, 0.5);
+}
+
+/* Botón activo (como INICIO) */
+button.active,
+.nav-button.active {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+}
+/* ===== PESTAÑAS PRO ===== */
+
+.subtabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.subtab {
+  background: #eef3f8;
+  color: #4a6b8a;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.subtab:hover {
+  background: #dce8f5;
+  transform: translateY(-1px);
+}
+
+/* Activa */
+.subtab.active {
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  box-shadow: 0 4px 10px rgba(53, 122, 189, 0.3);
+}
+/* ===== HEADER PRO ===== */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.brand-logo {
+  height: 48px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-subtitle {
+  font-size: 14px;
+  color: #5f6f82;
+}
+
+/* Caja superior */
+.top-box {
+  background: linear-gradient(135deg, #ffffff, #f4f8fc);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+}
+
+/* Buscador */
+input[type="text"] {
+  border-radius: 999px;
+  padding: 10px 16px;
+  border: 1px solid #d6e2ec;
+  width: 100%;
+  outline: none;
+  transition: 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15);
+}
+/* ===== ESTILO CHEROHICA ===== */
+
+body {
+  background: linear-gradient(180deg, #dff4fb 0%, #eef9ff 45%, #f8fcff 100%);
+  color: #243447;
+}
+
+/* Zona superior */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.brand-logo {
+  height: 58px;
+  width: auto;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.10));
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-text strong,
+.brand-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #18407c;
+  letter-spacing: 0.2px;
+}
+
+.brand-subtitle {
+  font-size: 16px;
+  color: #4e6a85;
+  font-weight: 500;
+}
+
+/* Caja del aviso */
+.notice,
+.alerta-superior,
+.top-box,
+.aviso-interno {
+  background: linear-gradient(135deg, #fff7df, #fff1c7);
+  border: 3px solid #f39a00;
+  border-radius: 24px;
+  box-shadow: 0 10px 24px rgba(243, 154, 0, 0.14);
+  padding: 22px;
+}
+
+/* Tarjetas */
+.card {
+  background: rgba(255,255,255,0.96);
+  border: 1px solid #dceaf5;
+  border-radius: 24px;
+  box-shadow: 0 8px 22px rgba(34, 89, 138, 0.08);
+  padding: 22px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  letter-spacing: -0.3px;
+}
+
+h1 {
+  color: #18407c;
+  font-weight: 800;
+}
+
+h2 {
+  color: #295a9b;
+  font-weight: 750;
+}
+
+h3 {
+  color: #c7475d;
+  font-weight: 700;
+}
+
+/* Botones principales */
+button,
+.nav-button,
+.main-tab,
+.btn {
+  border: none;
+  border-radius: 18px;
+  padding: 11px 18px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.main-tab,
+.nav-button,
+button {
+  background: linear-gradient(135deg, #ffe600, #ffc400);
+  color: #3e3300;
+  box-shadow: 0 6px 14px rgba(255, 196, 0, 0.28);
+}
+
+.main-tab:hover,
+.nav-button:hover,
+button:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 10px 18px rgba(255, 196, 0, 0.34);
+}
+
+.main-tab.active,
+.nav-button.active,
+button.active {
+  background: linear-gradient(135deg, #5ba0f2, #2f72d6);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(47, 114, 214, 0.28);
+}
+
+/* Subpestañas */
+.subtabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 18px;
+}
+
+.subtab {
+  background: #32e6a7d2;
+  color: #557189;
+  border: 1px solid #d9e7f2;
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.22s ease;
+}
+
+.subtab:hover {
+  background: #e9f3fb;
+  transform: translateY(-1px);
+}
+
+.subtab.active {
+  background: linear-gradient(135deg, #ffb347, #ff7a59, #7b8cff);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgba(123, 140, 255, 0.22);
+}
+
+/* Buscador */
+input[type="text"],
+input[type="search"] {
+  background: #fff;
+  border: 1px solid #d8e6f1;
+  border-radius: 999px;
+  padding: 12px 16px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="search"]:focus {
+  border-color: #6ba8ff;
+  box-shadow: 0 0 0 4px rgba(107, 168, 255, 0.15);
+}
+
+/* Bloques destacados */
+.highlight,
+.tip-comercial,
+.callout,
+.result-card {
+  background: linear-gradient(135deg, #fff8de, #fff2c4);
+  border-left: 6px solid #f3b200;
+  border-radius: 18px;
+  padding: 15px 16px;
+  box-shadow: 0 6px 14px rgba(243, 178, 0, 0.10);
+}
+
+/* Tablas */
+table {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+table th {
+  background: linear-gradient(135deg, #1f5ca8, #2e7dd7);
+  color: white;
+}
+
+table td,
+table th {
+  padding: 10px;
+}
+
+/* Scroll arriba */
+.scroll-top,
+#scrollTopBtn {
+  border-radius: 16px !important;
+  box-shadow: 0 8px 16px rgba(76, 175, 80, 0.22);
+}
+
+/* Toque más cálido para textos suaves */
+.muted,
+.small,
+.helper-text {
+  color: #5f7388;
+}
+/* ===== EFECTO WOW CHEROHICA ===== */
+
+/* Cabecera tipo bloque elegante */
+.section-header {
+  background: linear-gradient(135deg, #1f5ca8, #2e7dd7);
+  color: white;
+  padding: 18px 20px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 20px;
+  box-shadow: 0 10px 20px rgba(31, 92, 168, 0.25);
+  margin-bottom: 15px;
+}
+
+/* Títulos con iconito sutil */
+h2::before {
+  content: "✨ ";
+}
+
+/* Tarjetas con hover suave */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(34, 89, 138, 0.12);
+}
+
+/* Subrayado elegante */
+h3 {
+  position: relative;
+}
+
+h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffb347, #ff7a59);
+  border-radius: 2px;
+  margin-top: 6px;
+}
+
+/* Botón buscar más pro */
+button,
+.btn {
+  letter-spacing: 0.3px;
+}
+
+/* Scroll más fino */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5ba0f2, #2f72d6);
+  border-radius: 10px;
+}
+/* ===== BLOQUE PRODUCTO TOP ===== */
+
+.producto-box {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+  border-left: 6px solid #2e7dd7;
+}
+
+/* Cabecera más potente */
+.producto-header {
+  background: linear-gradient(135deg, #1f5ca8, #2e7dd7);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Subtítulo elegante */
+.producto-sub {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+/* Títulos internos */
+.producto-box h3 {
+  color: #1f5ca8;
+  margin-top: 18px;
+}
+
+/* Listas más limpias */
+.producto-box ul li {
+  margin-bottom: 6px;
+}
+
+/* Numeración más visual */
+.producto-box ol {
+  padding-left: 18px;
+}
+/* ===== ANIMACIÓN PESTAÑAS ===== */
+
+.main-section {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.main-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.main-section {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.main-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ESTADO PROMOCIONES */
+.promo-card {
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+/* ACTIVA */
+.promo-activa {
+  box-shadow: 0 6px 18px rgba(25, 135, 84, 0.25);
+  border-left: 5px solid #198754;
+}
+
+/* PRÓXIMA */
+.promo-proxima {
+  box-shadow: 0 6px 18px rgba(13, 110, 253, 0.25);
+  border-left: 5px solid #0d6efd;
+}
+
+/* PRÓXIMA A VENCER */
+.promo-urgente {
+  box-shadow: 0 6px 18px rgba(253, 126, 20, 0.3);
+  border-left: 5px solid #fd7e14;
+}
+
+/* INACTIVA */
+.promo-inactiva {
+  opacity: 0.5;
+  filter: grayscale(40%);
 }
 </style>
 
