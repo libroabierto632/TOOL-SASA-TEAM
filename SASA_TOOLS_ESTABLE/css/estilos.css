@@ -118,9 +118,11 @@ box-shadow:0 6px 14px rgba(0,0,0,0.08);
 
 h1,h2,h3{
 
+ color: 
  
+#d983df;
 
-color:#3F51B5;
+color:#ed0c6d;
 
 ;
 
@@ -1193,154 +1195,379 @@ border-color:#d6001c;
 .ultimos { background: #ffc107; color: #000; }
 .finalizada { background: #dc3545; }
 .proxima { background: #6c757d; }
-</style>
 
 
-.gamas {
+<style>
+/* ===================== IMPAGO ESTILO MEJORADO ===================== */
+#impago {
+  padding: 24px;
+}
+
+#impago .section-head {
+  margin-bottom: 18px;
+}
+
+#impago .section-head h1 {
+  font-size: 34px;
+  margin-bottom: 8px;
+  color: #1f3f8f;
+}
+
+#impago .section-head .muted {
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+#impago .impago-hero {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  border: 1px solid #dbe7f3;
+}
+
+#impago .badge {
+  display: inline-block;
+  background: #35a853;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+#impago .impago-title {
+  font-size: 32px;
+  margin: 0 0 10px 0;
+  color: #1f3f8f;
+}
+
+#impago .impago-subtitle {
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+#impago .impago-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+  margin: 18px 0;
+}
+
+#impago .kpi {
+  background: #f8fbff;
+  border: 1px solid #d6e6f7;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+#impago .kpi-top {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+#impago .kpi-main {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f3f8f;
+}
+
+#impago .kpi-sub {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+#impago .tip-card {
+  background: #fff8e8;
+  border-left: 5px solid #f4b400;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+#impago .tip-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #7a5600;
+}
+
+#impago .tip-text {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+#impago .subtabs {
   display: flex;
-  gap: 15px;
-  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 20px;
+}
+
+#impago .subtab {
+  border: none;
+  background: #ffffff;
+  color: #1f3f8f;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #cfe0f2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#impago .subtab.active {
+  background: #1f3f8f;
+  color: #fff;
+  border-color: #1f3f8f;
+}
+
+#impago .subtab-panels {
+  margin-top: 12px;
+}
+
+#impago .subtab-panel {
+  display: none;
+}
+
+#impago .subtab-panel.active {
+  display: block;
+}
+
+#impago .subtab-panel > .card,
+#impago .subtab-panel .card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  border: 1px solid #dbe7f3;
+  margin-bottom: 18px;
+}
+
+#impago h3 {
+  color: #1f3f8f;
+  margin-bottom: 14px;
+}
+
+#impago h4 {
+  color: #234b9b;
+  margin: 18px 0 10px;
+}
+
+#impago .nice-list li,
+#impago ul li,
+#impago ol li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+#impago .callout {
+  background: #eef6ff;
+  border-left: 5px solid #2b7de9;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+
+#impago .muted {
+  color: #6b7280;
+}
+
+#impago .result-card {
+  background: #f8fbff;
+  border: 1px solid #d6e6f7;
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+#impago .btn.primary {
+  background: #1f3f8f;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+#impago .btn.ghost {
+  background: #fff;
+  color: #1f3f8f;
+  border: 1px solid #cfe0f2;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+#impago .actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
   flex-wrap: wrap;
 }
 
-.gama {
-  flex: 1;
+
+/* ===== BLOQUE RENTA / UNIT LINKED ===== */
+
+.renta-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.renta-header {
+  background: linear-gradient(135deg, #004481, #0070ba);
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.renta-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.renta-sub {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.renta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.renta-card {
+  background: #f8f9fb;
   padding: 15px;
   border-radius: 10px;
-  color: #333;
+  border: 1px solid #e0e0e0;
 }
 
-.gama h4 {
-  margin-bottom: 10px;
+.renta-card h4 {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #004481;
 }
 
-.gama ul {
-  padding-left: 18px;
-}
-
-.gama .frase {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* COLORES */
-.gama.eco {
-  background: #e9f7ef;
-  border-left: 5px solid #198754;
-}
-
-.gama.azul {
-  background: #e7f0ff;
-  border-left: 5px solid #0d6efd;
-}
-
-.gama.plus {
-  background: #fdecea;
-  border-left: 5px solid #dc3545;
-}
-
-.detalle, .argumentario {
-  margin-top: 20px;
-}
-
-.tip-comercial {
+.renta-table {
+  width: 100%;
+  border-collapse: collapse;
   margin-top: 15px;
-  background: #fff3cd;
+}
+
+.renta-table th {
+  background: #004481;
+  color: white;
   padding: 10px;
-  border-radius: 8px;
-}
-<style>
-#buscadorContactos:focus {
-  border-color: #1976d2;
-  box-shadow: 0 0 8px rgba(25,118,210,0.3);
 }
 
-.card {
-  transition: all 0.3s ease;
+.renta-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
-.card.oculto {
-  opacity: 0;
-  transform: scale(0.95);
-  pointer-events: none;
+.renta-table tr:nth-child(even) {
+  background: #f9f9f9;
 }
 
-.card.visible {
-  opacity: 1;
-  transform: scale(1);
+.renta-highlight {
+  background: #fff3cd;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+/* ===== BLOQUE RENTA / UNIT LINKED ===== */
+.renta-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.renta-header {
+  background: linear-gradient(135deg, #004481, #0070ba);
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.renta-header h1,
+.renta-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.renta-sub {
+  font-size: 14px;
+  opacity: 0.95;
+  margin-top: 6px;
+}
+
+.renta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.renta-card {
+  background: #f8f9fb;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.renta-card h4 {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #004481;
+}
+
+.renta-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.renta-table th {
+  background: #004481;
+  color: white;
+  padding: 10px;
+}
+
+.renta-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.renta-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.renta-highlight {
+  background: #fff3cd;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-size: 14px;
 }
 </style>
 
-/* CONTENEDOR GENERAL */
-.main-section {
-  padding: 20px;
-  animation: fadeIn 0.4s ease-in-out;
-}
 
-/* TITULO */
-.main-section h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
 
-/* FRASE CLAVE */
-.highlight-box {
-  background: linear-gradient(90deg, #e3f2fd, #ffffff);
-  padding: 12px 16px;
-  border-left: 5px solid #1976d2;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
-/* GRID DE TARJETAS */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-/* TARJETAS */
-.card {
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-}
-
-/* TITULOS DE TARJETA */
-.card h3 {
-  margin-bottom: 10px;
-  color: #0d47a1;
-}
-
-/* BLOQUE ROJO IMPACTO */
-.alert {
-  background: #fdecea;
-  padding: 12px;
-  border-left: 5px solid #d32f2f;
-  border-radius: 8px;
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-/* CTA FINAL */
-.cta {
-  background: #e8f5e9;
-  padding: 15px;
-  border-left: 5px solid #2e7d32;
-  border-radius: 10px;
-  margin-top: 20px;
-  font-weight: 600;
-}
-
-/* ANIMACIÓN */
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
