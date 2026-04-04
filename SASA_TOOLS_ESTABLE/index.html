@@ -1,12 +1,10 @@
 <!DOCTYPE html>
+<!-- saved from url=(0122)file:///C:/Users/chero/OneDrive/Desktop/SASA%20TOOL%20super%20ESTABLE%20-%20copia%20-%20copia%20(3)%20-%20copia/index.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<html lang="es">
+  
 
-<head>
-
-  <meta charset="UTF-8" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
  
 
@@ -14,26 +12,25 @@
 
  
 
-  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="manifest" href="file:///C:/Users/chero/OneDrive/Desktop/SASA%20TOOL%20super%20ESTABLE%20-%20copia%20-%20copia%20(3)%20-%20copia/manifest.webmanifest">
 
-  <meta name="theme-color" content="#111827" />
-
- 
-
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
-
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png" />
-
-  <link rel="apple-touch-icon" href="assets/icon-192.png" />
+  <meta name="theme-color" content="#111827">
 
  
 
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/png" sizes="192x192" href="file:///C:/Users/chero/OneDrive/Desktop/SASA%20TOOL%20super%20ESTABLE%20-%20copia%20-%20copia%20(3)%20-%20copia/assets/icon-192.png">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="file:///C:/Users/chero/OneDrive/Desktop/SASA%20TOOL%20super%20ESTABLE%20-%20copia%20-%20copia%20(3)%20-%20copia/assets/icon-512.png">
+
+  <link rel="apple-touch-icon" href="file:///C:/Users/chero/OneDrive/Desktop/SASA%20TOOL%20super%20ESTABLE%20-%20copia%20-%20copia%20(3)%20-%20copia/assets/icon-192.png">
+
+ 
+
+  <link rel="stylesheet" href="./index_files/estilos.css">
 
 
 
-  </head>
-<script>
+  <script>
 document.addEventListener("DOMContentLoaded", function () {
   const hoy = new Date();
   const cards = document.querySelectorAll('#promociones .card');
@@ -93,9 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     card.appendChild(badge);
   });
 });
-</script>
-
-<script>
+</script><script>
 function 
 Tab(event, panelId) {
   event.preventDefault();
@@ -118,7 +113,10 @@ Tab(event, panelId) {
 
   event.currentTarget.classList.add('active');
 }
-</script>
+</script></head>
+
+
+
 
 <body>
 
@@ -142,7 +140,7 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 </div>
     <div class="brand">
 
-      <img class="brand-logo" src="assets/ACS_logo_SASA_Canarias.png" alt="Logo SASA Team Canarias" />
+      <img class="brand-logo" src="./index_files/ACS_logo_SASA_Canarias.png" alt="Logo SASA Team Canarias">
 
       <div class="brand-text">
 
@@ -168,7 +166,9 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
       <button class="main-tab" data-target="impago">Protección Impago</button>
 
-      <button class="main-tab" data-target="rav">Renta Vitalicia y Ahorro Unit linked</button>
+      <button class="main-tab active" data-target="rav">Renta Vitalicia</button>
+
+      <button class="main-tab" data-target="europa8">Europa Vencimiento 8</button>
 
       <button class="main-tab" data-target="aegon">Seguros Aegon, vida, salud...</button>
 
@@ -222,17 +222,8 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
   </header>
 
 <div class="global-search-box" style="display:flex; gap:8px; align-items:center; margin:12px 0 18px 0; flex-wrap:wrap;">
-  <input
-    id="globalSearchInput"
-    type="text"
-    placeholder="Buscar en toda la herramienta..."
-    style="flex:1; min-width:260px; padding:10px 12px; border:1px solid #ccc; border-radius:8px;"
-  >
-  <button
-    id="globalSearchBtn"
-    type="button"
-    style="padding:10px 16px; border:none; border-radius:8px; background:#d6001c; color:#fff; font-weight:600; cursor:pointer;"
-  >
+  <input id="globalSearchInput" type="text" placeholder="Buscar en toda la herramienta..." style="flex:1; min-width:260px; padding:10px 12px; border:1px solid #ccc; border-radius:8px;">
+  <button id="globalSearchBtn" type="button" style="padding:10px 16px; border:none; border-radius:8px; background:#d6001c; color:#fff; font-weight:600; cursor:pointer;">
     Buscar
   </button>
 </div>
@@ -246,7 +237,7 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
     <!-- ===================== INICIO ===================== -->
 
-    <section id="inicio" class="main-section is-visible">
+    <section id="inicio" class="main-section is-visible" style="display: none;">
 
       <div class="hero">
 
@@ -605,11 +596,11 @@ Selecciona los productos que quieres incluir en el dossier y genera un documento
 
 
   <div class="hogar-subtabs autos-subtabs">
-    <button type="button" class="hogar-subtab autos-subtab active" onclick="openAutosTab(event, 'autos-eco-panel')">Gama Eco</button>
-    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, 'autos-eleccion-panel')">Gama Elección</button>
-    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, 'autos-plus-panel')">Gama Plus</button>
-    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, 'autos-moto-panel')">Motos</button>
-    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, 'autos-argumentario-panel')">Argumentario</button>
+    <button type="button" class="hogar-subtab autos-subtab active" onclick="openAutosTab(event, &#39;autos-eco-panel&#39;)">Gama Eco</button>
+    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, &#39;autos-eleccion-panel&#39;)">Gama Elección</button>
+    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, &#39;autos-plus-panel&#39;)">Gama Plus</button>
+    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, &#39;autos-moto-panel&#39;)">Motos</button>
+    <button type="button" class="hogar-subtab autos-subtab" onclick="openAutosTab(event, &#39;autos-argumentario-panel&#39;)">Argumentario</button>
   </div>
 
   <!-- GAMA ECO -->
@@ -691,7 +682,7 @@ Selecciona los productos que quieres incluir en el dossier y genera un documento
 
       <h3>Comparativa rápida</h3>
       <table style="width:100%; border-collapse:collapse; margin-top:10px;">
-        <tr style="background:#f5f5f5;">
+        <tbody><tr style="background:#f5f5f5;">
           <th style="border:1px solid #ccc; padding:8px;">Cobertura</th>
           <th style="border:1px solid #ccc; padding:8px;">Terceros</th>
           <th style="border:1px solid #ccc; padding:8px;">Terceros Ampliado</th>
@@ -733,7 +724,7 @@ Selecciona los productos que quieres incluir en el dossier y genera un documento
           <td style="border:1px solid #ccc; padding:8px;">❌</td>
           <td style="border:1px solid #ccc; padding:8px;">✔️</td>
         </tr>
-      </table>
+      </tbody></table>
 
       <div class="tip-comercial">
         💡 Frase útil: “Es una opción muy equilibrada, porque sin irte a un todo riesgo ya incorporas coberturas muy importantes.”
@@ -1019,12 +1010,12 @@ derivados de golpes, daños propios u otras incidencias relevantes.
 
 
 
-<section id="transportesMercancias" class="main-section" style="display:none;">
+<section id="transportesMercancias" class="main-section" style="display: none;">
 
 <h1>🚚 Transportes Mercancías</h1>
 
 
-</div>
+
 
 <div class="cta">
 💡 Si la mercancía se pierde, el problema no es tuyo… recae en el transportista
@@ -1049,7 +1040,7 @@ derivados de golpes, daños propios u otras incidencias relevantes.
 <div style="margin:10px 0;">
   <button onclick="toggleFormacion()" style="padding:8px 12px;border:none;border-radius:8px;background:#1976d2;color:white;cursor:pointer;">
    
-</div>
+</button></div>
 
 <div class="card">
   <h2>Visión rápida</h2>
@@ -2136,7 +2127,7 @@ function toggleFormacionTransportes() {
 
 
 
-  <section id="otrosSeguros" class="main-section" style="display:none;">
+  <section id="otrosSeguros" class="main-section" style="display: none;">
 
   <h1>🌿 Otros Seguros</h1>
   <p>Soluciones de protección personal para complementar la seguridad económica del cliente.</p>
@@ -2216,7 +2207,7 @@ function toggleFormacionTransportes() {
   <h3>⏱️ Carencias</h3>
 
   <table style="width:100%; border-collapse:collapse;">
-    <tr style="background:#f2f2f2;">
+    <tbody><tr style="background:#f2f2f2;">
       <th style="border:1px solid #ccc; padding:8px;">Cobertura</th>
       <th style="border:1px solid #ccc; padding:8px;">Inicial</th>
       <th style="border:1px solid #ccc; padding:8px;">Entre siniestros</th>
@@ -2239,7 +2230,7 @@ function toggleFormacionTransportes() {
       <td style="border:1px solid #ccc; padding:8px;">180 días</td>
       <td style="border:1px solid #ccc; padding:8px;">No incluido</td>
     </tr>
-  </table>
+  </tbody></table>
 
   <!-- EXCLUSIONES -->
   <h3>🚫 Importante (exclusiones clave)</h3>
@@ -2477,11 +2468,11 @@ function toggleFormacionTransportes() {
     </div>
   </div>
 
-</div>
 
 
 
-<section id="promociones" class="main-section">
+
+<section id="promociones" class="main-section" style="display: none;">
 
 <p style="font-size:13px;color:#555;">
 Información comercial orientativa. Promociones vigentes sujetas a actualización según campaña.
@@ -2491,95 +2482,95 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 
 
 <!-- VIDA VENTA LIBRE  -->
-<div class="card" data-inicio="2026-04-01" data-fin="2026-05-31">
+<div class="card" data-inicio="2026-04-01" data-fin="2026-05-31" style="position: relative;">
 <h3> Vida venta libre</h3>
 <ul>
 <li>Hasta 5% de descuento</li>
 <li>Vigencia del 1 de abril al 31 de mayo</li>
 <li>Protección familiar plus, femenino y esencial</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 <!-- VIDA FEMENINO, FAMILIAR PLUS, Y ESENCIAL DIGITAL -->
-<div class="card" data-inicio="2026-04-01" data-fin="2026-05-31">
+<div class="card" data-inicio="2026-04-01" data-fin="2026-05-31" style="position: relative;">
 <h3> Vida Femenino, Familiar Plus y Esencial sólo fallecimiento DIGITAL</h3>
 <ul>
 <li>Hasta 10% de descuento</li>
 <li>Vigencia del 1 de abril al 31 de mayo</li>
 <li>Protección Familiar en Femenino</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 
 <!-- PROTECCIÓN EMPRESA -->
-<div class="card" data-inicio="2026-04-01">
+<div class="card" data-inicio="2026-04-01" style="position: relative;">
 <h3>Protección Empresa</h3>
 <ul>
 <li>Descuento discrecional 0% - 5%</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 <!-- ACCIDENTES DIGITAL -->
-<div class="card" data-inicio="2026-04-01" data-fin="2026-07-31">
+<div class="card" data-inicio="2026-04-01" data-fin="2026-07-31" style="position: relative;">
 <h3>Accidentes Protección Integral</h3>
 <ul>
 <li>Descuento discrecional 0% - 5%</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 <!-- SENIOR -->
-<div class="card" data-inicio="2025-06-16">
+<div class="card" data-inicio="2025-06-16" style="position: relative;">
 <h3>Protección Senior</h3>
 <ul>
 <li>Descuento discrecional 0% - 5%</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 <!-- ITA DIGITAL -->
-<div class="card" data-inicio="2026-04-01" data-fin="2026-07-31">
+<div class="card" data-inicio="2026-04-01" data-fin="2026-07-31" style="position: relative;">
 <h3>ITA</h3>
 <ul>
 <li>Hasta 10% de descuento</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 <!-- SALUD -->
-<div class="card" data-inicio="2026-03-09">
+<div class="card" data-inicio="2026-03-09" style="position: relative;">
 <h3>Promoción Salud</h3>
 <ul>
 <li>10% de descuento</li>
 <li>SELECT activo desde el 9 de marzo</li>
 <li>Sin fecha fin actualmente</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
-<div class="card" data-inicio="2026-03-09">
+<div class="card" data-inicio="2026-03-09" style="position: relative;">
 <h3>Salud Senior</h3>
 <ul>
 <li>0% - 5% - 10% Select</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
-<div class="card" data-inicio="2026-03-09">
+<div class="card" data-inicio="2026-03-09" style="position: relative;">
 <h3>Salud con Copago</h3>
 <ul>
 <li>0% - 5% - 10% Select</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 <!-- MHS -->
-<div class="card" data-inicio="2025-06-16">
+<div class="card" data-inicio="2025-06-16" style="position: relative;">
 <h3>MHS</h3>
 <ul>
 <li>Bonificación 0% - 5%</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
-<div class="card" data-inicio="2025-06-16">
+<div class="card" data-inicio="2025-06-16" style="position: relative;">
 <h3>MHS Senior</h3>
 <ul>
 <li>Bonificación 0% - 5%</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 <!-- TARJETAS -->
 <div class="card">
@@ -2590,55 +2581,55 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 </div>
 
 <!-- INGRESOS -->
-<div class="card" data-inicio="2025-06-16">
+<div class="card" data-inicio="2025-06-16" style="position: relative;">
 <h3>Protección de Ingresos</h3>
 <ul>
 <li>Bonificación 0% - 5%</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 <!-- CONVENIOS -->
-<div class="card" data-inicio="2025-07-01">
+<div class="card" data-inicio="2025-07-01" style="position: relative;">
 <h3>Accidentes y Vida Convenios Colectivos</h3>
 <ul>
 <li>Bonificación hasta 40%</li>
 <li>Pendiente ampliación</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 <!-- IMPAGO -->
-<div class="card" data-inicio="2026-03-03">
+<div class="card" data-inicio="2026-03-03" style="position: relative;">
 <h3>Impago de Alquiler</h3>
 <ul>
 <li>Bonificación 0% - 0%</li>
 <li>+1 mes tras despliegue</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 <!-- VIDA HIPOTECA -->
-<div class="card" data-inicio="2025-07-14" data-fin="2026-06-30">
+<div class="card" data-inicio="2025-07-14" data-fin="2026-06-30" style="position: relative;">
 <h3>Vida Vinculado Préstamos Hipotecarios</h3>
 <ul>
 <li>Hasta 20% de descuento</li>
 <li>Vigencia hasta 30/06/2026</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 
 
 <!-- AUTOS -->
-<div class="card" data-inicio="2026-03-02" data-fin="2026-04-30">
+<div class="card" data-inicio="2026-03-02" data-fin="2026-04-30" style="position: relative;">
 <h3>Autos</h3>
 <ul>
 <li>Cheque regalo 60€</li>
 <li>Vigencia hasta 30 de abril</li>
 <li>Aplicable desde 499€</li>
 </ul>
-</div>
+<span style="position: absolute; top: 10px; right: 10px; background: rgb(25, 135, 84); color: rgb(255, 255, 255); padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: bold; z-index: 20;">ACTIVA</span></div>
 </section>
 
     <!-- ===================== SALUD ASISA EMPRESA ===================== -->
 
-    <section id="salud" class="main-section">
+    <section id="salud" class="main-section" style="display: none;">
 
       <div class="section-head">
 
@@ -2683,7 +2674,7 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 
       <div class="subcontent">
 
-        <article id="salud-resumen" class="sub-section is-visible">
+        <article id="salud-resumen" class="sub-section is-visible" style="display: block;">
 
           <div class="card accent">
 
@@ -2779,7 +2770,7 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 
  
 
-        <article id="salud-caracteristicas" class="sub-section">
+        <article id="salud-caracteristicas" class="sub-section" style="display: none;">
 
           <div class="card">
 
@@ -2857,7 +2848,7 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 
  
 
-        <article id="salud-carencias" class="sub-section">
+        <article id="salud-carencias" class="sub-section" style="display: none;">
 
           <div class="card">
 
@@ -2891,7 +2882,7 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 
  
 
-        <article id="salud-exclusiones" class="sub-section">
+        <article id="salud-exclusiones" class="sub-section" style="display: none;">
 
           <div class="card">
 
@@ -2919,7 +2910,7 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 
  
 
-        <article id="salud-contratacion" class="sub-section">
+        <article id="salud-contratacion" class="sub-section" style="display: none;">
 
           <div class="card">
 
@@ -2991,7 +2982,7 @@ Saludos</pre>
 
  
 
-        <article id="salud-fiscalidad" class="sub-section">
+        <article id="salud-fiscalidad" class="sub-section" style="display: none;">
 
           <div class="card">
 
@@ -3013,7 +3004,7 @@ Saludos</pre>
 
  
 
-        <article id="salud-dentalplus" class="sub-section">
+        <article id="salud-dentalplus" class="sub-section" style="display: none;">
 
           <div class="card accent">
 
@@ -3113,7 +3104,7 @@ Saludos</pre>
 
  
 
-        <article id="salud-argumentario" class="sub-section">
+        <article id="salud-argumentario" class="sub-section" style="display: none;">
 
           <div class="card">
 
@@ -3193,7 +3184,7 @@ Saludos</pre>
 
     <!-- ===================== PROTECCIÓN IMPAGO ===================== -->
 
-    <section id="impago" class="main-section">
+    <section id="impago" class="main-section" style="display: none;">
 
     <div class="section-head">
 
@@ -3284,7 +3275,7 @@ Saludos</pre>
 
 <div class="subtabs" data-subtabs="impago">
 
-  <button class="subtab active" data-subtab="impago-indice">Índice</button>
+  <button class="subtab is-active" data-subtab="impago-indice">Índice</button>
 
   <button class="subtab" data-subtab="impago-comercializacion">Comercialización</button>
 
@@ -3322,7 +3313,7 @@ Saludos</pre>
 
   <!-- ÍNDICE -->
 
-  <div id="impago-indice" class="subtab-panel active">
+  <div id="impago-indice" class="subtab-panel is-visible" style="display: block;">
 
     <h3>Índice general</h3>
 
@@ -3360,7 +3351,7 @@ Saludos</pre>
 
   <!-- COMERCIALIZACIÓN -->
 
-  <div id="impago-comercializacion" class="subtab-panel">
+  <div id="impago-comercializacion" class="subtab-panel" style="display: none;">
 
     <h3>Comercialización</h3>
 
@@ -3416,7 +3407,7 @@ Saludos</pre>
 
   <!-- CASOS DE USO -->
 
-  <div id="impago-casos" class="subtab-panel">
+  <div id="impago-casos" class="subtab-panel" style="display: none;">
 
     <h3>Casos de uso del seguro (completos)</h3>
 
@@ -3610,7 +3601,7 @@ Saludos</pre>
 
   <!-- SCORING -->
 
-  <div id="impago-scoring" class="subtab-panel">
+  <div id="impago-scoring" class="subtab-panel" style="display: none;">
 
     <h3>Proceso de scoring (Fast Score)</h3>
 
@@ -3692,7 +3683,7 @@ Saludos</pre>
 
   <!-- CONTRATACIÓN -->
 
-  <div id="impago-contratacion" class="subtab-panel">
+  <div id="impago-contratacion" class="subtab-panel" style="display: none;">
 
     <h3>Proceso de contratación (paso a paso)</h3>
 
@@ -3780,7 +3771,7 @@ Saludos</pre>
 
       <li>Opción: “Quiero que el seguro comience el mismo día que el contrato”.</li>
 
-      <li>Fecha inicio contrato (calendario). Si >60 días: ajustar.</li>
+      <li>Fecha inicio contrato (calendario). Si &gt;60 días: ajustar.</li>
 
     </ul>
 
@@ -3840,7 +3831,7 @@ Saludos</pre>
 
   <!-- COBERTURAS -->
 
-  <div id="impago-coberturas" class="subtab-panel">
+  <div id="impago-coberturas" class="subtab-panel" style="display: none;">
 
     <h3>Coberturas y modalidades</h3>
 
@@ -3880,7 +3871,7 @@ Saludos</pre>
 
   <!-- FRANQUICIA Y PLAZOS -->
 
-  <div id="impago-franquicia" class="subtab-panel">
+  <div id="impago-franquicia" class="subtab-panel" style="display: none;">
 
     <h3>Franquicia y plazos relevantes</h3>
 
@@ -3932,7 +3923,7 @@ Saludos</pre>
 
   <!-- EXCLUSIONES Y DESISTIMIENTO -->
 
-  <div id="impago-exclusiones" class="subtab-panel">
+  <div id="impago-exclusiones" class="subtab-panel" style="display: none;">
 
     <h3>Exclusiones y desistimiento</h3>
 
@@ -3978,7 +3969,7 @@ Saludos</pre>
 
   <!-- POSTVENTA Y SINIESTROS -->
 
-  <div id="impago-postventa" class="subtab-panel">
+  <div id="impago-postventa" class="subtab-panel" style="display: none;">
 
     <h3>Postventa y siniestros</h3>
 
@@ -4020,7 +4011,7 @@ Saludos</pre>
 
   <!-- MINI COTIZADOR -->
 
-  <div id="impago-minicotizador" class="subtab-panel">
+  <div id="impago-minicotizador" class="subtab-panel" style="display: none;">
 
     <h3>Mini cotizador (orientativo)</h3>
 
@@ -4103,7 +4094,7 @@ Saludos</pre>
  </div>
 
  <!-- ARGUMENTARIO -->
-  <div id="impago-argumentario" class="subtab-panel">
+  <div id="impago-argumentario" class="subtab-panel" style="display: none;">
 
     <h3>Argumentario y cierre</h3>
 
@@ -4129,7 +4120,7 @@ Saludos</pre>
   </div>
 
   <!-- FAQ -->
-  <div id="impago-faq" class="subtab-panel">
+  <div id="impago-faq" class="subtab-panel" style="display: none;">
 
     <h3>FAQ</h3>
 
@@ -4211,7 +4202,7 @@ Saludos</pre>
   </div>
 
   <!-- TARIFAS -->
-  <div id="impago-tarifas" class="subtab-panel">
+  <div id="impago-tarifas" class="subtab-panel" style="display: none;">
 
     <h3>Tarifas</h3>
 
@@ -4230,19 +4221,19 @@ Saludos</pre>
 
   </div>
 
-</div>
+
 
 </section>
    
  
 
-</div>
 
-</section>
+
+
 
     <!-- ===================== COTIZADOR ASISA ===================== -->
 
-   <section id="cotizadorAsisa" class="main-section">
+   <section id="cotizadorAsisa" class="main-section" style="display: none;">
 
   <h2>Cotizador ASISA Empresas 2026</h2>
 
@@ -4440,9 +4431,7 @@ Saludos</pre>
 
   <!-- BLOQUE QUE SE IMPRIME -->
 
-  <div id="asisaPresupuestoImprimible" 
-
-    <h1 class="azul">Presupuesto Salud Empresas</h1>
+  <div id="asisaPresupuestoImprimible" <h1="" class="azul">Presupuesto Salud Empresas
 
     <p><strong>Empresa:</strong> <span id="printEmpresa"> </span></p>
 
@@ -4490,7 +4479,7 @@ Saludos</pre>
 
     <!-- ===================== TARIFAS VIGENTES ===================== -->
 
-    <section id="tarifas" class="main-section">
+    <section id="tarifas" class="main-section" style="display: none;">
 
     <h2>Tarifas base 2026</h2>
 
@@ -4514,7 +4503,67 @@ Saludos</pre>
 
   </thead>
 
-  <tbody id="tablaTarifasBaseBody"></tbody>
+  <tbody id="tablaTarifasBaseBody"><tr>
+
+      <td><strong>0-44</strong></td>
+
+      <td>58,16 €</td>
+
+      <td>697,92 €</td>
+
+      <td>63,18 €</td>
+
+      <td>758,16 €</td>
+
+    </tr><tr>
+
+      <td><strong>45-59</strong></td>
+
+      <td>59,27 €</td>
+
+      <td>711,24 €</td>
+
+      <td>64,39 €</td>
+
+      <td>772,68 €</td>
+
+    </tr><tr>
+
+      <td><strong>60-64</strong></td>
+
+      <td>63,81 €</td>
+
+      <td>765,72 €</td>
+
+      <td>69,32 €</td>
+
+      <td>831,84 €</td>
+
+    </tr><tr>
+
+      <td><strong>65-69</strong></td>
+
+      <td>116,56 €</td>
+
+      <td>1398,72 €</td>
+
+      <td>120,47 €</td>
+
+      <td>1445,64 €</td>
+
+    </tr><tr>
+
+      <td><strong>70+</strong></td>
+
+      <td>136,77 €</td>
+
+      <td>1641,24 €</td>
+
+      <td>141,35 €</td>
+
+      <td>1696,20 €</td>
+
+    </tr></tbody>
 
 </table>
 
@@ -4548,17 +4597,157 @@ Saludos</pre>
 
   </thead>
 
-  <tbody id="tablaDescuentosBody"></tbody>
+  <tbody id="tablaDescuentosBody"><tr>
+
+        <td><strong>0-44</strong></td>
+
+        <td>Sin dental</td>
+
+        <td>58,16 €</td>
+
+        <td>46,53 €</td>
+
+        <td>49,44 €</td>
+
+        <td>52,34 €</td>
+
+      </tr><tr>
+
+        <td><strong>0-44</strong></td>
+
+        <td>Con dental</td>
+
+        <td>63,18 €</td>
+
+        <td>50,54 €</td>
+
+        <td>53,70 €</td>
+
+        <td>56,86 €</td>
+
+      </tr><tr>
+
+        <td><strong>45-59</strong></td>
+
+        <td>Sin dental</td>
+
+        <td>59,27 €</td>
+
+        <td>47,42 €</td>
+
+        <td>50,38 €</td>
+
+        <td>53,34 €</td>
+
+      </tr><tr>
+
+        <td><strong>45-59</strong></td>
+
+        <td>Con dental</td>
+
+        <td>64,39 €</td>
+
+        <td>51,51 €</td>
+
+        <td>54,73 €</td>
+
+        <td>57,95 €</td>
+
+      </tr><tr>
+
+        <td><strong>60-64</strong></td>
+
+        <td>Sin dental</td>
+
+        <td>63,81 €</td>
+
+        <td>51,05 €</td>
+
+        <td>54,24 €</td>
+
+        <td>57,43 €</td>
+
+      </tr><tr>
+
+        <td><strong>60-64</strong></td>
+
+        <td>Con dental</td>
+
+        <td>69,32 €</td>
+
+        <td>55,46 €</td>
+
+        <td>58,92 €</td>
+
+        <td>62,39 €</td>
+
+      </tr><tr>
+
+        <td><strong>65-69</strong></td>
+
+        <td>Sin dental</td>
+
+        <td>116,56 €</td>
+
+        <td>93,25 €</td>
+
+        <td>99,08 €</td>
+
+        <td>104,90 €</td>
+
+      </tr><tr>
+
+        <td><strong>65-69</strong></td>
+
+        <td>Con dental</td>
+
+        <td>120,47 €</td>
+
+        <td>96,38 €</td>
+
+        <td>102,40 €</td>
+
+        <td>108,42 €</td>
+
+      </tr><tr>
+
+        <td><strong>70+</strong></td>
+
+        <td>Sin dental</td>
+
+        <td>136,77 €</td>
+
+        <td>109,42 €</td>
+
+        <td>116,25 €</td>
+
+        <td>123,09 €</td>
+
+      </tr><tr>
+
+        <td><strong>70+</strong></td>
+
+        <td>Con dental</td>
+
+        <td>141,35 €</td>
+
+        <td>113,08 €</td>
+
+        <td>120,15 €</td>
+
+        <td>127,22 €</td>
+
+      </tr></tbody>
 
 </table>
 
-  </div>
+  
 
-</div>
+
 
         <div class="table-wrap" id="tarifasAsisaWrap"></div>
 
-      </div>
+      
 
  
 
@@ -4576,7 +4765,7 @@ Saludos</pre>
 
     <!-- ===================== CUADRO MÉDICO ===================== -->
 
-    <section id="cuadro" class="main-section">
+    <section id="cuadro" class="main-section" style="display: none;">
 
       <div class="section-head">
 
@@ -4674,7 +4863,7 @@ Saludos</pre>
 
     <!-- ===================== CARTAS ===================== -->
 
-    <section id="cartas" class="main-section">
+    <section id="cartas" class="main-section" style="display: none;">
 
       <div class="section-head">
 
@@ -4706,7 +4895,7 @@ Saludos</pre>
 
         <div class="subcontent">
 
-          <article id="carta-baja-total" class="sub-section is-visible">
+          <article id="carta-baja-total" class="sub-section is-visible" style="display: block;">
 
             <div class="letter-tools">
 
@@ -4717,7 +4906,6 @@ Saludos</pre>
 ✏️ Puedes editar el texto de la carta antes de imprimir. Rellena los datos del cliente y modifica lo que necesites.
 </div>
             <textarea id="txtBajaTotal" class="letter-area">
-
  
 
 Nombre del tomador o empresa:
@@ -4751,7 +4939,7 @@ Nombre y apellidos:
 
  
 
-          <article id="carta-baja-asegurado" class="sub-section">
+          <article id="carta-baja-asegurado" class="sub-section" style="display: none;">
 
             <div class="letter-tools">
 
@@ -4762,7 +4950,6 @@ Nombre y apellidos:
 ✏️ Puedes editar el texto de la carta antes de imprimir. Rellena los datos del cliente y modifica lo que necesites.
 </div>
             <textarea id="txtBajaAsegurado" class="letter-area">
-
  
 
 Nombre del tomador o empresa:
@@ -4803,7 +4990,7 @@ Nombre y apellidos del tomador:
 
  
 
-          <article id="carta-no-renovacion" class="sub-section">
+          <article id="carta-no-renovacion" class="sub-section" style="display: none;">
 
             <div class="letter-tools">
 
@@ -4814,7 +5001,6 @@ Nombre y apellidos del tomador:
 ✏️ Puedes editar el texto de la carta antes de imprimir. Rellena los datos del cliente y modifica lo que necesites.
 </div>
             <textarea id="txtNoRenovacion" class="letter-area">
-
 Nombre del tomador o empresa:
 NIF / CIF / NIE:
 Teléfono:
@@ -4849,245 +5035,222 @@ Nombre y apellidos:
     </section>
 
  
- <!-- ======================= CONTACTOS ======================= -->
-<section id="contactos" class="main-section">
-<div class="card" id="cardBuscadorContactos" style="background: linear-gradient(135deg, #e3f2fd, #ffffff); border:1px solid #90caf9;">
+<!-- ======================= CONTACTOS ======================= -->
+<section id="contactos" class="main-section" style="display: none;">
 
-  <h3 style="margin-bottom:10px;">🔎 Buscar contacto</h3>
-<div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
-  <button type="button" onclick="filtrarContactoRapido('autos')" style="padding:8px 12px; border:none; border-radius:20px; background:#e3f2fd; cursor:pointer;">🚗 Autos</button>
-  <button type="button" onclick="filtrarContactoRapido('hogar')" style="padding:8px 12px; border:none; border-radius:20px; background:#e8f5e9; cursor:pointer;">🏠 Hogar</button>
-  <button type="button" onclick="filtrarContactoRapido('salud')" style="padding:8px 12px; border:none; border-radius:20px; background:#fff3e0; cursor:pointer;">🏥 Salud</button>
-  <button type="button" onclick="filtrarContactoRapido('bajas')" style="padding:8px 12px; border:none; border-radius:20px; background:#ffebee; cursor:pointer;">❌ Bajas</button>
-  <button type="button" onclick="filtrarContactoRapido('prestaciones')" style="padding:8px 12px; border:none; border-radius:20px; background:#f3e5f5; cursor:pointer;">📧 Prestaciones</button>
-  <button type="button" onclick="filtrarContactoRapido('')" style="padding:8px 12px; border:none; border-radius:20px; background:#eeeeee; cursor:pointer;">🔄 Ver todos</button>
-</div>
-  <input 
-    type="text" 
-    id="buscadorContactos"
-    placeholder="Ej: autos, bajas, aegon, mapfre..."
-    style="
-      width:100%;
-      padding:12px;
-      border-radius:10px;
-      border:1px solid #90caf9;
-      outline:none;
-      font-size:14px;
-    ">
+  <div class="card" id="cardBuscadorContactos" style="background: linear-gradient(135deg, #e3f2fd, #ffffff); border:1px solid #90caf9;">
+    <h3 style="margin-bottom:10px;">🔎 Buscar contacto</h3>
 
-  <p id="mensajeBusqueda" style="margin-top:10px; font-size:13px; color:#666;"></p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
+      <button type="button" onclick="filtrarContactoRapido(&#39;autos&#39;)" style="padding:8px 12px; border:none; border-radius:20px; background:#e3f2fd; cursor:pointer;">🚗 Autos</button>
+      <button type="button" onclick="filtrarContactoRapido(&#39;hogar&#39;)" style="padding:8px 12px; border:none; border-radius:20px; background:#e8f5e9; cursor:pointer;">🏠 Hogar</button>
+      <button type="button" onclick="filtrarContactoRapido(&#39;salud&#39;)" style="padding:8px 12px; border:none; border-radius:20px; background:#fff3e0; cursor:pointer;">🏥 Salud</button>
+      <button type="button" onclick="filtrarContactoRapido(&#39;bajas&#39;)" style="padding:8px 12px; border:none; border-radius:20px; background:#ffebee; cursor:pointer;">❌ Bajas</button>
+      <button type="button" onclick="filtrarContactoRapido(&#39;prestaciones&#39;)" style="padding:8px 12px; border:none; border-radius:20px; background:#f3e5f5; cursor:pointer;">📧 Prestaciones</button>
+      <button type="button" onclick="filtrarContactoRapido(&#39;&#39;)" style="padding:8px 12px; border:none; border-radius:20px; background:#eeeeee; cursor:pointer;">🔄 Ver todos</button>
+    </div>
 
-</div>
-<div class="card">
-<h2>ASISA vía banco</h2>
-<ul>
+    <input type="text" id="buscadorContactos" placeholder="Ej: autos, bajas, aegon, mapfre..." style="width:100%; padding:12px; border-radius:10px; border:1px solid #90caf9; outline:none; font-size:14px;">
 
-<li>Contratación ASISA<br>
-Tel: <a href="tel:912843824">912 843 824</a><br>
-<a href="mailto:contratasantander@asisa.es">contratasantander@asisa.es</a>
-</li>
+    <p id="mensajeBusqueda" style="margin-top:10px; font-size:13px; color:#666;"></p>
+  </div>
 
-<li>Consultas e información general<br>
-Tel: <a href="tel:912843823">912 843 823</a><br>
-<a href="mailto:asisa.informacion@asisa.es">asisa.informacion@asisa.es</a>
-</li>
+  <div class="card">
+    <h2>ASISA vía banco</h2>
+    <ul>
+      <li>Contratación ASISA<br>
+        Tel: <a href="tel:912843824">912 843 824</a><br>
+        <a href="mailto:contratasantander@asisa.es">contratasantander@asisa.es</a>
+      </li>
 
-<li>Línea comercial<br>
-Tel: <a href="tel:900123470">900 123 470</a>
-</li>
+      <li>Consultas e información general<br>
+        Tel: <a href="tel:912843823">912 843 823</a><br>
+        <a href="mailto:asisa.informacion@asisa.es">asisa.informacion@asisa.es</a>
+      </li>
 
-<li>Atención asegurado 24h<br>
-Tel: <a href="tel:919911999">919 911 999</a><br>
-Tel: <a href="tel:900922992">900 922 992</a>
-</li>
+      <li>Línea comercial<br>
+        Tel: <a href="tel:900123470">900 123 470</a>
+      </li>
 
-<li>Red asistencia domiciliaria<br>
-Tel: <a href="tel:902010181">902 010 181</a>
-</li>
+      <li>Atención asegurado 24h<br>
+        Tel: <a href="tel:919911999">919 911 999</a><br>
+        Tel: <a href="tel:900922992">900 922 992</a>
+      </li>
 
-<li>Urgencias<br>
-Tel: <a href="tel:900900118">900 900 118</a><br>
-Tel: <a href="tel:900898856">900 898 856</a>
-</li>
+      <li>Red asistencia domiciliaria<br>
+        Tel: <a href="tel:902010181">902 010 181</a>
+      </li>
 
-<li>Desde extranjero<br>
-Tel: <a href="tel:+34915143611">+34 915 143 611</a>
-</li>
+      <li>Urgencias<br>
+        Tel: <a href="tel:900900118">900 900 118</a><br>
+        Tel: <a href="tel:900898856">900 898 856</a>
+      </li>
 
-</ul>
-</div>
+      <li>Desde extranjero<br>
+        Tel: <a href="tel:+34915143611">+34 915 143 611</a>
+      </li>
+    </ul>
+  </div>
 
-<div class="card">
-<h2>Seguros Banco</h2>
-<ul>
+  <div class="card">
+    <h2>Seguros Banco</h2>
+    <ul>
+      <li>Atención cliente seguros<br>
+        Tel: <a href="tel:915123123">915 123 123</a>
+      </li>
 
-<li>Atención cliente seguros<br>
-Tel: <a href="tel:915123123">915 123 123</a>
-</li>
+      <li>Atención seguros / incidencias<br>
+        Tel: <a href="tel:910503500">910 503 500</a>
+      </li>
 
-<li>Atención seguros / incidencias<br>
-Tel: <a href="tel:910503500">910 503 500</a>
-</li>
+      <li>Corrección mala venta<br>
+        Tel: <a href="tel:910503430">910 503 430</a>
+      </li>
 
-<li>Corrección mala venta<br>
-Tel: <a href="tel:910503430">910 503 430</a>
-</li>
+      <li>SAS soporte seguros<br>
+        Tel: <a href="tel:912769503">912 769 503</a>
+      </li>
 
-<li>SAS soporte seguros<br>
-Tel: <a href="tel:912769503">912 769 503</a>
-</li>
+      <li>CEAC ayuda contratación<br>
+        Tel: <a href="tel:902480048">902 480 048</a><br>
+        <a href="mailto:ceac_seguros@santandervidaygenerales.es">ceac_seguros@santandervidaygenerales.es</a>
+      </li>
 
-<li>CEAC ayuda contratación<br>
-Tel: <a href="tel:902480048">902 480 048</a><br>
-<a href="mailto:ceac_seguros@santandervidaygenerales.es">ceac_seguros@santandervidaygenerales.es</a>
-</li>
+      <li>Calidad cliente oficina RAV<br>
+        Tel: <a href="tel:912769645">912 769 645</a>
+      </li>
+    </ul>
+  </div>
 
-<li>Calidad cliente oficina RAV<br>
-Tel: <a href="tel:912769645">912 769 645</a>
-</li>
+  <div class="card">
+    <h2>AEGON</h2>
+    <ul>
+      <li>Atención al cliente<br>
+        Tel: <a href="tel:900159000">900 159 000</a><br>
+        Tel: <a href="tel:915632000">915 632 000</a>
+      </li>
 
-</ul>
-</div>
+      <li>Teleselección vida<br>
+        Tel: <a href="tel:932253266">932 253 266</a>
+      </li>
 
-<div class="card">
-<h2>AEGON</h2>
-<ul>
+      <li>Asistencia viaje AEGON<br>
+        Tel: <a href="tel:917221777">917 221 777</a>
+      </li>
 
-<li>Atención al cliente<br>
-Tel: <a href="tel:900159000">900 159 000</a><br>
-Tel: <a href="tel:915632000">915 632 000</a>
-</li>
+      <li>Asistencia viaje salud<br>
+        Tel: <a href="tel:915641212">915 641 212</a>
+      </li>
 
-<li>Teleselección vida<br>
-Tel: <a href="tel:932253266">932 253 266</a>
-</li>
+      <li>Cuestionario / exclusiones salud<br>
+        Tel: <a href="tel:913059465">913 059 465</a>
+      </li>
 
-<li>Asistencia viaje AEGON<br>
-Tel: <a href="tel:917221777">917 221 777</a>
-</li>
+      <li>Documentación salud<br>
+        <a href="mailto:documentacion.salud@aegon.es">documentacion.salud@aegon.es</a>
+      </li>
 
-<li>Asistencia viaje salud<br>
-Tel: <a href="tel:915641212">915 641 212</a>
-</li>
+      <li>Calidad hogar<br>
+        Tel: <a href="tel:913059452">913 059 452</a><br>
+        <a href="mailto:tcalidad.hogar@aegon.es">tcalidad.hogar@aegon.es</a>
+      </li>
 
-<li>Cuestionario / exclusiones salud<br>
-Tel: <a href="tel:913059465">913 059 465</a>
-</li>
+      <li>Prestaciones ILT<br>
+        <a href="mailto:prestaciones.ilt@aegon.es">prestaciones.ilt@aegon.es</a>
+      </li>
 
-<li>Documentación salud<br>
-<a href="mailto:documentacion.salud@aegon.es">documentacion.salud@aegon.es</a>
-</li>
+      <li>Prestaciones accidentes<br>
+        <a href="mailto:prestaciones.accidentes@aegon.es">prestaciones.accidentes@aegon.es</a>
+      </li>
+    </ul>
+  </div>
 
-<li>Calidad hogar<br>
-Tel: <a href="tel:913059452">913 059 452</a><br>
-<a href="mailto:tcalidad.hogar@aegon.es">tcalidad.hogar@aegon.es</a>
-</li>
+  <div class="card">
+    <h2>Prestaciones Seguros Banco</h2>
+    <ul>
+      <li>Prestaciones vida<br>
+        <a href="mailto:prestacionesvida@gruposantander.com">prestacionesvida@gruposantander.com</a>
+      </li>
 
-<li>Prestaciones ILT<br>
-<a href="mailto:prestaciones.ilt@aegon.es">prestaciones.ilt@aegon.es</a>
-</li>
+      <li>Prestaciones ILT<br>
+        <a href="mailto:prestaciones.ILT@santandervida.com">prestaciones.ILT@santandervida.com</a>
+      </li>
 
-<li>Prestaciones accidentes<br>
-<a href="mailto:prestaciones.accidentes@aegon.es">prestaciones.accidentes@aegon.es</a>
-</li>
+      <li>Prestaciones accidentes<br>
+        <a href="mailto:prestaciones.accidentes@santandervida.com">prestaciones.accidentes@santandervida.com</a>
+      </li>
 
-</ul>
-</div>
+      <li>Prestaciones accidentes ILT<br>
+        <a href="mailto:prestaciones.accidentesltk@santandervida.com">prestaciones.accidentesltk@santandervida.com</a>
+      </li>
 
-<div class="card">
-<h2>Prestaciones Seguros Banco</h2>
-<ul>
+      <li>Prestación mediadores<br>
+        <a href="mailto:prestacionmediadores@gruposantander.com">prestacionmediadores@gruposantander.com</a>
+      </li>
 
-<li>Prestaciones vida<br>
-<a href="mailto:prestacionesvida@gruposantander.com">prestacionesvida@gruposantander.com</a>
-</li>
+      <li>Prestación plan pensiones<br>
+        <a href="mailto:prestacionplanpensiones@gruposantander.com">prestacionplanpensiones@gruposantander.com</a>
+      </li>
 
-<li>Prestaciones ILT<br>
-<a href="mailto:prestaciones.ILT@santandervida.com">prestaciones.ILT@santandervida.com</a>
-</li>
+      <li>Prestaciones decesos<br>
+        <a href="mailto:prestaciones.decesos@santandervida.com">prestaciones.decesos@santandervida.com</a>
+      </li>
 
-<li>Prestaciones accidentes<br>
-<a href="mailto:prestaciones.accidentes@santandervida.com">prestaciones.accidentes@santandervida.com</a>
-</li>
+      <li>Decesos<br>
+        <a href="mailto:decesos@seguros.santandervida.com">decesos@seguros.santandervida.com</a>
+      </li>
+    </ul>
+  </div>
 
-<li>Prestaciones accidentes ILT<br>
-<a href="mailto:prestaciones.accidentesltk@santandervida.com">prestaciones.accidentesltk@santandervida.com</a>
-</li>
+  <div class="card">
+    <h2>Santander MAPFRE</h2>
+    <ul>
+      <li>Atención autos y multirriesgo<br>
+        Tel: <a href="tel:912747576">912 747 576</a>
+      </li>
 
-<li>Prestación mediadores<br>
-<a href="mailto:prestacionmediadores@gruposantander.com">prestacionmediadores@gruposantander.com</a>
-</li>
+      <li>Bajas autos y multirriesgo<br>
+        Tel: <a href="tel:912747570">912 747 570</a>
+      </li>
 
-<li>Prestación plan pensiones<br>
-<a href="mailto:prestacionplanpensiones@gruposantander.com">prestacionplanpensiones@gruposantander.com</a>
-</li>
+      <li>Patrimoniales MAPFRE<br>
+        <a href="mailto:cuepatrimoniales@mapfre.com">cuepatrimoniales@mapfre.com</a>
+      </li>
 
-<li>Prestaciones decesos<br>
-<a href="mailto:prestaciones.decesos@santandervida.com">prestaciones.decesos@santandervida.com</a>
-</li>
+      <li>Atención al cliente MAPFRE<br>
+        <a href="mailto:cueatencionalcliente@mapfre.com">cueatencionalcliente@mapfre.com</a>
+      </li>
 
-<li>Decesos<br>
-<a href="mailto:decesos@seguros.santandervida.com">decesos@seguros.santandervida.com</a>
-</li>
-<div class="card">
-<h2>Santander MAPFRE</h2>
-<ul>
+      <li>Anulación empresas<br>
+        <a href="mailto:cueanulacionempresas@santander.com">cueanulacionempresas@santander.com</a>
+      </li>
 
-<li>Atención autos y multirriesgo<br>
-Tel: <a href="tel:912747576">912 747 576</a>
-</li>
+      <li>Anulación autos<br>
+        <a href="mailto:cueanulacionautos@santander.com">cueanulacionautos@santander.com</a>
+      </li>
+    </ul>
+  </div>
 
-<li>Bajas autos y multirriesgo<br>
-Tel: <a href="tel:912747570">912 747 570</a>
-</li>
+  <div class="card">
+    <h2>Buzones AEGON / SANTANDER</h2>
+    <ul>
+      <li>Buzón servicio Sassa<br>
+        <a href="mailto:serviciosassa@aegon.es">serviciosassa@aegon.es</a>
+      </li>
 
-<li>Patrimoniales MAPFRE<br>
-<a href="mailto:cuepatrimoniales@mapfre.com">cuepatrimoniales@mapfre.com</a>
-</li>
+      <li>Buzón escalados salud<br>
+        <a href="mailto:escaladossalud@aegon.es">escaladossalud@aegon.es</a>
+      </li>
 
-<li>Atención al cliente MAPFRE<br>
-<a href="mailto:cueatencionalcliente@mapfre.com">cueatencionalcliente@mapfre.com</a>
-</li>
+      <li>Buzón preferente servicios<br>
+        <a href="mailto:preferente.serviciosassa@aegon.es">preferente.serviciosassa@aegon.es</a>
+      </li>
+    </ul>
+  </div>
 
-<li>Anulación empresas<br>
-<a href="mailto:cueanulacionempresas@santander.com">cueanulacionempresas@santander.com</a>
-</li>
-
-<li>Anulación autos<br>
-<a href="mailto:cueanulacionautos@santander.com">cueanulacionautos@santander.com</a>
-</li>
-
-</ul>
-</div>
-
-
-<div class="card">
-<h2>Buzones AEGON / SANTANDER</h2>
-<ul>
-
-<li>Buzón servicio Sassa<br>
-<a href="mailto:serviciosassa@aegon.es">serviciosassa@aegon.es</a>
-</li>
-
-<li>Buzón escalados salud<br>
-<a href="mailto:escaladossalud@aegon.es">escaladossalud@aegon.es</a>
-</li>
-
-<li>Buzón preferente servicios<br>
-<a href="mailto:preferente.serviciosassa@aegon.es">preferente.serviciosassa@aegon.es</a>
-</li>
-
-</ul>
-</div>
-</div>
-</footer>
 </section>
-
-    
-
-
 <!-- ===================== MANUAL COMERCIAL ===================== -->
-<section id="manual" class="main-section">
+<section id="manual" class="main-section" style="display: none;">
 
 
 <h1>Manual comercial</h1>
@@ -5201,7 +5364,7 @@ Plazos de carencia / diferimiento según tipo de protección.
 
 <tr style="background-color:#f5f5f5;">
 <td style="padding:8px;">Responsabilidad Civil JV</td>
-<td style="padding:8px;">365 días (RC Integral) / 90 días (D&O)</td>
+<td style="padding:8px;">365 días (RC Integral) / 90 días (D&amp;O)</td>
 </tr>
 
 <tr>
@@ -5228,7 +5391,7 @@ Plazos de carencia / diferimiento según tipo de protección.
 
 
 <!-- ===================== OBJECIONES ===================== -->
-<section id="objeciones" class="main-section">
+<section id="objeciones" class="main-section" style="display: none;">
 
 <h1>Objeciones comerciales</h1>
 
@@ -5269,7 +5432,7 @@ No discutir con el cliente. Escuchar primero, entender la objeción y responder 
 
 
 <!-- ===================== OPORTUNIDADES ===================== -->
-<section id="deteccion-oportunidad" class="main-section">
+<section id="deteccion-oportunidad" class="main-section" style="display: none;">
 <h1>Detección de oportunidades comerciales</h1>
 
 <div class="notice">
@@ -5410,11 +5573,11 @@ Después presentar el seguro como una solución.
 
 
 </div>
-</section>
+</div></section>
 
 
 <!-- ===================== VERIFICACION CLIENTE ===================== -->
-<section id="verificacion-datos" class="main-section">
+<section id="verificacion-datos" class="main-section" style="display: none;">
 
 <h1>Verificación de datos del cliente</h1>
 
@@ -5473,7 +5636,7 @@ Para el resto de productos es necesario que el cliente tenga datos completos y v
 
 
 <!-- ===================== ERRORES CONTRATACION ===================== -->
-<section id="errores-contratacion" class="main-section">
+<section id="errores-contratacion" class="main-section" style="display: none;">
 
 <h1>Errores habituales en la contratación</h1>
 
@@ -5526,7 +5689,7 @@ Revisar siempre la información antes de finalizar la contratación.
 
 
 <!-- ===================== EXPLICAR SEGUROS ===================== -->
-<section id="explicacion-30s" class="main-section">
+<section id="explicacion-30s" class="main-section" style="display: none;">
 
 <h1>Cómo explicar un seguro en 30 segundos</h1>
 
@@ -5575,7 +5738,7 @@ No explicar todas las coberturas técnicas. Explicar el problema que evita el se
 
 
 <!-- ===================== CIERRES VENTA ===================== -->
-<section id="cierres-comerciales" class="main-section">
+<section id="cierres-comerciales" class="main-section" style="display: none;">
 
 <h1>Cierres comerciales</h1>
 
@@ -5625,7 +5788,7 @@ Siempre hay que hacer una pregunta final.
 
 
 <!-- ===================== FRASES CALIDAD ===================== -->
-<section id="frases-calidad" class="main-section">
+<section id="frases-calidad" class="main-section" style="display: none;">
 
 <h1>Frases importantes para control de calidad</h1>
 
@@ -5672,7 +5835,7 @@ El cliente debe entender qué está contratando. La transparencia evita problema
 
 <!-- ================= SABIAS QUE ================= -->
 
-<section id="sabias-que" class="main-section">
+<section id="sabias-que" class="main-section" style="display: none;">
 
 <h1>¿Sabías qué?</h1>
 
@@ -5858,14 +6021,14 @@ Si los datos no son correctos o están desactualizados, en caso de siniestro la 
 Por eso es recomendable revisar los seguros periódicamente para asegurarse de que reflejan la situación real del cliente.
 </p>
 
-</div>
+</section></div>
 
 </section>
 
 
 <!-- ================= CASOS REALES ================= -->
 
-<section id="casos-reales" class="main-section">
+<section id="casos-reales" class="main-section" style="display: none;">
 
 <h1>Casos reales de seguros</h1>
 
@@ -5905,7 +6068,7 @@ Algunas pólizas incluyen horas de ayuda a domicilio cuando se producen enfermed
 
 </section>
 
-<section id="rutaGO" class="main-section">
+<section id="rutaGO" class="main-section" style="display: none;">
 
   <div class="card">
 
@@ -6065,7 +6228,7 @@ Listado de focos clave para trabajar oportunidades desde listados complementario
 
 
 <!-- ===================== CONTROL CALIDAD ===================== -->
-<section id="control-calidad" class="main-section">
+<section id="control-calidad" class="main-section" style="display: none;">
 
 <h1>Control de calidad en seguros</h1>
 
@@ -6104,8 +6267,7 @@ Este checklist ayuda a evitar incidencias de calidad o reclamaciones posteriores
 
 <li><strong>Seguro Incapacidad Temporal Autónomos:</strong> explicar que la indemnización se calcula según baremo y días de hospitalización.</li>
 
-<li><strong>Responsabilidad Civil:</strong
-<h2>Objetivo de la llamada</h2>
+<li><strong>Responsabilidad Civil:</strong>Objetivo de la llamada
 
 <ul>
 <li>Confirmar que el cliente entiende el seguro contratado.</li>
@@ -6140,7 +6302,7 @@ Si el cliente indica en la llamada que no entendía el seguro o que no quería c
 
 </div>
 
-</div>
+</li></ul></div>
 <div class="card">
 
 
@@ -6151,7 +6313,7 @@ Si el cliente indica en la llamada que no entendía el seguro o que no quería c
 
 
 <!-- ===================== CHECKLIST COTIZACION ===================== -->
-<section id="checklist-cotizacion" class="main-section">
+<section id="checklist-cotizacion" class="main-section" style="display: none;">
 
 <h1>Checklist para cotizar seguros</h1>
 
@@ -6211,9 +6373,8 @@ Cuanta más información se tenga antes de cotizar, más preciso será el presup
 </section>  </main>
 
 
-<script src="js/funciones.js?v=2"></script>
-<button onclick="window.scrollTo({top:0,behavior:'smooth'})" 
-style="position:fixed;bottom:20px;right:20px;padding:10px 14px;border:none;border-radius:8px;background:#4CAF50;color:white;cursor:pointer;">
+<script src="./index_files/funciones.js"></script>
+<button onclick="window.scrollTo({top:0,behavior:&#39;smooth&#39;})" style="position:fixed;bottom:20px;right:20px;padding:10px 14px;border:none;border-radius:8px;background:#4CAF50;color:white;cursor:pointer;">
 ↑
 </button>
 <script>
@@ -6507,16 +6668,31 @@ function openAutosTab(event, panelId) {
   }
 }
 </script>
-</body>
+<script>
+function filtrarContactoRapido(filtro) {
+  const cards = document.querySelectorAll("#contactos .card");
 
-</html>
+  cards.forEach(card => {
+    const texto = card.innerText.toLowerCase();
 
-<section id="ciberseguro" class="main-section">
+    if (filtro === "" || texto.includes(filtro.toLowerCase())) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
+
+
+
+
+<section id="ciberseguro" class="main-section" style="display: none;">
   <h1>🛡️ Ciberseguro</h1>
   <p>Protección digital para autónomos y PYMEs: asistencia 24/7 y coberturas ante ataques informáticos y sus consecuencias.</p>
 
   <div class="subtabs">
-    <button class="subtab active" data-subtab="ciber-indice">Índice</button>
+    <button class="subtab is-active" data-subtab="ciber-indice">Índice</button>
     <button class="subtab" data-subtab="ciber-riesgo">Riesgo real</button>
     <button class="subtab" data-subtab="ciber-quees">Qué es</button>
     <button class="subtab" data-subtab="ciber-cubre">Qué cubre</button>
@@ -6529,7 +6705,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- ÍNDICE -->
-  <div id="ciber-indice" class="subtab-panel active">
+  <div id="ciber-indice" class="subtab-panel is-visible" style="display: block;">
     <h2>📌 Índice rápido</h2>
     <ol>
       <li><b>Riesgo real:</b> por qué esto importa hoy</li>
@@ -6549,7 +6725,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- RIESGO REAL -->
-  <div id="ciber-riesgo" class="subtab-panel">
+  <div id="ciber-riesgo" class="subtab-panel" style="display: none;">
     <h2>⚠️ Riesgo real (para abrir conversación)</h2>
     <ul>
       <li><b>El 60% de las pymes que sufren un ciberataque no se recuperan.</b></li>
@@ -6568,7 +6744,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- QUÉ ES -->
-  <div id="ciber-quees" class="subtab-panel">
+  <div id="ciber-quees" class="subtab-panel" style="display: none;">
     <h2>🧩 Qué es (en 1 frase)</h2>
     <p>
       Un seguro para <b>proteger el negocio</b> frente a los principales riesgos cibernéticos y cubrir
@@ -6581,7 +6757,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- QUÉ CUBRE -->
-  <div id="ciber-cubre" class="subtab-panel">
+  <div id="ciber-cubre" class="subtab-panel" style="display: none;">
     <h2>✅ Qué cubre (resumen claro)</h2>
 
     <h3>Asistencia y respuesta</h3>
@@ -6612,7 +6788,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- PERFIL OBJETIVO -->
-  <div id="ciber-perfil" class="subtab-panel">
+  <div id="ciber-perfil" class="subtab-panel" style="display: none;">
     <h2>🎯 A quién va dirigido</h2>
     <ul>
       <li><b>Autónomos y PYMEs</b> con presencia digital: web, e-commerce, TPV virtual</li>
@@ -6627,7 +6803,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- DETECTOR OPORTUNIDAD -->
-  <div id="ciber-detector" class="subtab-panel">
+  <div id="ciber-detector" class="subtab-panel" style="display: none;">
     <h2>🔎 Detector rápido de oportunidad</h2>
     <p>Haz 5 preguntas y en 30 segundos sabes si hay oportunidad:</p>
     <ul>
@@ -6644,7 +6820,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- GUION COMERCIAL -->
-  <div id="ciber-guion" class="subtab-panel">
+  <div id="ciber-guion" class="subtab-panel" style="display: none;">
     <h2>🗣️ Guion comercial (60–90 segundos)</h2>
     <p>
       “Este ciberseguro sirve para <b>proteger tu negocio</b> cuando pasa un ataque informático.
@@ -6660,7 +6836,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- OBJECIONES -->
-  <div id="ciber-objeciones" class="subtab-panel">
+  <div id="ciber-objeciones" class="subtab-panel" style="display: none;">
     <h2>🧯 Objeciones típicas (respuesta corta)</h2>
 
     <h3>“A mí eso no me va a pasar”</h3>
@@ -6677,7 +6853,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- CHECKLIST -->
-  <div id="ciber-checklist" class="subtab-panel">
+  <div id="ciber-checklist" class="subtab-panel" style="display: none;">
     <h2>✅ Checklist (lo mínimo que tienes que preguntar)</h2>
     <ul>
       <li>Tipo de negocio y actividad</li>
@@ -6691,7 +6867,7 @@ function openAutosTab(event, panelId) {
   </div>
 
   <!-- CIERRE -->
-  <div id="ciber-cierre" class="subtab-panel">
+  <div id="ciber-cierre" class="subtab-panel" style="display: none;">
     <h2>⚡ Cierre rápido</h2>
     <p>Elige una:</p>
     <ul>
@@ -6704,7 +6880,11 @@ function openAutosTab(event, panelId) {
       💡 Tip: si el cliente tiene TPV virtual o tienda online, esto suele ser “sí o sí” porque el impacto del parón es directo.
     </div>
   </div>
-</section><section id="rav" class="main-section">
+
+
+
+
+</section><section id="rav" class="main-section active" style="display: block;">
 
 <h1>💰 Renta Vitalicia Asegurada (RAV)</h1>
 <div class="detector-oportunidad">
@@ -6726,10 +6906,10 @@ function openAutosTab(event, panelId) {
 <p>Producto de ahorro que permite convertir un capital en una renta garantizada de por vida.</p>
 
 <div class="subtabs">
-<button class="subtab active" data-subtab="rav-indice">Índice</button>
+<button class="subtab" data-subtab="rav-indice">Índice</button>
 <button class="subtab" data-subtab="rav-quees">Qué es</button>
 <button class="subtab" data-subtab="rav-beneficios">Beneficios</button>
-<button class="subtab" data-subtab="rav-fiscalidad">Fiscalidad</button>
+<button class="subtab is-active active" data-subtab="rav-fiscalidad">Fiscalidad</button>
 <button class="subtab" data-subtab="rav-cliente">Perfil cliente</button>
 <button class="subtab" data-subtab="rav-ejemplo">Ejemplo real</button>
 <button class="subtab" data-subtab="rav-comparacion">Comparación</button>
@@ -6739,7 +6919,7 @@ function openAutosTab(event, panelId) {
 </div>
 
 
-<div id="rav-indice" class="subtab-panel active">
+<div id="rav-indice" class="subtab-panel" style="display: none;">
 <h2>📌 Índice rápido</h2>
 
 <ul>
@@ -6752,141 +6932,6 @@ function openAutosTab(event, panelId) {
 <li>Argumentario comercial</li>
 <li>Cierre de venta</li>
 </ul>
-<div class="card">
-
-<h2>📈 Santander Vencimiento Europa 8</h2>
-
-<p>
-Seguro de vida ahorro en modalidad <strong>Unit Linked</strong>, en el que el tomador asume el riesgo de la inversión.
-Se trata de un producto de <strong>prima única</strong> que permite obtener pagos anuales y recuperar la prima inicial al vencimiento.
-</p>
-
-<h3>Perfil de cliente</h3>
-
-<ul>
-<li>Personas físicas entre <strong>18 y 75 años</strong></li>
-<li>Residentes fiscales en España</li>
-<li>Clientes con capital ahorrado que buscan una rentabilidad potencial</li>
-<li>Clientes que aceptan cierto riesgo de inversión</li>
-</ul>
-
-<h3>Funcionamiento del producto</h3>
-
-<ol>
-<li>El cliente realiza una <strong>única aportación inicial</strong>.</li>
-<li>Durante la vida del producto recibe <strong>pagos anuales del 2,02%</strong> mediante rescates parciales preconcertados.</li>
-<li>Al vencimiento se devuelve la <strong>prima inicial aportada</strong>.</li>
-<li>En caso de fallecimiento, los beneficiarios reciben el valor de mercado de la inversión más un capital adicional.</li>
-</ol>
-
-<h3>Aportación</h3>
-
-<ul>
-<li>Aportación mínima: <strong>10.000 €</strong></li>
-<li>Aportación máxima: <strong>50.000 €</strong></li>
-<li>No se permiten aportaciones adicionales</li>
-</ul>
-
-<h3>Pagos anuales estimados</h3>
-
-<div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Año</th>
-<th>Pago estimado</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>Mayo 2027</td>
-<td>2,02%</td>
-</tr>
-
-<tr>
-<td>Mayo 2028</td>
-<td>2,02%</td>
-</tr>
-
-<tr>
-<td>Mayo 2029</td>
-<td>2,02%</td>
-</tr>
-
-<tr>
-<td>Mayo 2030</td>
-<td>2,02%</td>
-</tr>
-
-<tr>
-<td>Mayo 2031</td>
-<td>Devolución del capital</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<h3>Duración del producto</h3>
-
-<ul>
-<li>Fecha de vencimiento: <strong>28 de mayo de 2031</strong></li>
-<li>Producto diseñado para mantenerse hasta vencimiento</li>
-</ul>
-
-<h3>Liquidez</h3>
-
-<p>
-El cliente puede solicitar el <strong>rescate total</strong> del seguro en ventanas de liquidez mensuales,
-recibiendo el <strong>valor de mercado</strong> de la inversión.
-</p>
-
-<p>
-Este valor puede ser <strong>superior o inferior</strong> a la prima inicialmente aportada.
-</p>
-
-<h3>Inversión del producto</h3>
-
-<p>
-La inversión está vinculada a bonos de deuda pública europea:
-</p>
-
-<ul>
-<li>Bono del Estado Español</li>
-<li>Bono del Estado Italiano</li>
-<li>Bono del Estado Francés</li>
-</ul>
-
-<h3>Cobertura adicional</h3>
-
-<p>
-En caso de fallecimiento del asegurado, los beneficiarios recibirán el <strong>valor de mercado de la inversión</strong>
-más un capital adicional de <strong>505 €</strong>.
-</p>
-
-<h3>Riesgos principales</h3>
-
-<ul>
-<li><strong>Riesgo de mercado:</strong> el valor de la inversión puede fluctuar.</li>
-<li><strong>Riesgo de crédito:</strong> relacionado con los emisores de los bonos.</li>
-</ul>
-
-<h3>Contratación</h3>
-
-<p>
-Este producto se puede contratar a través de:
-</p>
-
-<ul>
-<li><strong>Mi Escritorio → Contratación Seguros de Ahorro Omnicanal</strong></li>
-<li><strong>GO Comercial → Contratación</strong></li>
-</ul>
-
-<div class="tip-comercial">
-💡 Idea comercial: producto pensado para clientes que tienen dinero parado en cuenta y quieren obtener pagos anuales manteniendo una inversión estructurada hasta vencimiento.
-</div>
-
-</div>
 
 <div class="card">
 
@@ -6969,7 +7014,7 @@ Revisar su situación puede permitirles obtener ingresos adicionales o mejorar l
 </div>
 
 
-<div id="rav-quees" class="subtab-panel">
+<div id="rav-quees" class="subtab-panel" style="display: none;">
 
 <h2>Qué es la Renta Vitalicia Asegurada</h2>
 
@@ -6990,7 +7035,7 @@ Esto permite convertir el ahorro acumulado en ingresos estables para la jubilaci
 </div>
 
 
-<div id="rav-beneficios" class="subtab-panel">
+<div id="rav-beneficios" class="subtab-panel" style="display: none;">
 
 <h2>Beneficios principales</h2>
 
@@ -7014,7 +7059,7 @@ Esto permite convertir el ahorro acumulado en ingresos estables para la jubilaci
 </div>
 
 
-<div id="rav-fiscalidad" class="subtab-panel">
+<div id="rav-fiscalidad" class="subtab-panel is-visible active" style="display: block;">
 
 <h2>Fiscalidad del producto</h2>
 
@@ -7157,7 +7202,7 @@ Las subidas de tipos permiten mejorar la renta ofrecida al cliente. Es un buen m
 
 
 
-<div id="rav-cliente" class="subtab-panel">
+<div id="rav-cliente" class="subtab-panel" style="display: none;">
 
 <h2>Perfil de cliente adecuado</h2>
 
@@ -7180,7 +7225,7 @@ Las subidas de tipos permiten mejorar la renta ofrecida al cliente. Es un buen m
 </div>
 
 
-<div id="rav-ejemplo" class="subtab-panel">
+<div id="rav-ejemplo" class="subtab-panel" style="display: none;">
 
 <h2>Ejemplo práctico</h2>
 
@@ -7202,7 +7247,7 @@ Las subidas de tipos permiten mejorar la renta ofrecida al cliente. Es un buen m
 </div>
 
 
-<div id="rav-comparacion" class="subtab-panel">
+<div id="rav-comparacion" class="subtab-panel" style="display: none;">
 
 <h2>Comparación con otros productos</h2>
 
@@ -7233,7 +7278,7 @@ Las subidas de tipos permiten mejorar la renta ofrecida al cliente. Es un buen m
 </div>
 
 
-<div id="rav-argumentario" class="subtab-panel">
+<div id="rav-argumentario" class="subtab-panel" style="display: none;">
 
 <h2>Argumentario comercial</h2>
 
@@ -7255,7 +7300,7 @@ Las subidas de tipos permiten mejorar la renta ofrecida al cliente. Es un buen m
 </div>
 
 
-<div id="rav-cierre" class="subtab-panel">
+<div id="rav-cierre" class="subtab-panel" style="display: none;">
 
 <h2>Cierre comercial</h2>
 
@@ -7266,7 +7311,7 @@ Las subidas de tipos permiten mejorar la renta ofrecida al cliente. Es un buen m
 </ul>
 </div>
 
-<div id="rav-modalidades" class="subtab-panel">
+<div id="rav-modalidades" class="subtab-panel" style="display: none;">
 
 <h2>💰 Modalidades de Renta Vitalicia</h2>
 
@@ -7345,11 +7390,161 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 💡 Si el cliente tiene depósitos que vencen, es el momento perfecto para proponer una RAV.
 </div>
 
-</div>
+
 
 </section>
 
-<section id="aegon" class="main-section">
+
+
+  
+<section id="europa8" class="main-section" style="display: none;">
+
+  <div class="renta-box">
+    <div class="renta-header">
+      <h1>📈 Santander Vencimiento Europa 8</h1>
+      <div class="renta-sub">Unit Linked · Prima única · Rentabilidad estimada</div>
+    </div>
+
+    <p>
+      Seguro de vida ahorro en modalidad <strong>Unit Linked</strong>, en el que el tomador asume el riesgo de la inversión.
+      Se trata de un producto de <strong>prima única</strong> que permite obtener pagos anuales y recuperar la prima inicial al vencimiento.
+    </p>
+
+    <h3>Perfil de cliente</h3>
+    <ul>
+      <li>Personas físicas entre <strong>18 y 75 años</strong></li>
+      <li>Residentes fiscales en España</li>
+      <li>Clientes con capital ahorrado que buscan una rentabilidad potencial</li>
+      <li>Clientes que aceptan cierto riesgo de inversión</li>
+    </ul>
+
+    <h3>Funcionamiento del producto</h3>
+    <ol>
+      <li>El cliente realiza una <strong>única aportación inicial</strong>.</li>
+      <li>Durante la vida del producto recibe <strong>pagos anuales del 2,02%</strong> mediante rescates parciales preconcertados.</li>
+      <li>Al vencimiento se devuelve la <strong>prima inicial aportada</strong>.</li>
+      <li>En caso de fallecimiento, los beneficiarios reciben el valor de mercado de la inversión más un capital adicional.</li>
+    </ol>
+
+    <h3>Aportación</h3>
+    <ul>
+      <li>Aportación mínima: <strong>10.000 €</strong></li>
+      <li>Aportación máxima: <strong>50.000 €</strong></li>
+      <li>No se permiten aportaciones adicionales</li>
+    </ul>
+
+    <h3>Pagos anuales estimados</h3>
+    <div class="table-wrap">
+      <table class="renta-table">
+        <thead>
+          <tr>
+            <th>Año</th>
+            <th>Pago estimado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mayo 2027</td>
+            <td>2,02%</td>
+          </tr>
+          <tr>
+            <td>Mayo 2028</td>
+            <td>2,02%</td>
+          </tr>
+          <tr>
+            <td>Mayo 2029</td>
+            <td>2,02%</td>
+          </tr>
+          <tr>
+            <td>Mayo 2030</td>
+            <td>2,02%</td>
+          </tr>
+          <tr>
+            <td>Mayo 2031</td>
+            <td>Devolución del capital</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Duración del producto</h3>
+    <ul>
+      <li>Fecha de vencimiento: <strong>28 de mayo de 2031</strong></li>
+      <li>Producto diseñado para mantenerse hasta vencimiento</li>
+    </ul>
+
+    <h3>Liquidez</h3>
+    <p>
+      El cliente puede solicitar el <strong>rescate total</strong> del seguro en ventanas de liquidez mensuales,
+      recibiendo el <strong>valor de mercado</strong> de la inversión.
+    </p>
+
+    <p>
+      Este valor puede ser <strong>superior o inferior</strong> a la prima inicialmente aportada.
+    </p>
+
+    <h3>Inversión del producto</h3>
+    <p>La inversión está vinculada a bonos de deuda pública europea:</p>
+    <ul>
+      <li>Bono del Estado Español</li>
+      <li>Bono del Estado Italiano</li>
+      <li>Bono del Estado Francés</li>
+    </ul>
+
+    <h3>Cobertura adicional</h3>
+    <p>
+      En caso de fallecimiento del asegurado, los beneficiarios recibirán el <strong>valor de mercado de la inversión</strong>
+      más un capital adicional de <strong>505 €</strong>.
+    </p>
+
+    <h3>Riesgos principales</h3>
+    <ul>
+      <li><strong>Riesgo de mercado:</strong> el valor de la inversión puede fluctuar.</li>
+      <li><strong>Riesgo de crédito:</strong> relacionado con los emisores de los bonos.</li>
+    </ul>
+
+    <h3>Contratación</h3>
+    <p>Este producto se puede contratar a través de:</p>
+    <ul>
+      <li><strong>Mi Escritorio → Contratación Seguros de Ahorro Omnicanal</strong></li>
+      <li><strong>GO Comercial → Contratación</strong></li>
+    </ul>
+
+    <div class="renta-highlight">
+      💡 Idea comercial: producto pensado para clientes que tienen dinero parado en cuenta y quieren obtener pagos anuales manteniendo una inversión estructurada hasta vencimiento.
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+<section id="aegon" class="main-section" style="display: none;">
 
 <h1>🩺 Seguros AEGON</h1>
 
@@ -7358,7 +7553,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 <div class="subtabs">
 
 <div class="subtabs">
-<button class="subtab active" data-subtab="aegon-indice">Índice</button>
+<button class="subtab is-active" data-subtab="aegon-indice">Índice</button>
 <button class="subtab" data-subtab="aegon-vida">Seguros de Vida</button>
 <button class="subtab" data-subtab="aegon-salud">Seguros de Salud</button>
 <button class="subtab" data-subtab="aegon-autonomo">Autónomos</button>
@@ -7370,7 +7565,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 </div>
 
 
-<div id="aegon-indice" class="subtab-panel active">
+<div id="aegon-indice" class="subtab-panel is-visible" style="display: block;">
 
 <h2>📌 Índice de productos</h2>
 
@@ -7392,7 +7587,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 
 
 
-<div id="aegon-vida" class="subtab-panel">
+<div id="aegon-vida" class="subtab-panel" style="display: none;">
 
   <div class="card">
     <h2>🛡️ Seguros de Vida</h2>
@@ -7404,17 +7599,17 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 
   <div class="vida-subtabs" style="margin:16px 0;">
 
-<button type="button" class="vida-subtab active" onclick="openVidaTab(event, 'vida-guia-aegon')">Guía Vida</button>
+<button type="button" class="vida-subtab active" onclick="openVidaTab(event, &#39;vida-guia-aegon&#39;)">Guía Vida</button>
 
-<button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-esencial-aegon')">Esencial</button> 
+<button type="button" class="vida-subtab" onclick="openVidaTab(event, &#39;vida-esencial-aegon&#39;)">Esencial</button> 
 
-<button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-familiar-aegon')">Familiar Plus</button>
+<button type="button" class="vida-subtab" onclick="openVidaTab(event, &#39;vida-familiar-aegon&#39;)">Familiar Plus</button>
 
-<button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-empresa-aegon')">Empresa</button>
+<button type="button" class="vida-subtab" onclick="openVidaTab(event, &#39;vida-empresa-aegon&#39;)">Empresa</button>
 
-<button type="button" class="vida-subtab" onclick="openVidaTab(event, 'vida-femenino-aegon')">Femenino</button>
+<button type="button" class="vida-subtab" onclick="openVidaTab(event, &#39;vida-femenino-aegon&#39;)">Femenino</button>
 
-<button class="vida-subtab" onclick="openVidaTab(event, 'vida-vinculados')">Vinculados Hipoteca/préstamo</button>
+<button class="vida-subtab" onclick="openVidaTab(event, &#39;vida-vinculados&#39;)">Vinculados Hipoteca/préstamo</button>
 
   </div>
 
@@ -7582,7 +7777,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
     <div class="card">
       <h3>🩺 Telesselección Seguros de Vida</h3>
       <table style="width:100%; border-collapse:collapse;">
-        <tr style="background:#f2f2f2;">
+        <tbody><tr style="background:#f2f2f2;">
           <th style="padding:8px;border:1px solid #ddd;">Edad</th>
           <th style="padding:8px;border:1px solid #ddd;">Declaración de Salud</th>
           <th style="padding:8px;border:1px solid #ddd;">Telesselección / Pruebas Médicas</th>
@@ -7602,7 +7797,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
           <td style="padding:8px;border:1px solid #ddd;">—</td>
           <td style="padding:8px;border:1px solid #ddd;">Pruebas médicas a partir de 300.000 €</td>
         </tr>
-      </table>
+      </tbody></table>
     </div>
 
   </div>
@@ -7627,7 +7822,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
       <h4>Primas orientativas</h4>
 
       <table style="width:100%; border-collapse:collapse;">
-        <tr style="background:#f2f2f2;">
+        <tbody><tr style="background:#f2f2f2;">
           <th style="padding:8px;border:1px solid #ddd;">Edad</th>
           <th style="padding:8px;border:1px solid #ddd;">Prima anual</th>
         </tr>
@@ -7635,7 +7830,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
         <tr><td style="padding:8px;border:1px solid #ddd;">51-55</td><td style="padding:8px;border:1px solid #ddd;">350 €</td></tr>
         <tr><td style="padding:8px;border:1px solid #ddd;">56-60</td><td style="padding:8px;border:1px solid #ddd;">550 €</td></tr>
         <tr><td style="padding:8px;border:1px solid #ddd;">61-65</td><td style="padding:8px;border:1px solid #ddd;">750 €</td></tr>
-      </table>
+      </tbody></table>
     </div>
 
   </div>
@@ -7992,7 +8187,6 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 </div>
 
 </div>
-</div>
 
 
 
@@ -8009,7 +8203,8 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
 
 
 
-<div id="aegon-salud" class="subtab-panel">
+
+<div id="aegon-salud" class="subtab-panel" style="display: none;">
 
  <p>Úsalo como guion rápido para vender en 1 minuto, sin tecnicismos.</p>
 <h2>🧾 Comparativa rápida Salud Aegon</h2>
@@ -8156,11 +8351,9 @@ habitual <strong>no exceda de 90 días consecutivos</strong> por viaje o desplaz
 
 <ul>
 <li><strong>Gastos médicos, quirúrgicos, farmacéuticos y de hospitalización en el extranjero:</strong> hasta <strong>30.000 € por asegurado y anualidad</strong>.</li>
-<li><strong>Tratamientos odontológicos de urgencia en el extranjero:</strong> hasta <strong>240,40 € por asegurado y anualidad</strong
-
-  <div class="tip-comercial">
+<li><strong>Tratamientos odontológicos de urgencia en el extranjero:</strong> hasta <strong>240,40 € por asegurado y anualidad</strong>
     💡 Tip oficina: “Básico = complemento. Cuadro médico = completo. Reembolso = libertad.”
-  </div>
+  </li></ul></div>
 
   <h3>🧾 Caso frecuente Canarias: no residente (Extranjería)</h3>
   <ul>
@@ -8466,7 +8659,7 @@ En algunas pólizas existen límites máximos anuales o por acto médico.
 </div>
 </div>
 
-<div id="aegon-autonomo" class="subtab-panel">
+<div id="aegon-autonomo" class="subtab-panel" style="display: none;">
 
 <h3>Incapacidad Temporal Autónomo</h3>
 
@@ -8917,11 +9110,11 @@ en la que no pueden trabajar durante varias semanas o meses.
 
 </div>
 </div>
-</div>
-</div>
 
 
-<div id="aegon-accidentes" class="subtab-panel">
+
+
+<div id="aegon-accidentes" class="subtab-panel" style="display: none;">
 
 <h2>Seguro de Accidentes</h2>
 
@@ -8989,7 +9182,7 @@ en la que no pueden trabajar durante varias semanas o meses.
 
 <h2>Tabla de precios Senior</h2>
 <p>
-<h3>💰 Tarifas orientativas – Protección Senior</h3>
+</p><h3>💰 Tarifas orientativas – Protección Senior</h3>
 
 <div class="table-wrap">
 <table>
@@ -9038,11 +9231,11 @@ en la que no pueden trabajar durante varias semanas o meses.
 
 <div class="tip-comercial">
 💡 Producto pensado para personas mayores que quieren una protección económica frente a accidentes sin primas elevadas.
-</div></p>
+</div><p></p>
 </div>
 
 
-<div id="aegon-dependencia" class="subtab-panel">
+<div id="aegon-dependencia" class="subtab-panel" style="display: none;">
 
 <h2>Seguro de Dependencia</h2>
 
@@ -9115,7 +9308,7 @@ en la que no pueden trabajar durante varias semanas o meses.
 </div>
 
 
-<div id="aegon-decesos" class="subtab-panel">
+<div id="aegon-decesos" class="subtab-panel" style="display: none;">
 
 <h2>Seguro de Decesos</h2>
 <h3>🌍 Traslado y repatriación</h3>
@@ -9286,19 +9479,19 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
 </div>
 </div>
 
-<div id="aegon-hogar" class="subtab-panel">
+<div id="aegon-hogar" class="subtab-panel" style="display: none;">
 
   <h2>Mi Hogar</h2>
   <p>Protección para la vivienda, el contenido y la responsabilidad del cliente.</p>
 
   <div class="hogar-subtabs">
-    <button type="button" class="hogar-subtab active" onclick="openHogarTab(event, 'hogar-modalidades-panel')">Modalidades</button>
-    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-capitales-panel')">Capitales</button>
-    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-joyas-panel')">Joyas</button>
-    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-objetos-valor-panel')">Objetos valor</button>
-    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-argumentario-panel')">Argumentario</button>
-    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-venta-cruzada-panel')">Venta cruzada</button>
-    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-checklist-panel')">Checklist</button>
+    <button type="button" class="hogar-subtab active" onclick="openHogarTab(event, &#39;hogar-modalidades-panel&#39;)">Modalidades</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, &#39;hogar-capitales-panel&#39;)">Capitales</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, &#39;hogar-joyas-panel&#39;)">Joyas</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, &#39;hogar-objetos-valor-panel&#39;)">Objetos valor</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, &#39;hogar-argumentario-panel&#39;)">Argumentario</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, &#39;hogar-venta-cruzada-panel&#39;)">Venta cruzada</button>
+    <button type="button" class="hogar-subtab" onclick="openHogarTab(event, &#39;hogar-checklist-panel&#39;)">Checklist</button>
   </div>
 
 <!-- MODALIDADES -->
@@ -9818,7 +10011,7 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
   </ul>
 
 </div>
-</section>
+</div></section>
 
 
 
@@ -9827,7 +10020,7 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
 
 
 
-<section id="credito" class="main-section">
+<section id="credito" class="main-section" style="display: none;">
   <h1>📊 Seguro de Crédito – Póliza PY</h1>
 
   <p>Seguro que protege a las empresas frente al riesgo de impago de sus clientes.</p>
@@ -9996,12 +10189,12 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
 La pregunta no es si puede haber un impago, sino cuándo puede ocurrir.
 Con este seguro la empresa protege su facturación y su tesorería frente a ese riesgo.
 </p>
-</div>
-</section>
 
 </section>
 
-<section id="empresas" class="main-section">
+
+
+<section id="empresas" class="main-section" style="display: none;">
 <div class="card">
 
 <h3>Multirriesgo Integral Comercios y Emprendedores</h3>
@@ -10239,7 +10432,7 @@ En actividades con atención al público (hostelería, comercios, alojamientos t
 
 <div class="card">
 
-<h3>Responsabilidad Civil para Directivos (D&O)</h3>
+<h3>Responsabilidad Civil para Directivos (D&amp;O)</h3>
 
 <p>
 Seguro destinado a proteger el patrimonio personal de administradores, directivos y altos cargos frente a reclamaciones derivadas de errores cometidos en el ejercicio de sus funciones de gestión.
@@ -10467,7 +10660,7 @@ Esta guía permite identificar rápidamente qué seguros pueden ser necesarios s
 
 <tr>
 <td style="padding:8px; border:1px solid #ddd;">Empresa con socios o directivos</td>
-<td style="padding:8px; border:1px solid #ddd;">Responsabilidad Civil Directivos (D&O)</td>
+<td style="padding:8px; border:1px solid #ddd;">Responsabilidad Civil Directivos (D&amp;O)</td>
 </tr>
 
 </tbody>
@@ -10497,9 +10690,9 @@ Con esta información es más fácil identificar qué seguros necesita realmente
 </div>
 </div>
 
-</section>
+</div></div></section>
 
-</script>
+
 <footer style="margin-top:40px; padding:15px; font-size:12px; color:#666; text-align:center; border-top:1px solid #ddd;">
 
 Herramienta interna de apoyo comercial utilizada para consulta y formación del equipo.
@@ -10508,16 +10701,10 @@ El contenido tiene carácter informativo y no constituye documentación oficial 
 </footer>
 
 <div style="margin:20px 0; text-align:center;">
-  <input 
-    type="text" 
-    id="buscador" 
-    placeholder="🔍 Buscar cobertura, concepto o palabra..."
-    style="padding:10px; width:300px; border-radius:8px; border:1px solid #ccc;"
-    onkeyup="buscarContenido()">
+  <input type="text" id="buscador" placeholder="🔍 Buscar cobertura, concepto o palabra..." style="padding:10px; width:300px; border-radius:8px; border:1px solid #ccc;" onkeyup="buscarContenido()">
 </div>
-</section>
-</div
-<script>
+
+
 <script>
 function activarPrimeraSubtabHogar() {
   const primeraTab = document.querySelector('#aegon-hogar .hogar-subtab');
@@ -10530,4 +10717,4 @@ document.addEventListener("DOMContentLoaded", function () {
   const botonMiHogar = document.querySelector('[data-subtab="aegon-hogar"]');
 
   if (botonMiHogar) {
-    botonMiHogar.addEventListener("click", function () {
+    botonMiHogar.addEventListener("click", function () {</script></body></html>
