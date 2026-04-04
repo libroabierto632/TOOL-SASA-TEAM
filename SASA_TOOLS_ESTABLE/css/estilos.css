@@ -2081,6 +2081,48 @@ button,
   opacity: 0.5;
   filter: grayscale(40%);
 }
+.subtabs-empresas{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:18px 0 20px;
+}
+
+.subtab-empresa{
+  border:none;
+  border-radius:999px;
+  padding:10px 16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:all .25s ease;
+  color:#fff;
+}
+
+.subtab-empresa:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.05);
+}
+
+.subtab-empresa.active{
+  box-shadow:0 8px 18px rgba(0,0,0,.18);
+  transform:translateY(-1px);
+}
+
+.empresa-multi{ background:linear-gradient(135deg,#1f5ca8,#2e7dd7); }
+.empresa-rc{ background:linear-gradient(135deg,#f39c12,#e67e22); }
+.empresa-rcplus{ background:linear-gradient(135deg,#7b61ff,#9b59b6); }
+.empresa-capitales{ background:linear-gradient(135deg,#00b8a9,#009688); }
+.empresa-do{ background:linear-gradient(135deg,#d64550,#b83240); }
+.empresa-otros{ background:linear-gradient(135deg,#4caf50,#2e7d32); }
+
+.empresa-panel{
+  animation:fadeEmpresa .25s ease;
+}
+
+@keyframes fadeEmpresa{
+  from{ opacity:0; transform:translateY(8px); }
+  to{ opacity:1; transform:translateY(0); }
+}
 </style>
 
 
