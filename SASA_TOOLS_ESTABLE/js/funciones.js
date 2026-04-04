@@ -1814,3 +1814,16 @@ if (estado === "ACTIVA") card.classList.add("promo-activa");
 if (estado === "PRÓXIMA") card.classList.add("promo-proxima");
 if (estado === "PRÓXIMA A VENCER") card.classList.add("promo-urgente");
 if (estado === "INACTIVA") card.classList.add("promo-inactiva");
+
+function openEmpresaTab(evt, panelId) {
+  document.querySelectorAll('.empresa-panel').forEach(panel => {
+    panel.style.display = 'none';
+  });
+
+  document.querySelectorAll('.subtab-empresa').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  document.getElementById(panelId).style.display = 'block';
+  evt.currentTarget.classList.add('active');
+}
