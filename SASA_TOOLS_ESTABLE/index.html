@@ -214,11 +214,11 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
       <button class="main-tab" data-target="autos">🚗 Autos y Motos</button>
 
-      <button class="main-tab" data-target="otrosSeguros">🧩 Otros Seguros</button>
+      <button class="main-tab" data-target="transportesMercancias">🚚 Transportes Mercancías</button> 
 
-      <button class="main-tab" data-target="transportesMercancias">🚚 Transportes Mercancías</button>
+     <button class="main-tab" data-target="otrosSeguros">🧩 Otros Seguros</button>
 
-    </nav>  
+    </nav>
   </header>
 
 <div class="global-search-box" style="display:flex; gap:8px; align-items:center; margin:12px 0 18px 0; flex-wrap:wrap;">
@@ -272,9 +272,7 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
             <strong>Nota promo</strong>
 
-            El descuento promocional de Asisa del 20% se aplica si se contrata antes del 31 de marzo. 
 
-            Durante el 2026, durante el 2027 tendrá el 15% y durante el 2028 el 10%
 
  
 
@@ -352,45 +350,12 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 Selecciona los productos que quieres incluir en el dossier y genera un documento listo para imprimir o enviar al cliente.
 </p>
 
-<label><input type="checkbox" value="promociones"> Promociones</label><br>
-<label><input type="checkbox" value="inicio"> Inicio</label><br>
-<label><input type="checkbox" value="cartas"> Cartas</label><br>
-<label><input type="checkbox" value="contactos"> Contactos</label><br>
-<label><input type="checkbox" value="impago"> Protección Impago</label><br>
-
-<label><input type="checkbox" value="manual"> Manual comercial</label><br>
-<label><input type="checkbox" value="objeciones"> Objeciones</label><br>
-<label><input type="checkbox" value="deteccion-oportunidad"> Oportunidades</label><br>
-<label><input type="checkbox" value="verificacion-datos"> Verificación cliente</label><br>
-<label><input type="checkbox" value="errores-contratacion"> Errores contratación</label><br>
-<label><input type="checkbox" value="explicacion-30s"> Explicar seguros</label><br>
-<label><input type="checkbox" value="cierres-comerciales"> Cierres de venta</label><br>
-<label><input type="checkbox" value="frases-calidad"> Frases calidad</label><br>
-<label><input type="checkbox" value="control-calidad"> Control calidad</label><br>
-
+<label><input type="checkbox" value="ciberseguro"> Ciberseguro</label><br>
+<label><input type="checkbox" value="credito"> Seguro de crédito</label><br>
 <label><input type="checkbox" value="rav"> Renta Vitalicia</label><br>
 <label><input type="checkbox" value="aegon"> Seguros Aegon</label><br>
-<label><input type="checkbox" value="credito"> Seguro de crédito</label><br>
 <label><input type="checkbox" value="empresas"> Seguros Empresas</label><br>
-<label><input type="checkbox" value="ciberseguro"> Ciberseguro</label><br>
 <label><input type="checkbox" value="salud"> Salud Asisa</label><br>
-
-<label><input type="checkbox" value="cotizadorAsisa"> Cotizador Asisa</label><br>
-<label><input type="checkbox" value="tarifas"> Tarifas</label><br>
-<label><input type="checkbox" value="cuadro"> Cuadro médico</label><br>
-
-<label><input type="checkbox" value="checklist-cotizacion"> Checklist cotización</label><br>
-<label><input type="checkbox" value="sabias-que"> ¿Sabías qué?</label><br>
-<label><input type="checkbox" value="casos-reales"> Casos reales</label><br>
-<label><input type="checkbox" value="rutaGO"> Ruta GO</label><br>
-
-<label><input type="checkbox" value="autos"> Autos y Motos</label><br>
-<label><input type="checkbox" value="otrosSeguros"> Otros Seguros</label><br>
-<label><input type="checkbox" value="transportesMercancias"> Transportes Mercancías</label><br>
-
-
-
-
 <br>
 <p id="contadorProductos"></p>
 <button onclick="generarDossier()" class="btn">
@@ -1051,389 +1016,8 @@ derivados de golpes, daños propios u otras incidencias relevantes.
 
 </div>
 
-<section id="promociones" class="main-section">
 
-<p style="font-size:13px;color:#555;">
-Información comercial orientativa. Promociones vigentes sujetas a actualización según campaña.
-</p>
 
-<section id="promociones" class="tab-content">
-  <div class="promo-header">
-    <h2>🔥 Campañas y promociones del mes</h2>
-  </div>
-<div class="promo-card">
-  <h3>Vida VL Digital</h3>
-  <span class="estado activa">ACTIVA</span>
-  <ul>
-    <li>Descuento del 10%</li>
-    <li>Desde el 01/04/2026 al 31/05/2026</li>
-    <li>Modalidades: Protección Familiar Plus y Protección Familiar en Femenino</li>
-  </ul>
-</div>
-
-<div class="promo-card">
-  <h3>ITA Digital</h3>
-  <span class="estado activa">ACTIVA</span>
-  <ul>
-    <li>Descuento del 10%</li>
-    <li>Desde el 01/04/2026 al 31/07/2026</li>
-  </ul>
-</div>
-
-<div class="promo-card">
-  <h3>Accidentes Digital</h3>
-  <span class="estado activa">ACTIVA</span>
-  <ul>
-    <li>Descuento del 10%</li>
-    <li>Desde el 01/04/2026 al 31/07/2026</li>
-    <li>Modalidades: Accidentes Protección Integral, Accidentes Protección Integral Esencial y Protección Senior</li>
-  </ul>
-</div>
-
-<div class="promo-card">
-  <h3>Promoción Salud</h3>
-  <span class="estado activa">ACTIVA</span>
-  <ul>
-    <li>10% de descuento</li>
-    <li>SELECT activo desde el 9 de marzo</li>
-    <li>Sin fecha fin actualmente</li>
-  </ul>
-</div>
-
-<div class="promo-card">
-  <h3>Vida Vinculado Préstamos Hipotecarios</h3>
-  <span class="estado activa">ACTIVA</span>
-  <ul>
-    <li>Hasta 20% de descuento</li>
-    <li>Vigencia hasta 30/06/2026</li>
-  </ul>
-</div>
-
-<div class="promo-card">
-  <h3>Autos</h3>
-  <span class="estado ultimos">ÚLTIMOS DÍAS</span>
-  <ul>
-    <li>Cheque regalo 60€</li>
-    <li>Vigencia hasta 30/04/2026</li>
-    <li>Aplicable desde 499€</li>
-  </ul>
-</div>
-
-<div class="promo-card">
-  <h3>Planeta Seguros</h3>
-  <span class="estado inactiva">INACTIVA</span>
-  <ul>
-    <li>Hasta 15% de descuento en recibos</li>
-    <li>+1% adicional durante la vida de la póliza</li>
-    <li>Finalizada el 31/03/2026</li>
-  </ul>
-</div>
-
-<div class="promo-card">
-  <h3>Seguros de ahorro</h3>
-  <span class="estado inactiva">INACTIVA</span>
-  <ul>
-    <li>Objetivo de reposición de vencimientos</li>
-    <li>Sin campaña definida actualmente</li>
-  </ul>
-</div><section id="otrosSeguros" class="main-section" style="display:none;">
-
-  <h1>🌿 Otros Seguros</h1>
-  <p>Soluciones de protección personal para complementar la seguridad económica del cliente.</p>
-<div class="card">
-
-  <h2>💼 Protección de Ingresos</h2>
-
-  <p>
-    Seguro diseñado para mantener un ingreso mensual si el cliente pierde su empleo,
-    cesa su actividad como autónomo o se encuentra en situación de baja médica.
-  </p>
-
-  <div class="tip-comercial">
-    💡 Idea clave: protege los ingresos, no el trabajo.
-  </div>
-
-  <!-- COBERTURAS -->
-  <h3>🛡️ Qué cubre</h3>
-  <ul>
-    <li><strong>Asalariados:</strong> Desempleo + Incapacidad Temporal</li>
-    <li><strong>Autónomos:</strong> Incapacidad Temporal + Cese de Actividad</li>
-    <li>Indemnización mensual: 300€, 600€ o 1.000€</li>
-    <li>Máximo 10 pagos consecutivos o 20 alternos</li>
-  </ul>
-
-  <!-- EJEMPLO -->
-  <div class="card" style="background:#f8f9fa;">
-    <h4>📊 Ejemplo real</h4>
-    <p>
-      Si el cliente contrata 600€/mes y está 2 meses y medio sin trabajar:
-    </p>
-    <ul>
-      <li>600€ + 600€ + 300€ = <strong>1.500€ cobrados</strong></li>
-    </ul>
-  </div>
-
-  <!-- ARGUMENTARIO -->
-  <div class="argumentario">
-    <h3>💬 Cómo explicarlo al cliente</h3>
-
-    <p>
-      Este seguro no protege tu puesto de trabajo, protege tu dinero.
-      Si en algún momento dejas de ingresar, tienes un ingreso mensual
-      que te ayuda a seguir pagando tus gastos.
-    </p>
-
-    <ul>
-      <li>Hipoteca, alquiler, préstamos… siguen pagándose</li>
-      <li>No dependes solo del paro o ahorros</li>
-      <li>Evita problemas económicos en situaciones inesperadas</li>
-    </ul>
-
-    <div class="tip-comercial">
-      💡 “Si mañana no puedes trabajar, ¿cómo pagas tus gastos?”
-    </div>
-  </div>
-
-  <!-- CUÁNDO OFRECER -->
-  <h3>🎯 Cuándo ofrecerlo</h3>
-  <ul>
-    <li>Clientes con hipoteca o alquiler</li>
-    <li>Autónomos (muy importante)</li>
-    <li>Clientes con préstamos activos</li>
-    <li>Clientes sin ahorro suficiente</li>
-  </ul>
-
-  <!-- REQUISITOS -->
-  <h3>📋 Requisitos</h3>
-  <ul>
-    <li>Edad: 18 a 64 años</li>
-    <li>Cliente Banco Santander</li>
-    <li>Ingresos mínimos: 300€/mes</li>
-    <li>Trabajador por cuenta ajena o autónomo</li>
-  </ul>
-
-  <!-- CARENCIAS -->
-  <h3>⏱️ Carencias</h3>
-
-  <table style="width:100%; border-collapse:collapse;">
-    <tr style="background:#f2f2f2;">
-      <th style="border:1px solid #ccc; padding:8px;">Cobertura</th>
-      <th style="border:1px solid #ccc; padding:8px;">Inicial</th>
-      <th style="border:1px solid #ccc; padding:8px;">Entre siniestros</th>
-    </tr>
-
-    <tr>
-      <td style="border:1px solid #ccc; padding:8px;">Desempleo</td>
-      <td style="border:1px solid #ccc; padding:8px;">180 días</td>
-      <td style="border:1px solid #ccc; padding:8px;">180 días</td>
-    </tr>
-
-    <tr>
-      <td style="border:1px solid #ccc; padding:8px;">Incapacidad temporal</td>
-      <td style="border:1px solid #ccc; padding:8px;">180 días (excepto accidentes)</td>
-      <td style="border:1px solid #ccc; padding:8px;">30 días / 180 días</td>
-    </tr>
-
-    <tr>
-      <td style="border:1px solid #ccc; padding:8px;">Cese actividad</td>
-      <td style="border:1px solid #ccc; padding:8px;">180 días</td>
-      <td style="border:1px solid #ccc; padding:8px;">No incluido</td>
-    </tr>
-  </table>
-
-  <!-- EXCLUSIONES -->
-  <h3>🚫 Importante (exclusiones clave)</h3>
-  <ul>
-    <li>No cubre desempleo voluntario</li>
-    <li>No cubre fin de contrato conocido o previsto</li>
-    <li>No cubre funcionarios ni personas sin actividad laboral</li>
-    <li>No cubre bajas sin justificación médica</li>
-  </ul>
-
-  <!-- OBJECIONES -->
-  <div class="card" style="margin-top:20px; background:#fff3cd;">
-    <h3>🧠 Objeciones reales del cliente (y cómo responder)</h3>
-
-    <h4>❓ “Ya tengo paro”</h4>
-    <p>
-      El paro es temporal y muchas veces no cubre todos los gastos. Este seguro complementa ese ingreso
-      para que puedas mantener tu nivel de vida.
-    </p>
-
-    <h4>❓ “Tengo ahorros”</h4>
-    <p>
-      Perfecto, pero este seguro evita que tengas que gastar esos ahorros en un imprevisto.
-      Es una forma de proteger lo que ya tienes.
-    </p>
-
-    <h4>❓ “No lo necesito”</h4>
-    <p>
-      Justo es un seguro que parece innecesario hasta que pasa algo.
-      La pregunta es: si mañana dejas de ingresar, ¿cómo afrontas tus gastos?
-    </p>
-
-    <h4>❓ “Es caro”</h4>
-    <p>
-      Más que el precio, lo importante es el impacto. Un mes sin ingresos puede costar miles de euros.
-      Este seguro cubre justo ese riesgo.
-    </p>
-
-    <h4>❓ “Mi trabajo es estable”</h4>
-    <p>
-      Nadie espera perder el trabajo o ponerse de baja.
-      Este seguro cubre situaciones que no dependen de nosotros.
-    </p>
-
-  </div>
-
-  <!-- CIERRE -->
-  <div class="tip-comercial">
-    💡 Este seguro no es para todo el mundo, pero para quien depende de su ingreso mensual, es clave.
-  </div>
-
-<div class="card">
-
-  <h2>💳 Protección de Tarjetas</h2>
-
-  <p>
-    Seguro que protege las pérdidas económicas relacionadas con el uso de tus tarjetas,
-    así como imprevistos derivados de compras, retiradas de efectivo o accidentes.
-  </p>
-
-  <div class="tip-comercial">
-    💡 Idea clave: protege el dinero que usas en el día a día.
-  </div>
-
-  <!-- COBERTURAS -->
-  <h3>🛡️ Qué cubre</h3>
-  <ul>
-    <li>Uso fraudulento de tarjetas</li>
-    <li>Robo o pérdida de dinero</li>
-    <li>Compras realizadas con tarjeta</li>
-    <li>Protección personal (baja, desempleo, accidentes)</li>
-  </ul>
-
-  <!-- COBERTURAS DESTACADAS -->
-  <h3>⭐ Coberturas principales</h3>
-  <ul>
-    <li><strong>Compra protegida:</strong> daños o robo en los 90 días tras la compra</li>
-    <li><strong>Robo de móvil:</strong> hasta el 25% del valor del nuevo dispositivo</li>
-    <li><strong>Robo en cajero:</strong> hasta 1.000€</li>
-    <li><strong>Protección de entradas:</strong> hasta 1.000€ por entrada (máx. 10/año)</li>
-  </ul>
-
-  <!-- PROTECCIÓN PERSONAL -->
-  <h3>👤 Protección adicional (muy importante)</h3>
-  <ul>
-    <li><strong>Desempleo / cese:</strong> hasta 500€/mes durante 3 meses</li>
-    <li><strong>Incapacidad temporal:</strong> hasta 500€/mes durante 3 meses</li>
-    <li><strong>Hospitalización:</strong> 50€/día (máx. 10 días)</li>
-    <li><strong>Fracturas:</strong> hasta 3.000€</li>
-    <li><strong>Quemaduras:</strong> hasta 1.500€</li>
-  </ul>
-
-  <!-- EJEMPLO -->
-  <div class="card" style="background:#f8f9fa;">
-    <h4>📊 Ejemplo real</h4>
-    <p>
-      Compras un móvil con tarjeta y te lo roban a los pocos días:
-    </p>
-    <ul>
-      <li>El seguro te cubre parte del coste del nuevo móvil</li>
-    </ul>
-
-    <p>
-      O retiras dinero en cajero y sufres un robo:
-    </p>
-    <ul>
-      <li>Recuperas el dinero hasta el límite cubierto</li>
-    </ul>
-  </div>
-
-  <!-- ARGUMENTARIO -->
-  <div class="argumentario">
-    <h3>💬 Cómo explicarlo al cliente</h3>
-
-    <p>
-      Hoy prácticamente todo se paga con tarjeta. Este seguro protege ese dinero
-      frente a robos, fraudes o imprevistos.
-    </p>
-
-    <ul>
-      <li>Protege compras del día a día</li>
-      <li>Cubre situaciones reales (robo, daño, pérdida)</li>
-      <li>Incluye protección personal adicional</li>
-    </ul>
-
-    <div class="tip-comercial">
-      💡 “Si pagas todo con tarjeta, este seguro protege ese dinero.”
-    </div>
-  </div>
-
-  <!-- CUÁNDO OFRECER -->
-  <h3>🎯 Cuándo ofrecerlo</h3>
-  <ul>
-    <li>Clientes que usan mucho tarjeta</li>
-    <li>Clientes jóvenes o digitales</li>
-    <li>Clientes que viajan</li>
-    <li>Clientes que compran online</li>
-  </ul>
-
-  <!-- CARACTERÍSTICAS -->
-  <h3>⚙️ Características</h3>
-  <ul>
-    <li>Prima aproximada: 108€/año</li>
-    <li>Edad: 18 a 70 años</li>
-    <li>Requiere tener tarjeta Santander</li>
-  </ul>
-
-  <!-- EXCLUSIONES -->
-  <h3>🚫 Importante</h3>
-  <ul>
-    <li>No cubre uso fraudulento por negligencia del cliente</li>
-    <li>No cubre actos intencionados o fraudulentos</li>
-    <li>No cubre siniestros anteriores a la contratación</li>
-  </ul>
-
-  <!-- OBJECIONES -->
-  <div class="card" style="margin-top:20px; background:#fff3cd;">
-    <h3>🧠 Objeciones reales del cliente</h3>
-
-    <h4>❓ “Eso ya me lo cubre el banco”</h4>
-    <p>
-      El banco cubre ciertos fraudes, pero este seguro amplía la protección
-      a compras, robos y muchas más situaciones.
-    </p>
-
-    <h4>❓ “Yo no uso mucho la tarjeta”</h4>
-    <p>
-      Hoy en día casi todo se paga con tarjeta, incluso sin darte cuenta.
-      Este seguro cubre ese uso diario.
-    </p>
-
-    <h4>❓ “Nunca me ha pasado nada”</h4>
-    <p>
-      Justo es un seguro para cuando pasa algo que no esperas.
-      Un solo siniestro puede compensar varios años de seguro.
-    </p>
-
-    <h4>❓ “Es caro”</h4>
-    <p>
-      Un robo en cajero o una compra importante dañada puede superar
-      con creces el coste del seguro.
-    </p>
-
-  </div>
-
-  <!-- CIERRE -->
-  <div class="tip-comercial">
-    💡 Es un seguro pequeño, pero protege muchas situaciones del día a día.
-  </div>
-
-</div>
-</div>
- 
-</section>
 
 <section id="transportesMercancias" class="main-section" style="display:none;">
 
@@ -1525,7 +1109,7 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 
     <div class="mini-card">
       <h3>6. Coberturas adaptadas</h3>
-      <p>Existen distintos niveles de cobertura que van desde riesgos básicos hasta coberturas amplias tipo todo riesgo. Cada opción permite ajustar el nivel de protección según las necesidades del cliente.</p>
+      <p>c distintos niveles de cobertura que van desde riesgos básicos hasta coberturas amplias tipo todo riesgo. Cada opción permite ajustar el nivel de protección según las necesidades del cliente.</p>
       <p class="highlight-box"><strong>Mensaje comercial:</strong> Elige cuánto quieres proteger: desde lo esencial hasta la cobertura total.</p>
     </div>
 
@@ -2548,8 +2132,509 @@ function toggleFormacionTransportes() {
 
 </section>
 
+
+
+
+
+  <section id="otrosSeguros" class="main-section" style="display:none;">
+
+  <h1>🌿 Otros Seguros</h1>
+  <p>Soluciones de protección personal para complementar la seguridad económica del cliente.</p>
 <div class="card">
 
+  <h2>💼 Protección de Ingresos</h2>
+
+  <p>
+    Seguro diseñado para mantener un ingreso mensual si el cliente pierde su empleo,
+    cesa su actividad como autónomo o se encuentra en situación de baja médica.
+  </p>
+
+  <div class="tip-comercial">
+    💡 Idea clave: protege los ingresos, no el trabajo.
+  </div>
+
+  <!-- COBERTURAS -->
+  <h3>🛡️ Qué cubre</h3>
+  <ul>
+    <li><strong>Asalariados:</strong> Desempleo + Incapacidad Temporal</li>
+    <li><strong>Autónomos:</strong> Incapacidad Temporal + Cese de Actividad</li>
+    <li>Indemnización mensual: 300€, 600€ o 1.000€</li>
+    <li>Máximo 10 pagos consecutivos o 20 alternos</li>
+  </ul>
+
+  <!-- EJEMPLO -->
+  <div class="card" style="background:#f8f9fa;">
+    <h4>📊 Ejemplo real</h4>
+    <p>
+      Si el cliente contrata 600€/mes y está 2 meses y medio sin trabajar:
+    </p>
+    <ul>
+      <li>600€ + 600€ + 300€ = <strong>1.500€ cobrados</strong></li>
+    </ul>
+  </div>
+
+  <!-- ARGUMENTARIO -->
+  <div class="argumentario">
+    <h3>💬 Cómo explicarlo al cliente</h3>
+
+    <p>
+      Este seguro no protege tu puesto de trabajo, protege tu dinero.
+      Si en algún momento dejas de ingresar, tienes un ingreso mensual
+      que te ayuda a seguir pagando tus gastos.
+    </p>
+
+    <ul>
+      <li>Hipoteca, alquiler, préstamos… siguen pagándose</li>
+      <li>No dependes solo del paro o ahorros</li>
+      <li>Evita problemas económicos en situaciones inesperadas</li>
+    </ul>
+
+    <div class="tip-comercial">
+      💡 “Si mañana no puedes trabajar, ¿cómo pagas tus gastos?”
+    </div>
+  </div>
+
+  <!-- CUÁNDO OFRECER -->
+  <h3>🎯 Cuándo ofrecerlo</h3>
+  <ul>
+    <li>Clientes con hipoteca o alquiler</li>
+    <li>Autónomos (muy importante)</li>
+    <li>Clientes con préstamos activos</li>
+    <li>Clientes sin ahorro suficiente</li>
+  </ul>
+
+  <!-- REQUISITOS -->
+  <h3>📋 Requisitos</h3>
+  <ul>
+    <li>Edad: 18 a 64 años</li>
+    <li>Cliente Banco Santander</li>
+    <li>Ingresos mínimos: 300€/mes</li>
+    <li>Trabajador por cuenta ajena o autónomo</li>
+  </ul>
+
+  <!-- CARENCIAS -->
+  <h3>⏱️ Carencias</h3>
+
+  <table style="width:100%; border-collapse:collapse;">
+    <tr style="background:#f2f2f2;">
+      <th style="border:1px solid #ccc; padding:8px;">Cobertura</th>
+      <th style="border:1px solid #ccc; padding:8px;">Inicial</th>
+      <th style="border:1px solid #ccc; padding:8px;">Entre siniestros</th>
+    </tr>
+
+    <tr>
+      <td style="border:1px solid #ccc; padding:8px;">Desempleo</td>
+      <td style="border:1px solid #ccc; padding:8px;">180 días</td>
+      <td style="border:1px solid #ccc; padding:8px;">180 días</td>
+    </tr>
+
+    <tr>
+      <td style="border:1px solid #ccc; padding:8px;">Incapacidad temporal</td>
+      <td style="border:1px solid #ccc; padding:8px;">180 días (excepto accidentes)</td>
+      <td style="border:1px solid #ccc; padding:8px;">30 días / 180 días</td>
+    </tr>
+
+    <tr>
+      <td style="border:1px solid #ccc; padding:8px;">Cese actividad</td>
+      <td style="border:1px solid #ccc; padding:8px;">180 días</td>
+      <td style="border:1px solid #ccc; padding:8px;">No incluido</td>
+    </tr>
+  </table>
+
+  <!-- EXCLUSIONES -->
+  <h3>🚫 Importante (exclusiones clave)</h3>
+  <ul>
+    <li>No cubre desempleo voluntario</li>
+    <li>No cubre fin de contrato conocido o previsto</li>
+    <li>No cubre funcionarios ni personas sin actividad laboral</li>
+    <li>No cubre bajas sin justificación médica</li>
+  </ul>
+
+  <!-- OBJECIONES -->
+  <div class="card" style="margin-top:20px; background:#fff3cd;">
+    <h3>🧠 Objeciones reales del cliente (y cómo responder)</h3>
+
+    <h4>❓ “Ya tengo paro”</h4>
+    <p>
+      El paro es temporal y muchas veces no cubre todos los gastos. Este seguro complementa ese ingreso
+      para que puedas mantener tu nivel de vida.
+    </p>
+
+    <h4>❓ “Tengo ahorros”</h4>
+    <p>
+      Perfecto, pero este seguro evita que tengas que gastar esos ahorros en un imprevisto.
+      Es una forma de proteger lo que ya tienes.
+    </p>
+
+    <h4>❓ “No lo necesito”</h4>
+    <p>
+      Justo es un seguro que parece innecesario hasta que pasa algo.
+      La pregunta es: si mañana dejas de ingresar, ¿cómo afrontas tus gastos?
+    </p>
+
+    <h4>❓ “Es caro”</h4>
+    <p>
+      Más que el precio, lo importante es el impacto. Un mes sin ingresos puede costar miles de euros.
+      Este seguro cubre justo ese riesgo.
+    </p>
+
+    <h4>❓ “Mi trabajo es estable”</h4>
+    <p>
+      Nadie espera perder el trabajo o ponerse de baja.
+      Este seguro cubre situaciones que no dependen de nosotros.
+    </p>
+
+  </div>
+
+  <!-- CIERRE -->
+  <div class="tip-comercial">
+    💡 Este seguro no es para todo el mundo, pero para quien depende de su ingreso mensual, es clave.
+  </div>
+
+<div class="card">
+
+  <h2>💳 Protección de Tarjetas</h2>
+
+  <p>
+    Seguro que protege las pérdidas económicas relacionadas con el uso de tus tarjetas,
+    así como imprevistos derivados de compras, retiradas de efectivo o accidentes.
+  </p>
+
+  <div class="tip-comercial">
+    💡 Idea clave: protege el dinero que usas en el día a día.
+  </div>
+
+  <!-- COBERTURAS -->
+  <h3>🛡️ Qué cubre</h3>
+  <ul>
+    <li>Uso fraudulento de tarjetas</li>
+    <li>Robo o pérdida de dinero</li>
+    <li>Compras realizadas con tarjeta</li>
+    <li>Protección personal (baja, desempleo, accidentes)</li>
+  </ul>
+
+  <!-- COBERTURAS DESTACADAS -->
+  <h3>⭐ Coberturas principales</h3>
+  <ul>
+    <li><strong>Compra protegida:</strong> daños o robo en los 90 días tras la compra</li>
+    <li><strong>Robo de móvil:</strong> hasta el 25% del valor del nuevo dispositivo</li>
+    <li><strong>Robo en cajero:</strong> hasta 1.000€</li>
+    <li><strong>Protección de entradas:</strong> hasta 1.000€ por entrada (máx. 10/año)</li>
+  </ul>
+
+  <!-- PROTECCIÓN PERSONAL -->
+  <h3>👤 Protección adicional (muy importante)</h3>
+  <ul>
+    <li><strong>Desempleo / cese:</strong> hasta 500€/mes durante 3 meses</li>
+    <li><strong>Incapacidad temporal:</strong> hasta 500€/mes durante 3 meses</li>
+    <li><strong>Hospitalización:</strong> 50€/día (máx. 10 días)</li>
+    <li><strong>Fracturas:</strong> hasta 3.000€</li>
+    <li><strong>Quemaduras:</strong> hasta 1.500€</li>
+  </ul>
+
+  <!-- EJEMPLO -->
+  <div class="card" style="background:#f8f9fa;">
+    <h4>📊 Ejemplo real</h4>
+    <p>
+      Compras un móvil con tarjeta y te lo roban a los pocos días:
+    </p>
+    <ul>
+      <li>El seguro te cubre parte del coste del nuevo móvil</li>
+    </ul>
+
+    <p>
+      O retiras dinero en cajero y sufres un robo:
+    </p>
+    <ul>
+      <li>Recuperas el dinero hasta el límite cubierto</li>
+    </ul>
+  </div>
+
+  <!-- ARGUMENTARIO -->
+  <div class="argumentario">
+    <h3>💬 Cómo explicarlo al cliente</h3>
+
+    <p>
+      Hoy prácticamente todo se paga con tarjeta. Este seguro protege ese dinero
+      frente a robos, fraudes o imprevistos.
+    </p>
+
+    <ul>
+      <li>Protege compras del día a día</li>
+      <li>Cubre situaciones reales (robo, daño, pérdida)</li>
+      <li>Incluye protección personal adicional</li>
+    </ul>
+
+    <div class="tip-comercial">
+      💡 “Si pagas todo con tarjeta, este seguro protege ese dinero.”
+    </div>
+  </div>
+
+  <!-- CUÁNDO OFRECER -->
+  <h3>🎯 Cuándo ofrecerlo</h3>
+  <ul>
+    <li>Clientes que usan mucho tarjeta</li>
+    <li>Clientes jóvenes o digitales</li>
+    <li>Clientes que viajan</li>
+    <li>Clientes que compran online</li>
+  </ul>
+
+  <!-- CARACTERÍSTICAS -->
+  <h3>⚙️ Características</h3>
+  <ul>
+    <li>Prima aproximada: 108€/año</li>
+    <li>Edad: 18 a 70 años</li>
+    <li>Requiere tener tarjeta Santander</li>
+  </ul>
+
+  <!-- EXCLUSIONES -->
+  <h3>🚫 Importante</h3>
+  <ul>
+    <li>No cubre uso fraudulento por negligencia del cliente</li>
+    <li>No cubre actos intencionados o fraudulentos</li>
+    <li>No cubre siniestros anteriores a la contratación</li>
+  </ul>
+
+  <!-- OBJECIONES -->
+  <div class="card" style="margin-top:20px; background:#fff3cd;">
+    <h3>🧠 Objeciones reales del cliente</h3>
+
+    <h4>❓ “Eso ya me lo cubre el banco”</h4>
+    <p>
+      El banco cubre ciertos fraudes, pero este seguro amplía la protección
+      a compras, robos y muchas más situaciones.
+    </p>
+
+    <h4>❓ “Yo no uso mucho la tarjeta”</h4>
+    <p>
+      Hoy en día casi todo se paga con tarjeta, incluso sin darte cuenta.
+      Este seguro cubre ese uso diario.
+    </p>
+
+    <h4>❓ “Nunca me ha pasado nada”</h4>
+    <p>
+      Justo es un seguro para cuando pasa algo que no esperas.
+      Un solo siniestro puede compensar varios años de seguro.
+    </p>
+
+    <h4>❓ “Es caro”</h4>
+    <p>
+      Un robo en cajero o una compra importante dañada puede superar
+      con creces el coste del seguro.
+    </p>
+
+  </div>
+
+  <!-- CIERRE -->
+  <div class="tip-comercial">
+    💡 Es un seguro pequeño, pero protege muchas situaciones del día a día.
+  </div>
+
+</div>
+</div>
+ 
+</section>
+
+  <!-- ARGUMENTARIO -->
+  <div id="autos-argumentario-panel" class="autos-panel" style="display:none;">
+    <div class="card">
+      <h2>💬 Argumentario comercial</h2>
+
+      <h3>Ideas fuerza</h3>
+      <ul>
+        <li>No solo proteges el vehículo, también tu responsabilidad frente a terceros.</li>
+        <li>La asistencia en carretera es una de las coberturas que más valora el cliente cuando realmente la necesita.</li>
+        <li>La diferencia entre una modalidad básica y una más completa muchas veces es pequeña frente al coste de un siniestro.</li>
+        <li>Un seguro no se valora el día que se contrata, se valora el día que ocurre algo.</li>
+      </ul>
+
+      <h3>Cómo orientar la conversación</h3>
+      <ul>
+        <li>Primero detectar el uso del vehículo</li>
+        <li>Después valorar si el cliente prioriza precio o tranquilidad</li>
+        <li>Explicar de forma sencilla qué pierde si baja demasiado la cobertura</li>
+        <li>Proponer una alternativa razonable, no solo la más barata</li>
+      </ul>
+
+      <h3>Frases útiles</h3>
+      <ul>
+        <li>“Lo importante no es solo tener seguro, sino que te responda como esperas cuando lo necesites.”</li>
+        <li>“Vamos a buscar un equilibrio entre lo que pagas y lo que realmente te cubre.”</li>
+        <li>“Por una diferencia pequeña podemos mejorar bastante la protección.”</li>
+        <li>“Si el coche tiene cierto valor, bajar demasiado la cobertura puede salir caro.”</li>
+      </ul>
+
+      <h3>Objeciones típicas</h3>
+      <ul>
+        <li><strong>“Yo quiero lo más barato”</strong> → “Perfecto, lo revisamos, pero también te explico qué coberturas pierdes para que decidas con toda la información.”</li>
+        <li><strong>“Nunca me pasa nada”</strong> → “Ojalá siga así, precisamente el seguro está para cuando ocurre algo inesperado.”</li>
+        <li><strong>“Solo uso el coche para poco”</strong> → “Entonces quizá no necesites el máximo nivel, pero sí una opción equilibrada que no te deje corto.”</li>
+      </ul>
+
+      <div class="tip-comercial">
+        💡 Cierre útil: “Te enseño las opciones y te digo honestamente cuál veo más equilibrada para ti.”
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<section id="promociones" class="main-section">
+
+<p style="font-size:13px;color:#555;">
+Información comercial orientativa. Promociones vigentes sujetas a actualización según campaña.
+</p>
+
+<h1>🔥 Campañas y promociones del mes</h1>
+
+
+<!-- VIDA VENTA LIBRE  -->
+<div class="card" data-inicio="2026-04-01" data-fin="2026-05-31">
+<h3> Vida venta libre</h3>
+<ul>
+<li>Hasta 5% de descuento</li>
+<li>Vigencia del 1 de abril al 31 de mayo</li>
+<li>Protección familiar plus, femenino y esencial</li>
+</ul>
+</div>
+<!-- VIDA FEMENINO, FAMILIAR PLUS, Y ESENCIAL DIGITAL -->
+<div class="card" data-inicio="2026-04-01" data-fin="2026-05-31">
+<h3> Vida Femenino, Familiar Plus y Esencial sólo fallecimiento DIGITAL</h3>
+<ul>
+<li>Hasta 10% de descuento</li>
+<li>Vigencia del 1 de abril al 31 de mayo</li>
+<li>Protección Familiar en Femenino</li>
+</ul>
+</div>
+
+
+<!-- PROTECCIÓN EMPRESA -->
+<div class="card" data-inicio="2026-04-01">
+<h3>Protección Empresa</h3>
+<ul>
+<li>Descuento discrecional 0% - 5%</li>
+</ul>
+</div>
+
+<!-- ACCIDENTES DIGITAL -->
+<div class="card" data-inicio="2026-04-01" data-fin="2026-07-31">
+<h3>Accidentes Protección Integral</h3>
+<ul>
+<li>Descuento discrecional 0% - 5%</li>
+</ul>
+</div>
+
+<!-- SENIOR -->
+<div class="card" data-inicio="2025-06-16">
+<h3>Protección Senior</h3>
+<ul>
+<li>Descuento discrecional 0% - 5%</li>
+</ul>
+</div>
+
+<!-- ITA DIGITAL -->
+<div class="card" data-inicio="2026-04-01" data-fin="2026-07-31">
+<h3>ITA</h3>
+<ul>
+<li>Hasta 10% de descuento</li>
+</ul>
+</div>
+
+<!-- SALUD -->
+<div class="card" data-inicio="2026-03-09">
+<h3>Promoción Salud</h3>
+<ul>
+<li>10% de descuento</li>
+<li>SELECT activo desde el 9 de marzo</li>
+<li>Sin fecha fin actualmente</li>
+</ul>
+</div>
+
+<div class="card" data-inicio="2026-03-09">
+<h3>Salud Senior</h3>
+<ul>
+<li>0% - 5% - 10% Select</li>
+</ul>
+</div>
+
+<div class="card" data-inicio="2026-03-09">
+<h3>Salud con Copago</h3>
+<ul>
+<li>0% - 5% - 10% Select</li>
+</ul>
+</div>
+
+<!-- MHS -->
+<div class="card" data-inicio="2025-06-16">
+<h3>MHS</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<div class="card" data-inicio="2025-06-16">
+<h3>MHS Senior</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<!-- TARJETAS -->
+<div class="card">
+<h3>Protección de Tarjetas</h3>
+<ul>
+<li>Sin campaña activa</li>
+</ul>
+</div>
+
+<!-- INGRESOS -->
+<div class="card" data-inicio="2025-06-16">
+<h3>Protección de Ingresos</h3>
+<ul>
+<li>Bonificación 0% - 5%</li>
+</ul>
+</div>
+
+<!-- CONVENIOS -->
+<div class="card" data-inicio="2025-07-01">
+<h3>Accidentes y Vida Convenios Colectivos</h3>
+<ul>
+<li>Bonificación hasta 40%</li>
+<li>Pendiente ampliación</li>
+</ul>
+</div>
+
+<!-- IMPAGO -->
+<div class="card" data-inicio="2026-03-03">
+<h3>Impago de Alquiler</h3>
+<ul>
+<li>Bonificación 0% - 0%</li>
+<li>+1 mes tras despliegue</li>
+</ul>
+</div>
+
+<!-- VIDA HIPOTECA -->
+<div class="card" data-inicio="2025-07-14" data-fin="2026-06-30">
+<h3>Vida Vinculado Préstamos Hipotecarios</h3>
+<ul>
+<li>Hasta 20% de descuento</li>
+<li>Vigencia hasta 30/06/2026</li>
+</ul>
+</div>
+
+
+<!-- AUTOS -->
+<div class="card" data-inicio="2026-03-02" data-fin="2026-04-30">
+<h3>Autos</h3>
+<ul>
+<li>Cheque regalo 60€</li>
+<li>Vigencia hasta 30 de abril</li>
+<li>Aplicable desde 499€</li>
+</ul>
+</div>
+</section>
 
     <!-- ===================== SALUD ASISA EMPRESA ===================== -->
 
@@ -4764,8 +4849,7 @@ Nombre y apellidos:
     </section>
 
  
-
-  <!-- ======================= CONTACTOS ======================= -->
+ <!-- ======================= CONTACTOS ======================= -->
 <section id="contactos" class="main-section">
 <div class="card" id="cardBuscadorContactos" style="background: linear-gradient(135deg, #e3f2fd, #ffffff); border:1px solid #90caf9;">
 
@@ -4789,8 +4873,7 @@ Nombre y apellidos:
       border:1px solid #90caf9;
       outline:none;
       font-size:14px;
-    "
-  >
+    ">
 
   <p id="mensajeBusqueda" style="margin-top:10px; font-size:13px; color:#666;"></p>
 
@@ -4996,12 +5079,16 @@ Tel: <a href="tel:912747570">912 747 570</a>
 
 </ul>
 </div>
-
+</div>
+</footer>
 </section>
+
+    
 
 
 <!-- ===================== MANUAL COMERCIAL ===================== -->
 <section id="manual" class="main-section">
+
 
 <h1>Manual comercial</h1>
 
@@ -5477,7 +5564,6 @@ Protege frente a ataques informáticos, robo de datos o problemas de seguridad d
 cubriendo gastos de recuperación de información, asistencia informática y responsabilidad
 por filtración de datos.
 </p>
-
 
 <h2>Consejo comercial</h2>
 
@@ -6421,62 +6507,9 @@ function openAutosTab(event, panelId) {
   }
 }
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+</body>
 
-  const input = document.getElementById("buscadorContactos");
-  const mensaje = document.getElementById("mensajeBusqueda");
-
-  if (!input) return;
-
-  input.addEventListener("input", function () {
-
-    const filtro = input.value.toLowerCase().trim();
-    const cards = document.querySelectorAll("#contactos .card");
-
-    let visibles = 0;
-
-    cards.forEach(function (card) {
-
-      if (card.id === "cardBuscadorContactos") {
-        card.style.display = "block";
-        return;
-      }
-
-      const texto = card.textContent.toLowerCase();
-
-      if (filtro === "" || texto.includes(filtro)) {
-        card.style.display = "block";
-        visibles++;
-      } else {
-        card.style.display = "none";
-      }
-
-    });
-
-    // 👇 MENSAJES PRO
-    if (filtro === "") {
-      mensaje.innerText = "🔎 Escribe para buscar contactos";
-    } 
-    else if (visibles === 0) {
-      mensaje.innerText = "❌ No se encontraron resultados";
-    } 
-    else {
-      mensaje.innerText = "✅ " + visibles + " resultados encontrados";
-    }
-
-  });
-
-});
-window.filtrarContactoRapido = function(texto) {
-  const input = document.getElementById("buscadorContactos");
-  if (!input) return;
-
-  input.value = texto;
-  input.dispatchEvent(new Event("input"));
-};
-</script>
-
+</html>
 
 <section id="ciberseguro" class="main-section">
   <h1>🛡️ Ciberseguro</h1>
@@ -6510,93 +6543,9 @@ window.filtrarContactoRapido = function(texto) {
       <li><b>Cierre:</b> frase final para cerrar</li>
     </ol>
 
-
     <div class="tip-comercial">
       💡 Tip: es especialmente recomendable para negocios con <b>web</b>, <b>e-commerce</b> o <b>TPV virtual</b>.
     </div>
-<div class="card">
-
-<h3>🔐 Ciberseguro para empresas</h3>
-
-<p>
-Seguro diseñado para proteger al negocio frente a ataques informáticos, robo de datos y problemas derivados del uso de tecnología.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🔍 ¿Qué cubre realmente?</h3>
-
-<ul>
-<li><strong>Robo de datos:</strong> información de clientes, empleados o empresa</li>
-<li><strong>Ciberataques:</strong> virus, malware, hackeos</li>
-<li><strong>Bloqueo del sistema:</strong> ransomware (te bloquean el ordenador y piden dinero)</li>
-<li><strong>Responsabilidad por datos:</strong> si un cliente te reclama por filtración</li>
-<li><strong>Recuperación informática:</strong> restauración de sistemas y archivos</li>
-<li><strong>Pérdida de actividad:</strong> si no puedes trabajar por un ataque</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>🚫 ¿Qué NO cubre?</h3>
-
-<ul>
-<li>Falta total de medidas de seguridad básicas</li>
-<li>Actos intencionados del asegurado</li>
-<li>Equipos sin protección mínima (según póliza)</li>
-<li>Errores no relacionados con ciberataques</li>
-</ul>
-
-<p style="font-size:13px; color:#555;">
-👉 Importante: no sustituye la seguridad informática, la complementa
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>💥 Ejemplos reales</h3>
-
-<ul>
-<li>Te hackean el correo y envían facturas falsas → cubre</li>
-<li>Virus bloquea tu ordenador → cubre recuperación</li>
-<li>Filtración de datos de clientes → cubre reclamaciones</li>
-<li>No puedes trabajar varios días → cubre pérdidas</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>🧠 Cómo explicarlo al cliente</h3>
-
-<ul>
-<li>“Es como un seguro, pero para los problemas informáticos”</li>
-<li>“Hoy en día cualquier negocio puede sufrir un ataque”</li>
-<li>“No es cuestión de tamaño, es cuestión de exposición”</li>
-</ul>
-
-<p style="background:#e3f2fd; padding:10px; border-radius:6px;">
-👉 “Si usas ordenador, correo o datos de clientes… necesitas ciberseguro”
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>📊 Cuándo recomendarlo</h3>
-
-<ul>
-<li>Empresas que usan ordenador o TPV</li>
-<li>Negocios con base de datos de clientes</li>
-<li>Asesorías, clínicas, comercios</li>
-<li>Empresas que trabajan con correos electrónicos</li>
-</ul>
-
-</div>
   </div>
 
   <!-- RIESGO REAL -->
@@ -6739,7 +6688,6 @@ Seguro diseñado para proteger al negocio frente a ataques informáticos, robo d
       <li>¿Dependencia del sistema para facturar/cobrar?</li>
       <li>Teléfono y email de contacto para asistencias</li>
     </ul>
-
   </div>
 
   <!-- CIERRE -->
@@ -7206,6 +7154,7 @@ Las subidas de tipos permiten mejorar la renta ofrecida al cliente. Es un buen m
 </div>
 
 </div>
+
 
 
 <div id="rav-cliente" class="subtab-panel">
@@ -8039,93 +7988,7 @@ Modalidad pensada para clientes que han obtenido una ganancia patrimonial y dese
       💡 Este producto es ideal para explicarlo aparte, porque mezcla fase de prima única y fase de prima periódica, y si lo dejas junto al resto de vida libre se confunde mucho.
     </div>
   </div>
-<div style="margin-bottom:18px;">
-  <div style="background-color:#fff3cd; border-left:6px solid #ffc107; padding:20px; border-radius:8px; font-family:Arial, sans-serif;">
 
-    <h3 style="margin-top:0;">🔒 Seguro Protección Préstamo Consumo (Prima Única)</h3>
-
-    <p>Seguro que cubre determinadas contingencias que pueden afectar a la capacidad de pago del préstamo, según las condiciones establecidas en la póliza.</p>
-
-    <h4>📌 Prestaciones</h4>
-    <ul>
-      <li><strong>Fallecimiento por cualquier causa:</strong> Pago del capital asegurado según condiciones de la póliza.</li>
-      <li><strong>Invalidez permanente absoluta:</strong> Pago del capital asegurado.</li>
-      <li><strong>Desempleo o Incapacidad Temporal:</strong> En función de la situación laboral del asegurado en el momento del siniestro.</li>
-    </ul>
-
-    <h4>👤 Según situación laboral</h4>
-    <ul>
-      <li><strong>Trabajadores por cuenta ajena con contrato indefinido:</strong><br>
-      Cobertura de Desempleo o Incapacidad Temporal, con un límite de <strong>900 €/mes</strong>.</li>
-
-      <li><strong>Autónomos, funcionarios y otros:</strong><br>
-      Cobertura de <strong>Incapacidad Temporal (IT)</strong>, con un límite de <strong>1.350 €/mes</strong>.</li>
-    </ul>
-
-    <h4>⏱️ Límites y condiciones</h4>
-    <ul>
-      <li>Duración máxima de la indemnización: <strong>10 meses consecutivos</strong> por un mismo siniestro.</li>
-      <li>Límite máximo acumulado: <strong>30 meses</strong> durante la vigencia del seguro.</li>
-      <li><strong>Franquicia:</strong> 21 días (retroactiva).</li>
-      <li><strong>Periodo de carencia:</strong> 30 días desde la fecha de efecto de la póliza, excepto en incapacidad temporal por accidente.</li>
-    </ul>
-
-    <h4>💰 Cálculo de la prestación</h4>
-    <p>El capital asegurado se determina como el porcentaje del préstamo asegurado que figura en la póliza, aplicable sobre el <strong>150% de la cuota de amortización</strong> del préstamo en la fecha del siniestro, con los límites mensuales establecidos.</p>
-
-    <h4>🛠️ Tramitación de siniestros</h4>
-    <p><strong>Ruta:</strong><br>
-    Mi Escritorio → Gestión operativa → Peticiones a Back Office (Operaciones) → Nueva petición → Peticiones → Seguros → PRESTACIONES</p>
-
-    <p>Seleccionar en el desplegable la contingencia correspondiente: <strong>“Desempleo”</strong> o <strong>“Incapacidad temporal”</strong>.</p>
-
-    <h4>📄 Documentación</h4>
-    <ul>
-      <li>Vida laboral actualizada</li>
-      <li>NIF</li>
-      <li>Parte inicial de baja (ejemplar para el trabajador)</li>
-      <li>Partes de confirmación</li>
-      <li>Informe médico con historia clínica y fecha de diagnóstico</li>
-      <li>Cuenta bancaria y justificante de titularidad</li>
-    </ul>
-
-    <p>Además, es obligatorio registrar la solicitud en <strong>Intervinientes → Alta de contacto</strong>, indicando teléfono y correo electrónico válidos.</p>
-
-  </div>
-</div>
-
-<div style="margin:12px 0 10px 0; font-family:Arial, sans-serif; font-weight:bold; color:#9a6700;">
-  Ejemplo real de aplicación en oficina:
-</div>
-
-<div style="background-color:#fff3cd; border-left:6px solid #fd7e14; padding:20px; border-radius:8px; font-family:Arial, sans-serif; margin-top:15px;">
-
-  <h4 style="margin-top:0;">📍 Caso práctico: Autónomo en Incapacidad Temporal</h4>
-
-  <p>Cliente autónomo con Seguro de Protección de Préstamo Consumo (Prima Única), en situación de incapacidad temporal (baja médica).</p>
-
-  <h4>✔️ Cobertura aplicable</h4>
-  <ul>
-    <li>No corresponde prestación por desempleo.</li>
-    <li>Corresponde <strong>Incapacidad Temporal (IT)</strong>.</li>
-    <li>Límite de indemnización: <strong>1.350 €/mes</strong>.</li>
-  </ul>
-
-  <h4>📊 Funcionamiento</h4>
-  <ul>
-    <li>Se aplica una <strong>franquicia de 21 días</strong>.</li>
-    <li>La indemnización se genera conforme a las condiciones de la póliza, una vez superado dicho periodo.</li>
-    <li>La duración máxima es de <strong>10 meses por siniestro</strong>, dentro del límite global del seguro.</li>
-  </ul>
-
-  <h4>⚠️ Condiciones</h4>
-  <ul>
-    <li>Debe haberse superado el periodo de carencia (30 días desde efecto, salvo accidente).</li>
-    <li>Debe existir justificación médica completa.</li>
-    <li>Se deben aportar los documentos requeridos para la tramitación.</li>
-  </ul>
-
-</div>
 </div>
 
 </div>
@@ -9428,7 +9291,6 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
   <h2>Mi Hogar</h2>
   <p>Protección para la vivienda, el contenido y la responsabilidad del cliente.</p>
 
-
   <div class="hogar-subtabs">
     <button type="button" class="hogar-subtab active" onclick="openHogarTab(event, 'hogar-modalidades-panel')">Modalidades</button>
     <button type="button" class="hogar-subtab" onclick="openHogarTab(event, 'hogar-capitales-panel')">Capitales</button>
@@ -9544,8 +9406,6 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
     <li>Material deportivo</li>
     <li>Objetos personales</li>
   </ul>
-
-
 
   <h3>Importante</h3>
   <p><b>Si el capital declarado es inferior al valor real puede aplicarse la regla proporcional en caso de siniestro.</b></p>
@@ -9949,143 +9809,7 @@ que los hijos tengan que encargarse de gestiones y trámites en un momento compl
     <li>Garaje o trastero.</li>
     <li>Instalaciones adicionales.</li>
   </ul>
-<div class="cartel-hogar-operativa">
-  <h3>Información importante · Mi Hogar </h3>
 
-  <p>
-    <strong>Qué se asegura en hogar:</strong> principalmente <strong>continente</strong> y <strong>contenido</strong>.
-    El <strong>continente</strong> incluye la construcción, instalaciones fijas, sanitarios, persianas, toldos,
-    parquet, cerramientos, piscinas, jardines, anexos como garajes o trasteros, participación en zonas comunes
-    y placas solares en viviendas unifamiliares.
-    El <strong>contenido</strong> incluye mobiliario, electrodomésticos, ropa, objetos personales, equipos electrónicos,
-    menaje, bicicletas, herramientas, joyas y objetos de valor especial según modalidad y límites.
-  </p>
-
-  <p>
-    <strong>Joyas y objetos de valor especial:</strong> las joyas y objetos de valor especial deben declararse
-    según su valor y modalidad. Si el capital total de joyas supera los <strong>10.000 €</strong>, es necesaria
-    <strong>caja fuerte</strong>. No se pueden asegurar joyas u objetos de valor especial sin contratar también
-    el capital de mobiliario.
-  </p>
-
-  <p>
-    <strong>Cómo se contrata:</strong> el proceso permite hacer primero una <strong>simulación</strong> y después,
-    si el cliente quiere, continuar con la <strong>contratación</strong>. Se accede desde la ruta de seguros de hogar
-    en la herramienta comercial. El cliente debe estar previamente censado en el banco.
-  </p>
-
-  <p>
-    <strong>Protección de datos:</strong> al inicio del proceso hay que entregar al cliente el documento de
-    <strong>información básica sobre protección de datos</strong> que genera el aplicativo. No es necesario firmarlo
-    ni custodiarlo.
-  </p>
-
-  <p>
-    <strong>Datos del riesgo:</strong> hay que completar la dirección de la vivienda, confirmar o buscar los datos
-    en Catastro y añadir la información complementaria del inmueble. Con esos datos, la aplicación propone
-    <strong>capitales orientativos</strong> y valida si el riesgo es aceptable, si necesita revisión por la aseguradora
-    o si puede contratarse directamente.
-  </p>
-
-  <p>
-    <strong>Oferta y documentación previa:</strong> una vez obtenida la oferta, el cliente puede seguir adelante,
-    modificar datos o no continuar. Se puede elegir forma de pago <strong>anual, semestral o trimestral</strong>.
-    En la simulación se entrega al cliente el <strong>proyecto</strong>, el <strong>IPID</strong>, la
-    <strong>información previa al tomador</strong>, la <strong>nota informativa del mediador</strong> y la
-    <strong>comparativa de garantías</strong>. Esta documentación no se firma ni se custodia.
-  </p>
-
-  <p>
-    <strong>Validez de la prima:</strong> la prima del proyecto se mantiene durante
-    <strong>30 días naturales</strong>, siempre que no cambien los datos utilizados en la cotización.
-  </p>
-
-  <p>
-    <strong>Datos necesarios para contratar:</strong> si el cliente decide contratar, hay que indicar la
-    <strong>fecha de efecto</strong>, la <strong>cuenta de domiciliación</strong>, si existe
-    <strong>hipoteca</strong>, los datos del asegurado si es distinto al tomador y los datos de contacto.
-    La fecha de efecto puede ponerse a futuro hasta <strong>270 días</strong>. Si hay selección de riesgo,
-    la fecha no puede ser inferior a <strong>7 días</strong> desde la propuesta.
-  </p>
-
-  <p>
-    <strong>Firma y formalización:</strong> al final se entrega la documentación precontractual y contractual,
-    y se firma de forma <strong>digital</strong>. La documentación queda automáticamente digitalizada, registrada
-    y custodiada en la aplicación.
-  </p>
-
-  <p>
-    <strong>Selección de riesgo:</strong> en algunos casos la aseguradora debe revisar la solicitud. Tras esa revisión,
-    el resultado puede ser <strong>aceptación sin condiciones</strong>, <strong>aceptación con condiciones</strong>
-    o <strong>rechazo</strong>.
-  </p>
-
-  <p>
-    <strong>Documentación que recibe el cliente:</strong> durante la simulación recibe la documentación precontractual.
-    Durante la contratación recibe las <strong>Condiciones Particulares</strong> o la
-    <strong>Solicitud de seguro</strong> si el riesgo necesita revisión. Después, la aseguradora envía por correo
-    electrónico las condiciones particulares junto con las generales.
-  </p>
-
-  <p>
-    <strong>Postventa y suplementos:</strong> desde oficina o Superlínea se pueden tramitar cambios como domicilio
-    de correspondencia, domiciliación bancaria, forma de pago o duplicado de póliza. Otros cambios como asegurado,
-    acreedor hipotecario, capitales, oferta o datos del riesgo se gestionan solo por <strong>Superlínea</strong>.
-    El cliente también puede hacer algunas modificaciones desde la <strong>Banca Online</strong>.
-  </p>
-
-  <p>
-    <strong>Comunicación de siniestros:</strong> el cliente puede comunicar siniestros en el
-    <strong>91 343 58 70</strong> o hacerlo desde la Banca Online o la App del Banco Santander.
-  </p>
-
-  <p>
-    <strong>Consultas y ayuda:</strong> para incidencias y consultas se utiliza el CAU desde la intranet.
-    Para ayuda a la contratación se puede llamar al <strong>902 48 00 48</strong>,
-    de lunes a jueves de 8:00 a 18:00 y viernes de 8:00 a 16:00.
-  </p>
-
-  <p>
-    <strong>Cancelación:</strong> si la póliza tiene fecha de efecto diferida, se puede cancelar antes de que entre
-    en vigor sin cobro de recibo. Si ya está activa, la cancelación o devolución de recibos se solicita a través del
-    <strong>910 503 500</strong>, de lunes a viernes de 8:00 a 18:00.
-  </p>
-
-  <p>
-    <strong>Mejora del nuevo proceso:</strong> el nuevo proceso de hogar apuesta por la
-    <strong>omnicanalidad</strong>, una navegación más intuitiva, mejor diseño, más información visible y la posibilidad
-    de retomar la contratación desde distintos canales, mejorando claramente el proceso anterior.
-  </p>
-</div>
-
-<style>
-.cartel-hogar-operativa {
-  background: #fff7cc;
-  border: 1px solid #f0d76a;
-  border-left: 6px solid #d4a800;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 24px 0;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-.cartel-hogar-operativa h3 {
-  margin: 0 0 16px;
-  font-size: 22px;
-  color: #7a5a00;
-}
-
-.cartel-hogar-operativa p {
-  margin: 0 0 14px;
-  font-size: 15px;
-  line-height: 1.65;
-  color: #5a4a14;
-}
-
-.cartel-hogar-operativa p:last-child {
-  margin-bottom: 0;
-}
-</style>
   <h3>Revisión final</h3>
   <ul>
     <li>Modalidad elegida (Esencial, Ampliado, Integral o Senior).</li>
@@ -10274,23 +9998,20 @@ Con este seguro la empresa protege su facturación y su tesorería frente a ese 
 </p>
 </div>
 </section>
+
+</section>
+
 <section id="empresas" class="main-section">
-
 <div class="card">
-<h2>🏢 Seguros para empresas</h2>
-<p>
-Soluciones orientativas para proteger negocios, comercios, autónomos y pymes según su actividad, estructura y nivel de riesgo.
-</p>
-</div>
 
-<div class="card">
-<h3>Multirriesgo Integral Comercios y Emprendedores</h3
+<h3>Multirriesgo Integral Comercios y Emprendedores</h3>
 
 <p>
 Seguro destinado a proteger los principales activos del negocio, la actividad empresarial y los beneficios frente a daños materiales o interrupciones de la actividad.
 </p>
 
 <h4>¿Para quién es?</h4>
+
 <ul>
 <li>Comercios abiertos al público</li>
 <li>Autónomos y emprendedores</li>
@@ -10300,6 +10021,7 @@ Seguro destinado a proteger los principales activos del negocio, la actividad em
 </ul>
 
 <h4>Coberturas principales</h4>
+
 <ul>
 <li>Incendio, rayo y explosión</li>
 <li>Daños eléctricos</li>
@@ -10313,104 +10035,19 @@ Seguro destinado a proteger los principales activos del negocio, la actividad em
 </ul>
 
 <h4>Servicios adicionales</h4>
+
 <ul>
 <li>Asistencia urgente en el local</li>
 <li>Servicio de asistencia informática</li>
 <li>Defensa jurídica</li>
 <li>Protección digital</li>
 </ul>
-<div class="card">
 
-<h3>🔍 ¿Qué cubre realmente este seguro? (explicado fácil)</h3>
-
-<ul>
-<li><strong>El local:</strong> daños en paredes, techos, instalaciones (incendio, agua, etc.)</li>
-<li><strong>El contenido:</strong> mobiliario, maquinaria, mercancía</li>
-<li><strong>La actividad:</strong> cubre pérdidas si no puedes abrir (según garantías)</li>
-<li><strong>Terceros:</strong> si causas daños a clientes o proveedores (Responsabilidad Civil)</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>⚖️ Diferencia clave: TODO RIESGO vs SIN TODO RIESGO</h3>
-
-<p><strong>🔹 SIN TODO RIESGO (básico):</strong></p>
-<ul>
-<li>Solo cubre lo que está expresamente indicado en póliza</li>
-<li>Ej: incendio, agua, robo, daños eléctricos…</li>
-<li>Si pasa algo que NO está en la lista → ❌ NO cubre</li>
-</ul>
-
-<p><strong>🔹 CON TODO RIESGO:</strong></p>
-<ul>
-<li>Cubre TODO lo que no esté excluido</li>
-<li>Más protección ante imprevistos raros o no contemplados</li>
-<li>Ej: rotura accidental, daños por descuidos, situaciones no típicas</li>
-</ul>
-
-<p style="background:#fff3cd; padding:10px; border-radius:6px;">
-💡 <strong>CLAVE COMERCIAL:</strong>  
-Sin todo riesgo → sabes lo que cubre  
-Con todo riesgo → sabes lo que NO cubre
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚫 ¿Qué NO suele cubrir? (IMPORTANTE)</h3>
-
-<ul>
-<li>Desgaste o falta de mantenimiento</li>
-<li>Daños intencionados del asegurado</li>
-<li>Errores conocidos no reparados</li>
-<li>Determinados fenómenos extremos (según póliza → Consorcio)</li>
-<li>Mercancía no declarada o fuera de garantías</li>
-</ul>
-
-<p style="font-size:13px; color:#555;">
-👉 Esto es clave para evitar problemas en siniestros
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🧠 Cómo explicárselo fácil al cliente</h3>
-
-<p><strong>Opción rápida (modo venta):</strong></p>
-
-<ul>
-<li>“Si quieres cubrir lo básico y controlar precio → SIN todo riesgo”</li>
-<li>“Si quieres tranquilidad total ante cualquier imprevisto → CON todo riesgo”</li>
-</ul>
-
-<p><strong>Frase clave:</strong></p>
-
-<p style="background:#e3f2fd; padding:10px; border-radius:6px;">
-👉 “El todo riesgo es para no tener que pensar si está cubierto o no”
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>📊 Cuándo recomendar TODO RIESGO</h3>
-
-<ul>
-<li>Locales con maquinaria o inversión alta</li>
-<li>Negocios abiertos al público</li>
-<li>Clientes que no quieren sorpresas</li>
-<li>Actividades con riesgo operativo (hostelería, comercio, talleres)</li>
-</ul>
-
-</div>
 <p><strong>Duración:</strong> anual renovable</p>
-</div>
 
+</div>
 <div class="card">
+
 <h3>Responsabilidad Civil Integral Pymes y Emprendedores</h3>
 
 <p>
@@ -10418,6 +10055,7 @@ Seguro que protege al negocio frente a reclamaciones de terceros por daños pers
 </p>
 
 <h4>Cobertura básica</h4>
+
 <ul>
 <li>Responsabilidad Civil de Explotación</li>
 <li>Responsabilidad Civil por accidentes de trabajo</li>
@@ -10425,6 +10063,7 @@ Seguro que protege al negocio frente a reclamaciones de terceros por daños pers
 </ul>
 
 <h4>Otras coberturas</h4>
+
 <ul>
 <li>Daños a bienes confiados</li>
 <li>Daños a vehículos de terceros en instalaciones</li>
@@ -10435,188 +10074,57 @@ Seguro que protege al negocio frente a reclamaciones de terceros por daños pers
 </ul>
 
 <h4>Capitales asegurados</h4>
+
 <ul>
 <li>Desde 150.000 €</li>
 <li>Hasta 5.000.000 €</li>
 </ul>
 
 <p><strong>Duración:</strong> anual renovable</p>
-</div>
-
-
-<div class="bloque-rc-actividades">
-
-  <h2>Responsabilidad Civil por tipo de actividad</h2>
-  <p>Dependiendo de la actividad del cliente, las necesidades de Responsabilidad Civil pueden variar significativamente. Estas son las coberturas más relevantes según sector:</p>
-
-  <div class="grid-rc">
-
-    <!-- CONSTRUCCIÓN -->
-    <div class="card-rc">
-      <h3>Construcción</h3>
-      <ul>
-        <li>Daños a terceros en obras y trabajos realizados</li>
-        <li>Daños causados por empleados y técnicos (arquitectos, ingenieros, etc.)</li>
-        <li>Responsabilidad por contratistas y subcontratistas</li>
-        <li>Daños en instalaciones propias o en alquiler (RC inmobiliaria)</li>
-        <li>RC cruzada entre intervinientes en la obra</li>
-        <li>Daños por maquinaria, grúas y equipos</li>
-        <li>Daños durante carga, descarga y transporte</li>
-        <li>Daños a bienes preexistentes en trabajos en instalaciones de terceros</li>
-        <li>Participación en UTEs</li>
-      </ul>
-    </div>
-
-    <!-- TRANSPORTE -->
-    <div class="card-rc">
-      <h3>Transporte y almacenamiento</h3>
-      <ul>
-        <li>Daños causados por empleados en su actividad</li>
-        <li>Daños en instalaciones (naves, almacenes, depósitos)</li>
-        <li>Daños por carga, descarga, recogida y distribución</li>
-        <li>Daños derivados del transporte en vehículos propios o de terceros</li>
-        <li>Daños por almacenamiento y manipulación de mercancías</li>
-      </ul>
-    </div>
-
-    <!-- ASOCIACIONES -->
-    <div class="card-rc">
-      <h3>Asociaciones y actividades recreativas</h3>
-      <ul>
-        <li>Daños durante actividades organizadas</li>
-        <li>Responsabilidad por empleados y directivos</li>
-        <li>Daños en instalaciones (locales, oficinas, pabellones)</li>
-        <li>Daños por alimentos o bebidas servidas</li>
-        <li>Cobertura a socios, familiares e invitados como terceros</li>
-      </ul>
-    </div>
-
-    <!-- ENSEÑANZA -->
-    <div class="card-rc">
-      <h3>Centros de enseñanza</h3>
-      <ul>
-        <li>Daños causados por personal docente y auxiliar</li>
-        <li>Daños en instalaciones educativas</li>
-        <li>Daños a alumnos bajo custodia</li>
-        <li>Daños entre alumnos o a terceros</li>
-        <li>Daño moral o psicológico</li>
-        <li>Intoxicaciones alimentarias en comedores o cantinas</li>
-      </ul>
-    </div>
-
-    <!-- TALLERES -->
-    <div class="card-rc">
-      <h3>Talleres</h3>
-      <ul>
-        <li>Daños en instalaciones del negocio</li>
-        <li>Daños por maquinaria, herramientas o vehículos</li>
-        <li>Daños causados por empleados</li>
-        <li>Daños a vehículos en custodia</li>
-        <li>Daños durante pruebas en vía pública (probadores)</li>
-      </ul>
-    </div>
-
-    <!-- INDUSTRIA -->
-    <div class="card-rc">
-      <h3>Industria</h3>
-      <ul>
-        <li>Daños derivados de la actividad industrial</li>
-        <li>Daños por instalaciones y centros de trabajo</li>
-        <li>Daños por maquinaria y procesos productivos</li>
-        <li>Daños fuera de las instalaciones</li>
-        <li>Responsabilidad por subcontratas</li>
-        <li>Daños en operaciones logísticas</li>
-        <li>RC subsidiaria por vehículos</li>
-      </ul>
-    </div>
-
-    <!-- LIMPIEZA -->
-    <div class="card-rc">
-      <h3>Empresas de limpieza</h3>
-      <ul>
-        <li>Daños durante trabajos de limpieza</li>
-        <li>Daños en instalaciones del cliente</li>
-        <li>Daños fuera del centro de trabajo</li>
-        <li>Daños causados por empleados</li>
-        <li>Daños a bienes sobre los que se trabaja</li>
-        <li>Daños en operaciones de transporte de material</li>
-      </ul>
-    </div>
-
-    <!-- ALIMENTACIÓN -->
-    <div class="card-rc">
-      <h3>Alimentación</h3>
-      <ul>
-        <li>Daños por productos fabricados o distribuidos</li>
-        <li>Daños por empleados</li>
-        <li>Daños en instalaciones</li>
-        <li>Responsabilidad por productos defectuosos</li>
-        <li>Mezcla o unión con otros productos</li>
-        <li>Gastos de retirada de productos</li>
-      </ul>
-    </div>
-
-    <!-- INMOBILIARIA -->
-    <div class="card-rc">
-      <h3>Actividades inmobiliarias</h3>
-      <ul>
-        <li>Daños por incendio, explosión o agua</li>
-        <li>Daños causados por empleados del inmueble</li>
-        <li>Daños por elementos comunes</li>
-        <li>Daños a inquilinos, propietarios y convivientes</li>
-      </ul>
-    </div>
-
-  </div>
 
 </div>
 
-<div style="background:#fff3cd; border-left:6px solid #ffc107; padding:15px; margin-top:15px; border-radius:6px;">
-
-<strong>⚠ IMPORTANTE – TAXIS Y RESPONSABILIDAD CIVIL</strong>
-
-<p style="margin-top:10px;">
-La Responsabilidad Civil de explotación <strong>NO cubre la actividad principal de un taxi</strong>, ya que no incluye la circulación del vehículo.
-</p>
-
-<ul>
-<li>No cubre accidentes de tráfico.</li>
-<li>No cubre daños a pasajeros durante el servicio.</li>
-<li>No cubre la responsabilidad derivada de la conducción.</li>
-</ul>
-
-<p>
-El taxi requiere un <strong>seguro de auto profesional</strong>, donde se incluye la responsabilidad civil obligatoria y voluntaria.
-</p>
-
-<p>
-Actualmente, <strong>este tipo de seguros no se está trabajando</strong>, por lo que no es posible cubrir correctamente esta actividad mediante RC de explotación.
-</p>
-
-<p style="margin-top:10px;">
-👉 <strong>Conclusión:</strong> La RC de explotación no es válida como solución para un taxista.
-</p>
-
-</div>
 <div class="card">
-<h3>Coberturas ampliadas de Responsabilidad Civil</h3>
-<ul>
-<li><strong>Infidelidad de empleados</strong><br>Daños causados por empleados que cometan actos fraudulentos o faciliten el acceso a terceros para cometer robos.</li>
-<li><strong>Daños a bienes de empleados</strong><br>Daños materiales causados a bienes de trabajadores dentro de las instalaciones del negocio.</li>
-<li><strong>Pérdida o extravío de documentos</strong><br>Cobertura por pérdida, deterioro o extravío de expedientes o documentos confiados al asegurado.</li>
-<li><strong>Responsabilidad por protección de datos</strong><br>Cubre reclamaciones y sanciones derivadas del incumplimiento de la normativa de protección de datos.</li>
-<li><strong>Responsabilidad por mercancías manipuladas</strong><br>Daños causados a mercancías transportadas o manipuladas por grúas u otros equipos.</li>
-<li><strong>Responsabilidad civil de accidentes de trabajo</strong><br>Reclamaciones por lesiones sufridas por trabajadores en accidentes laborales.</li>
-<li><strong>Responsabilidad civil de productos</strong><br>Daños causados por productos, trabajos o servicios después de su entrega o prestación.</li>
-<li><strong>Unión, mezcla o transformación de productos</strong><br>Cobertura por daños causados cuando un producto se integra o transforma con otros.</li>
-<li><strong>Retirada de productos</strong><br>Gastos necesarios para retirar del mercado productos defectuosos o peligrosos.</li>
-<li><strong>Desmontaje y reinstalación</strong><br>Costes derivados del desmontaje o sustitución de productos defectuosos.</li>
-</ul>
 
+<h3>Coberturas ampliadas de Responsabilidad Civil</h3>
+
+<ul>
+
+<li><strong>Infidelidad de empleados</strong><br>
+Daños causados por empleados que cometan actos fraudulentos o faciliten el acceso a terceros para cometer robos.</li>
+
+<li><strong>Daños a bienes de empleados</strong><br>
+Daños materiales causados a bienes de trabajadores dentro de las instalaciones del negocio.</li>
+
+<li><strong>Pérdida o extravío de documentos</strong><br>
+Cobertura por pérdida, deterioro o extravío de expedientes o documentos confiados al asegurado.</li>
+
+<li><strong>Responsabilidad por protección de datos</strong><br>
+Cubre reclamaciones y sanciones derivadas del incumplimiento de la normativa de protección de datos.</li>
+
+<li><strong>Responsabilidad por mercancías manipuladas</strong><br>
+Daños causados a mercancías transportadas o manipuladas por grúas u otros equipos.</li>
+
+<li><strong>Responsabilidad civil de accidentes de trabajo</strong><br>
+Reclamaciones por lesiones sufridas por trabajadores en accidentes laborales.</li>
+
+<li><strong>Responsabilidad civil de productos</strong><br>
+Daños causados por productos, trabajos o servicios después de su entrega o prestación.</li>
+
+<li><strong>Unión, mezcla o transformación de productos</strong><br>
+Cobertura por daños causados cuando un producto se integra o transforma con otros.</li>
+
+<li><strong>Retirada de productos</strong><br>
+Gastos necesarios para retirar del mercado productos defectuosos o peligrosos.</li>
+
+<li><strong>Desmontaje y reinstalación</strong><br>
+Costes derivados del desmontaje o sustitución de productos defectuosos.</li>
+
+</ul>
 <p><strong>Nota:</strong> La única cobertura obligatoria es la Responsabilidad Civil de Explotación. El resto de coberturas se pueden adaptar según la actividad de la empresa.</p>
 </div>
-
 <div class="card">
+
 <h3>Responsabilidad Civil (RC) – Cómo entender los capitales y sublímites</h3>
 
 <p>
@@ -10624,466 +10132,293 @@ En los seguros de Responsabilidad Civil existen varios límites que determinan c
 </p>
 
 <h4>1️⃣ Límite por siniestro</h4>
+
 <p>
 El <strong>límite por siniestro</strong> es el importe máximo que pagará la aseguradora por un mismo accidente o reclamación, independientemente del número de personas afectadas.
 </p>
+
+<p><strong>Ejemplo:</strong></p>
+
 <ul>
 <li>Límite por siniestro: <strong>300.000 €</strong></li>
-<li>Si el daño total asciende a 400.000 €, la aseguradora solo pagará hasta <strong>300.000 €</strong>.</li>
+<li>Si el daño total del siniestro asciende a 400.000 €, la aseguradora solo pagará hasta <strong>300.000 €</strong>.</li>
 </ul>
 
 <h4>2️⃣ Límite por anualidad</h4>
+
 <p>
-El <strong>límite por anualidad</strong> es el máximo que pagará la aseguradora durante todo el año de seguro sumando todos los siniestros.
+El <strong>límite por anualidad</strong> es el máximo que pagará la aseguradora durante todo el año de seguro sumando todos los siniestros ocurridos en ese periodo.
+</p>
+
+<p>
+Ejemplo: si el límite anual es <strong>300.000 €</strong> y durante el año se producen varios siniestros, la suma de todas las indemnizaciones no podrá superar esa cantidad.
 </p>
 
 <h4>3️⃣ Sublímite por víctima</h4>
+
 <p>
 El <strong>sublímite por víctima</strong> es el máximo que puede recibir cada persona perjudicada dentro de un mismo siniestro.
 </p>
+
+<p><strong>Ejemplo:</strong></p>
+
 <ul>
 <li>Límite por siniestro: <strong>300.000 €</strong></li>
 <li>Sublímite por víctima: <strong>150.000 €</strong></li>
 </ul>
 
-<h4>4️⃣ Cuando no existe sublímite por víctima</h4>
 <p>
-Si la póliza indica <strong>sin sublímite por víctima</strong>, el único límite será el capital total del siniestro.
+Si hay dos personas lesionadas en el mismo accidente:
+</p>
+
+<ul>
+<li>Víctima 1 → máximo <strong>150.000 €</strong></li>
+<li>Víctima 2 → máximo <strong>150.000 €</strong></li>
+</ul>
+
+<p>
+Aunque el capital total del siniestro sea mayor, cada víctima no puede superar su sublímite individual.
+</p>
+
+<h4>4️⃣ Cuando NO existe sublímite por víctima</h4>
+
+<p>
+En algunas coberturas la póliza indica <strong>"sin sublímite por víctima"</strong>. En ese caso el único límite aplicable es el capital total del siniestro.
+</p>
+
+<p><strong>Ejemplo:</strong></p>
+
+<ul>
+<li>Límite por siniestro: <strong>300.000 €</strong></li>
+<li><strong>Sin sublímite por víctima</strong></li>
+</ul>
+
+<p>
+Si una sola persona sufre daños graves, podría recibir hasta los <strong>300.000 € completos</strong>.
 </p>
 
 <h4>5️⃣ Franquicia</h4>
+
 <p>
-La <strong>franquicia</strong> es la parte del daño que asume el asegurado antes de que intervenga la aseguradora.
+La <strong>franquicia</strong> es la parte del daño que asume el asegurado en cada siniestro antes de que intervenga la aseguradora.
 </p>
+
+<p><strong>Ejemplo:</strong></p>
+
 <ul>
 <li>Franquicia: <strong>300 €</strong></li>
 <li>Daño reclamado: <strong>5.000 €</strong></li>
 </ul>
 
+<p>
+El asegurado paga los primeros <strong>300 €</strong> y la aseguradora indemniza el resto.
+</p>
+
 <div style="background:#fff3cd; border-left:6px solid #ffc107; padding:15px; margin-top:20px; border-radius:6px;">
-<strong>⚠ Importante</strong>
+
+<strong>⚠ IMPORTANTE</strong>
+
 <p style="margin-top:10px;">
-Al revisar o contratar un seguro de RC conviene comprobar:
+Al revisar o contratar un seguro de Responsabilidad Civil siempre se deben comprobar tres elementos clave:
 </p>
-<ul>
-<li>Capital máximo por siniestro</li>
-<li>Capital máximo por anualidad</li>
-<li>Sublímites por víctima</li>
-</ul>
-<p>
-En actividades con atención al público es recomendable contratar capitales elevados.
-</p>
-<div class="card">
 
-<h3>🔍 ¿Qué cubre realmente la Responsabilidad Civil?</h3>
+<ul>
+<li><strong>Capital máximo por siniestro.</strong></li>
+<li><strong>Capital máximo por anualidad.</strong></li>
+<li><strong>Sublímites por víctima.</strong></li>
+</ul>
 
 <p>
-La Responsabilidad Civil protege al negocio cuando causa daños a terceros y estos reclaman una indemnización.
-</p>
-
-<ul>
-<li><strong>Daños personales:</strong> lesiones a clientes, empleados o terceros</li>
-<li><strong>Daños materiales:</strong> rotura o deterioro de bienes de terceros</li>
-<li><strong>Perjuicios económicos:</strong> pérdidas derivadas del daño causado</li>
-<li><strong>Defensa jurídica:</strong> abogados y gastos legales</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>⚖️ Tipos de Responsabilidad Civil (explicado fácil)</h3>
-
-<p><strong>RC Explotación</strong></p>
-<ul>
-<li>Cubre daños derivados de la actividad diaria</li>
-<li>Ej: un cliente se cae en el local</li>
-</ul>
-
-<p><strong>RC Patronal</strong></p>
-<ul>
-<li>Cubre daños a empleados por accidentes laborales</li>
-<li>Ej: trabajador lesionado que reclama a la empresa</li>
-</ul>
-
-<p><strong>RC Productos</strong></p>
-<ul>
-<li>Cubre daños causados por productos vendidos</li>
-<li>Ej: alimento en mal estado</li>
-</ul>
-
-<p><strong>RC Trabajos en terceros</strong></p>
-<ul>
-<li>Daños causados trabajando fuera del local</li>
-<li>Ej: reformas, instalaciones</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>🚫 ¿Qué NO cubre la RC?</h3>
-
-<ul>
-<li>Daños propios del negocio (eso es multirriesgo)</li>
-<li>Daños intencionados</li>
-<li>Multas o sanciones (salvo excepciones)</li>
-<li>Incumplimientos contractuales</li>
-</ul>
-
-<p style="font-size:13px; color:#555;">
-👉 Muy importante: la RC cubre a terceros, no al propio negocio
+En actividades con atención al público (hostelería, comercios, alojamientos turísticos, eventos, etc.) es recomendable contratar capitales elevados, ya que una reclamación por daños personales puede superar fácilmente los capitales bajos.
 </p>
 
 </div>
 
-<div class="card">
-
-<h3>💡 Ejemplos reales (esto es lo que entiende el cliente)</h3>
-
-<ul>
-<li>Cliente se resbala → RC cubre</li>
-<li>Intoxicación alimentaria → RC cubre</li>
-<li>Daño a un coche en el parking → RC cubre</li>
-<li>Se rompe algo tuyo → ❌ no cubre (eso es multirriesgo)</li>
-</ul>
-
 </div>
+<div class="card">
 
 <div class="card">
 
-<h3>📊 Cómo elegir el capital adecuado</h3>
-
-<ul>
-<li>Negocios pequeños → desde 150.000 €</li>
-<li>Locales con público → recomendable 300.000 € o más</li>
-<li>Hostelería / alto riesgo → 600.000 € - 1.000.000 €</li>
-</ul>
-
-<p style="background:#fff3cd; padding:10px; border-radius:6px;">
-💡 Cuanto más contacto con personas, mayor capital recomendable
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🧠 Cómo explicarlo al cliente</h3>
-
-<ul>
-<li>“Este seguro cubre los daños que puedas causar a otros”</li>
-<li>“No protege tu negocio, protege frente a reclamaciones”</li>
-<li>“Es el seguro que evita que pagues de tu bolsillo”</li>
-</ul>
-
-<p style="background:#e3f2fd; padding:10px; border-radius:6px;">
-👉 “Un accidente puede costar miles de euros, la RC evita que salgan de tu bolsillo”
-</p>
-
-</div>
-
-
-</div>
-</div>
-
-
-<div class="card">
-
-<h3>🧑‍💼 Responsabilidad Civil de Directivos (D&O)</h3>
+<h3>Responsabilidad Civil para Directivos (D&O)</h3>
 
 <p>
-Seguro diseñado para proteger el patrimonio personal de administradores, directivos y responsables de empresa frente a reclamaciones derivadas de su gestión.
+Seguro destinado a proteger el patrimonio personal de administradores, directivos y altos cargos frente a reclamaciones derivadas de errores cometidos en el ejercicio de sus funciones de gestión.
 </p>
 
-</div>
-
-<div class="card">
-
-<h3>🔍 ¿Qué cubre realmente?</h3>
+<h4>¿Por qué es importante?</h4>
 
 <ul>
-<li><strong>Errores de gestión:</strong> decisiones que causen perjuicios económicos</li>
-<li><strong>Reclamaciones de socios:</strong> por mala gestión o pérdidas</li>
-<li><strong>Reclamaciones de empleados:</strong> despidos, acoso, discriminación</li>
-<li><strong>Reclamaciones de terceros:</strong> proveedores, acreedores, clientes</li>
-<li><strong>Defensa jurídica:</strong> abogados, juicios y gastos legales</li>
+<li>Los directivos responden con su patrimonio personal.</li>
+<li>Las reclamaciones pueden venir de socios, empleados, acreedores o administraciones.</li>
+<li>La empresa no siempre puede asumir esa responsabilidad.</li>
 </ul>
 
-</div>
-
-<div class="card">
-
-<h3>⚖️ ¿Por qué es importante?</h3>
+<h4>Quién contrata y quién está asegurado</h4>
 
 <ul>
-<li>Los directivos responden con su patrimonio personal</li>
-<li>Una mala decisión puede generar reclamaciones importantes</li>
-<li>La empresa no siempre cubre al directivo</li>
+<li>Tomador: la empresa (persona jurídica).</li>
+<li>Asegurados: administradores, directivos, consejeros y altos cargos.</li>
+<li>No es necesario identificar a cada directivo individualmente.</li>
 </ul>
 
-</div>
-
-<div class="card">
-
-<h3>🚫 ¿Qué NO cubre?</h3>
+<h4>Principales coberturas</h4>
 
 <ul>
-<li>Actos intencionados o fraudulentos</li>
-<li>Enriquecimiento ilícito</li>
-<li>Multas no asegurables (según normativa)</li>
+<li>Responsabilidad civil de administradores y altos cargos.</li>
+<li>Prácticas laborales indebidas (acoso, discriminación, despidos).</li>
+<li>Reembolso a la empresa por indemnizaciones asumidas.</li>
+<li>Reclamaciones entre asegurados.</li>
 </ul>
 
-<p style="font-size:13px; color:#555;">
-👉 Solo cubre errores, no malas prácticas intencionadas
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>💥 Ejemplos reales</h3>
+<h4>Gastos y coberturas adicionales</h4>
 
 <ul>
-<li>Socio reclama por pérdidas → cubre defensa y responsabilidad</li>
-<li>Empleado demanda por despido improcedente → cubre</li>
-<li>Proveedor reclama por mala decisión → cubre</li>
+<li>Defensa jurídica.</li>
+<li>Gastos de investigación.</li>
+<li>Multas y sanciones administrativas asegurables.</li>
+<li>Gestión de crisis y restauración de imagen.</li>
+<li>Gastos de publicidad y comunicación.</li>
 </ul>
 
-</div>
-
-<div class="card">
-
-<h3>🧠 Cómo explicarlo al cliente</h3>
+<h4>Capitales orientativos</h4>
 
 <ul>
-<li>“Este seguro protege tu patrimonio personal como directivo”</li>
-<li>“Si te reclaman por una decisión, no pagas tú de tu bolsillo”</li>
-<li>“Es una protección para quien toma decisiones”</li>
+<li>150.000 €</li>
+<li>300.000 €</li>
+<li>600.000 €</li>
+<li>1.000.000 €</li>
+<li>2.000.000 €</li>
+<li>3.000.000 €</li>
 </ul>
-
-<p style="background:#e3f2fd; padding:10px; border-radius:6px;">
-👉 “Si diriges una empresa, este seguro te protege a ti, no solo al negocio”
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>📊 Cuándo recomendarlo</h3>
-
-<ul>
-<li>Empresas con varios socios</li>
-<li>Negocios con empleados</li>
-<li>Administradores o directivos con responsabilidad</li>
-<li>Empresas con decisiones estratégicas o financieras</li>
-</ul>
-
-</div>
-
-
 
 <p><strong>Duración:</strong> anual renovable</p>
-<p><strong>Argumento comercial:</strong> Si un directivo toma una decisión que genera perjuicios a terceros, puede responder con su patrimonio personal. Este seguro protege ese riesgo.</p>
-</div>
-
-<div class="card">
-<h3>Seguro de Vida y Accidentes de Convenios Colectivos</h3>
-
-<p>
-Seguro diseñado para cumplir con la obligación de mantener protegido al equipo con las coberturas y capitales establecidos por convenio.
+<p><strong>Argumento comercial:</strong>  
+Si un directivo toma una decisión que genera pérdidas o perjuicios a terceros, puede responder con su patrimonio personal.  
+Este seguro protege ese riesgo.
 </p>
-
-<h4>¿Qué cubre?</h4>
-<ul>
-<li>Fallecimiento por accidente, enfermedad o cualquier otra causa según convenio</li>
-<li>Invalidez permanente parcial, total, absoluta o gran invalidez</li>
-<li>Coberturas adaptadas al convenio aplicable</li>
-</ul>
-
-<h4>Ventajas</h4>
-<ul>
-<li>Pago anual o semestral sin recargo</li>
-<li>Proceso 100% digital</li>
-<li>Actualización de capitales y coberturas según convenio</li>
-<li>Teléfono exclusivo con agentes especializados</li>
-</ul>
-
-<h4>Ámbito temporal posible</h4>
-<ul>
-<li>24 horas</li>
-<li>Laboral</li>
-<li>Extralaboral</li>
-</ul>
+</div>
 <div class="card">
 
-<h3>👷 Seguro de Accidentes por Convenio Colectivo</h3>
-
-<p>
-Seguro obligatorio en muchas empresas para cumplir con el convenio colectivo y proteger a los empleados.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🔍 ¿Qué cubre realmente?</h3>
-
-<ul>
-<li><strong>Fallecimiento:</strong> por accidente o enfermedad (según convenio)</li>
-<li><strong>Invalidez:</strong> total, parcial o absoluta</li>
-<li><strong>Gran invalidez:</strong> cuando el trabajador necesita ayuda de otra persona</li>
-</ul>
-
-<p>
-👉 Las coberturas y capitales dependen del convenio aplicable
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>⚖️ ¿Por qué es importante?</h3>
-
-<ul>
-<li>Es obligatorio en muchos sectores</li>
-<li>Evita sanciones a la empresa</li>
-<li>Protege económicamente a los empleados</li>
-<li>Cumple con la normativa laboral</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>🚫 ¿Qué NO cubre?</h3>
-
-<ul>
-<li>Situaciones fuera de lo establecido en el convenio</li>
-<li>Trabajadores no incluidos en la póliza</li>
-<li>Capitales inferiores a los exigidos por convenio</li>
-</ul>
-
-<p style="font-size:13px; color:#555;">
-👉 Importante: el seguro debe ajustarse al convenio vigente
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>💥 Ejemplos reales</h3>
-
-<ul>
-<li>Empleado sufre accidente laboral → indemnización</li>
-<li>Invalidez permanente → cobertura según convenio</li>
-<li>Fallecimiento → capital para familiares</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h3>🧠 Cómo explicarlo al cliente</h3>
-
-<ul>
-<li>“Es un seguro obligatorio para tus trabajadores”</li>
-<li>“Protege a tu equipo y evita problemas legales”</li>
-<li>“Cumple con el convenio sin complicaciones”</li>
-</ul>
-
-<p style="background:#e3f2fd; padding:10px; border-radius:6px;">
-👉 “Si tienes empleados, probablemente estás obligado a tener este seguro”
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>📊 Cuándo es obligatorio</h3>
-
-<ul>
-<li>Empresas con trabajadores según convenio</li>
-<li>Sectores como construcción, hostelería, comercio, etc.</li>
-<li>Cuando el convenio lo exige expresamente</li>
-</ul>
-
-</div>
-
-<p><strong>Importante:</strong> Si el convenio no obliga, puede existir opción básica accidental con capital estándar.</p>
-</div>
-
-<div class="card">
 <h3>Otros seguros para empresas</h3>
-<ul>
-<li><strong>Ciberseguro</strong><br>Protección frente a ciberataques, robo de datos e interrupción de sistemas.</li>
-<li><strong>Seguro de crédito</strong><br>Protección frente al riesgo de impago de clientes.</li>
-<li><strong>Seguro de transporte</strong><br>Protección de mercancías durante transporte terrestre, marítimo o aéreo.</li>
-<li><strong>Seguro de equipos electrónicos</strong><br>Cobertura de daños a equipos informáticos o tecnológicos.</li>
-<li><strong>Seguro de maquinaria</strong><br>Cobertura frente a averías o daños en maquinaria industrial.</li>
-<li><strong>Flotas de vehículos</strong><br>Seguro para empresas con varios vehículos.</li>
-</ul>
-</div>
 
-<div class="card">
-<h3>Cómo detectar qué seguro necesita una empresa en 30 segundos</h3>
 <ul>
-<li><strong>¿Tiene local o negocio físico?</strong><br>→ Multirriesgo empresa</li>
-<li><strong>¿Tiene clientes o proveedores que visitan el local?</strong><br>→ Responsabilidad Civil de explotación</li>
-<li><strong>¿Tiene trabajadores?</strong><br>→ Accidentes de convenio colectivo</li>
-<li><strong>¿Gestiona datos de clientes o usa sistemas informáticos?</strong><br>→ Ciberseguro</li>
-<li><strong>¿Depende de administradores o socios clave?</strong><br>→ D&amp;O o vida empresa</li>
-<li><strong>¿Trabaja con muchos clientes o vende a crédito?</strong><br>→ Seguro de crédito</li>
-</ul>
-</div>
 
-<div class="card">
-<h3>Datos necesarios para cotizar seguros de empresa</h3>
+<li><strong>Ciberseguro</strong><br>
+Protección frente a ciberataques, robo de datos, interrupción de sistemas y responsabilidad por protección de datos.</li>
+
+<li><strong>Accidentes convenio colectivo</strong><br>
+Seguro obligatorio para empresas que tienen trabajadores según convenio.</li>
+
+<li><strong>Seguro de transporte</strong><br>
+Protección de mercancías durante transporte terrestre, marítimo o aéreo.</li>
+
+<li><strong>Seguro de equipos electrónicos</strong><br>
+Cobertura de daños a equipos informáticos o tecnológicos.</li>
+
+<li><strong>Seguro de maquinaria</strong><br>
+Cobertura frente a averías o daños en maquinaria industrial.</li>
+
+<li><strong>Flotas de vehículos</strong><br>
+Seguro para empresas con varios vehículos.</li>
+
+</ul>
+
+</div>
+<div style="background:#fff3cd; border-left:6px solid #ffc107; padding:15px; margin-top:20px; border-radius:6px;">
+
+<strong>💡 Cómo detectar qué seguro necesita una empresa en 30 segundos</strong>
+
+<p style="margin-top:10px;">
+Cuando se habla con una empresa o autónomo, estas preguntas ayudan a detectar rápidamente qué seguros pueden ser necesarios.
+</p>
+
+<ul>
+
+<li><strong>¿Tiene local o negocio físico?</strong><br>
+→ Multirriesgo empresa.</li>
+
+<li><strong>¿Tiene clientes o proveedores que visitan el local?</strong><br>
+→ Responsabilidad Civil de explotación.</li>
+
+<li><strong>¿Tiene trabajadores?</strong><br>
+→ Accidentes de convenio colectivo.</li>
+
+<li><strong>¿Gestiona datos de clientes o trabaja con sistemas informáticos?</strong><br>
+→ Ciberseguro.</li>
+
+<li><strong>¿La empresa depende de un administrador o socio clave?</strong><br>
+→ Seguro de vida empresa o protección del empresario.</li>
+
+<li><strong>¿Trabaja con muchos clientes o vende a crédito?</strong><br>
+→ Seguro de crédito.</li>
+
+</ul>
+
+<p>
+Este pequeño análisis permite identificar rápidamente los riesgos principales del negocio y proponer las soluciones aseguradoras adecuadas.
+</p>
+
+<div style="background:#fff3cd; border-left:6px solid #ffc107; padding:15px; margin-top:20px; border-radius:6px;">
+
+<strong>📋 Datos necesarios para cotizar seguros de empresa</strong>
+
+<p style="margin-top:10px;">
+Para poder calcular correctamente el precio de un seguro de empresa es necesario recopilar una serie de datos básicos del negocio. Cuanta más información se tenga, más ajustada será la cotización.
+</p>
 
 <h4>Datos de la empresa</h4>
+
 <ul>
-<li>Nombre o razón social</li>
-<li>CIF</li>
-<li>Nombre del apoderado y contacto</li>
-<li>Teléfono, fijo, móvil y correo electrónico</li>
-<li>Actividad económica</li>
-<li>Dirección del negocio o local</li>
-<li>Año de inicio de actividad</li>
-<li>Facturación anual</li>
+<li>Nombre o razón social.</li>
+<li>CIF de la empresa.</li>
+<li>Nombre de apoderado y contacto de él</li>
+<li>Teléfono movil,fijo, correo electrónico</li>
+<li>Actividad económica.</li>
+<li>Dirección del negocio o del local.</li>
+<li>Año de inicio de la actividad.</li>
+<li>Volumen de facturación anual</li>
 </ul>
 
 <h4>Datos del negocio o local</h4>
+
 <ul>
-<li>Tipo de actividad</li>
-<li>Superficie en metros cuadrados</li>
-<li>Local propio o alquilado</li>
-<li>Año de construcción o última reforma</li>
-<li>Medidas de seguridad</li>
-<li>Materiales combustibles: madera, panel sándwich, etc.</li>
+<li>Tipo de actividad (comercio, hostelería, oficina, alojamiento, etc.).</li>
+<li>Superficie del local en metros cuadrados.</li>
+<li>Si el local es propio o alquilado.</li>
+<li>Año de construcción o última reforma.</li>
+<li>Medidas de seguridad (alarmas, cámaras, extintores, etc.).</li>
+<li>¿Fabricado con materiales combustibles? Madera, paneles sandwich....</li>
 </ul>
 
 <h4>Datos de la actividad</h4>
+
 <ul>
-<li>Número de empleados</li>
-<li>Si recibe público o clientes</li>
-<li>Si se realizan trabajos fuera del establecimiento</li>
-<li>Si se manipulan productos o alimentos</li>
+<li>Facturación anual aproximada.</li>
+<li>Número de empleados.</li>
+<li>Si recibe público o clientes en el local.</li>
+<li>Si se realizan trabajos fuera del establecimiento.</li>
+<li>Si se manipulan productos o alimentos.</li>
 </ul>
 
-<h4>Otros datos que pueden pedir</h4>
+<h4>Otros datos que pueden solicitar las aseguradoras</h4>
+
 <ul>
-<li>Historial de siniestros</li>
-<li>Capitales a asegurar</li>
-<li>Maquinaria o equipos especiales</li>
-<li>Uso de datos personales o sistemas informáticos</li>
+<li>Historial de siniestros.</li>
+<li>Capitales a asegurar (continente, contenido, maquinaria, mercancía).</li>
+<li>Existencia de maquinaria o equipos especiales.</li>
+<li>Uso de datos personales o sistemas informáticos.</li>
 </ul>
 
 <p>
-Tener esta información permite una cotización más precisa y evita incidencias en contratación o siniestro.
+Disponer de estos datos permite realizar una cotización más precisa y evitar problemas en la contratación o en caso de siniestro.
 </p>
-</div>
-
 <div class="card">
+
 <h3>Mapa rápido de seguros según actividad</h3>
+
+<p>
+Esta guía permite identificar rápidamente qué seguros pueden ser necesarios según el tipo de actividad del cliente.
+</p>
 
 <table style="width:100%; border-collapse:collapse; margin-top:10px;">
 <thead>
@@ -11092,99 +10427,75 @@ Tener esta información permite una cotización más precisa y evita incidencias
 <th style="padding:8px; border:1px solid #ddd;">Seguros recomendados</th>
 </tr>
 </thead>
+
 <tbody>
+
 <tr>
 <td style="padding:8px; border:1px solid #ddd;">Bar / Restaurante</td>
-<td style="padding:8px; border:1px solid #ddd;">Multirriesgo empresa + RC + Accidentes convenio</td>
+<td style="padding:8px; border:1px solid #ddd;">Multirriesgo empresa + Responsabilidad Civil + Accidentes convenio colectivo</td>
 </tr>
+
 <tr>
 <td style="padding:8px; border:1px solid #ddd;">Comercio / Tienda</td>
-<td style="padding:8px; border:1px solid #ddd;">Multirriesgo comercio + RC</td>
+<td style="padding:8px; border:1px solid #ddd;">Multirriesgo comercio + Responsabilidad Civil</td>
 </tr>
+
 <tr>
 <td style="padding:8px; border:1px solid #ddd;">Oficina / Asesoría</td>
-<td style="padding:8px; border:1px solid #ddd;">RC profesional + Ciberseguro</td>
+<td style="padding:8px; border:1px solid #ddd;">Responsabilidad Civil profesional + Ciberseguro</td>
 </tr>
+
 <tr>
 <td style="padding:8px; border:1px solid #ddd;">Empresa con empleados</td>
-<td style="padding:8px; border:1px solid #ddd;">RC + Accidentes convenio</td>
+<td style="padding:8px; border:1px solid #ddd;">Responsabilidad Civil + Accidentes convenio colectivo</td>
 </tr>
+
 <tr>
 <td style="padding:8px; border:1px solid #ddd;">Vivienda vacacional</td>
-<td style="padding:8px; border:1px solid #ddd;">Hogar + RC explotación</td>
+<td style="padding:8px; border:1px solid #ddd;">Seguro de hogar + Responsabilidad Civil explotación</td>
 </tr>
+
 <tr>
 <td style="padding:8px; border:1px solid #ddd;">Casa cueva turística</td>
-<td style="padding:8px; border:1px solid #ddd;">Hogar especial + RC</td>
+<td style="padding:8px; border:1px solid #ddd;">Seguro de hogar (riesgo especial) + Responsabilidad Civil</td>
 </tr>
+
 <tr>
 <td style="padding:8px; border:1px solid #ddd;">Empresa con clientes o proveedores</td>
-<td style="padding:8px; border:1px solid #ddd;">RC + Ciberseguro</td>
+<td style="padding:8px; border:1px solid #ddd;">Responsabilidad Civil + Ciberseguro</td>
 </tr>
+
 <tr>
 <td style="padding:8px; border:1px solid #ddd;">Empresa con socios o directivos</td>
-<td style="padding:8px; border:1px solid #ddd;">D&amp;O</td>
+<td style="padding:8px; border:1px solid #ddd;">Responsabilidad Civil Directivos (D&O)</td>
 </tr>
+
 </tbody>
 </table>
-</div>
 
-<div class="card">
-<h3>Selector rápido por actividad</h3>
+<div style="background:#fff3cd; border-left:6px solid #ffc107; padding:15px; margin-top:15px; border-radius:6px;">
 
-<p>Elige la actividad y te orienta sobre los seguros más habituales.</p>
-
-<select id="actividadEmpresa" onchange="recomendarSeguroEmpresa()" style="width:100%; padding:10px; border-radius:8px; margin-top:10px;">
-<option value="">Selecciona actividad</option>
-<option value="bar">Bar / Restaurante</option>
-<option value="comercio">Comercio / Tienda</option>
-<option value="oficina">Oficina / Asesoría</option>
-<option value="empleados">Empresa con empleados</option>
-<option value="vivienda">Vivienda vacacional</option>
-<option value="cueva">Casa cueva turística</option>
-<option value="clientes">Empresa con clientes o proveedores</option>
-<option value="directivos">Empresa con socios o directivos</option>
-</select>
-
-<div id="resultadoSeguroEmpresa" style="margin-top:15px; padding:12px; background:#f8f9fa; border-radius:8px;"></div>
-</div>
-
-<div style="background:#fff3cd; border-left:6px solid #ffc107; padding:15px; margin-top:20px; border-radius:6px;">
 <strong>💡 Consejo comercial</strong>
+
 <p style="margin-top:10px;">
-Antes de cotizar conviene identificar si la actividad recibe público, si tiene trabajadores, si dispone de local y si gestiona datos de clientes.
+Antes de cotizar un seguro de empresa conviene identificar:
 </p>
+
+<ul>
+<li>Si la actividad recibe público.</li>
+<li>Si tiene trabajadores.</li>
+<li>Si tiene local o instalaciones.</li>
+<li>Si gestiona datos de clientes.</li>
+</ul>
+
 <p>
-Con esa base es mucho más fácil detectar qué seguros necesita realmente el negocio.
+Con esta información es más fácil identificar qué seguros necesita realmente el negocio.
 </p>
+
 </div>
 
-<script>
-function recomendarSeguroEmpresa() {
-  var actividad = document.getElementById("actividadEmpresa").value;
-  var resultado = document.getElementById("resultadoSeguroEmpresa");
-
-  if (actividad === "bar") {
-    resultado.innerHTML = "👉 Recomendación: Multirriesgo empresa + Responsabilidad Civil + Accidentes de convenio colectivo.";
-  } else if (actividad === "comercio") {
-    resultado.innerHTML = "👉 Recomendación: Multirriesgo comercio + Responsabilidad Civil.";
-  } else if (actividad === "oficina") {
-    resultado.innerHTML = "👉 Recomendación: Responsabilidad Civil profesional + Ciberseguro.";
-  } else if (actividad === "empleados") {
-    resultado.innerHTML = "👉 Recomendación: Responsabilidad Civil + Accidentes de convenio colectivo.";
-  } else if (actividad === "vivienda") {
-    resultado.innerHTML = "👉 Recomendación: Seguro de hogar + Responsabilidad Civil de explotación.";
-  } else if (actividad === "cueva") {
-    resultado.innerHTML = "👉 Recomendación: Seguro de hogar especial + Responsabilidad Civil.";
-  } else if (actividad === "clientes") {
-    resultado.innerHTML = "👉 Recomendación: Responsabilidad Civil + Ciberseguro.";
-  } else if (actividad === "directivos") {
-    resultado.innerHTML = "👉 Recomendación: Responsabilidad Civil para Directivos (D&O).";
-  } else {
-    resultado.innerHTML = "";
-  }
-}
-</script>
+</div>
+</div>
 
 </section>
 
@@ -11200,15 +10511,14 @@ El contenido tiene carácter informativo y no constituye documentación oficial 
   <input 
     type="text" 
     id="buscador" 
-    placeholder="🔍 Buscar coberttuyura, concepto o palabra..."
+    placeholder="🔍 Buscar cobertura, concepto o palabra..."
     style="padding:10px; width:300px; border-radius:8px; border:1px solid #ccc;"
     onkeyup="buscarContenido()">
 </div>
 </section>
-</div>
-
+</div
 <script>
-
+<script>
 function activarPrimeraSubtabHogar() {
   const primeraTab = document.querySelector('#aegon-hogar .hogar-subtab');
   if (primeraTab) {
@@ -11221,1181 +10531,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (botonMiHogar) {
     botonMiHogar.addEventListener("click", function () {
-
-</script>
-<!-- ===== CHATBOT SASA LIMPIO ===== -->
-<style>
-
-#chatBotBtn{
-  position:fixed;
-  right:18px;
-  bottom:15px;
-  width:56px;
-  height:60px;
-  border:none;
-  border-radius:50%;
-  background:#0b3f8a;
-  color:#fff;
-  font-size:24px;
-  cursor:pointer;
-  z-index:99999;
-  box-shadow:0 8px 18px rgba(0,0,0,.2);
-}
-#chatBox{
-  position:fixed;
-  right:18px;
-  bottom:86px;
-  width:370px;
-  max-width:calc(100vw - 24px);
-  height:520px;
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  display:none;
-  flex-direction:column;
-  z-index:99998;
-  box-shadow:0 12px 30px rgba(0,0,0,.18);
-  font-family:Arial, sans-serif;
-}
-#chatHeader {
-  background: linear-gradient(90deg, #004481 0%, #0b5cab 100%) !important;
-  color: #ffffff !important;
-}
-#chatMessages{
-  flex:1;
-  overflow-y:auto;
-  padding:14px;
-  background:#f7fbff;
-}
-#chatMessages {
-  max-height: 350px;
-  overflow-y: auto;
-  padding: 12px;
-  line-height: 1.4;
-}
-#chatMessages div {
-  margin-bottom: 10px;
-}
-.msgUserWrap{ text-align:right; margin:8px 0; }
-.msgBotWrap{ text-align:left; margin:8px 0; }
-.msgUser{
-  display:inline-block;
-  max-width:82%;
-  background:#e8f2ff;
-  color:#1a1a1a;
-  padding:10px 12px;
-  border-radius:14px;
-  white-space:pre-wrap;
-  text-align:left;
-}
-.msgBot{
-  display:inline-block;
-  max-width:82%;
-  background:#ffffff;
-  color:#1a1a1a;
-  padding:10px 12px;
-  border-radius:14px;
-  white-space:pre-wrap;
-  text-align:left;
-  border:1px solid #dfe8f3;
-}
-#chatInputArea{
-  display:flex;
-  gap:8px;
-  padding:12px;
-  border-top:1px solid #dfe8f3;
-  background:#fff;
-}
-.contenido-msg {
-  font-size: 14px;
-  line-height: 1.5;
-}
-.chatQuickBtn {
-  background: #ffffff !important;
-  color: #004481 !important;
-  border: 1px solid #004481 !important;
-}
-/* TÍTULOS tipo 👉 PRODUCTO */
-.contenido-msg strong,
-.contenido-msg b {
-  display: block;
-  margin-top: 8px;
-  font-size: 15px;
-}
-
-/* CLAVE */
-.contenido-msg:has(:contains("Clave")) {
-  margin-top: 8px;
-}
-
-/* BLOQUE CLAVE */
-.contenido-msg span.clave {
-  display: block;
-  background: #fff7e6;
-  padding: 8px;
-  border-radius: 8px;
-  margin-top: 6px;
-}
-
-/* BLOQUE CIERRE */
-.contenido-msg span.cierre {
-  display: block;
-  background: #e6f0ff;
-  padding: 8px;
-  border-radius: 8px;
-  margin-top: 6px;
-  font-weight: 600;
-}
-#chatInput{
-  flex:1;
-  border:1px solid #b9c8da;
-  border-radius:10px;
-  padding:10px 12px;
-  font-size:14px;
-  outline:none;
-}
-#chatSend{
-  border:none;
-  border-radius:10px;
-  background:#0b3f8a;
-  color:#fff;
-  padding:10px 14px;
-  cursor:pointer;
-  font-weight:700;
-}
-#chatQuickActions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 10px 12px;
-  border-bottom: 1px solid #dfe8f3;
-  background: #ffffff;
-}
-
-.chatQuickBtn {
-  border: 1px solid #c9d7e6;
-  background: #f7fbff;
-  color: #0b3f8a;
-  border-radius: 999px;
-  padding: 7px 10px;
-  font-size: 12px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.chatQuickBtn:hover {
-  background: #eaf3ff;
-}
-.bubble {
-  padding: 10px 12px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.4;
-  max-width: 90%;
-}
-
-/* BOT */
-.bot {
-  background: #f1f5f9;
-  color: #000;
-  text-align: left;
-}
-.bubble.bot {
-  background: #f5f7fb;
-  padding: 12px 14px;
-  border-radius: 12px;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #1f2937;
-  margin-bottom: 10px;
-}
-
-.bubble.user {
-  background: #004481;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-size: 14px;
-}
-
-.bubble strong {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 15px;
-}
-
-.bubble hr {
-  border: none;
-  border-top: 1px solid #e5e7eb;
-  margin: 10px 0;
-}
-/* USER */
-.user {
-  background: #004481;
-  color: #fff;
-  text-align: right;
-}
-#chatMessages {
-  overflow-y: auto;
-  scrollbar-width: thin;
-}
-
-#chatMessages::-webkit-scrollbar {
-  width: 6px;
-}
-
-#chatMessages::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 10px;
-}
-#chatBox {
-  border: 1px solid #d9e2ec;
-  box-shadow: 0 8px 20px rgba(0, 68, 129, 0.12);
-}
-
-#chatHeader {
-  background: linear-gradient(90deg, #004481 0%, #0b5cab 100%);
-  color: #fff;
-}
-
-#chatQuickActions {
-  background: #f8fbff;
-}
-
-.chatQuickBtn {
-  background: #fff;
-  color: #004481;
-  border: 1px solid #d5e2f0;
-  border-radius: 999px;
-}
-
-.chatQuickBtn:hover {
-  background: #edf5ff;
-}
-
-#chatMessages {
-  background: #fff;
-}
-
-#chatSend {
-  background: linear-gradient(90deg, #004481 0%, #0b5cab 100%);
-  color: #fff;
-}
-
-#chatMessages::-webkit-scrollbar {
-  width: 6px;
-}
-
-#chatMessages::-webkit-scrollbar-thumb {
-  background: #c4d4e5;
-  border-radius: 10px;
-}
-#chatBotBtn {
-  background: #e30613 !important;
-  color: #ffffff !important;
-  border: none !important;
-  box-shadow: 0 4px 12px rgba(227,6,19,0.3);
-}
-
-#chatBotBtn:hover {
-  background: #c00510 !important;
-}
-#chatBotBtn {
-  bottom: 90px !important;
-}
-</style>
-
-<button id="chatBotBtn" type="button">💬</button>
-
-<div id="chatBox">
-  <div id="chatHeader">Asistente SASA</div>
-
-
-<div id="chatQuickActions">
-  <button class="chatQuickBtn" data-prompt="como vender empresa">Empresa</button>
-  <button class="chatQuickBtn" data-prompt="como vender multirriesgo">Multirriesgo</button>
-  <button class="chatQuickBtn" data-prompt="responsabilidad civil">RC</button>
-  <button class="chatQuickBtn" data-prompt="como vender ciberseguro">Ciber</button>
-  <button class="chatQuickBtn" data-prompt="como vender impago">Impago</button>
-  <button class="chatQuickBtn" data-prompt="como vender asisa">Asisa</button>
-  <button class="chatQuickBtn" data-prompt="como vender transporte de mercancias">Transporte</button>
-  <button class="chatQuickBtn" data-prompt="como vender vida">Vida</button>
-  <button class="chatQuickBtn" data-prompt="como vender hogar">Hogar</button>
-  <button class="chatQuickBtn" data-prompt="como vender autonomos">Autónomos</button>
-  <button class="chatQuickBtn" data-prompt="como vender accidentes convenio">Accidentes</button>
-  <button class="chatQuickBtn" data-prompt="objecion por precio">Objeciones</button>
-  <button class="chatQuickBtn" data-prompt="cerrar venta">Cierre</button>
-  <button class="chatQuickBtn" data-prompt="venta cruzada">Cross sell</button>
-  <button class="chatQuickBtn" data-prompt="modo director">Modo director</button>
-  <button class="chatQuickBtn" data-prompt="equipo objetivo">Equipo objetivo</button>
-  <button class="chatQuickBtn" data-prompt="equipo cierre">Equipo cierre</button>
-  <button class="chatQuickBtn" data-prompt="empresa equipo">Equipo empresa</button>
-  <button class="chatQuickBtn" data-prompt="equipo ciber">Equipo ciber</button>
-</div>
-
-<div id="chatMessages"></div>
-  <div id="chatMessages"></div>
-  <div id="chatInputArea">
-    <input id="chatInput" type="text" placeholder="Escribe aquí..." autocomplete="off">
-    <button id="chatSend" type="button">Enviar</button>
-  </div>
-</div>
-
-<script>
-(function () {
-  const btn = document.getElementById("chatBotBtn");
-  const box = document.getElementById("chatBox");
-  const messages = document.getElementById("chatMessages");
-  const input = document.getElementById("chatInput");
-  const send = document.getElementById("chatSend");
-
-  function addMsg(text, tipo) {
-    const wrap = document.createElement("div");
-    wrap.className = tipo === "user" ? "msgUserWrap" : "msgBotWrap";
-
-    const bubble = document.createElement("div");
-bubble.className = "bubble " + tipo;
-bubble.innerHTML = `
-${tipo === "bot" ? `<div style="font-weight:700;margin-bottom:6px;">🧠 Asistente SASA</div>` : ""}
-<div class="contenido-msg">${String(text).replace(/\n/g, "<br>")}
-`;
-wrap.appendChild(bubble);
-messages.appendChild(wrap);
-
-setTimeout(() => {
-  wrap.scrollIntoView({ behavior: "smooth", block: "start" });
-}, 50);
-  }
-
-  function tiene(q, ...palabras) {
-    return palabras.some(p => q.includes(p));
-  }
-function responder(p) {
-  p = (p || "").toLowerCase().trim();
-  p = p.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-  // normalización útil
-  if (p.includes("poliza")) p += " credito";
-  if (p.includes("py")) p += " credito";
-  if (p.includes("directivo")) p += " rc";
-  if (p.includes("d&o")) p += " directivo";
-  if (p.includes("empresa")) p += " multirriesgo";
-  if (p.includes("negocio")) p += " multirriesgo";
-  if (p.includes("alquiler")) p += " impago";
-  if (p.includes("hogar")) p += " casa vivienda";
-  if (p.includes("autonomo")) p += " ingresos";
-  if (p.includes("deceso")) p += " decesos";
-  if (p.includes("transporte")) p += " transporte";
-  if (p.includes("mercancias")) p += " transporte";
-  // =========================
-  // OBJECIONES
-  // =========================
-  if (
-    p.includes("es caro") ||
-    p.includes("muy caro") ||
-    p.includes("caro") ||
-    p.includes("precio alto") ||
-    p.includes("mejor precio") ||
-    p.includes("mas barato") ||
-    p.includes("más barato") ||
-    p.includes("objecion") ||
-    p.includes("objecion precio") ||
-    p.includes("objecion por precio")
-  ) {
-    return `
-
-👉 OBJECIÓN POR PRECIO
-
-• No compares solo prima
-• Lleva la conversación a coberturas, servicio y siniestro
-.contenido-msg {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-/* TÍTULOS tipo 👉 PRODUCTO */
-.contenido-msg strong,
-.contenido-msg b {
-  display: block;
-  margin-top: 8px;
-  font-size: 15px;
-}
-
-/* CLAVE */
-.contenido-msg:has(:contains("Clave")) {
-  margin-top: 8px;
-}
-
-/* BLOQUE CLAVE */
-.contenido-msg span.clave {
-  display: block;
-  background: #fff7e6;
-  padding: 8px;
-  border-radius: 8px;
-  margin-top: 6px;
-}
-
-/* BLOQUE CIERRE */
-.contenido-msg span.cierre {
-  display: block;
-  background: #e6f0ff;
-  padding: 8px;
-  border-radius: 8px;
-  margin-top: 6px;
-  font-weight: 600;
-}
-💡 Clave:
-Lo barato deja de ser barato cuando falta cobertura
-
-👉 Respuesta útil:
-Entiendo que mires precio, pero aquí lo importante es qué pasa cuando lo necesites de verdad.
-
-👉 Cierre:
-¿Quieres que comparemos solo prima o también lo que te cubre cada opción?
-`;
-  }
-
-  if (
-    p.includes("ya lo tengo") ||
-    p.includes("ya tengo seguro") ||
-    p.includes("lo tengo con otra") ||
-    p.includes("tengo otra compania") ||
-    p.includes("tengo otra compañia")
-  ) {
-    return `
-👉 OBJECIÓN: YA LO TENGO
-
-• No ataques su seguro actual
-• Abre comparación de valor
-
-💡 Clave:
-No se trata de cambiar por cambiar, sino de revisar si está bien cubierto
-
-👉 Respuesta útil:
-Perfecto, precisamente por eso merece la pena revisarlo y ver si estás pagando bien por lo que tienes.
-
-👉 Cierre:
-Si quieres, lo vemos rápido y te digo si realmente merece la pena moverlo o no.
-`;
-  }
-
-  if (
-    p.includes("no lo necesito") ||
-    p.includes("no me hace falta") ||
-    p.includes("no lo veo necesario")
-  ) {
-    return `
-👉 OBJECIÓN: NO LO NECESITO
-
-• No contradigas de frente
-• Lleva al riesgo real
-
-💡 Clave:
-Muchos seguros no se valoran hasta que pasa algo
-
-👉 Respuesta útil:
-Ojalá no lo necesites nunca, pero la idea es que si pasa algo importante no tengas que asumirlo solo.
-
-👉 Cierre:
-¿Prefieres verlo ahora con calma o cuando ya haya habido un problema?
-`;
-  }
-
-  // =========================
-  // CIERRE
-  // =========================
-  if (
-    p.includes("cerrar venta") ||
-    p.includes("como cerrar") ||
-    p.includes("cómo cerrar") ||
-    p.includes("cierre comercial") ||
-    p.includes("frase de cierre")
-  ) {
-    return `
-👉 CIERRE DE VENTA
-
-• No preguntes si lo quiere
-• Da por hecho el siguiente paso
-
-💡 Frases útiles:
-• ¿Lo prefieres mensual o anual?
-• ¿Lo dejamos ya activado para que estés cubierto desde hoy?
-• ¿Te encaja más dejarlo resuelto ahora?
-
-👉 Clave:
-El cierre no es empujar, es facilitar la decisión.
-`;
-  }
-
-  // =========================
-  // DETECCIÓN DE NECESIDAD
-  // =========================
-  if (
-    p.includes("que le pregunto") ||
-    p.includes("que preguntar") ||
-    p.includes("qué le pregunto") ||
-    p.includes("qué preguntar") ||
-    p.includes("detectar necesidad") ||
-    p.includes("preguntas cliente")
-  ) {
-    return `
-👉 DETECCIÓN DE NECESIDAD
-
-Pregunta siempre:
-
-• ¿A qué te dedicas exactamente?
-• ¿Tienes empleados?
-• ¿Tienes local o trabajas desde casa?
-• ¿Tratas con clientes o datos?
-• ¿Tienes familia o ingresos que proteger?
-
-💡 Con eso detectas:
-RC, ciber, multirriesgo, accidentes, vida, salud, impago o protección de ingresos, transporte de mercancías.
-
-👉 Clave:
-No vendas primero. Diagnostica.
-`;
-  }
-
-  // =========================
-  // VENTA CRUZADA
-  // =========================
-  if (
-    p.includes("venta cruzada") ||
-    p.includes("que vender") ||
-    p.includes("qué vender") ||
-    p.includes("oportunidad") ||
-    p.includes("objeciones") ||
-    p.includes("cruzar venta")
-  ) {
-    return `
-👉 VENTA CRUZADA
-
-Oportunidades rápidas:
-
-• Hipoteca → vida + hogar
-• Alquiler → impago
-• Empresa → RC + ciber + salud+ transporte de mercancías
-• Autónomo → protección ingresos + salud+ transporte mercancías
-• Empleados → accidentes convenio + salud empresa
-• Familia → vida + decesos+ dependencia+ salud Aegon
-
-💡 Clave:
-No vendas productos sueltos. Vende protección completa.
-`;
-  }
-
-  // =========================
-  // MODO VENTA GENERAL
-  // =========================
-  if (
-    p.includes("como vender") ||
-    p.includes("cómo vender") ||
-    p.includes("vender ")
-  ) {
-    if (p.includes("empresa") || p.includes("multirriesgo")) {
-      return `
-👉 MULTIRRIESGO EMPRESA
-
-• No empieces por la póliza
-• Empieza por el riesgo real del negocio
-• Habla de incendio, agua, robo y parón de actividad
-
-💡 Clave:
-No es un seguro, es continuidad del negocio
-
-👉 Cierre:
-Si mañana no puedes abrir, ¿cuánto pierdes?
-`;
-    }
-
-    if (p.includes("credito") || p.includes("poliza py")) {
-      return `
-👉 SEGURO DE CRÉDITO / PÓLIZA PY
-
-• No vendas un seguro, vende cobrar
-• Habla de facturas impagadas, análisis de clientes y recobro
-
-💡 Clave:
-La empresa no pierde por vender, pierde por no cobrar
-
-👉 Cierre:
-¿Prefieres vender más o cobrar seguro?
-`;
-    }
-if (
-  p === "transporte" ||
-  p.includes("transporte") ||
-  p.includes("mercancía") ||
-  p.includes("mercancia") ||
-  p.includes("carga")
-) {
-  return `
-<strong>👉 TRANSPORTE DE MERCANCÍAS</strong>
-
-• No hables del camión, habla del dinero
-• La clave es quién pierde si pasa algo
-
-<strong>💡 Clave:</strong>
-No es transporte, es proteger el valor de la carga
-
-<strong>👉 Cierre:</strong>
-Si mañana se pierde la mercancía, ¿quién asume el coste?
-`;
-}
-    
- if (p.includes("ciber")) {
-  return `
-<strong>👉 CIBERSEGURO</strong>
-
-• No empieces por tecnología  
-• Empieza por riesgo real  
-• Pérdida de datos, paralización y dinero  
-
-<hr>
-
-💡 <strong>Clave</strong>  
-No es un seguro, es supervivencia del negocio  
-
-<hr>
-
-👉 <strong>Cierre</strong>  
-Si mañana no puedes facturar por un ataque… ¿qué haces?
-`;
-}    if (p.includes("hogar") || p.includes("casa") || p.includes("vivienda")) {
-      return `
-👉 SEGURO DE HOGAR
-
-• No hables solo de continente y contenido
-• Habla de proteger lo que más valor tiene
-
-💡 Clave:
-No es una casa, es tranquilidad
-
-👉 Cierre:
-¿Tienes cubierto lo que más valor tiene?
-`;
-    }
-
-    if (p.includes("vida")) {
-      return `
-👉 SEGURO DE VIDA
-
-• No empieces por fallecimiento
-• Empieza por protección familiar y estabilidad económica
-
-💡 Clave:
-No es para ti, es para los tuyos
-
-👉 Cierre:
-Si mañana faltaras, ¿tu familia tendría respaldo?
-`;
-    }
-
-
-    if (p.includes("directivo") || p.includes("rc")) {
-      return `
-👉 RC DIRECTIVOS / RESPONSABILIDAD CIVIL
-
-• Empieza por el riesgo personal
-• Una reclamación no la paga el cargo, la paga la persona si no está cubierta
-
-💡 Clave:
-No proteges una empresa, proteges el patrimonio del directivo
-
-👉 Cierre:
-Si mañana te reclaman personalmente, ¿estás cubierto?
-`;
-    }
-
-
-    if (p.includes("salud") || p.includes("asisa")) {
-      return `
-👉 SALUD / ASISA
-
-• Empieza por rapidez y acceso
-• Habla de especialistas, hospitalización y tranquilidad
-
-💡 Clave:
-No es gasto, es cuidado y fidelización
-
-👉 Cierre:
-¿Quieres resolverlo rápido cuando lo necesites o seguir esperando?
-`;
-    }
-
-    if (p.includes("impago")) {
-      return `
-👉 IMPAGO DE ALQUILER
-
-• No vendas solo rentas
-• Vende tranquilidad, defensa jurídica y descanso
-
-💡 Clave:
-El propietario compra dormir tranquilo
-
-👉 Cierre:
-¿Puedes permitirte varios meses sin cobrar?
-`;
-    }
-
-
-
-    if (p.includes("accidente") || p.includes("convenio")) {
-      return `
-👉 ACCIDENTES DE CONVENIO
-
-• Empieza por la obligación
-• Luego habla de protección del empleado y tranquilidad para la empresa
-
-💡 Clave:
-No es una opción, es cumplimiento
-
-👉 Cierre:
-¿Lo tienes ya cubierto o lo dejamos listo?
-`;
-    }
-
-    if (p.includes("dependencia")) {
-      return `
-👉 DEPENDENCIA
-
-• Habla de previsión y cuidados futuros
-• Llévalo a tranquilidad familiar
-
-💡 Clave:
-No vendes edad, vendes previsión
-
-👉 Cierre:
-Si mañana necesitaras ayuda diaria, ¿cómo lo tendrías resuelto?
-`;
-    }
-
-    if (p.includes("decesos")) {
-      return `
-👉 DECESOS
-
-• No hables de muerte
-• Habla de evitar cargas y gestiones a la familia
-
-💡 Clave:
-No vendes un seguro, vendes alivio en el peor momento
-
-👉 Cierre:
-¿Prefieres dejar esto resuelto ahora o que lo gestione tu familia?
-`;
-    }
-
-    if (p.includes("autonomo")) {
-      return `
-👉 PROTECCIÓN AUTÓNOMOS
-
-• No empieces por coberturas
-• Empieza por ingresos
-
-💡 Clave:
-Si no trabajas, no ingresas
-
-👉 Cierre:
-Si mañana no puedes trabajar, ¿qué pasa con tus ingresos?
-`;
-    }
-
-    return `
-👉 GUÍA GENERAL DE VENTA
-
-• No empieces por precio
-• Empieza por el problema real
-• Haz que el cliente lo visualice
-• Presenta el seguro como solución
-
-💡 Vendes tranquilidad, no pólizas
-`;
-  }
-
-  // =========================
-  // PRODUCTOS / CONSULTAS
-  // =========================
-  if (p.includes("ciber")) {
-    return `
-👉 CIBERSEGURO
-
-• No empieces por tecnología, empieza por riesgo real
-• Pérdida de datos, paralización y dinero
-
-💡 Clave:
-No es un seguro, es supervivencia del negocio
-
-👉 Cierre:
-Si mañana no pudieras facturar por un ataque, ¿qué harías?
-`;
-  }
-
-  if (p.includes("credito") || p.includes("poliza py")) {
-    return `
-👉 SEGURO DE CRÉDITO (PÓLIZA PY)
-
-• Cubre facturas impagadas
-• Analiza clientes
-• Gestiona recobro
-
-💡 Clave:
-No vendes seguro, vendes cobrar
-
-👉 Cierre:
-¿Prefieres vender más o vender seguro?
-`;
-  }
-
-  if (p.includes("rc") || p.includes("responsabilidad") || p.includes("directivo")) {
-    return `
-👉 RESPONSABILIDAD CIVIL / D&O
-
-• Protege patrimonio personal
-• Errores, reclamaciones y demandas
-
-💡 Clave:
-No paga la empresa, paga la persona
-
-👉 Cierre:
-Si mañana te reclaman personalmente, ¿estás cubierto?
-`;
-  }
-
-  if (p.includes("multirriesgo")) {
-    return `
-👉 MULTIRRIESGO EMPRESA
-
-• Daños: incendio, agua, robo
-• Parón de negocio
-• Responsabilidad
-
-💡 Clave:
-No es un seguro, es continuidad del negocio
-
-👉 Cierre:
-Si mañana no puedes abrir, ¿cuánto pierdes?
-`;
-  }
-
-  if (p.includes("transporte")) {
-    return `
-👉 TRANSPORTE DE MERCANCÍAS
-
-• Cubre daños o pérdida de mercancía
-
-💡 Clave:
-No es quién transporta, es quién pierde el dinero
-
-👉 Cierre:
-Si se pierde la carga, ¿quién lo paga?
-`;
-  }
-
-  if (p.includes("auto") || p.includes("coche") || p.includes("moto")) {
-    return `
-👉 AUTOS Y MOTOS
-
-• ECO → precio
-• Elección → equilibrio
-• Plus → tranquilidad
-
-💡 Clave:
-No vendas precio, vende siniestro
-
-👉 Cierre:
-¿Prefieres ahorrar hoy o no preocuparte mañana?
-`;
-  }
-
-  if (p.includes("asisa") || p.includes("salud")) {
-    return `
-👉 SALUD ASISA EMPRESA
-
-• Sin copagos
-• Hospitalización incluida
-• Ventaja fiscal
-
-💡 Clave:
-No es gasto, es fidelización
-
-👉 Cierre:
-¿Quieres cuidar al equipo o solo pagar nóminas?
-`;
-  }
-
-  if (p.includes("impago")) {
-    return `
-👉 IMPAGO ALQUILER
-
-• Cubre rentas
-• Defensa jurídica
-• Tiempo y desgaste
-
-💡 Clave:
-No vendes renta, vendes dormir tranquilo
-
-👉 Cierre:
-¿Puedes permitirte meses sin cobrar?
-`;
-  }
-
-  if (p.includes("accidente") || p.includes("convenio")) {
-    return `
-👉 ACCIDENTES CONVENIO
-
-• Obligatorio
-• Sancionable si no lo tienes
-
-💡 Clave:
-No es opción, es obligación + tranquilidad
-
-👉 Cierre:
-¿Lo tienes ya cubierto o lo dejamos listo?
-`;
-  }
-
-  if (p.includes("vida")) {
-    return `
-👉 SEGURO DE VIDA
-
-• Protección familiar
-• Cobertura de deudas
-
-💡 Clave:
-No es para ti, es para los tuyos
-
-👉 Cierre:
-Si faltas mañana, ¿qué pasa con tu familia?
-`;
-  }
-
-  if (p.includes("hogar") || p.includes("casa") || p.includes("vivienda")) {
-    return `
-👉 SEGURO DE HOGAR
-
-• Continente + contenido
-• Responsabilidad civil
-
-💡 Clave:
-No es casa, es tu tranquilidad
-
-👉 Cierre:
-¿Tienes cubierto lo que más valor tiene?
-`;
-  }
-
-  if (p.includes("autonomo")) {
-    return `
-👉 PROTECCIÓN AUTÓNOMOS
-
-• Protección de ingresos
-• Continuidad económica
-
-💡 Clave:
-Si no trabajas, no ingresas
-
-👉 Cierre:
-Si mañana no puedes trabajar, ¿qué haces?
-`;
-  }
-
-  if (p.includes("dependencia")) {
-    return `
-👉 DEPENDENCIA
-
-• Previsión
-• Cuidados futuros
-• Tranquilidad familiar
-
-💡 Clave:
-No es edad, es anticiparse
-
-👉 Cierre:
-¿Quién te ayudaría si mañana dependieras de otros?
-`;
-  }
-
-  if (p.includes("decesos")) {
-    return `
-👉 DECESOS
-
-• Gestión
-• Tranquilidad
-• Protección para la familia
-
-💡 Clave:
-Evitas problemas en el peor momento
-
-👉 Cierre:
-¿Lo quieres dejar resuelto ahora o que lo suyos lo gestionen?
-`;
-  }
-if (p.includes("lo que quieras")) {
-  return `texto`;
-}
-// =========================
-// MODO DIRECTOR
-// =========================
-if (p.includes("modo director") || p.includes("mensaje equipo") || p.includes("dinamizar equipo")) {
-  return `
-👉 MENSAJE PARA EQUIPO
-
-Equipo, hoy no hace falta hacer nada raro.
-
-Simplemente estar atentos a lo que salga en conversación:
-👉 hipoteca → vida + hogar  
-👉 alquiler → impago  
-👉 empresa → RC + ciber+ Transporte+ salud Asisa+ Vida Empresas
-
-Sin forzar, solo aprovechar lo que ya tenemos delante.
-
-Ahí es donde salen las operaciones.
-`;
-}
-
-if (p.includes("empresa equipo")) {
-  return `
-👉 FOCO EMPRESAS
-
-Ojo hoy con empresas.
-
-No empecéis por el seguro:
-👉 actividad  
-👉 empleados  
-👉 local  
-
-De ahí salen solos RC, multirriesgo, Transporte de mercancías, ciber o accidentes.
-
-No es vender, es detectar.
-`;
-}
-
-if (p.includes("equipo precio") || p.includes("es caro equipo")) {
-  return `
-👉 OBJECIÓN PRECIO (EQUIPO)
-
-Cuando os digan “es caro”:
-
-👉 no entréis en precio  
-👉 llevadlo a cobertura  
-👉 y a qué pasaría en un siniestro  
-
-El cliente no compra barato, compra tranquilo.
-`;
-}
-
-if (p.includes("equipo cierre")) {
-  return `
-👉 CIERRE EQUIPO
-
-No preguntéis si lo quiere.
-
-Usad:
-👉 “¿lo dejamos ya activado?”  
-👉 “¿prefieres mensual o anual?”  
-
-Mucho más natural y funciona mejor.
-`;
-}
-
-if (p.includes("equipo objetivo") || p.includes("mensaje motivacion")) {
-  return `
-👉 MENSAJE OBJETIVO
-
-Nos quedan pocos días, pero está más cerca de lo que parece.
-
-Con una operación por persona al día, estamos dentro.
-
-Empezamos nuevo trimestre, a por todas!!
-Con una operación por persona al día, estamos a ritmo
-
-👉 mirad cartera  
-👉 llamad a clientes vivos  
-👉 aprovechad cualquier conversación  
-
-Vamos a por ello 💪
-`;
-}
-
-if (p.includes("equipo ciber")) {
-  return `
-👉 FOCO CIBER
-
-No habléis de tecnología.
-
-Hablad de:
-👉 perder datos  
-👉 no poder trabajar  
-👉 perder dinero  
-👉 tienes antivirus?
-👉 qué actividad tienes?
-
-Ahí es donde lo entienden todos.
-`;
-}
-  return `
-Hazme la pregunta más concreta:
-
-👉 crédito, empresa, RC, ciber, transporte, impago
-👉 Asisa, autos, vida, hogar, autónomos, accidentes, dependencia o decesos
-
-Y te ayudo a cerrarlo.
-`;
-}
-  
-
-  function enviar() {
-    const texto = input.value.trim();
-    if (!texto) return;
-    addMsg(texto, "user");
-    const respuesta = responder(texto);
-    addMsg(respuesta, "bot");
-    input.value = "";
-    input.focus();
-  }
-
-  btn.onclick = function () {
-    box.style.display = box.style.display === "flex" ? "none" : "flex";
-  };
-
-  send.onclick = enviar;
-  input.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") enviar();
-  });
-document.querySelectorAll(".chatQuickBtn").forEach(function (btnQuick) {
-  btnQuick.addEventListener("click", function () {
-    lanzarBoton(this.dataset.prompt);
-  });
-});
-function lanzarBoton(texto) {
-  const input = document.getElementById("chatInput");
-  const messages = document.getElementById("chatMessages");
-
-  // limpiar conversación visible para que se vea clara la respuesta del botón
-  messages.innerHTML = "";
-
-  // mostrar la consulta elegida
-  addMsg(texto, "user");
-
-  // responder
-  const respuesta = responder(texto);
-  addMsg(respuesta, "bot");
-
-  input.value = "";
-  input.focus();
-
-  // asegurar que se vea el inicio del mensaje nuevo
-  setTimeout(() => {
-    messages.scrollTop = 0;
-  }, 50);
-}  addMsg("Hola. Pregúntame sobre ventas, productos u objeciones.", "bot");
-})();
-</script>
-<!-- ===== FIN CHATBOT SASA ===== -->
-
-</body>
-
-</html>
-
