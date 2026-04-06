@@ -2142,198 +2142,235 @@ function abrirSeguroYSubtab(subtabId) {
  }
 
 function detectarOportunidades() {
+  const clienteBanco = document.getElementById("detClienteBanco")?.value || "";
   const edad = parseInt(document.getElementById("detEdad")?.value || "0", 10) || 0;
-  const perfil = document.getElementById("detPerfil")?.value || "";
-  const tipoCliente = document.getElementById("detTipoCliente")?.value || "";
   const sexo = document.getElementById("detSexo")?.value || "";
+  const perfil = document.getElementById("detPerfil")?.value || "";
   const profesion = (document.getElementById("detProfesion")?.value || "").toLowerCase();
+  const prioridad = document.getElementById("detPrioridad")?.value || "";
 
-  const hipoteca = document.getElementById("detHipoteca")?.checked || false;
   const hijos = document.getElementById("detHijos")?.checked || false;
+  const hipoteca = document.getElementById("detHipoteca")?.checked || false;
+  const prestamo = document.getElementById("detPrestamo")?.checked || false;
   const vivienda = document.getElementById("detVivienda")?.checked || false;
-  const dinero = document.getElementById("detDinero")?.checked || false;
-  const venta = document.getElementById("detVenta")?.checked || false;
-  const ingresos = document.getElementById("detIngresos")?.checked || false;
-  const negocio = document.getElementById("detNegocio")?.checked || false;
-  const empleados = document.getElementById("detEmpleados")?.checked || false;
-  const datos = document.getElementById("detDatos")?.checked || false;
-  const mercancia = document.getElementById("detMercancia")?.checked || false;
-  const dependeTrabajo = document.getElementById("detDependeTrabajo")?.checked || false;
-  const socioClave = document.getElementById("detSocioClave")?.checked || false;
   const segurosAntiguos = document.getElementById("detSegurosAntiguos")?.checked || false;
   const salud = document.getElementById("detSalud")?.checked || false;
   const dependencia = document.getElementById("detDependencia")?.checked || false;
+  const decesos = document.getElementById("detDecesos")?.checked || false;
 
-  const recomendaciones = [];
+  const dinero = document.getElementById("detDinero")?.checked || false;
+  const venta = document.getElementById("detVenta")?.checked || false;
+  const ingresos = document.getElementById("detIngresos")?.checked || false;
+  const ahorro = document.getElementById("detAhorro")?.checked || false;
 
-  function agregar(nombre, prioridad, motivo) {
-    const existente = recomendaciones.find(r => r.nombre === nombre);
-    if (!existente) {
-      recomendaciones.push({ nombre, prioridad, motivo });
-    }
-  }
+  const dependeTrabajo = document.getElementById("detDependeTrabajo")?.checked || false;
+  const negocio = document.getElementById("detNegocio")?.checked || false;
+  const empleados = document.getElementById("detEmpleados")?.checked || false;
+  const socioClave = document.getElementById("detSocioClave")?.checked || false;
+  const datos = document.getElementById("detDatos")?.checked || false;
+  const mercancia = document.getElementById("detMercancia")?.checked || false;
+  const credito = document.getElementById("detCredito")?.checked || false;
+  const exporta = document.getElementById("detExporta")?.checked || false;
 
-  function prioridadTexto(n) {
-    if (n >= 90) return "Muy alta";
-    if (n >= 70) return "Alta";
-    if (n >= 50) return "Media";
-    return "Revisable";
-  }
+  const coche = document.getElementById("detCoche")?.checked || false;
+  const moto = document.getElementById("detMoto")?.checked || false;
+  const flota = document.getElementById("detFlota")?.checked || false;
+  const camiones = document.getElementById("detCamiones")?.checked || false;
 
-  if (hipoteca || hijos) {
-    agregar("Seguro de Vida", 85, "Tiene hipoteca, préstamo o personas a cargo.");
-  }
-
-  if (vivienda) {
-    agregar("Seguro de Hogar", 75, "Tiene vivienda y conviene revisar protección del inmueble y responsabilidad civil.");
-  }
-
-  if (salud) {
-    agregar("Seguro de Salud", 70, "Hay interés en asistencia sanitaria privada o en evitar listas de espera.");
-  }
-
-  if (
-    perfil === "autonomo" ||
-    dependeTrabajo ||
-    profesion.includes("autónom") ||
-    profesion.includes("autonom") ||
-    profesion.includes("taxi") ||
-    profesion.includes("médic") ||
-    profesion.includes("medic") ||
-    profesion.includes("abogad") ||
-    profesion.includes("comercial")
-  ) {
-    agregar("Incapacidad Temporal", 90, "Depende de su trabajo diario para mantener ingresos.");
-    agregar("Accidentes", 75, "Puede tener sentido reforzar protección personal por accidente.");
-  }
-
-  if (perfil === "autonomo" || negocio) {
-    agregar("Responsabilidad Civil", 65, "Conviene revisar daños a terceros derivados de la actividad.");
-  }
-
-  if (edad >= 65 && (dinero || venta || ingresos || perfil === "jubilado")) {
-    agregar("Renta Vitalicia", 95, "Perfil muy claro para revisar rentas, ahorro parado o reinversión.");
-  }
-
-  if ((dinero || venta) && edad >= 55) {
-    agregar("Europa 8", 60, "Puede interesar revisar soluciones de ahorro o inversión conservadora.");
-  }
-
-  if (edad >= 64) {
-    agregar("Decesos", 75, "Por edad conviene revisar protección de decesos.");
-  }
-
-  if (edad >= 64 || dependencia) {
-    agregar("Dependencia", 65, "Puede tener sentido revisar protección futura y situaciones de dependencia.");
-  }
-
-  if (sexo === "mujer") {
-    agregar(
-      "Seguro Femenino",
-      (hijos || salud) ? 75 : 60,
-      "Puede encajar por perfil y necesidades de protección específicas."
-    );
-  }
-
-  if (negocio) {
-    agregar("Multirriesgo Empresa", 80, "Tiene negocio o local y conviene proteger continente, contenido y actividad.");
-  }
-
-  if (empleados) {
-    agregar("Accidentes Convenio", 85, "Tiene empleados y conviene revisar obligación o necesidad de cobertura.");
-  }
-
-  if (datos) {
-    agregar("Ciberseguro", 80, "Gestiona datos o sistemas y existe riesgo digital.");
-  }
-
-  if (mercancia) {
-    agregar("Transporte", 80, "Envía o recibe mercancía y puede necesitar protección del transporte.");
-  }
-
-  if (socioClave || profesion.includes("administrador") || profesion.includes("gerente")) {
-    agregar("D&O", 70, "Puede existir exposición como administrador o figura clave.");
-  }
-
-  if (tipoCliente === "juridica" && dependeTrabajo) {
-    agregar("Incapacidad Temporal", 70, "Aunque sea persona jurídica, hay dependencia de la actividad de una persona clave.");
-  }
-
-  if (segurosAntiguos) {
-    agregar("Revisión integral de seguros", 75, "Tiene seguros sin revisar y puede haber oportunidad transversal.");
-  }
-
-  recomendaciones.sort((a, b) => b.prioridad - a.prioridad);
-
+  const resultado = document.getElementById("detectorResultado");
   const resumen = document.getElementById("detectorResumen");
-  const productos = document.getElementById("detectorProductos");
+  const alta = document.getElementById("detectorAlta");
+  const media = document.getElementById("detectorMedia");
+  const comp = document.getElementById("detectorComplementaria");
   const frase = document.getElementById("detectorFrase");
-  const bloque = document.getElementById("detectorResultado");
 
-  if (!bloque || !resumen || !productos || !frase) return;
+  if (!resultado || !resumen || !alta || !media || !comp || !frase) return;
 
-  if (recomendaciones.length === 0) {
-    bloque.style.display = "block";
-    resumen.innerHTML = "<p><strong>No se detectó una oportunidad clara con los datos marcados.</strong></p><p>Prueba añadiendo más información del cliente.</p>";
-    productos.innerHTML = "";
-    frase.textContent = "Frase sugerida: Vamos a revisar un momento tu situación para ver si hay algo que realmente te encaje.";
+  if (clienteBanco !== "si" || edad < 18) {
+    resultado.style.display = "block";
+    resumen.innerHTML = `<p><strong>Revisión no aplicable.</strong></p>
+      <p>La herramienta está pensada para clientes del banco y mayores de 18 años.</p>`;
+    alta.innerHTML = "";
+    media.innerHTML = "";
+    comp.innerHTML = "";
+    frase.textContent = "Frase sugerida: Primero confirmamos si cumple condiciones básicas y, a partir de ahí, revisamos qué puede encajarle.";
     return;
   }
 
-  resumen.innerHTML = `
-    <p><strong>Perfil analizado:</strong> ${perfil || "No indicado"} ${edad ? "· " + edad + " años" : ""} ${sexo ? "· " + sexo : ""}</p>
-    <p><strong>Resultado:</strong> Se han detectado ${recomendaciones.length} oportunidades comerciales revisables.</p>
-  `;
+  const recomendaciones = [];
 
-  productos.innerHTML = `
-    <table style="width:100%; border-collapse:collapse; margin-top:10px;">
-      <thead>
-        <tr style="background:#f1f1f1;">
-          <th style="padding:8px; border:1px solid #ddd; text-align:left;">Producto</th>
-          <th style="padding:8px; border:1px solid #ddd; text-align:left;">Prioridad</th>
-          <th style="padding:8px; border:1px solid #ddd; text-align:left;">Motivo</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${recomendaciones.map(r => `
-          <tr>
-            <td style="padding:8px; border:1px solid #ddd;">${r.nombre}</td>
-            <td style="padding:8px; border:1px solid #ddd;">${prioridadTexto(r.prioridad)}</td>
-            <td style="padding:8px; border:1px solid #ddd;">${r.motivo}</td>
-          </tr>
-        `).join("")}
-      </tbody>
-    </table>
-  `;
-
-  const top = recomendaciones[0]?.nombre || "una revisión comercial";
-  let fraseSugerida = `Frase sugerida: Por lo que veo en tu perfil, puede tener sentido revisar ${top.toLowerCase()} para ver si realmente te encaja.`;
-
-  if (top === "Renta Vitalicia") {
-    fraseSugerida = "Frase sugerida: Por tu perfil, puede tener mucho sentido revisar si parte de ese ahorro te puede generar ingresos o una mejor planificación.";
-  } else if (top === "Incapacidad Temporal") {
-    fraseSugerida = "Frase sugerida: Aquí lo importante es ver qué pasaría con tus ingresos si mañana no pudieras trabajar durante una temporada.";
-  } else if (top === "Decesos") {
-    fraseSugerida = "Frase sugerida: También conviene revisar si tienes bien resuelta la parte de decesos para dejar esa tranquilidad cubierta.";
-  } else if (top === "Dependencia") {
-    fraseSugerida = "Frase sugerida: Puede ser buen momento para revisar la parte de protección futura y dependencia, por tranquilidad y previsión.";
-  } else if (top === "Seguro Femenino") {
-    fraseSugerida = "Frase sugerida: Por tu perfil, puede tener sentido revisar también una protección específica femenina y ver si encaja contigo.";
-  } else if (top === "Multirriesgo Empresa") {
-    fraseSugerida = "Frase sugerida: Aquí no se trata solo del local, sino de proteger la actividad y el dinero que puede perder el negocio si pasa algo.";
+  function agregar(nombre, nivel, motivo) {
+    const existe = recomendaciones.find(r => r.nombre === nombre);
+    if (!existe) recomendaciones.push({ nombre, nivel, motivo });
   }
 
+  function subirPorPrioridad(nombreObjetivo) {
+    const item = recomendaciones.find(r => r.nombre === nombreObjetivo);
+    if (item && item.nivel === "media") item.nivel = "alta";
+  }
+
+  // PERSONALES Y FAMILIA
+  if (hipoteca) agregar("Vida vinculado a hipoteca", "alta", "Tiene hipoteca y conviene revisar protección vinculada.");
+  if (prestamo) agregar("Vida vinculado a préstamo consumo", "media", "Tiene préstamo o financiación y puede encajar protección vinculada.");
+  if (hijos || hipoteca) agregar("Vida Familiar Plus", "alta", "Tiene familia, personas a cargo o hipoteca.");
+  if (!hijos && !hipoteca && edad >= 18 && edad < 65) agregar("Vida Esencial", "media", "Puede encajar protección básica solo fallecimiento.");
+  if (sexo === "mujer") agregar("Vida en Femenino", salud || hijos ? "alta" : "media", "Puede encajar por perfil y protección específica.");
+  if (edad >= 18 && edad < 70) agregar("Accidentes Protección Integral", dependeTrabajo ? "alta" : "media", "Puede reforzar protección personal por accidente.");
+  if (edad >= 60) agregar("Protección Senior", "media", "Por edad puede tener sentido revisar protección senior.");
+  if ((edad >= 64) || dependencia) agregar("Dependencia", "media", "Puede tener sentido revisar protección futura y dependencia.");
+  if ((edad >= 64) || decesos) agregar("Decesos", "media", "Puede ser momento de dejar resuelta la parte de decesos.");
+
+  // SALUD
+  if (salud && (perfil === "empresa" || empleados)) {
+    agregar("Salud Asisa Empresa", "alta", "Hay encaje de salud para empresa o empleados.");
+  } else if (salud && (perfil === "autonomo-fisica" || perfil === "autonomo-juridica")) {
+    agregar("Salud Aegon Autónomos", "alta", "Hay interés en salud y encaja perfil autónomo.");
+  } else if (salud) {
+    agregar("Salud Aegon Particular", "alta", "Hay interés en salud o evitar listas de espera.");
+  }
+
+  // INGRESOS Y ACTIVIDAD
+  if (perfil === "autonomo-fisica" || dependeTrabajo || profesion.includes("autónom") || profesion.includes("autonom")) {
+    agregar("Incapacidad Temporal Autónomos", "alta", "Depende de trabajar a diario para generar ingresos.");
+  }
+
+  if ((perfil === "autonomo-juridica" || perfil === "empresa") && socioClave) {
+    agregar("ITA digital", "alta", "La actividad depende de una persona clave.");
+  }
+
+  if (dependeTrabajo && (perfil === "empleado" || perfil === "particular")) {
+    agregar("Protección de Ingresos", "media", "Puede encajar para proteger ingresos ante imprevistos.");
+  }
+
+  // AMA DE CASA
+  if (perfil === "amacasa") {
+    agregar("Vida Familiar Plus", hijos || hipoteca ? "alta" : "media", "Puede encajar por protección familiar.");
+    if (salud) agregar("Salud Aegon Particular", "alta", "Interés claro en salud.");
+    if (sexo === "mujer") agregar("Vida en Femenino", "media", "Encaje por perfil femenino.");
+    if (vivienda) agregar("Mi Hogar", "media", "Tiene vivienda y conviene revisar hogar.");
+  }
+
+  // AHORRO / INVERSIÓN
+  if (edad >= 65 && (dinero || venta || ingresos || perfil === "jubilado")) {
+    agregar("Renta Vitalicia", "alta", "Perfil claro para revisar rentas, liquidez o reinversión.");
+  }
+
+  if (edad >= 55 && (dinero || venta || ahorro)) {
+    agregar("Europa 8", "media", "Puede encajar como solución de ahorro inversión.");
+  }
+
+  // HOGAR
+  if (vivienda) agregar("Mi Hogar", "alta", "Tiene vivienda y conviene revisar protección del inmueble y responsabilidad civil.");
+
+  // EMPRESA
+  if (negocio) agregar("Multirriesgo Empresa", "alta", "Tiene negocio o local y conviene proteger actividad y contenido.");
+  if (negocio || perfil === "empresa" || perfil === "autonomo-fisica" || perfil === "autonomo-juridica") {
+    agregar("Responsabilidad Civil", "alta", "Conviene revisar daños a terceros derivados de la actividad.");
+  }
+  if (empleados) agregar("Accidentes Convenio Colectivo", "alta", "Tiene empleados y conviene revisar convenio colectivo.");
+  if ((perfil === "empresa" || perfil === "autonomo-juridica") && socioClave) {
+    agregar("Protección Empresas", "media", "Puede encajar protección de vida para empresas.");
+    agregar("D&O", "media", "Puede existir exposición como administrador o figura clave.");
+  }
+  if (datos) agregar("Ciberseguro", "alta", "Gestiona datos o sistemas y existe riesgo digital.");
+  if (mercancia) agregar("Transporte de mercancías", "alta", "Envía o recibe mercancía y puede necesitar cobertura específica.");
+  if (credito || exporta) agregar("Seguro de Crédito Póliza PY", "alta", "Vende a crédito o trabaja con riesgo de impago.");
+  if (credito) subirPorPrioridad("Seguro de Crédito Póliza PY");
+
+  // VEHÍCULOS
+  if (coche) agregar("Seguro de Auto", "alta", "Tiene coche y conviene revisar precio y coberturas.");
+  if (moto) agregar("Seguro de Moto", "media", "Tiene moto y puede interesar revisar modalidad y asistencia.");
+  if (flota) agregar("Flotas", "alta", "Tiene varios vehículos y conviene revisar aseguramiento conjunto.");
+  if (camiones) agregar("Flotas / Camiones", "alta", "Tiene camiones o vehículos pesados y requiere revisión específica.");
+
+  // AJUSTES POR PRIORIDAD PRINCIPAL
+  if (prioridad === "salud") {
+    subirPorPrioridad("Salud Aegon Particular");
+    subirPorPrioridad("Salud Aegon Autónomos");
+    subirPorPrioridad("Salud Asisa Empresa");
+  }
+  if (prioridad === "ahorro") {
+    subirPorPrioridad("Renta Vitalicia");
+    subirPorPrioridad("Europa 8");
+  }
+  if (prioridad === "empresa") {
+    subirPorPrioridad("Multirriesgo Empresa");
+    subirPorPrioridad("Responsabilidad Civil");
+    subirPorPrioridad("Ciberseguro");
+    subirPorPrioridad("Seguro de Crédito Póliza PY");
+  }
+  if (prioridad === "vehiculos") {
+    subirPorPrioridad("Seguro de Auto");
+    subirPorPrioridad("Seguro de Moto");
+    subirPorPrioridad("Flotas");
+    subirPorPrioridad("Flotas / Camiones");
+  }
+
+  if (segurosAntiguos) {
+    agregar("Revisión integral de seguros", "media", "Tiene seguros antiguos o sin revisar.");
+  }
+
+  const altas = recomendaciones.filter(r => r.nivel === "alta");
+  const medias = recomendaciones.filter(r => r.nivel === "media");
+  const complementarias = recomendaciones.filter(r => r.nivel !== "alta" && r.nivel !== "media");
+
+  resumen.innerHTML = `
+    <p><strong>Perfil analizado:</strong> ${perfil || "No indicado"} · ${edad} años ${sexo ? "· " + sexo : ""}</p>
+    <p><strong>Resultado:</strong> ${recomendaciones.length} oportunidades detectadas.</p>
+  `;
+
+  function pintarBloque(titulo, items) {
+    if (!items.length) return `<div class="card" style="margin-top:12px;"><h3>${titulo}</h3><p class="muted">Sin resultados en este bloque.</p></div>`;
+    return `
+      <div class="card" style="margin-top:12px;">
+        <h3>${titulo}</h3>
+        <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+          <thead>
+            <tr style="background:#f1f1f1;">
+              <th style="padding:8px; border:1px solid #ddd; text-align:left;">Producto</th>
+              <th style="padding:8px; border:1px solid #ddd; text-align:left;">Motivo</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${items.map(i => `
+              <tr>
+                <td style="padding:8px; border:1px solid #ddd;">${i.nombre}</td>
+                <td style="padding:8px; border:1px solid #ddd;">${i.motivo}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  alta.innerHTML = pintarBloque("Prioridad alta", altas);
+  media.innerHTML = pintarBloque("Interesante revisar", medias);
+  comp.innerHTML = complementarias.length ? pintarBloque("Complementarios", complementarias) : "";
+
+  let fraseSugerida = "Frase sugerida: Por lo que veo en tu perfil, puede tener sentido revisar contigo qué protecciones encajan de verdad y cuáles pueden aportarte más valor ahora mismo.";
+
+  const top = altas[0]?.nombre || medias[0]?.nombre || "";
+  if (top === "Renta Vitalicia") fraseSugerida = "Frase sugerida: Por tu perfil, puede tener mucho sentido revisar si parte de ese ahorro te puede generar ingresos o una mejor planificación.";
+  if (top === "Incapacidad Temporal Autónomos" || top === "ITA digital") fraseSugerida = "Frase sugerida: Aquí lo importante es ver qué pasaría con tus ingresos o con la actividad si mañana no pudieras trabajar durante una temporada.";
+  if (top === "Salud Aegon Particular" || top === "Salud Aegon Autónomos" || top === "Salud Asisa Empresa") fraseSugerida = "Frase sugerida: Si te parece, revisamos la parte de salud y vemos qué opción te encaja mejor por perfil y uso real.";
+  if (top === "Seguro de Crédito Póliza PY") fraseSugerida = "Frase sugerida: Aquí no solo se trata del impago, sino de proteger la tesorería y vender con más seguridad.";
+  if (top === "Multirriesgo Empresa") fraseSugerida = "Frase sugerida: Aquí no se trata solo del local, sino de proteger la actividad y el dinero que puede perder el negocio si pasa algo.";
+  if (top === "Vida Familiar Plus" || top === "Vida Esencial" || top === "Vida vinculado a hipoteca") fraseSugerida = "Frase sugerida: Lo importante es ver si esa parte de protección familiar o vinculada la tienes bien resuelta y si encaja contigo hoy.";
+
   frase.textContent = fraseSugerida;
-  bloque.style.display = "block";
+  resultado.style.display = "block";
 }
 
 function limpiarDetectorOportunidades() {
   const idsTexto = ["detEdad", "detProfesion"];
-  const idsSelect = ["detPerfil", "detTipoCliente", "detSexo"];
+  const idsSelect = ["detClienteBanco", "detSexo", "detPerfil", "detPrioridad"];
   const idsChecks = [
-    "detHipoteca", "detHijos", "detVivienda", "detDinero", "detVenta", "detIngresos",
-    "detNegocio", "detEmpleados", "detDatos", "detMercancia", "detDependeTrabajo",
-    "detSocioClave", "detSegurosAntiguos", "detSalud", "detDependencia"
+    "detHijos", "detHipoteca", "detPrestamo", "detVivienda", "detSegurosAntiguos",
+    "detSalud", "detDependencia", "detDecesos", "detDinero", "detVenta",
+    "detIngresos", "detAhorro", "detDependeTrabajo", "detNegocio", "detEmpleados",
+    "detSocioClave", "detDatos", "detMercancia", "detCredito", "detExporta",
+    "detCoche", "detMoto", "detFlota", "detCamiones"
   ];
 
   idsTexto.forEach(id => {
@@ -2351,17 +2388,26 @@ function limpiarDetectorOportunidades() {
     if (el) el.checked = false;
   });
 
-  const bloque = document.getElementById("detectorResultado");
+  const resultado = document.getElementById("detectorResultado");
   const resumen = document.getElementById("detectorResumen");
-  const productos = document.getElementById("detectorProductos");
+  const alta = document.getElementById("detectorAlta");
+  const media = document.getElementById("detectorMedia");
+  const comp = document.getElementById("detectorComplementaria");
   const frase = document.getElementById("detectorFrase");
+  const alquiler = document.getElementById("detAlquiler")?.checked || false;
+  const arrendador = document.getElementById("detArrendador")?.checked || false;
+  const rentasAlquiler = document.getElementById("detRentasAlquiler")?.checked || false;
 
-  if (bloque) bloque.style.display = "none";
+  if (resultado) resultado.style.display = "none";
   if (resumen) resumen.innerHTML = "";
-  if (productos) productos.innerHTML = "";
+  if (alta) alta.innerHTML = "";
+  if (media) media.innerHTML = "";
+  if (comp) comp.innerHTML = "";
   if (frase) frase.textContent = "";
-}
 
+"detAlquiler", "detArrendador", "detRentasAlquiler"
+
+}
 function generarDossier() {
   const checks = document.querySelectorAll('input[type="checkbox"]:checked');
   let contenido = "";
