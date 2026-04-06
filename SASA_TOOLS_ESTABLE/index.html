@@ -503,40 +503,41 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
 
 
 
+
+
+
 <section id="detector-oportunidades" class="main-section" style="display:none;">
 
-  <h1>Detector de oportunidades</h1>
-  <p>Herramienta rápida para detectar qué productos revisar según edad, perfil y situación del cliente.</p>
+  <div class="section-head">
+    <h1>🎯 Detector de oportunidades</h1>
+    <p class="muted">
+      Herramienta rápida para detectar productos recomendables según perfil, edad, situación personal, profesional y necesidades del cliente.
+    </p>
+  </div>
+
+  <div class="card accent">
+    <h2>Condición base</h2>
+    <div class="grid-2">
+      <label class="field">
+        <span>¿Es cliente del banco?</span>
+        <select id="detClienteBanco">
+          <option value="">Selecciona</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>Edad</span>
+        <input type="number" id="detEdad" min="0" max="100" placeholder="Ej. 46">
+      </label>
+    </div>
+  </div>
 
   <div class="card">
     <h2>Datos básicos</h2>
 
-    <div class="grid2">
-      <label class="field">
-        <span>Edad</span>
-        <input type="number" id="detEdad" min="0" max="100" placeholder="Ej. 67">
-      </label>
-
-      <label class="field">
-        <span>Perfil</span>
-        <select id="detPerfil">
-          <option value="">Selecciona</option>
-          <option value="particular">Particular</option>
-          <option value="autonomo">Autónomo</option>
-          <option value="empresa">Empresa</option>
-          <option value="jubilado">Jubilado</option>
-        </select>
-      </label>
-
-      <label class="field">
-        <span>Tipo de cliente</span>
-        <select id="detTipoCliente">
-          <option value="">Selecciona</option>
-          <option value="fisica">Persona física</option>
-          <option value="juridica">Persona jurídica</option>
-        </select>
-      </label>
-
+    <div class="grid-2">
       <label class="field">
         <span>Sexo</span>
         <select id="detSexo">
@@ -547,31 +548,88 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
       </label>
 
       <label class="field">
+        <span>Perfil principal</span>
+        <select id="detPerfil">
+          <option value="">Selecciona</option>
+          <option value="particular">Particular</option>
+          <option value="empleado">Empleado por cuenta ajena</option>
+          <option value="autonomo-fisica">Autónomo persona física</option>
+          <option value="autonomo-juridica">Autónomo persona jurídica</option>
+          <option value="empresa">Empresa</option>
+          <option value="jubilado">Jubilado</option>
+          <option value="amacasa">Ama de casa</option>
+          <option value="desempleado">Desempleado</option>
+        </select>
+      </label>
+
+      <label class="field">
         <span>Profesión o situación</span>
         <input type="text" id="detProfesion" placeholder="Ej. médico, taxista, administrador, jubilado...">
+      </label>
+     
+      <label class="field">
+        <span>Prioridad principal</span>
+        <select id="detPrioridad">
+          <option value="">Selecciona</option>
+          <option value="proteccion">Protección</option>
+          <option value="salud">Salud</option>
+          <option value="ahorro">Ahorro / inversión</option>
+          <option value="empresa">Empresa</option>
+          <option value="vehiculos">Vehículos</option>
+        </select>
       </label>
     </div>
   </div>
 
   <div class="card">
-    <h2>Situación detectada</h2>
-
-    <div class="grid2">
-      <label><input type="checkbox" id="detHipoteca"> Tiene hipoteca o préstamo</label>
+    <h2>Situación personal y familiar</h2>
+    <div class="grid-2">
       <label><input type="checkbox" id="detHijos"> Tiene hijos o personas a cargo</label>
+      <label><input type="checkbox" id="detHipoteca"> Tiene hipoteca</label>
+      <label><input type="checkbox" id="detPrestamo"> Tiene préstamo o financiación consumo</label>
       <label><input type="checkbox" id="detVivienda"> Tiene vivienda</label>
-      <label><input type="checkbox" id="detDinero"> Tiene dinero parado en cuenta</label>
-      <label><input type="checkbox" id="detVenta"> Ha vendido una propiedad o negocio</label>
-      <label><input type="checkbox" id="detIngresos"> Quiere ingresos periódicos</label>
-      <label><input type="checkbox" id="detNegocio"> Tiene negocio o local</label>
-      <label><input type="checkbox" id="detEmpleados"> Tiene empleados</label>
-      <label><input type="checkbox" id="detDatos"> Gestiona datos de clientes o usa sistemas informáticos</label>
-      <label><input type="checkbox" id="detMercancia"> Envía o recibe mercancía</label>
-      <label><input type="checkbox" id="detDependeTrabajo"> Depende de trabajar a diario para ingresar</label>
-      <label><input type="checkbox" id="detSocioClave"> Es socio clave, administrador o figura clave</label>
       <label><input type="checkbox" id="detSegurosAntiguos"> Tiene seguros antiguos o sin revisar</label>
       <label><input type="checkbox" id="detSalud"> Le preocupa salud o listas de espera</label>
       <label><input type="checkbox" id="detDependencia"> Le preocupa dependencia o futuro</label>
+      <label><input type="checkbox" id="detDecesos"> Quiere dejar resuelto decesos</label>
+      <label><input type="checkbox" id="detAlquiler"> Tiene vivienda alquilada o va a alquilarla</label>
+      <label><input type="checkbox" id="detArrendador"> Es propietario arrendador</label>
+      <label><input type="checkbox" id="detRentasAlquiler"> Tiene ingresos por alquiler</label>
+
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Situación económica y ahorro</h2>
+    <div class="grid-2">
+      <label><input type="checkbox" id="detDinero"> Tiene dinero parado en cuenta o depósitos</label>
+      <label><input type="checkbox" id="detVenta"> Ha vendido una vivienda, negocio o patrimonio</label>
+      <label><input type="checkbox" id="detIngresos"> Quiere ingresos periódicos</label>
+      <label><input type="checkbox" id="detAhorro"> Quiere ahorrar o rentabilizar capital</label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Actividad profesional y empresa</h2>
+    <div class="grid-2">
+      <label><input type="checkbox" id="detDependeTrabajo"> Depende de trabajar a diario para ingresar</label>
+      <label><input type="checkbox" id="detNegocio"> Tiene negocio o local</label>
+      <label><input type="checkbox" id="detEmpleados"> Tiene empleados</label>
+      <label><input type="checkbox" id="detSocioClave"> Es administrador, socio o figura clave</label>
+      <label><input type="checkbox" id="detDatos"> Gestiona datos de clientes o usa sistemas informáticos</label>
+      <label><input type="checkbox" id="detMercancia"> Envía o recibe mercancía</label>
+      <label><input type="checkbox" id="detCredito"> Vende a crédito o a plazo</label>
+      <label><input type="checkbox" id="detExporta"> Exporta o trabaja con clientes extranjeros</label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Vehículos</h2>
+    <div class="grid-2">
+      <label><input type="checkbox" id="detCoche"> Tiene coche</label>
+      <label><input type="checkbox" id="detMoto"> Tiene moto</label>
+      <label><input type="checkbox" id="detFlota"> Tiene flota o varios vehículos</label>
+      <label><input type="checkbox" id="detCamiones"> Tiene camiones o vehículos pesados</label>
     </div>
   </div>
 
@@ -583,18 +641,13 @@ Información comercial orientativa. Promociones vigentes sujetas a actualizació
   <div id="detectorResultado" class="card" style="display:none; margin-top:20px;">
     <h2>Resultado</h2>
     <div id="detectorResumen"></div>
-    <div id="detectorProductos" style="margin-top:15px;"></div>
+    <div id="detectorAlta" style="margin-top:15px;"></div>
+    <div id="detectorMedia" style="margin-top:15px;"></div>
+    <div id="detectorComplementaria" style="margin-top:15px;"></div>
     <div id="detectorFrase" class="tip-comercial" style="margin-top:15px;"></div>
   </div>
 
 </section>
-
-
-
-
-
-
-
 
 
 
