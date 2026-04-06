@@ -1747,7 +1747,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   const promos = document.querySelectorAll("#promociones .promo-card");
   const hoy = new Date();
@@ -1806,24 +1805,635 @@ document.addEventListener("DOMContentLoaded", function () {
 
     badge.textContent = estado;
     badge.style.background = color;
+
+    card.classList.remove("promo-activa", "promo-proxima", "promo-urgente", "promo-inactiva");
+
+    if (estado === "ACTIVA") card.classList.add("promo-activa");
+    if (estado === "PRÓXIMA") card.classList.add("promo-proxima");
+    if (estado === "PRÓXIMA A VENCER") card.classList.add("promo-urgente");
+    if (estado === "INACTIVA") card.classList.add("promo-inactiva");
   });
 });
-card.classList.remove("promo-activa", "promo-proxima", "promo-urgente", "promo-inactiva");
 
-if (estado === "ACTIVA") card.classList.add("promo-activa");
-if (estado === "PRÓXIMA") card.classList.add("promo-proxima");
-if (estado === "PRÓXIMA A VENCER") card.classList.add("promo-urgente");
-if (estado === "INACTIVA") card.classList.add("promo-inactiva");
-
-function openEmpresaTab(evt, panelId) {
-  document.querySelectorAll('.empresa-panel').forEach(panel => {
-    panel.style.display = 'none';
+function openEmpresaTab(evt, tabId) {
+  document.querySelectorAll(".empresa-panel").forEach(panel => {
+    panel.style.display = "none";
   });
 
-  document.querySelectorAll('.subtab-empresa').forEach(btn => {
-    btn.classList.remove('active');
+  document.querySelectorAll(".subtab-empresa").forEach(btn => {
+    btn.classList.remove("active");
   });
 
-  document.getElementById(panelId).style.display = 'block';
-  evt.currentTarget.classList.add('active');
+  const target = document.getElementById(tabId);
+  if (target) target.style.display = "block";
+
+  if (evt && evt.currentTarget) {
+    evt.currentTarget.classList.add("active");
+  }
+}
+
+function irAPestana(target) {
+  const boton = document.querySelector(`.main-tab[data-target="${target}"]`);
+  if (boton) {
+    boton.click();
+  } else {
+    console.warn("No encontré pestaña principal con data-target =", target);
+  }
+}
+// =====================================
+// NAVEGACIÓN DIRECTA A PESTAÑAS (FIX DEFINITIVO)
+// =====================================
+function irAPestana(id) {
+
+  // Ocultar todas las secciones
+  document.querySelectorAll(".main-section").forEach(sec => {
+    sec.style.display = "none";
+    sec.classList.remove("active");
+  });
+
+  // Quitar activo a todos los botones
+  document.querySelectorAll(".main-tab").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  // Mostrar la sección correcta
+  const target = document.getElementById(id);
+  if (!target) {
+    console.error("❌ NO EXISTE ESTE ID:", id);
+    return;
+  }
+
+  target.style.display = "block";
+  target.classList.add("active");
+
+  // Activar botón del menú
+  const btn = document.querySelector(`.main-tab[data-target="${id}"]`);
+  if (btn) btn.classList.add("active");
+
+  // Scroll arriba
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function copiarTexto(btn) {
+  const texto = btn.parentElement.innerText.replace("Copiar", "").trim();
+
+  navigator.clipboard.writeText(texto).then(() => {
+    btn.innerText = "Copiado ✔";
+    setTimeout(() => {
+      btn.innerText = "Copiar";
+    }, 1500);
+  });
+}
+
+function generarWhatsApp(texto) {
+  const url = "https://wa.me/?text=" + encodeURIComponent(texto);
+
+  navigator.clipboard.writeText(texto);
+
+  window.open(url, "_blank");
+}
+
+// ==========================
+// WHATSAPP - MENSAJES POR PRODUCTO
+// ==========================
+
+function enviarWhatsAppTransporte() {
+  const nombre = document.getElementById("nombreCliente")?.value || "😊";
+
+  const mensaje = `Hola ${nombre}
+Te comento rápido porque esto es importante.
+
+Cuando una mercancía se transporta, el transportista tiene responsabilidad limitada.
+Si pasa algo, normalmente no cubre el valor real.
+
+Este seguro protege el valor completo de la mercancía.
+
+Si quieres lo vemos en 2 minutos y te digo cuánto sería`;
+
+  window.open("https://wa.me/?text=" + encodeURIComponent(mensaje), "_blank");
+}
+
+
+function enviarWhatsAppImpago() {
+  const nombre = document.getElementById("nombreCliente")?.value || "😊";
+
+  const mensaje = `Hola ${nombre}
+Te comento rápido porque esto es importante.
+
+Si un inquilino deja de pagar, puedes estar meses sin cobrar.
+
+Este seguro te cubre las rentas y además incluye defensa jurídica.
+
+Si quieres lo vemos en 2 minutos y te explico cómo funciona`;
+
+  window.open("https://wa.me/?text=" + encodeURIComponent(mensaje), "_blank");
+}
+
+
+function enviarWhatsAppCiber() {
+  const nombre = document.getElementById("nombreCliente")?.value || "😊";
+
+  const mensaje = `Hola ${nombre}
+Te comento rápido porque esto es importante.
+
+Hoy en día cualquier negocio puede sufrir un ciberataque o robo de datos.
+
+Este seguro cubre los daños, recuperación de sistemas y responsabilidad frente a terceros.
+
+Si quieres lo vemos en 2 minutos y te explico cómo protegerte`;
+
+  window.open("https://wa.me/?text=" + encodeURIComponent(mensaje), "_blank");
+}
+
+
+function enviarWhatsAppAutos() {
+  const nombre = document.getElementById("nombreCliente")?.value || "😊";
+
+  const mensaje = `Hola ${nombre}
+Te comento rápido porque esto es importante.
+
+En el seguro de coche no solo es el precio, sino lo que realmente te cubre cuando pasa algo.
+
+Nosotros tenemos opciones muy completas con asistencia, sustitución y buenas coberturas.
+
+Si quieres lo vemos en 2 minutos y te paso precio`;
+
+  window.open("https://wa.me/?text=" + encodeURIComponent(mensaje), "_blank");
+}
+
+
+function enviarWhatsAppHogar() {
+  const nombre = document.getElementById("nombreCliente")?.value || "😊";
+
+  const mensaje = `Hola ${nombre}
+Te comento rápido porque esto es importante.
+
+El seguro de hogar no solo cubre incendios, también daños por agua, robos y responsabilidad civil.
+
+Es clave tenerlo bien ajustado para evitar sustos.
+
+Si quieres lo vemos en 2 minutos y te digo cómo lo tienes ahora`;
+
+  window.open("https://wa.me/?text=" + encodeURIComponent(mensaje), "_blank");
+}
+
+
+function enviarWhatsAppSalud() {
+  const nombre = document.getElementById("nombreCliente")?.value || "😊";
+
+  const mensaje = `Hola ${nombre}
+Te comento rápido porque esto es importante.
+
+Tener un seguro de salud te evita listas de espera y te da acceso rápido a especialistas.
+
+Además hay opciones muy ajustadas para empresas y familias.
+
+Si quieres lo vemos en 2 minutos y te explico opciones`;
+
+  window.open("https://wa.me/?text=" + encodeURIComponent(mensaje), "_blank");
+}
+
+
+function enviarWhatsAppVida() {
+  const nombre = document.getElementById("nombreCliente")?.value || "😊";
+
+  const mensaje = `Hola ${nombre}
+Te comento rápido porque esto es importante.
+
+El seguro de vida protege a tu familia ante cualquier imprevisto económico.
+
+Es fundamental si tienes hipoteca o personas a tu cargo.
+
+Si quieres lo vemos en 2 minutos y te digo cómo lo tienes ahora`;
+
+  window.open("https://wa.me/?text=" + encodeURIComponent(mensaje), "_blank");
+}
+function abrirImpagoSeguros(panelId, boton) {
+  const contenedor = document.getElementById("seguros-impago");
+  if (!contenedor) return;
+
+  contenedor.querySelectorAll('[id^="seguros-impago-"].subtab-panel').forEach(panel => {
+    panel.style.display = "none";
+    panel.classList.remove("active");
+  });
+
+  contenedor.querySelectorAll(".subtab-impago-seguros").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  const panel = document.getElementById(panelId);
+  if (panel) {
+    panel.style.display = "block";
+    panel.classList.add("active");
+  }
+
+  if (boton) {
+    boton.classList.add("active");
+  }
+}
+
+function openAutosTab(event, panelId) {
+  const root = document.getElementById("seguros-autos");
+  if (!root) return;
+
+  const paneles = root.querySelectorAll(".autos-panel");
+  const botones = root.querySelectorAll(".autos-subtab");
+
+  paneles.forEach(panel => {
+    panel.style.display = "none";
+    panel.classList.remove("active");
+  });
+
+  botones.forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  const destino = root.querySelector("#" + panelId);
+  if (destino) {
+    destino.style.display = "block";
+    destino.classList.add("active");
+  }
+
+  if (event && event.currentTarget) {
+    event.currentTarget.classList.add("active");
+  }
+}
+function abrirSaludAsisa(panelId, boton) {
+  const contenedor = document.getElementById("seguros-salud");
+  if (!contenedor) return;
+
+  contenedor.querySelectorAll(".sub-section").forEach(panel => {
+    panel.style.display = "none";
+    panel.classList.remove("is-visible", "active");
+  });
+
+  contenedor.querySelectorAll(".sub-tab").forEach(btn => {
+    btn.classList.remove("is-active", "active");
+  });
+
+  const panel = document.getElementById(panelId);
+  if (panel) {
+    panel.style.display = "block";
+    panel.classList.add("is-visible", "active");
+  }
+
+  if (boton) {
+    boton.classList.add("is-active", "active");
+  }
+}
+function abrirEmpresas(panelId, boton) {
+  const contenedor = document.getElementById("seguros-empresas");
+  if (!contenedor) return;
+
+  contenedor.querySelectorAll(".empresa2-panel").forEach(panel => {
+    panel.style.display = "none";
+    panel.classList.remove("active");
+  });
+
+  contenedor.querySelectorAll(".subtab-empresa2").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  const panel = document.getElementById(panelId);
+  if (panel) {
+    panel.style.display = "block";
+    panel.classList.add("active");
+  }
+
+  if (boton) {
+    boton.classList.add("active");
+  }
+}
+function abrirEmpresas(panelId, boton) {
+  const contenedor = document.getElementById("seguros-empresas");
+  if (!contenedor) return;
+
+  contenedor.querySelectorAll(".empresa2-panel").forEach(panel => {
+    panel.style.display = "none";
+    panel.classList.remove("active");
+  });
+
+  contenedor.querySelectorAll(".subtab-empresa2").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  const panel = document.getElementById(panelId);
+  if (panel) {
+    panel.style.display = "block";
+    panel.classList.add("active");
+  }
+
+  if (boton) {
+    boton.classList.add("active");
+  }
+}
+
+function abrirSeguroYSubtab(subtabId) {
+  const botonSeguros = document.querySelector('.main-tab[data-target="seguros"]');
+  if (botonSeguros) {
+    botonSeguros.click();
+  }
+
+  setTimeout(() => {
+    const subtab = document.querySelector('#seguros .subtab[data-subtab="' + subtabId + '"]');
+    if (subtab) {
+      subtab.click();
+    }
+  }, 150);
+ }
+
+function detectarOportunidades() {
+  const edad = parseInt(document.getElementById("detEdad")?.value || "0", 10) || 0;
+  const perfil = document.getElementById("detPerfil")?.value || "";
+  const tipoCliente = document.getElementById("detTipoCliente")?.value || "";
+  const sexo = document.getElementById("detSexo")?.value || "";
+  const profesion = (document.getElementById("detProfesion")?.value || "").toLowerCase();
+
+  const hipoteca = document.getElementById("detHipoteca")?.checked || false;
+  const hijos = document.getElementById("detHijos")?.checked || false;
+  const vivienda = document.getElementById("detVivienda")?.checked || false;
+  const dinero = document.getElementById("detDinero")?.checked || false;
+  const venta = document.getElementById("detVenta")?.checked || false;
+  const ingresos = document.getElementById("detIngresos")?.checked || false;
+  const negocio = document.getElementById("detNegocio")?.checked || false;
+  const empleados = document.getElementById("detEmpleados")?.checked || false;
+  const datos = document.getElementById("detDatos")?.checked || false;
+  const mercancia = document.getElementById("detMercancia")?.checked || false;
+  const dependeTrabajo = document.getElementById("detDependeTrabajo")?.checked || false;
+  const socioClave = document.getElementById("detSocioClave")?.checked || false;
+  const segurosAntiguos = document.getElementById("detSegurosAntiguos")?.checked || false;
+  const salud = document.getElementById("detSalud")?.checked || false;
+  const dependencia = document.getElementById("detDependencia")?.checked || false;
+
+  const recomendaciones = [];
+
+  function agregar(nombre, prioridad, motivo) {
+    const existente = recomendaciones.find(r => r.nombre === nombre);
+    if (!existente) {
+      recomendaciones.push({ nombre, prioridad, motivo });
+    }
+  }
+
+  function prioridadTexto(n) {
+    if (n >= 90) return "Muy alta";
+    if (n >= 70) return "Alta";
+    if (n >= 50) return "Media";
+    return "Revisable";
+  }
+
+  if (hipoteca || hijos) {
+    agregar("Seguro de Vida", 85, "Tiene hipoteca, préstamo o personas a cargo.");
+  }
+
+  if (vivienda) {
+    agregar("Seguro de Hogar", 75, "Tiene vivienda y conviene revisar protección del inmueble y responsabilidad civil.");
+  }
+
+  if (salud) {
+    agregar("Seguro de Salud", 70, "Hay interés en asistencia sanitaria privada o en evitar listas de espera.");
+  }
+
+  if (
+    perfil === "autonomo" ||
+    dependeTrabajo ||
+    profesion.includes("autónom") ||
+    profesion.includes("autonom") ||
+    profesion.includes("taxi") ||
+    profesion.includes("médic") ||
+    profesion.includes("medic") ||
+    profesion.includes("abogad") ||
+    profesion.includes("comercial")
+  ) {
+    agregar("Incapacidad Temporal", 90, "Depende de su trabajo diario para mantener ingresos.");
+    agregar("Accidentes", 75, "Puede tener sentido reforzar protección personal por accidente.");
+  }
+
+  if (perfil === "autonomo" || negocio) {
+    agregar("Responsabilidad Civil", 65, "Conviene revisar daños a terceros derivados de la actividad.");
+  }
+
+  if (edad >= 65 && (dinero || venta || ingresos || perfil === "jubilado")) {
+    agregar("Renta Vitalicia", 95, "Perfil muy claro para revisar rentas, ahorro parado o reinversión.");
+  }
+
+  if ((dinero || venta) && edad >= 55) {
+    agregar("Europa 8", 60, "Puede interesar revisar soluciones de ahorro o inversión conservadora.");
+  }
+
+  if (edad >= 64) {
+    agregar("Decesos", 75, "Por edad conviene revisar protección de decesos.");
+  }
+
+  if (edad >= 64 || dependencia) {
+    agregar("Dependencia", 65, "Puede tener sentido revisar protección futura y situaciones de dependencia.");
+  }
+
+  if (sexo === "mujer") {
+    agregar(
+      "Seguro Femenino",
+      (hijos || salud) ? 75 : 60,
+      "Puede encajar por perfil y necesidades de protección específicas."
+    );
+  }
+
+  if (negocio) {
+    agregar("Multirriesgo Empresa", 80, "Tiene negocio o local y conviene proteger continente, contenido y actividad.");
+  }
+
+  if (empleados) {
+    agregar("Accidentes Convenio", 85, "Tiene empleados y conviene revisar obligación o necesidad de cobertura.");
+  }
+
+  if (datos) {
+    agregar("Ciberseguro", 80, "Gestiona datos o sistemas y existe riesgo digital.");
+  }
+
+  if (mercancia) {
+    agregar("Transporte", 80, "Envía o recibe mercancía y puede necesitar protección del transporte.");
+  }
+
+  if (socioClave || profesion.includes("administrador") || profesion.includes("gerente")) {
+    agregar("D&O", 70, "Puede existir exposición como administrador o figura clave.");
+  }
+
+  if (tipoCliente === "juridica" && dependeTrabajo) {
+    agregar("Incapacidad Temporal", 70, "Aunque sea persona jurídica, hay dependencia de la actividad de una persona clave.");
+  }
+
+  if (segurosAntiguos) {
+    agregar("Revisión integral de seguros", 75, "Tiene seguros sin revisar y puede haber oportunidad transversal.");
+  }
+
+  recomendaciones.sort((a, b) => b.prioridad - a.prioridad);
+
+  const resumen = document.getElementById("detectorResumen");
+  const productos = document.getElementById("detectorProductos");
+  const frase = document.getElementById("detectorFrase");
+  const bloque = document.getElementById("detectorResultado");
+
+  if (!bloque || !resumen || !productos || !frase) return;
+
+  if (recomendaciones.length === 0) {
+    bloque.style.display = "block";
+    resumen.innerHTML = "<p><strong>No se detectó una oportunidad clara con los datos marcados.</strong></p><p>Prueba añadiendo más información del cliente.</p>";
+    productos.innerHTML = "";
+    frase.textContent = "Frase sugerida: Vamos a revisar un momento tu situación para ver si hay algo que realmente te encaje.";
+    return;
+  }
+
+  resumen.innerHTML = `
+    <p><strong>Perfil analizado:</strong> ${perfil || "No indicado"} ${edad ? "· " + edad + " años" : ""} ${sexo ? "· " + sexo : ""}</p>
+    <p><strong>Resultado:</strong> Se han detectado ${recomendaciones.length} oportunidades comerciales revisables.</p>
+  `;
+
+  productos.innerHTML = `
+    <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+      <thead>
+        <tr style="background:#f1f1f1;">
+          <th style="padding:8px; border:1px solid #ddd; text-align:left;">Producto</th>
+          <th style="padding:8px; border:1px solid #ddd; text-align:left;">Prioridad</th>
+          <th style="padding:8px; border:1px solid #ddd; text-align:left;">Motivo</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${recomendaciones.map(r => `
+          <tr>
+            <td style="padding:8px; border:1px solid #ddd;">${r.nombre}</td>
+            <td style="padding:8px; border:1px solid #ddd;">${prioridadTexto(r.prioridad)}</td>
+            <td style="padding:8px; border:1px solid #ddd;">${r.motivo}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
+
+  const top = recomendaciones[0]?.nombre || "una revisión comercial";
+  let fraseSugerida = `Frase sugerida: Por lo que veo en tu perfil, puede tener sentido revisar ${top.toLowerCase()} para ver si realmente te encaja.`;
+
+  if (top === "Renta Vitalicia") {
+    fraseSugerida = "Frase sugerida: Por tu perfil, puede tener mucho sentido revisar si parte de ese ahorro te puede generar ingresos o una mejor planificación.";
+  } else if (top === "Incapacidad Temporal") {
+    fraseSugerida = "Frase sugerida: Aquí lo importante es ver qué pasaría con tus ingresos si mañana no pudieras trabajar durante una temporada.";
+  } else if (top === "Decesos") {
+    fraseSugerida = "Frase sugerida: También conviene revisar si tienes bien resuelta la parte de decesos para dejar esa tranquilidad cubierta.";
+  } else if (top === "Dependencia") {
+    fraseSugerida = "Frase sugerida: Puede ser buen momento para revisar la parte de protección futura y dependencia, por tranquilidad y previsión.";
+  } else if (top === "Seguro Femenino") {
+    fraseSugerida = "Frase sugerida: Por tu perfil, puede tener sentido revisar también una protección específica femenina y ver si encaja contigo.";
+  } else if (top === "Multirriesgo Empresa") {
+    fraseSugerida = "Frase sugerida: Aquí no se trata solo del local, sino de proteger la actividad y el dinero que puede perder el negocio si pasa algo.";
+  }
+
+  frase.textContent = fraseSugerida;
+  bloque.style.display = "block";
+}
+
+function limpiarDetectorOportunidades() {
+  const idsTexto = ["detEdad", "detProfesion"];
+  const idsSelect = ["detPerfil", "detTipoCliente", "detSexo"];
+  const idsChecks = [
+    "detHipoteca", "detHijos", "detVivienda", "detDinero", "detVenta", "detIngresos",
+    "detNegocio", "detEmpleados", "detDatos", "detMercancia", "detDependeTrabajo",
+    "detSocioClave", "detSegurosAntiguos", "detSalud", "detDependencia"
+  ];
+
+  idsTexto.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
+  });
+
+  idsSelect.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
+  });
+
+  idsChecks.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.checked = false;
+  });
+
+  const bloque = document.getElementById("detectorResultado");
+  const resumen = document.getElementById("detectorResumen");
+  const productos = document.getElementById("detectorProductos");
+  const frase = document.getElementById("detectorFrase");
+
+  if (bloque) bloque.style.display = "none";
+  if (resumen) resumen.innerHTML = "";
+  if (productos) productos.innerHTML = "";
+  if (frase) frase.textContent = "";
+}
+
+function generarDossier() {
+  const checks = document.querySelectorAll('input[type="checkbox"]:checked');
+  let contenido = "";
+
+  checks.forEach(c => {
+    const seccion = document.getElementById(c.value);
+
+    if (seccion) {
+      const copia = seccion.cloneNode(true);
+
+      copia.querySelectorAll('.subtabs, .subnav, button, script').forEach(el => {
+        el.remove();
+      });
+
+      copia.querySelectorAll('.subtab-panel, .sub-section, .hogar-panel, .vida-panel, .autos-panel, .empresa-panel, .empresa2-panel').forEach(panel => {
+        panel.style.display = 'block';
+        panel.classList.add('active', 'is-visible');
+      });
+
+      contenido += "<hr>" + copia.innerHTML;
+    }
+  });
+
+  const ventana = window.open("", "_blank");
+
+  ventana.document.write(`
+    <html>
+    <head>
+      <title>Dossier Comercial</title>
+      <style>
+        body{
+          font-family: Arial, sans-serif;
+          padding: 40px;
+          max-width: 1000px;
+          margin: auto;
+        }
+        h1,h2,h3{
+          color:#004481;
+        }
+        .tip-comercial, .notice, .highlight{
+          background:#eef6ff;
+          padding:10px;
+          border-left:4px solid #004481;
+          margin:15px 0;
+          border-radius:8px;
+        }
+        hr{
+          margin:30px 0;
+        }
+        table{
+          width:100%;
+          border-collapse:collapse;
+          margin:15px 0;
+        }
+        th, td{
+          border:1px solid #ccc;
+          padding:8px;
+          text-align:left;
+        }
+        .subtab-panel, .sub-section, .hogar-panel, .vida-panel, .autos-panel, .empresa-panel, .empresa2-panel{
+          display:block !important;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>Dossier Comercial</h1>
+      ${contenido}
+    </body>
+    </html>
+  `);
+
+  ventana.document.close();
+  ventana.focus();
+  ventana.print();
 }
