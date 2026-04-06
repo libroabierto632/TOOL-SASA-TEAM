@@ -2202,3 +2202,27 @@ button,
     font-size: 17px;
   }
 }
+.hero-decorativa{
+  width: 100%;
+  margin: 18px 0 28px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-decorativa-img{
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 22px;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 768px){
+  .hero-decorativa{
+    margin: 12px 0 20px 0;
+  }
+
+  .hero-decorativa-img{
+    border-radius: 16px;
+  }
+}
