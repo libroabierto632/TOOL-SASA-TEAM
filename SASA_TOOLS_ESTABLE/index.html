@@ -132,18 +132,18 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
     
 <nav class="main-nav">
-  <button class="main-tab" data-target="promociones">Promociones</button>
-  <button class="main-tab" data-target="detector-oportunidades">Detector oportunidades</button>
   <button class="main-tab" data-target="inicio">Inicio</button>
-  <button class="main-tab" data-target="cartas">Cartas</button>
-  <button class="main-tab" data-target="contactos">Contactos</button>
+  <button class="main-tab" data-target="promociones">Promociones</button>
+  <button class="main-tab" data-target="planeta-seguros">Planeta Seguros</button>
+  <button class="main-tab" data-target="detector-oportunidades">Detector oportunidades</button>
   <button class="main-tab" data-target="herramientas">Herramientas comerciales</button>
   <button class="main-tab" data-target="seguros">Seguros</button>
-
-<button class="main-tab" data-target="rav">Renta Vitalicia</button>
-<button class="main-tab" data-target="europa8">Europa 8</button>
-<button class="main-tab" data-target="europa9">Europa 9</button>
-<button class="main-tab" data-target="credito">Crédito</button>
+  <button class="main-tab" data-target="rav">Renta Vitalicia</button>
+  <button class="main-tab" data-target="europa8">Europa 8</button>
+  <button class="main-tab" data-target="europa9">Europa 9</button>
+  <button class="main-tab" data-target="credito">Crédito</button>
+  <button class="main-tab" data-target="cartas">Cartas</button>
+  <button class="main-tab" data-target="contactos">Contactos</button>
 
 </nav>
 
@@ -236,11 +236,15 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
 
           <ol class="steps">
 
-            <li>Entra en Salud Asisa Empresa o Protección Impago</li>
+            <li>Usa cada pestaña para entrar en sección</li>
 
-            <li>Usa las subpestañas para ir por orden de formación</li>
+            <li>Ver Promociones activas</li>
 
-            <li>En Cotizador Asisa genera presupuesto e imprime</li>
+            <li>Usa el detector cuando tengas al cliente delante</li>
+
+            <li>En la pestaña Herramientas comerciales, tienes manual comercial, argimentario, objeciones, oportunidades, Ruta GO, verificación cliente, como explicar seguros, cierres de venta, frases de calidad... ¡¡¡Úsalas!!!!</li>
+
+            <li>En la pestaña de seguros, encontrarás seguro de salud ASISA y en ella un Cotizador Asisa genera presupuesto e imprime</li>
 
           
 
@@ -281,11 +285,9 @@ Selecciona los apartados que quieres incluir en el dossier y genera un documento
 </p>
 
 <label><input type="checkbox" value="inicio"> Inicio</label><br>
-
 <label><input type="checkbox" value="promociones"> Promociones</label><br>
+<label><input type="checkbox" value="planeta-seguros"> Planeta Seguros</label><br>
 <label><input type="checkbox" value="detector-oportunidades"> Detector de oportunidades</label><br>
-<label><input type="checkbox" value="cartas"> Cartas</label><br>
-<label><input type="checkbox" value="contactos"> Contactos</label><br>
 <label><input type="checkbox" value="herramientas"> Herramientas comerciales</label><br>
 <label><input type="checkbox" value="seguros"> Seguros</label><br>
 <label><input type="checkbox" value="rav"> Renta Vitalicia</label><br>
@@ -293,6 +295,8 @@ Selecciona los apartados que quieres incluir en el dossier y genera un documento
 <label><input type="checkbox" value="europa9"> Europa 9</label><br>
 <label><input type="checkbox" value="credito"> Seguro de crédito</label><br>
 
+<label><input type="checkbox" value="cartas"> Cartas</label><br>
+<label><input type="checkbox" value="contactos"> Contactos</label><br>
 
 <br>
 <p id="contadorProductos"></p>
@@ -3078,7 +3082,350 @@ function filtrarContactoRapido(filtro) {
 </section>
 
 
+<section id="planeta-seguros" class="main-section" style="display: none;">
+  <div class="producto-box">
+    <div class="renta-box">
 
+      <div class="renta-header producto-header">
+        <h1>🌍 Planeta Seguros</h1>
+        <div class="renta-sub producto-sub">Servicio gratuito · Pago mensual agrupado · Bonificación mensual</div>
+      </div>
+
+      <div class="card accent">
+        <h2>Qué ofrece a los clientes</h2>
+        <p>
+          Planeta Seguros es un <strong>servicio gratuito</strong> que permite a clientes <strong>persona física y jurídica</strong>, tomadores de seguros de protección comercializados por Banco, <strong>pagar de manera fraccionada</strong> y mediante un <strong>único cargo mensual</strong> las primas de los seguros incluidos en el servicio.
+        </p>
+        <p>
+          Además, cuanto mayor sea el importe agregado de las primas anuales incluidas, mayor podrá ser la <strong>bonificación mensual</strong> que reciba el cliente.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>¿Tiene algún coste?</h2>
+          <ul class="bullets">
+            <li>Ninguno</li>
+            <li>No tendrás que pagar nada por la contratación del servicio</li>
+            <li>Permite pagar mensualmente los seguros incluidos sin coste adicional</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>¿Cuándo y cómo recibes las bonificaciones?</h2>
+          <ul class="bullets">
+            <li>Desde el primer día que contratas Planeta Seguros</li>
+            <li>Sin periodo de carencia</li>
+            <li>La bonificación se descuenta todos los meses de la cuota mensual</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Seguros que puedes incluir</h2>
+
+        <h3>Compañías aseguradoras</h3>
+        <ol>
+          <li>Santander Seguros y Reaseguros Compañía Aseguradora, S.A.</li>
+          <li>Santander Vida Seguros y Reaseguros, S.A.</li>
+          <li>Santander Generales Seguros y Reaseguros, S.A.</li>
+          <li>Santander Mapfre Seguros y Reaseguros, S.A.</li>
+          <li>Aegon</li>
+        </ol>
+
+        <h3>Ramos incluidos</h3>
+        <ol>
+          <li>Vida riesgo</li>
+          <li>Accidentes</li>
+          <li>Hogar</li>
+          <li>Autos y motos</li>
+          <li>Decesos</li>
+          <li>Salud</li>
+          <li>Dependencia</li>
+          <li>Incapacidad temporal</li>
+          <li>Seguros asociados a préstamos hipotecarios y consumo</li>
+          <li>Protección de impagos</li>
+          <li>Protección de ingresos</li>
+          <li>Protección de tarjetas</li>
+          <li>Seguros de empresa Santander Mapfre</li>
+          <li>Consultar otros en vigor</li>
+        </ol>
+
+        <div class="notice">
+          También pueden contemplarse productos de protección vinculados a impagos, ingresos y tarjetas,multirriesgo, Rc,etc... siempre que estén habilitados en el listado vigente de productos de Planeta Seguros.
+        </div>
+
+        <div class="notice">
+          No pueden incluirse seguros de ahorro.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Cómo y cuándo se calcula la bonificación mensual</h2>
+        <ul class="bullets">
+          <li>La bonificación se calcula el <strong>día 23 de cada mes</strong></li>
+          <li>No condiciona ni sustituye los descuentos que ya tuvieran asignadas las pólizas</li>
+          <li>No tiene impacto fiscal para el cliente</li>
+          <li>Para beneficiarse de la bonificación es necesario tener <strong>al menos 2 seguros en vigor</strong> incluidos en Planeta Seguros en la fecha de cálculo</li>
+        </ul>
+
+        <h3>Cálculo mensual</h3>
+        <ol>
+          <li>Sumar la prima anual de los seguros incluidos en el momento de cálculo</li>
+          <li>En seguros de prima única:
+            <ul class="bullets">
+              <li><strong>Seguros de Decesos</strong> → prima única / 10</li>
+              <li><strong>Seguros asociados a préstamos</strong> → prima única / años de vigencia del seguro</li>
+            </ul>
+          </li>
+          <li>Obtener el porcentaje de bonificación según el importe total de las primas anuales</li>
+        </ol>
+
+        <div class="table-wrap">
+          <table class="renta-table">
+            <thead>
+              <tr>
+                <th>€ de prima anual</th>
+                <th>% descuento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>&lt; 500</td><td>0%</td></tr>
+              <tr><td>501 - 1000</td><td>3%</td></tr>
+              <tr><td>1001 - 1500</td><td>4%</td></tr>
+              <tr><td>1501 - 2000</td><td>5%</td></tr>
+              <tr><td>2001 - 2500</td><td>6%</td></tr>
+              <tr><td>2501 - 3000</td><td>7%</td></tr>
+              <tr><td>3001 - 3500</td><td>8%</td></tr>
+              <tr><td>3501 - 4000</td><td>9%</td></tr>
+              <tr><td>4001 - 4500</td><td>10%</td></tr>
+              <tr><td>&gt; 4500</td><td>11%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="highlight" style="margin-top:15px;">
+          Bonificación mensual (€) = <strong>(Suma de las primas anuales de tus seguros × % de bonificación) / 12</strong>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Cómo se calcula el cargo mensual</h2>
+        <p>
+          El importe del cargo mensual de Planeta Seguros será el resultado de <strong>restar la bonificación</strong> a la <strong>suma de los recibos remitidos al finalizar el mes</strong> por las compañías aseguradoras para todas las pólizas incluidas en el servicio.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>Requisitos o limitaciones</h2>
+          <ul class="bullets">
+            <li>El servicio está disponible para <strong>persona física y jurídica</strong></li>
+            <li>Solo debes tener contratada al menos <strong>una póliza o solicitud</strong> de alguno de los seguros que se pueden incluir</li>
+            <li>No es necesario contratar ninguna póliza adicional</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>¿Puedo contratarlo si solo tengo un seguro?</h2>
+          <p>
+            Sí. A partir de un seguro, póliza o solicitud pendiente de selección de riesgo de los que pueden incluirse en el servicio, puedes disfrutar de Planeta Seguros y empezar a pagar mes a mes.
+          </p>
+          <div class="notice">
+            Para beneficiarte de las bonificaciones deberás tener al menos <strong>dos pólizas en vigor incluidas</strong> por un importe anual de prima <strong>superior a 500 €</strong>.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Preguntas frecuentes</h2>
+
+        <h3>¿Puedo incluir más de un seguro de la misma modalidad?</h3>
+        <p>Sí. Podrás incluir todos los seguros que tengas contratados del mismo producto en los que figures como tomador, sin ninguna limitación.</p>
+
+        <h3>¿Puedo incluir seguros asociados a préstamos consumo e hipotecarios?</h3>
+        <p>Sí. Podrás incluir los seguros asociados a préstamos consumo e hipotecario que tengas contratados en los que figures como tomador.</p>
+
+        <h3>¿Puedo incluir seguros de prima única?</h3>
+        <p>Sí. Podrás incluir los seguros de prima única, como Decesos y Asociados a Préstamos.</p>
+        <p>El importe de estas primas no será objeto de fraccionamiento y mantendrán su forma de pago única, pero sí se tendrán en cuenta para el cálculo de las bonificaciones.</p>
+
+        <h3>¿Puedo incluir seguros que ya tuviera contratados previamente?</h3>
+        <p>Sí. Podrás incluir los seguros que ya tuvieras en cartera y los de nueva contratación, incluso las solicitudes que estén pendientes de aceptación por parte de las compañías aseguradoras.</p>
+      </div>
+
+      <div class="card">
+        <h2>Qué cambios se producen en los seguros incluidos</h2>
+        <p>
+          La inclusión de una póliza de prima periódica en Planeta Seguros únicamente afecta a su <strong>periodicidad</strong> y a su <strong>método de pago</strong>.
+        </p>
+<div class="notice" style="border-left:6px solid #d6001c; background:#fff5f5;">
+  <strong>Importante:</strong> Planeta Seguros debe firmarse el mismo día de la solicitud o firma del seguro.  
+  Si se hace después, el recibo se cobrará con la forma de pago original informada en la póliza y solo podrá mensualizarse a partir del siguiente recibo pendiente de emitir.  
+Tened especial atención en multirriesgos, RC tramitados con espejo Mapfre y en vidas vinculados a hipoteca desde preformalización.(Desde que se hace la solicitud hay que incluirlos en planeta y firmarlo)
+</div>
+
+        <ol>
+          <li>La periodicidad del pago de la prima pasa a ser <strong>mensual</strong> y tendrá efecto a partir del <strong>siguiente recibo emitido</strong> tras la inclusión de la póliza en el servicio.</li>
+          <li>El método de pago de los recibos pasa a ser a través del servicio Planeta Seguros Santander, mediante cargo de la cuota mensual resultante de la agrupación de los recibos de los seguros incluidos en el servicio.</li>
+        </ol>
+
+        <p>
+          Esto no afecta a las pólizas de prima única incluidas en el servicio, que se seguirán cobrando directamente desde las compañías.
+        </p>
+
+        <div class="notice">
+          El resto de características y de la operativa de gestión de las pólizas no sufre ninguna modificación. No se ven afectadas, entre otras:
+          <ul class="bullets">
+            <li>Coberturas</li>
+            <li>Precio</li>
+            <li>Descuentos</li>
+            <li>Siniestros en curso</li>
+            <li>Fechas de efecto y renovación</li>
+          </ul>
+        </div>
+      </div>
+
+<div class="card" style="border:2px solid #d6001c; background:#fff5f5;">
+  <h2 style="color:#d6001c;">⚠ Aviso Súper importante</h2>
+
+  <p>
+    <strong>Planeta Seguros debe firmarse el mismo día en que se firma o se solicita el seguro que se quiere incluir.</strong>
+  </p>
+
+  <p>
+    Si se firma después, el recibo se cobrará con la <strong>forma de pago que tuviera informada en ese momento</strong>.
+    Es decir:
+  </p>
+
+  <ul class="bullets">
+    <li>Si se puso <strong>anual</strong>, se cobrará anual de golpe</li>
+    <li>Si se puso <strong>trimestral</strong>, se cobrará trimestral</li>
+    <li>Si se puso <strong>semestral</strong>, se cobrará semestral</li>
+  </ul>
+
+  <p>
+    Solo a partir del <strong>siguiente recibo pendiente de emitir</strong> podrá pasar a mensualizarse a través de Planeta Seguros.
+  </p>
+
+  <div class="notice">
+    <strong>Conclusión operativa:</strong> si se quiere que el cliente entre correctamente en Planeta Seguros desde el inicio, hay que incluirlo y firmarlo <strong>en ese mismo momento</strong>, no después.
+  </div>
+
+  <h3>Casos importantes</h3>
+
+  <p>
+    <strong>Multirriesgoso seguros de empresas tramitados con espejo Mapfre:</strong><br>
+    Cuando se hace la solicitud a través del banco y se remite a Mapfre para emisión, hay que <strong>avisar e incluir al cliente en Planeta Seguros desde la solicitud</strong>, aunque la póliza todavía no esté en vigor.
+  </p>
+
+  <p>
+    Si no se hace así, cuando la póliza quede emitida se mantendrá la forma de pago que se hubiera informado inicialmente hasta el siguiente recibo.
+  </p>
+
+  <p>
+    <strong>Vida vinculado a hipoteca:</strong><br>
+    Cuando se solicita la contratación en el momento de la <strong>preformalización de la hipoteca</strong>, también debe incluirse en ese mismo momento en Planeta Seguros.
+  </p>
+
+  <p>
+    Si no se incluye entonces, cuando se firme la hipoteca el seguro de vida vinculado quedará contratado con la <strong>forma de pago anual</strong> o la que se hubiera puesto en ese momento, y no se podrá mensualizar hasta el siguiente recibo.
+  </p>
+</div>
+      <div class="card">
+        <h2>Cómo se contrata el servicio</h2>
+        <p>
+          La contratación puede hacerse desde la <strong>App o Web</strong>, por teléfono con el gestor de la banca Personal o desde la red de oficinas.
+        </p>
+
+        <h3>Proceso App / Web</h3>
+        <ol>
+          <li>Accede a tu área personal de la App o Web y entra en “Seguros” desde el apartado “Contratar” de la Web o “Explorar productos” de la App.</li>
+          <li>Selecciona Planeta Seguros .</li>
+          <li>Se mostrarán todos los seguros que puedes incluir y la prima anual de cada uno. Selecciona los que quieras incluir para ver la estimación del recibo mensual y de la bonificación anual.</li>
+          <li>Selecciona la cuenta de cargo a la que quieres asociar tu Planeta Seguros.</li>
+          <li>Confirma que tus datos de contacto estén actualizados.</li>
+          <li>Se mostrará una pantalla resumen con toda la información para revisión.</li>
+          <li>Descarga la documentación contractual y finaliza con firma electrónica.</li>
+          <li>Después podrás visualizar pólizas ya incluidas, pólizas susceptibles de inclusión, historial de recibos y opciones como dar de baja el servicio o excluir pólizas.</li>
+        </ol>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>Cancelación y penalización</h2>
+          <ul class="bullets">
+            <li>No existe ningún compromiso de permanencia</li>
+            <li>Puedes cancelar el servicio cuando quieras sin penalización</li>
+            <li>También puedes excluir las pólizas que consideres</li>
+          </ul>
+
+          <p>
+            La cancelación del servicio no supone ningún cambio en las condiciones de cobertura ni en la vigencia de las pólizas. Solo afecta a su periodicidad y forma de pago, que volverá a ser la que tenían antes de su inclusión.
+          </p>
+
+          <ol>
+            <li>Se restaurará la periodicidad del pago de la prima en su fecha de próxima renovación</li>
+            <li>Se modificará la forma de pago de los recibos que pasarán a ser cobrados directamente por las compañías aseguradoras a través de domiciliación bancaria</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h2>Modificaciones que se pueden realizar</h2>
+          <ul class="bullets">
+            <li>Cancelar el contrato Planeta Seguros </li>
+            <li>Incluir nuevos seguros</li>
+            <li>Excluir algún seguro</li>
+            <li>Modificar la cuenta de cargo de las cuotas mensuales</li>
+            <li>Modificar los datos de contacto</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Información que recibirá el cliente</h2>
+        <p>
+          Mensualmente, el <strong>día 25 de cada mes</strong>, el banco generará y pondrá a disposición del cliente un extracto con el detalle de la liquidación mensual del contrato Planeta Seguros. (El gestor lo puede ver en el adn cliente en comunicaciones)
+        </p>
+
+        <h3>Ese extracto incluye</h3>
+        <ol>
+          <li>Resumen de la liquidación mensual:
+            <ul class="bullets">
+              <li>Importe de los recibos de las pólizas incluidas en el servicio</li>
+              <li>Bonificación mensual</li>
+              <li>Cuota mensual neta</li>
+            </ul>
+          </li>
+          <li>Detalle del cálculo de la bonificación mensual</li>
+          <li>Detalle de los recibos incluidos en la liquidación</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h2>Qué ocurre en caso de impago</h2>
+        <p>
+          El último día hábil del mes el banco cargará en la cuenta del cliente el importe de la cuota mensual de su contrato Planeta Seguros.
+        </p>
+        <p>
+          Si en el momento del cargo no hubiera saldo suficiente, la cuota quedará impagada. Durante los <strong>15 días siguientes</strong>, el banco reintentará diariamente el cargo de la cuota mensual.
+        </p>
+        <div class="notice">
+          Transcurrido dicho plazo sin que el banco haya podido cobrar la cuota, la situación se catalogará como impago y por incumplimiento del contrato el servicio quedará automáticamente cancelado, y se pasará lo que queda por cobrar de golpe, ya que pasa a ser recibo SEPA, corriendo el riesgo que el cliente devuelva el recibo y también se cancele la póliza.
+
+        </div>
+      </div>
+
+      <div class="card accent">
+        <h2>Frase comercial útil</h2>
+        <p>
+          Planeta Seguros permite ordenar los seguros de protección del cliente en una sola cuota mensual, sin coste adicional, manteniendo las pólizas y con bonificación mensual si cumple condiciones.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <section id="europa8" class="main-section" style="display: none;">
@@ -3269,7 +3616,7 @@ function filtrarContactoRapido(filtro) {
     <div class="renta-box">
 
       <div class="renta-header producto-header">
-        <h1>📈 Santander Vencimiento Europa 9</h1>
+        <h1>📈 Vencimiento Europa 9</h1>
         <div class="renta-sub producto-sub">Unit Linked · Prima única · Producto de ahorro inversión</div>
       </div>
 
@@ -6031,7 +6378,7 @@ Saludos</pre>
       <li>No existe obligación de contratar el seguro con Santander Vida o Santander Seguros.</li>
       <li>Público objetivo: clientes particulares, personas físicas titulares de un préstamo hipotecario.</li>
       <li>Edad de contratación: mínima 18 años y máxima 64 años.</li>
-      <li>Canales disponibles: oficina y Santander Personal.</li>
+      <li>Canales disponibles: oficina y banca Personal.</li>
     </ul>
 
     <h4>Características</h4>
@@ -6055,7 +6402,7 @@ Saludos</pre>
 
     <h4>Beneficiarios</h4>
     <p>
-      En caso de fallecimiento o invalidez permanente absoluta, el beneficiario será Banco Santander por el importe pendiente de amortizar del préstamo, con el límite máximo del capital asegurado. Si el capital asegurado es superior al capital pendiente, la diferencia la perciben los beneficiarios designados en la póliza.
+      En caso de fallecimiento o invalidez permanente absoluta, el beneficiario será Banco por el importe pendiente de amortizar del préstamo, con el límite máximo del capital asegurado. Si el capital asegurado es superior al capital pendiente, la diferencia la perciben los beneficiarios designados en la póliza.
     </p>
 
     <h4>Coberturas y capital asegurado</h4>
@@ -6110,7 +6457,7 @@ Saludos</pre>
 
     <h4>Características principales</h4>
     <ul>
-      <li>Asegurador: Santander Vida Seguros y Reaseguros, S.A.</li>
+      <li>Asegurador: S. Vida Seguros y Reaseguros, S.A.</li>
       <li>Edad de contratación: entre 18 y 64 años.</li>
       <li>Duración inicial: 3 años en fase de prima única.</li>
       <li>Desde el año 4: seguro temporal renovable con prima periódica.</li>
@@ -6144,7 +6491,7 @@ Saludos</pre>
 
     <h4>Beneficiarios</h4>
     <p>
-      En caso de fallecimiento o invalidez permanente absoluta, el beneficiario será Banco Santander por el capital pendiente de amortizar del préstamo, con el límite máximo del capital asegurado. Si hay exceso, lo perciben los beneficiarios designados en la póliza.
+      En caso de fallecimiento o invalidez permanente absoluta, el beneficiario será Banco por el capital pendiente de amortizar del préstamo, con el límite máximo del capital asegurado. Si hay exceso, lo perciben los beneficiarios designados en la póliza.
     </p>
 
     <h4>Amortización del préstamo</h4>
