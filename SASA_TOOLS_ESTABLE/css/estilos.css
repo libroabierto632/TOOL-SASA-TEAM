@@ -2353,3 +2353,128 @@ button,
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   object-fit: contain;
 }
+#planeta-seguros .card{
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  background: #ffffff;
+  border: 1px solid #e8edf3;
+}
+
+#planeta-seguros .accent{
+  background: #fff8ec;
+  border: 1px solid #ffe0a6;
+}
+
+#planeta-seguros .card h2{
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #173b67;
+}
+
+#planeta-seguros .card h3{
+  font-size: 18px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #1f3b64;
+}
+
+#planeta-seguros p,
+#planeta-seguros li{
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+#planeta-seguros .bullets{
+  margin: 6px 0 12px 0;
+  padding-left: 22px;
+}
+
+#planeta-seguros .grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+#planeta-seguros .notice{
+  background: #eef6ff;
+  border-left: 5px solid #4a90e2;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-top: 14px;
+}
+
+#planeta-seguros .highlight{
+  background: #f3fbf3;
+  border-left: 5px solid #4caf50;
+  padding: 14px 16px;
+  border-radius: 12px;
+}
+
+#planeta-seguros .renta-header{
+  margin-bottom: 20px;
+}
+
+#planeta-seguros .producto-header h1{
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+#planeta-seguros .producto-sub{
+  font-size: 16px;
+  color: #5b6978;
+}
+
+#planeta-seguros .table-wrap{
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+#planeta-seguros .renta-table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 420px;
+}
+
+#planeta-seguros .renta-table th{
+  background: #173b67;
+  color: white;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+#planeta-seguros .renta-table td{
+  padding: 11px 12px;
+  border-bottom: 1px solid #e7edf3;
+  font-size: 14px;
+}
+
+#planeta-seguros .renta-table tr:nth-child(even){
+  background: #f8fbff;
+}
+
+@media (max-width: 768px){
+  #planeta-seguros .grid-2{
+    grid-template-columns: 1fr;
+  }
+
+  #planeta-seguros .card{
+    padding: 16px 18px;
+  }
+
+  #planeta-seguros .producto-header h1{
+    font-size: 30px;
+  }
+
+  #planeta-seguros .card h2{
+    font-size: 22px;
+  }
+
+  #planeta-seguros .card h3{
+    font-size: 17px;
+  }
+}
