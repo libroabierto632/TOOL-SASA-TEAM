@@ -1604,33 +1604,31 @@ function imprimirDossierSeleccionado(sectionIds){
       .replaceAll("'","&#039;");
   }
 }
-function generarDossier(){
 
+ 
+function generarDossier() {
   const checks = document.querySelectorAll('input[type="checkbox"]:checked');
-
   let contenido = "";
 
   checks.forEach(c => {
     const seccion = document.getElementById(c.value);
 
-    if(seccion){
-     const copia = seccion.cloneNode(true);
-// FORZAR QUE TODO LO OCULTO SE VEA EN EL DOSSIER
-copia.querySelectorAll('[style*="display:none"], .contenido-oculto, .formacion-oculta').forEach(el => {
-  el.style.display = 'block';
-});
+    if (seccion) {
+      const copia = seccion.cloneNode(true);
 
-// Mostrar botones y navegación interna en el dossier
-copia.querySelectorAll('.subtabs, .main-nav, button').forEach(el => {
-  el.remove();
-});
+      copia.querySelectorAll('[style*="display:none"], .contenido-oculto, .formacion-oculta').forEach(el => {
+        el.style.display = 'block';
+      });
 
-// Mostrar todos los paneles internos de Aegon, RAV, etc.
-copia.querySelectorAll('.subtab-panel').forEach(panel => {
-  panel.style.display = 'block';
-});
+      copia.querySelectorAll('.subtabs, .main-nav, button').forEach(el => {
+        el.remove();
+      });
 
-contenido += "<hr>" + copia.innerHTML;
+      copia.querySelectorAll('.subtab-panel').forEach(panel => {
+        panel.style.display = 'block';
+      });
+
+      contenido += "<hr>" + copia.innerHTML;
     }
   });
 
@@ -1639,11 +1637,13 @@ contenido += "<hr>" + copia.innerHTML;
   ventana.document.write(`
     <html>
     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Dossier Comercial</title>
       <style>
         body{
           font-family: Arial, sans-serif;
-          padding: 40px;
+          padding: 24px;
           max-width: 900px;
           margin: auto;
         }
@@ -1657,96 +1657,138 @@ contenido += "<hr>" + copia.innerHTML;
           padding:10px;
           border-left:4px solid #004481;
           margin:15px 0;
+          border-radius:8px;
+        }
+
+        .notice, .highlight{
+          background:#fff8ec;
+          padding:10px;
+          border-left:4px solid #f0ad4e;
+          margin:15px 0;
+          border-radius:8px;
+        }
+
+        .aviso-dossier{
+          background:#fff3cd;
+          border:2px solid #d6a700;
+          color:#5f4b00;
+          padding:16px 18px;
+          border-radius:10px;
+          margin-bottom:24px;
+          line-height:1.5;
+          font-size:14px;
         }
 
         hr{
           margin:30px 0;
         }
+
+        table{
+          width:100%;
+          border-collapse:collapse;
+          margin:15px 0;
+        }
+
+        th, td{
+          border:1px solid #ccc;
+          padding:8px;
+          text-align:left;
+        }
+
+        .barra-dossier{
+          position: sticky;
+          top: 0;
+          z-index: 999;
+          background: #ffffff;
+          padding: 12px 0 18px 0;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #ddd;
+          display:flex;
+          gap:10px;
+          flex-wrap:wrap;
+        }
+
+        .btn-dossier{
+          background:#004481;
+          color:#fff;
+          border:none;
+          padding:12px 18px;
+          border-radius:10px;
+          font-weight:600;
+          cursor:pointer;
+        }
+
+        .btn-dossier.secundario{
+          background:#2e7d32;
+        }
+
+        @media print{
+          .barra-dossier{
+            display:none !important;
+          }
+
+          body{
+            padding:20px;
+          }
+        }
       </style>
     </head>
     <body>
+
+      <div class="barra-dossier">
+        <button class="btn-dossier secundario" onclick="window.print()">🖨 Imprimir / Guardar PDF</button>
+        <button class="btn-dossier" onclick="window.close()">✖ Cerrar</button>
+      </div>
+
       <h1>Dossier Comercial</h1>
+
+      <div class="aviso-dossier">
+        <strong>DOCUMENTO INTERNO – USO ORIENTATIVO</strong><br>
+        Este dossier tiene carácter informativo y de apoyo comercial.
+        No constituye oferta vinculante ni documentación contractual.
+        Las condiciones, primas, promociones y vigencias deben verificarse siempre en los sistemas y documentación oficial vigente.
+      </div>
+
       ${contenido}
     </body>
- </html>
-`);
-ventana.document.close();
-ventana.focus();
-setTimeout(() => ventana.print(), 1000);
-} 
+    </html>
+  `);
 
+  ventana.document.close();
+  ventana.focus();
+}
 
 function generarTodo() {
   const checks = document.querySelectorAll('input[type="checkbox"]');
-
   checks.forEach(c => {
     c.checked = true;
   });
 
+  actualizarContador();
   generarDossier();
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-checkboxes.forEach(c => {
-c.addEventListener("change", actualizarContador);
-});
-
-function actualizarContador(){
-
-let total = document.querySelectorAll('input[type="checkbox"]:checked').length;
-
-document.getElementById("contadorProductos").innerText =
-"Productos seleccionados: " + total;
-
 }
+
+function actualizarContador() {
+  const total = document.querySelectorAll('input[type="checkbox"]:checked').length;
+  const contador = document.getElementById("contadorProductos");
+
+  if (contador) {
+    contador.innerText = "Productos seleccionados: " + total;
+  }
 }
-// =============================
-// IMPRESIÓN DE CARTAS
-// =============================
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  document.querySelectorAll(".print-letter").forEach(btn => {
-
-    btn.addEventListener("click", () => {
-
-      const id = btn.dataset.letter;
-      const area = document.getElementById(id);
-
-      if(!area){
-        alert("No se encontró la carta");
-        return;
-      }
-
-      const texto = area.value;
-
-      const win = window.open("", "_blank","width=900,height=700");
-
-      win.document.write(`
-        <html>
-        <head>
-        <title>Carta</title>
-        <style>
-        body{
-          font-family: Arial;
-          padding:40px;
-          line-height:1.6;
-          white-space:pre-wrap;
-        }
-        </style>
-        </head>
-        <body>${texto}</body>
-        </html>
-      `);
-
-      win.document.close();
-      win.focus();
-      win.print();
-
-    });
-
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(c => {
+    c.addEventListener("change", actualizarContador);
   });
 
+  actualizarContador();
 });
+
+
+
+ 
 document.addEventListener("DOMContentLoaded", function () {
   const promos = document.querySelectorAll("#promociones .promo-card");
   const hoy = new Date();
