@@ -2226,3 +2226,130 @@ button,
     border-radius: 16px;
   }
 }
+#promociones .card{
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+#promociones .card h2{
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+#promociones .card h3{
+  font-size: 18px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #1f3b64;
+}
+
+#promociones .card p,
+#promociones .card li{
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#promociones .bullets{
+  margin: 6px 0 12px 0;
+  padding-left: 22px;
+}
+
+#promociones .section-head{
+  margin-bottom: 18px;
+}
+
+#promociones .section-head h1{
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+#promociones .muted{
+  font-size: 15px;
+  color: #5c6b7a;
+}
+
+#promociones{
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+#promociones .grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+#promociones .accent{
+  background: #fff8ec;
+  border: 1px solid #ffe0a6;
+}
+
+#promociones .card:nth-of-type(4){
+  background: #eef8ff;
+  border: 1px solid #cfe8ff;
+}
+
+#promociones .card:nth-of-type(5){
+  background: #f3f0ff;
+  border: 1px solid #ddd2ff;
+}
+
+#promociones .card:nth-of-type(6){
+  background: #eefbef;
+  border: 1px solid #cdeccf;
+}
+
+#promociones .card:nth-of-type(7){
+  background: #fff6e9;
+  border: 1px solid #ffd7a0;
+}
+
+#promociones .card:nth-of-type(8){
+  background: #f7f7f7;
+  border: 1px solid #e1e1e1;
+}
+
+#promociones .card:nth-of-type(9){
+  background: #f4f4f4;
+  border: 1px solid #dddddd;
+}
+
+@media (max-width: 768px){
+  #promociones .grid-2{
+    grid-template-columns: 1fr;
+  }
+
+  #promociones .card{
+    padding: 16px 18px;
+  }
+
+  #promociones .section-head h1{
+    font-size: 30px;
+  }
+
+  #promociones .card h2{
+    font-size: 22px;
+  }
+
+  #promociones .card h3{
+    font-size: 17px;
+  }
+}
+.hero-decorativa{
+  width: 100%;
+  margin: 18px 0 28px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-decorativa-img{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  object-fit: contain;
+}
