@@ -1672,7 +1672,7 @@ contenido += "<hr>" + copia.innerHTML;
 `);
 ventana.document.close();
 ventana.focus();
-ventana.print();
+setTimeout(() => ventana.print(), 1000);
 } 
 
 
