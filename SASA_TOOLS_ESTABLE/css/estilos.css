@@ -2478,3 +2478,186 @@ button,
     font-size: 17px;
   }
 }
+#construccion-decenal .card{
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  background: #ffffff;
+  border: 1px solid #e8edf3;
+}
+
+#construccion-decenal .accent{
+  background: linear-gradient(180deg, #fff8ec 0%, #fffdf8 100%);
+  border: 1px solid #ffe0a6;
+}
+
+#construccion-decenal .card h2{
+  font-size: 26px;
+  margin-bottom: 12px;
+  color: #173b67;
+}
+
+#construccion-decenal .card h3{
+  font-size: 18px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #1f3b64;
+}
+
+#construccion-decenal p,
+#construccion-decenal li{
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+#construccion-decenal .bullets{
+  margin: 6px 0 12px 0;
+  padding-left: 22px;
+}
+
+#construccion-decenal .grid-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+#construccion-decenal .notice{
+  background: #eef6ff;
+  border-left: 5px solid #4a90e2;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-top: 14px;
+}
+
+#construccion-decenal .highlight{
+  background: #f3fbf3;
+  border-left: 5px solid #4caf50;
+  padding: 14px 16px;
+  border-radius: 12px;
+}
+
+#construccion-decenal .producto-header h1{
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+#construccion-decenal .producto-sub{
+  font-size: 16px;
+  color: #5b6978;
+}
+
+/* BLOQUES DECENAL */
+#construccion-decenal .bloque-decenal{
+  background: linear-gradient(180deg, #eef6ff 0%, #f8fbff 100%);
+  border: 1px solid #cfe3ff;
+  border-left: 8px solid #2f6fb6;
+}
+
+#construccion-decenal .bloque-decenal h2,
+#construccion-decenal .bloque-decenal h3{
+  color: #1f4f8c;
+}
+
+/* BLOQUES TRC / AUTOCONSTRUCCIÓN */
+#construccion-decenal .bloque-trc{
+  background: linear-gradient(180deg, #f7fbf4 0%, #fcfefb 100%);
+  border: 1px solid #dbe9d3;
+  border-left: 8px solid #5f8f3d;
+}
+
+#construccion-decenal .bloque-trc h2,
+#construccion-decenal .bloque-trc h3{
+  color: #476e2d;
+}
+
+/* BLOQUES MONTAJE / RELACIONADOS */
+#construccion-decenal .bloque-montaje{
+  background: linear-gradient(180deg, #fff8ec 0%, #fffdf8 100%);
+  border: 1px solid #ffe2b0;
+  border-left: 8px solid #d89a2b;
+}
+
+#construccion-decenal .bloque-montaje h2,
+#construccion-decenal .bloque-montaje h3{
+  color: #9a6613;
+}
+
+#construccion-decenal .table-wrap{
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+#construccion-decenal table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 420px;
+}
+
+#construccion-decenal th{
+  background: #173b67;
+  color: white;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+}
+
+#construccion-decenal td{
+  padding: 11px 12px;
+  border-bottom: 1px solid #e7edf3;
+  font-size: 14px;
+}
+
+#construccion-decenal tr:nth-child(even){
+  background: #f8fbff;
+}
+
+/* CINTAS VISUALES */
+#construccion-decenal .etiqueta-seccion{
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  margin-bottom: 12px;
+}
+
+#construccion-decenal .etiqueta-decenal{
+  background: #dcecff;
+  color: #1f4f8c;
+}
+
+#construccion-decenal .etiqueta-trc{
+  background: #e4f1da;
+  color: #476e2d;
+}
+
+#construccion-decenal .etiqueta-montaje{
+  background: #ffe9bf;
+  color: #9a6613;
+}
+
+@media (max-width: 768px){
+  #construccion-decenal .grid-2{
+    grid-template-columns: 1fr;
+  }
+
+  #construccion-decenal .card{
+    padding: 16px 18px;
+  }
+
+  #construccion-decenal .producto-header h1{
+    font-size: 30px;
+  }
+
+  #construccion-decenal .card h2{
+    font-size: 22px;
+  }
+
+  #construccion-decenal .card h3{
+    font-size: 17px;
+  }
+}
