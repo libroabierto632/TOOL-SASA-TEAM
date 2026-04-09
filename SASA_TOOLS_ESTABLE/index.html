@@ -138,6 +138,7 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
   <button class="main-tab" data-target="detector-oportunidades">Detector oportunidades</button>
   <button class="main-tab" data-target="herramientas">Herramientas comerciales</button>
   <button class="main-tab" data-target="seguros">Seguros</button>
+  <button class="main-tab" data-target="flotas">Flotas</button>
   <button class="main-tab" data-target="construccion-decenal">Construcción</button>
   <button class="main-tab" data-target="rav">Renta Vitalicia</button>
   <button class="main-tab" data-target="europa8">Europa 8</button>
@@ -291,6 +292,7 @@ Selecciona los apartados que quieres incluir en el dossier y genera un documento
 <label><input type="checkbox" value="detector-oportunidades"> Detector de oportunidades</label><br>
 <label><input type="checkbox" value="herramientas"> Herramientas comerciales</label><br>
 <label><input type="checkbox" value="seguros"> Seguros</label><br>
+<label><input type="checkbox" value="flotas"> Seguro de Flotas</label><br>
 <label><input type="checkbox" value="construccion-decenal"> Construcción y Seguro Decenal</label><br>
 <label><input type="checkbox" value="rav"> Renta Vitalicia</label><br>
 <label><input type="checkbox" value="europa8"> Europa Vencimiento 8</label><br>
@@ -2707,6 +2709,178 @@ function filtrarContactoRapido(filtro) {
     </div>
   </div>
 </section>
+
+
+<section id="flotas" class="main-section producto-seguro-flota" style="display:none;">
+  <div class="contenedor-flota">
+    <div class="cabecera-flota">
+      <span class="etiqueta-flota"> · Empresas</span>
+      <h2>Seguro de Flota de Vehículos</h2>
+      <p class="subtitulo-flota">
+        Protege los vehículos del negocio en una sola póliza, con coberturas pensadas para flotas de más de 5 vehículos.
+      </p>
+    </div>
+
+    <div class="grid-flota">
+      <div class="tarjeta-flota tarjeta-destacada">
+        <h3>¿A quién va dirigido?</h3>
+        <ul>
+          <li>Empresas</li>
+          <li>Autónomos</li>
+          <li>Flotas de más de 5 vehículos</li>
+        </ul>
+      </div>
+
+      <div class="tarjeta-flota">
+        <h3>Vehículos asegurables</h3>
+        <ul>
+          <li>Turismos</li>
+          <li>Furgonetas</li>
+          <li>Vehículos pesados</li>
+          <li>Camiones</li>
+          <li>Motos</li>
+        </ul>
+      </div>
+
+      <div class="tarjeta-flota">
+        <h3>Ventaja principal</h3>
+        <p>
+          Permite asegurar de forma conjunta los vehículos del negocio, manteniendo coberturas amplias y una gestión más cómoda.
+        </p>
+      </div>
+    </div>
+
+    <div class="bloque-flota">
+      <h3>Coberturas básicas</h3>
+      <div class="columnas-flota">
+        <div class="mini-tarjeta-flota">
+          <h4>Responsabilidad Civil Obligatoria</h4>
+          <p>
+            Cubre la responsabilidad civil del conductor dentro de los límites del seguro obligatorio.
+          </p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Responsabilidad Civil Suplementaria</h4>
+          <p>
+            Amplía la protección para indemnizaciones que excedan el seguro obligatorio e incluye fianzas judiciales.
+          </p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Defensa Jurídica y Reclamación de Daños</h4>
+          <p>
+            Incluye defensa jurídica del asegurado y reclamación de daños frente a terceros responsables.
+          </p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Seguro del Conductor</h4>
+          <p>
+            Cubre muerte, invalidez permanente y gastos sanitarios del conductor autorizado.
+          </p>
+          <p class="nota-flota">
+            Excluido para vehículos industriales y maquinaria agrícola.
+          </p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Asistencia en Viaje</h4>
+          <p>
+            Para vehículos de 2ª categoría cuando el ámbito de circulación es nacional.
+          </p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Riesgos extraordinarios</h4>
+          <p>
+            Daños personales y materiales con reclamación al Consorcio en supuestos contemplados en póliza.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bloque-flota">
+      <h3>Coberturas opcionales</h3>
+      <div class="columnas-flota">
+        <div class="mini-tarjeta-flota">
+          <h4>Rotura de parabrisas y lunas</h4>
+          <p>Reparación, sustitución o indemnización según el daño cubierto.</p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Incendio del vehículo</h4>
+          <p>Cobertura de daños producidos por incendio o explosión.</p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Robo del vehículo</h4>
+          <p>
+            Incluye sustracción del vehículo, piezas fijas, accesorios asegurados y daños derivados del robo.
+          </p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Daños propios con franquicia</h4>
+          <p>
+            Reparación, reposición o indemnización por daños sufridos por el vehículo en circulación, reposo o transporte.
+          </p>
+        </div>
+      </div>
+      <p class="nota-flota">
+        Algunas coberturas opcionales aparecen excluidas para tractores, vehículos industriales y maquinaria agrícola.
+      </p>
+    </div>
+
+    <div class="bloque-flota bloque-ventajas">
+      <h3>Ventajas destacadas</h3>
+      <div class="chips-flota">
+        <span>Robo</span>
+        <span>Asistencia en viaje</span>
+        <span>Incendio</span>
+        <span>Reclamación de daños</span>
+        <span>Riesgos extraordinarios</span>
+      </div>
+    </div>
+
+    <div class="bloque-flota">
+      <h3>Beneficios adicionales</h3>
+      <div class="columnas-flota">
+        <div class="mini-tarjeta-flota">
+          <h4>Yo Me Ocupo Empresas</h4>
+          <p>Búsqueda de proveedores, suministros, formación y apoyo para el negocio.</p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Asesoramiento legal</h4>
+          <p>Descuentos en asesoría legal, contable y fiscal para autónomos y pymes.</p>
+        </div>
+
+        <div class="mini-tarjeta-flota">
+          <h4>Servicios informáticos y digitales</h4>
+          <p>Recuperación de datos, seguridad digital, localización de dispositivos y marketing digital.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bloque-flota">
+      <h3>Camiones y vehículos pesados</h3>
+      <p>
+        Dentro de la solución de flotas pueden contemplarse también <strong>camiones y vehículos pesados</strong>, siempre que encajen en la política de suscripción y en el tipo de flota a asegurar.
+      </p>
+      <div class="notice-flota">
+        Conviene revisar cada caso según número de vehículos, tipología, uso, tonelaje y actividad de la empresa.
+      </div>
+    </div>
+
+    <div class="aviso-flota">
+      <strong>Resumen comercial:</strong>
+      Seguro orientado a empresas y autónomos con flotas de más de 5 vehículos, permitiendo agrupar la protección de turismos, furgonetas, vehículos pesados, camiones y motos bajo una sola póliza con coberturas básicas y opcionales.
+    </div>
+  </div>
+</section>
+
+
 
 
 <section id="construccion-decenal" class="main-section" style="display:none;">
