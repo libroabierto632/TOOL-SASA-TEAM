@@ -2661,3 +2661,201 @@ button,
     font-size: 17px;
   }
 }
+.producto-seguro-flota {
+  padding: 32px 20px;
+  background: linear-gradient(180deg, #f4f7fb 0%, #edf2f7 100%);
+}
+
+.contenedor-flota {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #ea0a0e;
+}
+
+.cabecera-flota {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.etiqueta-flota {
+  display: inline-block;
+  background: #dfe8f2;
+  color: #38506b;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.cabecera-flota h2 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  line-height: 1.15;
+  color: #f70a79;
+}
+
+.subtitulo-flota {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #5c6b7a;
+}
+
+.grid-flota,
+.columnas-flota {
+  display: grid;
+  gap: 18px;
+}
+
+.grid-flota {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: 26px;
+}
+
+.columnas-flota {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.tarjeta-flota,
+.mini-tarjeta-flota,
+.bloque-flota,
+.aviso-flota {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.tarjeta-flota {
+  padding: 22px;
+  border: 1px solid #e6ebf1;
+}
+
+.tarjeta-destacada {
+  border: 2px solid #cfd9e5;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.tarjeta-flota h3,
+.bloque-flota h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  color: hsl(109, 87%, 47%);
+}
+
+.mini-tarjeta-flota {
+  padding: 18px;
+  border: 1px solid #edf1f5;
+  background: #51ccdf;
+}
+
+.mini-tarjeta-flota h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: hsl(316, 92%, 46%);
+  font-size: 17px;
+}
+
+.bloque-flota {
+  padding: 24px;
+  margin-bottom: 22px;
+  border: 1px solid #e6ebf1;
+}
+
+.bloque-ventajas {
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+}
+
+.tarjeta-flota ul,
+.mini-tarjeta-flota ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.tarjeta-flota li,
+.mini-tarjeta-flota li {
+  margin-bottom: 8px;
+}
+
+.mini-tarjeta-flota p,
+.tarjeta-flota p,
+.aviso-flota {
+  line-height: 1.6;
+  margin: 0;
+}
+
+.nota-flota {
+  margin-top: 10px !important;
+  font-size: 14px;
+  color: #6c7a89;
+}
+
+/* AQUÍ ESTÁ EL CAMBIO FUERTE: ya no parecen pestañas */
+.chips-flota {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips-flota span {
+  background: #eef3f7;
+  color: #40576d;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid #d7e0e8;
+  box-shadow: none;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.chips-flota span::before {
+  content: "✓";
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7f93;
+}
+
+.notice-flota {
+  background: #eef5fb;
+  border-left: 5px solid #8fb3d1;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-top: 14px;
+  line-height: 1.6;
+  color: #31475d;
+}
+
+.aviso-flota {
+  padding: 20px 22px;
+  border-left: 5px solid #9fb3c8;
+  font-size: 15px;
+  background: #f8fbfd;
+  color: #31475d;
+}
+
+@media (max-width: 768px) {
+  .cabecera-flota h2 {
+    font-size: 28px;
+  }
+
+  .subtitulo-flota {
+    font-size: 16px;
+  }
+
+  .producto-seguro-flota {
+    padding: 24px 14px;
+  }
+
+  .bloque-flota,
+  .tarjeta-flota,
+  .mini-tarjeta-flota,
+  .aviso-flota {
+    border-radius: 14px;
+  }
+}
