@@ -4112,32 +4112,33 @@ Tened especial atención en multirriesgos, RC tramitados con espejo Mapfre y en 
 
 
 <section id="seguros" class="main-section" style="display: none;">
+
 <div style="margin:18px 0 24px 0; text-align:center;">
-  <img src="./assets/seguros_planeta.png?v=1" alt="Mapa general de seguros" style="display:block; width:100%; max-width:1100px; height:auto; margin:0 auto; border-radius:18px; box-shadow:0 6px 18px rgba(0,0,0,.15);">
+  <img src="./assets/seguros_planeta.png?v=1" alt="Mapa general de seguros" style="display:block; width:100%; max-width:900px; height:auto; margin:0 auto; border-radius:18px; box-shadow:0 6px 18px rgba(0,0,0,.15);">
 </div>
+
 
 <p>Seguros de protección personal para particulares, autónomos y empresas.</p>
 
 
 
-<div class="subtabs">
-<button class="subtab active" data-subtab="aegon-indice">Índice</button>
-<button class="subtab" data-subtab="aegon-vida">Seguros de Vida</button>
-<button class="subtab" data-subtab="aegon-salud">Seguros de Salud</button>
-<button class="subtab" data-subtab="aegon-autonomo">Autónomos</button>
-<button class="subtab" data-subtab="aegon-accidentes">Accidentes</button>
-<button class="subtab" data-subtab="aegon-dependencia">Dependencia</button>
-<button class="subtab" data-subtab="aegon-decesos">Decesos</button>
-<button class="subtab" data-subtab="aegon-hogar">Mi Hogar</button>
+<div class="subtabs" id="subtabs-seguros-principales">
+  <button class="subtab active" data-subtab="aegon-indice">Índice</button>
+  <button class="subtab" data-subtab="aegon-vida">Seguros de Vida</button>
+  <button class="subtab" data-subtab="aegon-salud">Seguros de Salud</button>
+  <button class="subtab" data-subtab="aegon-autonomo">Autónomos</button>
+  <button class="subtab" data-subtab="aegon-accidentes">Accidentes</button>
+  <button class="subtab" data-subtab="aegon-dependencia">Dependencia</button>
+  <button class="subtab" data-subtab="aegon-decesos">Decesos</button>
+  <button class="subtab" data-subtab="aegon-hogar">Mi Hogar</button>
+  <button class="subtab" data-subtab="seguros-impago">Impago</button>
+  <button class="subtab" data-subtab="seguros-transporte">Transporte</button>
+  <button class="subtab" data-subtab="seguros-ciber">Ciber</button>
+  <button class="subtab" data-subtab="seguros-otros">Otros seguros</button>
+  <button class="subtab" data-subtab="seguros-autos">Autos y Motos</button>
+  <button class="subtab" data-subtab="seguros-salud">Salud Asisa</button>
+  <button class="subtab" data-subtab="seguros-empresas">Empresas</button>
 </div>
-
-<button class="subtab" data-subtab="seguros-impago">Impago</button>
-<button class="subtab" data-subtab="seguros-transporte">Transporte</button>
-<button class="subtab" data-subtab="seguros-ciber">Ciber</button>
-<button class="subtab" data-subtab="seguros-otros">Otros seguros</button>
-<button class="subtab" data-subtab="seguros-autos">Autos y Motos</button>
-<button class="subtab" data-subtab="seguros-salud">Salud Asisa</button>
-<button class="subtab" data-subtab="seguros-empresas">Empresas</button>
 
 
 
@@ -6100,15 +6101,14 @@ Saludos</pre>
 
 </div>
 
-<div class="subtab-panel" id="seguros-empresas">
 
-<div style="margin:18px 0 24px 0; text-align:center;">
-  <img src="./assets/empresas_portada.png?v=1" alt="Seguros para autónomos y empresas" style="display:block; width:100%; max-width:1100px; height:auto; margin:0 auto; border-radius:18px; box-shadow:0 6px 18px rgba(0,0,0,.15);">
-</div>
+
+<div class="subtab-panel" id="seguros-empresas">
+ <div class="subtabs-empresas">
+
 
   <div class="card">
-
-    <div class="subtabs-empresas">
+   
       <button class="subtab-empresa2 active" type="button" onclick="abrirEmpresas('empresas-detectar', this)">🔎 Detectar</button>
       <button class="subtab-empresa2" type="button" onclick="abrirEmpresas('empresas-multirriesgo', this)">🏪 Multirriesgo</button>
       <button class="subtab-empresa2" type="button" onclick="abrirEmpresas('empresas-rc-integral', this)">⚖️ RC Integral</button>
@@ -6127,12 +6127,16 @@ Saludos</pre>
 
     <div id="empresas-detectar" class="empresa2-panel" style="display:block;">
 
+
       <div style="background:#eef6ff; border-left:6px solid #2563eb; padding:15px; border-radius:8px; margin-bottom:20px;">
         <h3 style="margin-top:0;">🎯 Punto de entrada</h3>
         <p style="margin-bottom:0;">
           Usa esta pantalla para detectar necesidades antes de hablar de productos.
         </p>
       </div>
+<div style="margin:18px 0 24px 0; text-align:center;">
+  <img src="./assets/empresas_portada.png?v=1" alt="Seguros para autónomos y empresas" style="display:block; width:100%; max-width:1100px; height:auto; margin:0 auto; border-radius:18px; box-shadow:0 6px 18px rgba(0,0,0,.15);">
+</div>
 
       <div class="tip-comercial" style="margin-bottom:15px;">
         💡 Cómo detectar qué seguro necesita una empresa en 30 segundos
@@ -6221,8 +6225,8 @@ Saludos</pre>
           Con esta información es más fácil identificar qué seguros necesita realmente el negocio.
         </p>
       </div>
-
     </div>
+
 
     <div id="empresas-multirriesgo" class="empresa2-panel" style="display:none;">
 
@@ -6730,9 +6734,7 @@ Saludos</pre>
 
 
 
-
 <div id="aegon-indice" class="subtab-panel is-visible" style="display:block;">
-
   <h2>📌 Índice de productos</h2>
 
   <ul>
