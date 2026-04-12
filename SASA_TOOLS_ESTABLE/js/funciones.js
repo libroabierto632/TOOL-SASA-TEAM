@@ -1605,8 +1605,7 @@ function imprimirDossierSeleccionado(sectionIds){
   }
 }
 
- 
-function generarDossier() {
+ function generarDossier() {
   const checks = document.querySelectorAll('input[type="checkbox"]:checked');
   let contenido = "";
 
@@ -1785,6 +1784,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   actualizarContador();
 });
+
+
 
 
 
@@ -2122,9 +2123,15 @@ function abrirSaludAsisa(panelId, boton) {
     boton.classList.add("is-active", "active");
   }
 }
+
 function abrirEmpresas(panelId, boton) {
   const contenedor = document.getElementById("seguros-empresas");
   if (!contenedor) return;
+
+  const subtabsGenerales = document.getElementById("subtabs-seguros-principales");
+  if (subtabsGenerales) {
+    subtabsGenerales.style.display = "none";
+  }
 
   contenedor.querySelectorAll(".empresa2-panel").forEach(panel => {
     panel.style.display = "none";
@@ -2145,31 +2152,14 @@ function abrirEmpresas(panelId, boton) {
     boton.classList.add("active");
   }
 }
-function abrirEmpresas(panelId, boton) {
-  const contenedor = document.getElementById("seguros-empresas");
-  if (!contenedor) return;
 
-  contenedor.querySelectorAll(".empresa2-panel").forEach(panel => {
-    panel.style.display = "none";
-    panel.classList.remove("active");
-  });
-
-  contenedor.querySelectorAll(".subtab-empresa2").forEach(btn => {
-    btn.classList.remove("active");
-  });
-
-  const panel = document.getElementById(panelId);
-  if (panel) {
-    panel.style.display = "block";
-    panel.classList.add("active");
-  }
-
-  if (boton) {
-    boton.classList.add("active");
-  }
-}
 
 function abrirSeguroYSubtab(subtabId) {
+  if (subtabId === "seguros-ciber") {
+    irAPestana("ciberseguro");
+    return;
+  }
+
   const botonSeguros = document.querySelector('.main-tab[data-target="seguros"]');
   if (botonSeguros) {
     botonSeguros.click();
@@ -2181,7 +2171,10 @@ function abrirSeguroYSubtab(subtabId) {
       subtab.click();
     }
   }, 150);
- }
+}
+
+
+
 
 function detectarOportunidades() {
   const clienteBanco = document.getElementById("detClienteBanco")?.value || "";
@@ -2525,3 +2518,31 @@ function generarDossier() {
   ventana.focus();
   ventana.print();
 }
+function actualizarVistaSegurosEmpresas() {
+  const fila = document.getElementById("subtabs-seguros-principales");
+  const panelEmpresas = document.getElementById("seguros-empresas");
+  if (!fila || !panelEmpresas) return;
+
+  const empresasActiva =
+    panelEmpresas.classList.contains("active") ||
+    panelEmpresas.style.display === "block";
+
+  fila.style.display = empresasActiva ? "none" : "flex";
+}
+
+document.addEventListener("click", function (e) {
+  const btnSubtab = e.target.closest(".subtab[data-subtab]");
+  if (btnSubtab) {
+    setTimeout(actualizarVistaSegurosEmpresas, 0);
+  }
+
+  const btnMainSeguros = e.target.closest('.main-tab[data-target="seguros"]');
+  if (btnMainSeguros) {
+    setTimeout(() => {
+      const fila = document.getElementById("subtabs-seguros-principales");
+      if (fila) fila.style.display = "flex";
+    }, 0);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", actualizarVistaSegurosEmpresas);
