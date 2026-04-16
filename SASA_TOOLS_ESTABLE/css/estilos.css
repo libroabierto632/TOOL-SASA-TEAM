@@ -3082,3 +3082,33 @@ button,
   color:#5f4a10;
   line-height:1.5;
 }
+.alerta-europa9{
+  background: linear-gradient(135deg, #fff7d6 0%, #ffe8a3 100%);
+  border: 1px solid #f2cf63;
+  border-left: 6px solid #d79b00;
+  border-radius: 16px;
+  padding: 16px 18px;
+  margin: 16px 0;
+  box-shadow: 0 8px 18px rgba(180, 130, 0, 0.10);
+}
+
+.alerta-europa9-titulo{
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #7a5600;
+  margin-bottom: 10px;
+}
+
+.alerta-europa9 p{
+  margin: 8px 0;
+  color: #5f4a10;
+  line-height: 1.55;
+}
+
+.alerta-europa9-nota{
+  font-weight: 700;
+}
+
+.europa9-vbi{
+  white-space: nowrap;
+}
