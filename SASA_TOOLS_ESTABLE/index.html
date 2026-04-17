@@ -143,7 +143,7 @@ Los cálculos, cotizaciones, presupuestos o documentos generados (incluidos PDFs
   <button class="main-tab" data-target="flotas">Flotas</button>
   <button class="main-tab" data-target="construccion-decenal">Construcción</button>
   <button class="main-tab" data-target="rav">Renta Vitalicia</button>
-  <button class="main-tab" data-target="europa9">Europa 9</button>
+  <button class="main-tab" data-target="europa10">Europa 10</button>
   <button class="main-tab" data-target="credito">Crédito</button>
   <button class="main-tab" data-target="cartas">Cartas</button>
   <button class="main-tab" data-target="contactos">Contactos</button>
@@ -298,7 +298,7 @@ Selecciona los apartados que quieres incluir en el dossier y genera un documento
 <label><input type="checkbox" value="flotas"> Seguro de Flotas</label><br>
 <label><input type="checkbox" value="construccion-decenal"> Construcción y Seguro Decenal</label><br>
 <label><input type="checkbox" value="rav"> Renta Vitalicia</label><br>
-<label><input type="checkbox" value="europa9"> Europa 9</label><br>
+<label><input type="checkbox" value="europa10"> Europa 10</label><br>
 <label><input type="checkbox" value="credito"> Seguro de crédito</label><br>
 <label><input type="checkbox" value="cartas"> Cartas</label><br>
 <label><input type="checkbox" value="contactos"> Contactos</label><br>
@@ -3587,7 +3587,83 @@ function filtrarContactoRapido(filtro) {
           Es una solución pensada para proteger la estabilidad de la obra, cubrir riesgos durante la construcción y reforzar la seguridad del promotor frente a daños y reclamaciones.
         </p>
       </div>
+<div class="bloque-trc-datos">
+  <div class="bloque-trc-titulo">Datos para Todo Riesgo Construcción (TRC)</div>
 
+  <div class="bloque-trc-grid">
+    <div class="campo-trc"><strong>NOMBRE:</strong></div>
+    <div class="campo-trc"><strong>APELLIDOS:</strong></div>
+    <div class="campo-trc"><strong>DNI:</strong></div>
+    <div class="campo-trc"><strong>FECHA DE NACIMIENTO:</strong></div>
+    <div class="campo-trc"><strong>DIRECCIÓN DE ENVÍO:</strong></div>
+    <div class="campo-trc"><strong>DIRECCIÓN DE RIESGO:</strong></div>
+    <div class="campo-trc"><strong>NUM. PLANTAS:</strong></div>
+    <div class="campo-trc"><strong>NUM. PLANTAS SÓTANO:</strong></div>
+    <div class="campo-trc"><strong>EDIFICIOS COLINDANTES:</strong></div>
+    <div class="campo-trc"><strong>DISTANCIA:</strong></div>
+    <div class="campo-trc"><strong>MAIL:</strong></div>
+    <div class="campo-trc"><strong>MÓVIL:</strong></div>
+    <div class="campo-trc"><strong>CUENTA BANCARIA:</strong></div>
+    <div class="campo-trc"><strong>IMPORTE CASA:</strong></div>
+    <div class="campo-trc"><strong>CARENCIA:</strong></div>
+    <div class="campo-trc"><strong>FECHA DE INICIO DE LA OBRA:</strong></div>
+    <div class="campo-trc"><strong>FECHA DE EFECTO:</strong></div>
+    <div class="campo-trc"><strong>OFICINA:</strong></div>
+    <div class="campo-trc"><strong>MATRÍCULA AGENTE:</strong></div>
+  </div>
+</div>
+
+<style>
+  .bloque-trc-datos{
+    background:#ffffff;
+    border:1px solid #dbe7f3;
+    border-left:6px solid #0ea5e9;
+    border-radius:16px;
+    padding:20px;
+    margin:20px 0;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+  }
+
+  .bloque-trc-titulo{
+    font-size:20px;
+    font-weight:700;
+    color:#0f172a;
+    margin-bottom:18px;
+  }
+
+  .bloque-trc-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:12px;
+  }
+
+  .campo-trc{
+    background:#f8fbff;
+    border:1px solid #dbe7f3;
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:14px;
+    color:#1e293b;
+    min-height:46px;
+    display:flex;
+    align-items:center;
+  }
+
+  @media (max-width: 768px){
+    .bloque-trc-datos{
+      padding:16px;
+    }
+
+    .bloque-trc-titulo{
+      font-size:18px;
+    }
+
+    .campo-trc{
+      font-size:13px;
+      padding:10px 12px;
+    }
+  }
+</style>
     </div>
   </div>
 
@@ -4003,6 +4079,76 @@ function filtrarContactoRapido(filtro) {
   <div class="producto-box">
     <div class="renta-box">
 
+</div>
+
+<div class="aviso-planeta-seguro">
+  <div class="aviso-planeta-icono">ℹ️</div>
+  <div class="aviso-planeta-contenido">
+    <div class="aviso-planeta-titulo">Importante</div>
+    <div class="aviso-planeta-texto">
+      La inclusión en <strong>Planeta Seguro</strong> debe realizarse, como norma general y única forma de garantizar su correcta admisión,
+      el <strong>mismo día de la contratación de la póliza</strong>, aunque la fecha de efecto sea diferida.
+      <br><br>
+      Si la firma se realiza con posterioridad, <strong>el sistema puede admitirla o no</strong>, sin que exista un plazo máximo oficial garantizable.
+      Por ello, <strong>no debe tomarse como operativa válida firmarlo al día siguiente o en días posteriores</strong>, aunque en algunos casos puntuales pudiera llegar a entrar.
+    </div>
+  </div>
+</div>
+
+<style>
+  .aviso-planeta-seguro{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    background:#f4fbff;
+    border-left:6px solid #00a3e0;
+    border-radius:14px;
+    padding:16px 18px;
+    margin:18px 0;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .aviso-planeta-icono{
+    font-size:24px;
+    line-height:1;
+    flex-shrink:0;
+    margin-top:2px;
+  }
+
+  .aviso-planeta-contenido{
+    flex:1;
+  }
+
+  .aviso-planeta-titulo{
+    font-size:18px;
+    font-weight:700;
+    color:#003b5c;
+    margin-bottom:6px;
+  }
+
+  .aviso-planeta-texto{
+    font-size:15px;
+    line-height:1.6;
+    color:#1f2937;
+  }
+
+  @media (max-width: 768px){
+    .aviso-planeta-seguro{
+      padding:14px;
+      gap:10px;
+    }
+
+    .aviso-planeta-titulo{
+      font-size:16px;
+    }
+
+    .aviso-planeta-texto{
+      font-size:14px;
+    }
+  }
+</style>
+
+
       <div class="renta-header producto-header">
         <h1>🌍 Planeta Seguros</h1>
         <div class="renta-sub producto-sub">Servicio gratuito · Pago mensual agrupado · Bonificación mensual</div>
@@ -4346,22 +4492,22 @@ Tened especial atención en multirriesgos, RC tramitados con espejo Mapfre y en 
 
 
   
-<section id="europa9" class="main-section" style="display: none;">
+<section id="europa10" class="main-section" style="display: none;">
   <div class="producto-box">
     <div class="renta-box">
 
       <div class="renta-header producto-header">
-        <h1>📈 Vencimiento Europa 9</h1>
+        <h1>📈 Vencimiento Europa 10</h1>
         <div class="renta-sub producto-sub">Unit Linked · Prima única · Producto de ahorro inversión</div>
       </div>
 
-<div class="alerta-europa9">
-  <div class="alerta-europa9-titulo">📢 Aviso importante · Europa 9</div>
+<div class="alerta-europa10">
+  <div class="alerta-europa10-titulo">📢 Aviso importante · Europa10</div>
   <p>
     Se ha procedido al <strong>cierre de la actual emisión de Unit Linked Santander Vencimiento Europa 9</strong>.
   </p>
   <p>
-    <strong>El lunes 20 de abril</strong> se abrirá a comercialización una <strong>nueva emisión</strong> con
+    <strong>El lunes 20 de abril</strong> se abrirá a comercialización El Europa 10 una <strong>nueva emisión</strong> con
     <strong>cupón asegurado del 2,16% durante 5 años</strong>, manteniendo una
     <strong>estructura de inversión conservadora 100% deuda pública</strong>.
   </p>
@@ -4369,7 +4515,7 @@ Tened especial atención en multirriesgos, RC tramitados con espejo Mapfre y en 
     Se mantiene un <strong>VBI del 1,50%</strong>
     <span class="europa9-vbi">(1,10% Upfront + 0,40% Recurrente)</span>.
   </p>
-  <p class="alerta-europa9-nota">
+  <p class="alerta-europa10-nota">
     Revisar siempre la emisión vigente antes de trasladar información al cliente.
   </p>
 </div>
@@ -4425,37 +4571,18 @@ Tened especial atención en multirriesgos, RC tramitados con espejo Mapfre y en 
           Según la ficha comercial, se realizarán rescates parciales preconcertados por importe equivalente al <strong>2,43%</strong> anual sobre la prima inicial aportada.
         </p>
 
-        <div class="table-wrap">
-          <table class="renta-table">
-            <thead>
-              <tr>
-                <th>Fecha</th>
-                <th>Pago previsto</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>30/04/2027</td>
-                <td>2,43%</td>
-              </tr>
-              <tr>
-                <td>30/04/2028</td>
-                <td>2,43%</td>
-              </tr>
-              <tr>
-                <td>30/04/2029</td>
-                <td>2,43%</td>
-              </tr>
-              <tr>
-                <td>30/04/2030</td>
-                <td>2,43%</td>
-              </tr>
-              <tr>
-                <td>30/04/2031</td>
-                <td>2,43%</td>
-              </tr>
-              <tr>
-                <td>A vencimiento</td>
+ </p>
+  <p>
+    <strong>El lunes 20 de abril</strong> se abrirá a comercialización El Europa 10 una <strong>nueva emisión</strong> con
+    <strong>cupón asegurado del 2,16% durante 5 años</strong>, manteniendo una
+    <strong>estructura de inversión conservadora 100% deuda pública</strong>.
+  </p>
+  <p>
+    Se mantiene un <strong>VBI del 1,50%</strong>
+    <span class="europa10-vbi">(1,10% Upfront + 0,40% Recurrente)</span>.
+  </p>
+
+                        <td>A vencimiento</td>
                 <td>Objetivo de devolución del 100% de la prima inicial aportada</td>
               </tr>
             </tbody>
@@ -4471,8 +4598,8 @@ Tened especial atención en multirriesgos, RC tramitados con espejo Mapfre y en 
         <div class="card">
           <h2>Duración y liquidez</h2>
           <ul class="bullets">
-            <li>Fecha de inicio de la inversión vinculada: <strong>6 de mayo de 2026</strong></li>
-            <li>Vencimiento del seguro: <strong>5 de mayo de 2031</strong></li>
+            <li>Fecha de inicio de la inversión vinculada: <strong> mayo de 2026</strong></li>
+            <li>Vencimiento del seguro: <strong> mayo de 2031</strong></li>
             <li>Plazo total: <strong>5 años</strong></li>
             <li>Ventanas de liquidez: <strong>mensuales</strong></li>
           </ul>
@@ -4508,9 +4635,9 @@ Tened especial atención en multirriesgos, RC tramitados con espejo Mapfre y en 
           La prima aportada se invierte en bonos soberanos europeos, según la documentación facilitada:
         </p>
         <ul class="bullets">
-          <li>Bono del Estado Español con vencimiento 30 de abril de 2031</li>
-          <li>Bono del Estado Italiano con vencimiento 1 de abril de 2031</li>
-          <li>Bono del Estado Francés con vencimiento 25 de febrero de 2031</li>
+          <li>Bono del Estado Español con vencimiento 2031</li>
+          <li>Bono del Estado Italiano con vencimiento 2031</li>
+          <li>Bono del Estado Francés con vencimiento  2031</li>
         </ul>
 
         <p>
@@ -4567,7 +4694,7 @@ Tened especial atención en multirriesgos, RC tramitados con espejo Mapfre y en 
           Si te parece, revisamos si este producto encaja por plazo, importe y perfil, y vemos si tiene sentido dentro de tu ahorro actual.
         </p>
       </div>
-
+</div>
     </div>
   </div>
 </section>
