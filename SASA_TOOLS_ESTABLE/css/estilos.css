@@ -3112,3 +3112,454 @@ button,
 .europa9-vbi{
   white-space: nowrap;
 }
+
+.bloque-bajas-competencia{
+  margin-top:18px;
+}
+
+.cabecera-bajas{
+  background: linear-gradient(135deg, #0f3d91 0%, #1d5fd0 100%);
+  color:#fff;
+  border-radius:18px;
+  padding:18px 20px;
+  margin-bottom:16px;
+  box-shadow:0 10px 24px rgba(13, 50, 120, 0.16);
+}
+
+.cabecera-bajas h3{
+  margin:0 0 8px;
+  font-size:1.2rem;
+}
+
+.cabecera-bajas .subtexto-bloque{
+  margin:0;
+  color:rgba(255,255,255,0.92);
+}
+
+.contactos-competencias-bajas-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:14px;
+}
+
+.contacto-compania{
+  background:#fff;
+  border:1px solid #e7edf8;
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 8px 18px rgba(15, 23, 42, 0.06);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+
+.contacto-compania:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 24px rgba(15, 23, 42, 0.10);
+}
+
+.contacto-compania h4{
+  margin:0 0 10px;
+  font-size:1rem;
+  color:#123b7a;
+  border-bottom:2px solid #eef4ff;
+  padding-bottom:8px;
+}
+
+.contacto-compania p{
+  margin:8px 0;
+  color:#374151;
+  line-height:1.5;
+  word-break:break-word;
+}
+
+.contacto-compania a{
+  color:#1d4ed8;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.contacto-compania a:hover{
+  text-decoration:underline;
+}
+
+.nota-bajas-competencia{
+  margin-top:16px;
+  background:linear-gradient(135deg, #fff7d6 0%, #ffe8a3 100%);
+  border:1px solid #f2cf63;
+  border-left:6px solid #d79b00;
+  border-radius:16px;
+  padding:14px 16px;
+  color:#6b5500;
+  font-weight:600;
+}
+.info-card.integracion{
+  background: linear-gradient(135deg, #eef5ff 0%, #f8fbff 100%);
+  border: 1px solid #dbe8ff;
+  border-left: 6px solid #1d5fd0;
+}
+
+.info-card.integracion h3{
+  color:#123b7a;
+}
+.agro-contacto-destacado{
+  background: linear-gradient(135deg, #eaf4ff 0%, #f7fbff 100%);
+  border: 1px solid #d7e8ff;
+  border-left: 6px solid #1d5fd0;
+  border-radius: 18px;
+  padding: 16px 18px;
+  margin: 0 0 18px;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.agro-contacto-titulo{
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #123b7a;
+  margin-bottom: 12px;
+}
+
+.agro-contacto-datos{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.agro-contacto-item{
+  background: #fff;
+  border: 1px solid #e6eef9;
+  border-radius: 14px;
+  padding: 12px 14px;
+  min-width: 170px;
+}
+
+.agro-label{
+  display: block;
+  font-size: 0.8rem;
+  color: #5b6472;
+  margin-bottom: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.agro-contacto-item strong{
+  color: #123b7a;
+  font-size: 1rem;
+}
+
+.agro-contacto-mail a{
+  color: #1d4ed8;
+  font-weight: 700;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.agro-contacto-mail a:hover{
+  text-decoration: underline;
+}
+.agro-hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+  background:linear-gradient(135deg, #0f3d91 0%, #1d5fd0 100%);
+  color:#fff;
+  border-radius:20px;
+  padding:22px 22px;
+  margin-bottom:18px;
+  box-shadow:0 12px 28px rgba(13, 50, 120, 0.16);
+}
+
+.agro-hero h2{
+  margin:0 0 10px;
+  font-size:1.5rem;
+}
+
+.agro-hero p{
+  margin:0;
+  color:rgba(255,255,255,0.95);
+  line-height:1.55;
+  max-width:780px;
+}
+
+.agro-hero-badge{
+  background:rgba(255,255,255,0.16);
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:16px;
+  padding:12px 14px;
+  min-width:140px;
+  text-align:center;
+}
+
+.agro-hero-badge span{
+  display:block;
+  font-size:.8rem;
+  opacity:.9;
+  margin-bottom:4px;
+}
+
+.agro-hero-badge strong{
+  font-size:1rem;
+}
+
+.agro-contacto-destacado{
+  background:linear-gradient(135deg, #eaf4ff 0%, #f7fbff 100%);
+  border:1px solid #d7e8ff;
+  border-left:6px solid #1d5fd0;
+  border-radius:18px;
+  padding:16px 18px;
+  margin:0 0 18px;
+  box-shadow:0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.agro-contacto-titulo{
+  font-size:1.05rem;
+  font-weight:800;
+  color:#123b7a;
+  margin-bottom:12px;
+}
+
+.agro-contacto-datos{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.agro-contacto-item{
+  background:#fff;
+  border:1px solid #e6eef9;
+  border-radius:14px;
+  padding:12px 14px;
+  min-width:170px;
+}
+
+.agro-label{
+  display:block;
+  font-size:.8rem;
+  color:#5b6472;
+  margin-bottom:4px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+.agro-contacto-item strong{
+  color:#123b7a;
+}
+
+.agro-contacto-mail a{
+  color:#1d4ed8;
+  font-weight:700;
+  text-decoration:none;
+  word-break:break-word;
+}
+
+.agro-contacto-mail a:hover{
+  text-decoration:underline;
+}
+
+.agro-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  gap:16px;
+}
+
+.agro-card{
+  background:#fff;
+  border:1px solid #e8eef8;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 8px 18px rgba(15, 23, 42, 0.06);
+}
+
+.agro-card h3{
+  margin:0 0 12px;
+  color:#123b7a;
+  font-size:1.06rem;
+}
+
+.agro-card p{
+  margin:0 0 10px;
+  color:#374151;
+  line-height:1.55;
+}
+
+.agro-card ul,
+.agro-card ol{
+  margin:0;
+  padding-left:18px;
+}
+
+.agro-card li{
+  margin:6px 0;
+  color:#374151;
+}
+
+.agro-card-destacado{
+  background:linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+}
+
+.agro-card-integracion{
+  background:linear-gradient(135deg, #eef5ff 0%, #f8fbff 100%);
+  border-left:6px solid #1d5fd0;
+}
+
+.agro-card-canarias{
+  background:linear-gradient(135deg, #fff9ec 0%, #fff3d8 100%);
+  border-left:6px solid #e7a92a;
+}
+
+.agro-card-check{
+  background:linear-gradient(135deg, #f3fbf4 0%, #e9f8ed 100%);
+  border-left:6px solid #3aa85b;
+}
+
+.agro-card-aviso{
+  background:linear-gradient(135deg, #fff7d6 0%, #ffe8a3 100%);
+  border-left:6px solid #d79b00;
+}
+
+.agro-subcard{
+  background:#f8fbff;
+  border:1px solid #e6eef9;
+  border-radius:14px;
+  padding:14px;
+  margin-top:12px;
+}
+
+.agro-subcard h4{
+  margin:0 0 8px;
+  color:#143b78;
+  font-size:.95rem;
+}
+
+.agro-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:12px;
+}
+
+.agro-tags span{
+  background:#eef4ff;
+  color:#16408b;
+  border:1px solid #d8e6ff;
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:.82rem;
+  font-weight:700;
+}
+
+.agro-columns{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:12px;
+}
+
+.agro-steps li{
+  margin:8px 0;
+}
+
+.agro-checklist{
+  list-style:none;
+  padding-left:0 !important;
+}
+
+.agro-checklist li{
+  position:relative;
+  padding-left:26px;
+  margin:8px 0;
+}
+
+.agro-checklist li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  color:#2e8b57;
+  font-weight:800;
+}
+
+@media (max-width: 768px){
+  .agro-hero{
+    flex-direction:column;
+  }
+
+  .agro-hero-badge{
+    min-width:auto;
+    width:100%;
+    text-align:left;
+  }
+}
+.agro-hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:16px;
+  background:linear-gradient(135deg, #0f3d91 0%, #1d5fd0 100%);
+  color:#fff;
+  border-radius:20px;
+  padding:22px 22px;
+  margin-bottom:18px;
+  box-shadow:0 12px 28px rgba(13, 50, 120, 0.16);
+}
+
+.agro-hero .agro-hero-texto{
+  flex:1;
+}
+
+.agro-hero .agro-hero-texto h2{
+  margin:0 0 10px;
+  font-size:1.65rem;
+  line-height:1.2;
+  color:#ffffff !important;
+  font-weight:800;
+  letter-spacing:0.2px;
+}
+
+.agro-hero .agro-hero-texto p{
+  margin:0;
+  color:rgba(255,255,255,0.96) !important;
+  line-height:1.6;
+  font-size:1rem;
+  max-width:780px;
+}
+
+.agro-hero-badge{
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.28);
+  border-radius:16px;
+  padding:12px 14px;
+  min-width:140px;
+  text-align:center;
+  color:#fff;
+}
+
+.agro-hero-badge span{
+  display:block;
+  font-size:.8rem;
+  opacity:.92;
+  margin-bottom:4px;
+  color:#fff;
+}
+
+.agro-hero-badge strong{
+  font-size:1rem;
+  color:#fff;
+}
+.agro-card-subvenciones{
+  background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+  border-left: 6px solid #1d5fd0;
+}
+
+.agro-card-subvenciones .agro-subcard{
+  background:#fff;
+}
+
+.agro-subcard-importante{
+  margin-top:16px;
+  background:linear-gradient(135deg, #eef5ff 0%, #f7fbff 100%);
+  border:1px solid #cfe0ff;
+}
+
+.agro-subcard-importante p{
+  margin:0;
+}
