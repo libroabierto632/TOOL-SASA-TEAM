@@ -3563,3 +3563,17 @@ button,
 .agro-subcard-importante p{
   margin:0;
 }
+
+
+.salud-hero h2{
+  color:#ffffff !important;
+  font-weight:900;
+  font-size:1.9rem;
+  line-height:1.2;
+  text-shadow:0 2px 4px rgba(0,0,0,0.16);
+}
+
+.salud-hero p{
+  color:rgba(255,255,255,0.97) !important;
+  font-size:1rem;
+}
